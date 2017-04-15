@@ -24,3 +24,98 @@ Where we review quasi-PDFs etc
 \subsection{Global PDF fits}
 
 Collinear unpolarized and polarized PDF analysis.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Unpolarized PDFs}
+
+
+
+
+\textcolor{blue}{HEADINGS: this is just for editing; we'll remove in the final. }
+
+\textcolor{blue}{INTRO:} 
+We express the collinear unpolarized PDFs as $f_{i}(x,\mu)$
+where the index $i$ represents the parton flavor $i=\{g,u,\bar{u},d,\bar{d},s,\bar{s},...\}$,
+$x$ is the fractional momentum carried by the parton, and $\mu$
+is the factorization (energy) scale.\footnote{We could add an additional index to specify the particular hadron
+(proton, neutron, pion, nuclei, ...); as we mainly refer to the proton
+in this work, we will omit such a designation unless necessary.} The PDF is a scheme-dependent quantity, and we typically work in
+the $\overline{MS}$ scheme; when this is convoluted with an appropriate
+hard cross section (Wilson coefficient), we obtain a scheme-independent
+physical observable. 
+
+\textcolor{blue}{X-DEPENDENCE:} 
+The $x$-dependence of the PDFs must
+be deduced by comparing with experimental data in a global fit. For
+this purpose, we often parameterize the $x$-dependence of the PDFs
+in the generic form: 
+\begin{equation}
+f_{i}(x,\mu)\sim x^{a}(1-x)^{b}\:C(x)\quad.
+\end{equation}
+Here, the $x^{a}$ term controls the small-$x$ behavior, the $(1-x)^{b}$
+term controls the large-$x$ behavior, and $C(x)$ represents the
+remaining $x$-dependence. The $a$ exponent is negative and generally
+in the range $-1$ to $-2$; thus, the PDFs diverge as $1/x^{\sim1.5}$
+for small $x$ and the number of soft partons is infinite. The $a$
+exponent must be larger than $-2$ or the momentum sum rule will diverge.
+The $b$ exponent is positive, and this ensures the PDF goes to zero
+as $x\to1$.
+
+
+\textcolor{blue}{NUMBER SUM RULES:} 
+There are a few constraints we
+can impose on the $x$-dependence of the PDFs at this point. Since
+the proton has the quantum numbers of two up quarks and one down quark,
+we have the following quark number sum rules given in terms of first
+moments: 
+%
+\begin{eqnarray*}
+\int_{0}^{1}dx\ \left[u(x,\mu)-\bar{u}(x,\mu)\right] & =\left\langle 1\right\rangle _{u^{-}}= & 2\\
+\int_{0}^{1}dx\ \left[d(x,\mu)-\bar{d}(x,\mu)\right] & =\left\langle 1\right\rangle _{d^{-}}= & 1\\
+\int_{0}^{1}dx\ \left[s(x,\mu)-\bar{s}(x,\mu)\right] & =\left\langle 1\right\rangle _{s^{-}}= & 0
+\end{eqnarray*}
+with similar results for the heavy quarks: $\left\langle 1\right\rangle _{c^{-}}=\left\langle 1\right\rangle _{b^{-}}=\left\langle 1\right\rangle _{t^{-}}=0$.
+
+\textcolor{blue}{MOMENTUM SUM RULE:} The fractional momentum carried
+by each parton flavor is given by the second moments: 
+%
+\begin{eqnarray*}
+\int_{0}^{1}dx\ x\ \left[u(x,\mu)\right] & = & \left\langle x\right\rangle _{u}\\
+\int_{0}^{1}dx\ x\ \left[u(x,\mu)+\bar{u}(x,\mu)\right] & = & \left\langle x\right\rangle _{u^{+}}\ .
+\end{eqnarray*}
+%
+Here, $\left\langle x\right\rangle _{u}$ is the fractional momentum
+carried by the up-quark, $\left\langle x\right\rangle _{u^{+}}$ is
+the fractional momentum carried by the up-quark and anti-up-quark.
+Since the total momentum of the proton must equal the momentum of
+its constituents, we have the momentum sum rule constraint: 
+%
+\begin{eqnarray*}
+1 & = & \left\langle x\right\rangle _{g}+\left\langle x\right\rangle _{u^{+}}+\left\langle x\right\rangle _{d^{+}}+\left\langle x\right\rangle _{s^{+}}+\left\langle x\right\rangle _{c^{+}}+\left\langle x\right\rangle _{b^{+}}+\left\langle x\right\rangle _{t^{+}}+...
+\end{eqnarray*}
+%
+where the ``...'' represents any other partonic components (such
+as a photon). 
+
+\textcolor{blue}{$\mu$-DEPENDENCE:} 
+The $\mu$-dependence of the
+PDFs is given by the DGLAP evolution equation\cite{Dokshitzer:1977sg,Gribov:1972ri,Altarelli:1977zs}
+\begin{eqnarray*}
+\frac{\partial}{\partial\ln\mu^{2}}\:f_{i}(x,\mu) & = & \sum_{j=g,q,\bar{q}}\ P_{ij}(x)\otimes f_{j}(x,\mu)\quad.
+\end{eqnarray*}
+Here, the logarithmic derivative of the PDF is determined by a convolution
+of the PDFs with the DGLAP kernel $P_{ij}(x)$ which can be computed
+perturbatively in powers of $\alpha_{s}(\mu)$; $P_{ij}(x)$ is known
+to NNLO.\footnote{The DGLAP (Dokshitzer\textendash Gribov\textendash Lipatov\textendash Altarelli\textendash Parisi)
+evolution can be modified by $\ln(1/x)$ terms at small-$x$, and
+this is characterized by the BFLK (Balitsky-FadinKuraev-Lipatov) equations.\cite{Kuraev:1976ge,Kuraev:1977fs,Balitsky:1978ic}
+Additionally, at large-$x$ and small $\mu$ scale the above framework
+can receive corrections from non-factorizeable higher-twist (HT) corrections.} When performing the global fit to the data, we use the DGLAP equations
+to combine data from different $\mu$ scales when constraining the
+PDFs. 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Polarized PDFs}
