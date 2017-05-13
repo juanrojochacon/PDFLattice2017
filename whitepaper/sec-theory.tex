@@ -32,7 +32,80 @@ These sources of systematic uncertainty all need to be under control when confro
 
 \subsubsection{Mellin moments of PDFs from lattice QCD}
 \label{Sec:MomentsLQCD}
-\input{MomentsLQCD}
+Parton distribution functions (PDFs) are defined as matrix elements of fields at light-like separations, which cannot be directly determined in Euclidean LQCD. Instead, the traditional approach for LQCD calculations is to determine the matrix elements of local twist-two operators, where twist is the dimension minus the spin, that can be related to the Mellin moments of PDFs. In principle, given a sufficient number of Mellin moments, PDFs can be reconstructed from the inverse Mellin transform. In practice, however, the calculation is limited to the lowest three moments, because power-divergent mixing occurs between twist-two operators on the lattice. Three moments is insufficient to reconstruct the momentum dependence of the PDFs without significant model dependence~\cite{Detmold:2003rq}.
+
+The lowest three moments do provide, however, useful information, both as benchmarks of LQCD calculations and as constraints in global extractions of PDFs. Here we briefly review the determination of Mellin moments of PDFs from LQCD. 
+
+PDFs are accessible, experimentally and theoretically, through the Compton amplitude
+\begin{equation}
+T_{\mu\nu}(p,q) = \int {\rm d}^4\!x\, {\rm e}^{iqx}  \langle p,s |T J_\mu(x) J_\nu(0)|p,s\rangle   
+\end{equation}
+at large photon momenta $q^2=-Q^2$. Here $T$ is the time-ordering operator, the $J_\mu(x)$ are local vector bilinears at spacetime point $x$, and the external states are hadronic states with momentum $p$ and spin $s$. The most general form of the Compton amplitude $T_{\mu\nu}(p,q)$ for polarised deep-inelastic scattering from a proton targets reads
+\begin{align}
+T_{\mu\nu}(p,q) = {} & \left(\delta_{\mu\nu}-\frac{q_\mu q_\nu}{q^2}\right) \mathcal{F}_1(\omega,Q^2) + \left(p_\mu-\frac{pq}{q^2}q_\mu\right) \left(p_\nu-\frac{pq}{q^2}q_\nu\right) \frac{1}{pq} \mathcal{F}_2(\omega,Q^2)\\ 
+& {} \quad  + \epsilon_{\mu\nu\lambda\sigma}q_\lambda s_\sigma \frac{1}{pq}\mathcal{G}_1(\omega,Q^2) + \epsilon_{\mu\nu\lambda\sigma}q_\lambda \left(pq s_\sigma - sq p_\sigma\right) \frac{1}{(pq)^2}\mathcal{G}_2(\omega,Q^2)
+\end{align}
+where $\mathcal{F}_1$, $\mathcal{F}_2$, $\mathcal{G}_1$ and $\mathcal{G}_2$ have different physical interpretations [\textbf{Can we be more specific here?}]. The unpolarised and polarised PDFs can be deduced from $\mathcal{F}_1$ and $\mathcal{G}_1$ by first rewriting them in terms of the structure functions spin-independent and spin-dependent structure functions, $F_1(x,Q^2)$ and $g_1(x,Q^2)$,
+\begin{align}
+\mathcal{F}_1(\omega,Q^2) = {} & 4 \omega^2 \int_0^1 dx\,  \frac{xF_1(x,Q^2)}{1-(\omega x)^2} = \sum_{n=2,4,\cdots}^\infty 4\omega^n \int_0^1 dx\, x^{n-1} F_1(x,Q^2) \,, \\
+\mathcal{G}_1(\omega,Q^2) = {} & 4 \omega \int_0^1 dx\, \frac{g_1(x,Q^2)}{1-(\omega x)^2} = \sum_{n=1,3,\cdots}^\infty 4\omega^n \int_0^1 dx\, x^{n-1} g_1(x,Q^2).
+\end{align}
+Here $\omega=2pq/q^2$ and target mass corrections have been discarded. Odd moments may be obtained from the mixture of currents $J_\mu J_\nu^5$.
+
+At sufficiently high momentum transfer that power corrections can be neglected, factorisation~\cite{Sterman:1995fz} at the scale $\mu$ lets us write the structure functions $F_1(x,Q^2)$ and $g_1(x)$ of the proton as 
+\begin{align}
+F_1(x,Q^2) = {} & \sum_{i=u,d, \cdots, g} \int_x^1\frac{dy}{y}\, c_{1,i}(x/y,\mu^2)|_{\mu^2=Q^2}\, f_i(y,Q^2) \,,\\
+g_1(x,Q^2) = {} & \sum_{i=u,d, \cdots, g} \int_x^1\frac{dy}{y}\, e_{1,i}(x/y,\mu^2)|_{\mu^2=Q^2}\, \Delta f_i(y,Q^2) \,,
+\label{pdf}
+\end{align}
+where $c_{1,i}$ and $e_{1,i}$ are splitting functions and the $f_i(x,Q^2)$ and $\Delta f_i(x,Q^2)$ are the unpolarised and polarised PDFs, respectively. Here the sum runs over the quark and antiquark flavours, $u$, $d$, $\bar{u}$ and $\bar{d}$, and the gluon $g$.
+
+Using the operator product expansion (OPE), the Mellin moments of structure functions, and the corresponding PDFs, can be expressed in terms of matrix elements of local operators:
+\begin{align}
+2 \int_0^1 dx\, x^{n-1} F_1(x,Q^2) &= \sum_{i=u,d, \cdots, g} c_{1,i}^n(\mu^2)\, v_i^n(\mu^2)|_{\mu^2=Q^2} = \sum_{i=u,d, \cdots, g} c_{1,i}^n(\mu^2)\, \int_0^1 dx\, x^{n-1} f_i(x,Q^2)\,,\\
+4 \int_0^1 dx\, x^n g_1(x,Q^2) &= \sum_{i=u,d, \cdots, g} e_{1,i}^n(\mu^2)\, a_i^n(\mu^2)|_{\mu^2=Q^2} = \sum_{i=u,d, \cdots, g} e_{1,i}^n(\mu^2)\, \int_0^1 dx\, x^n\, 2 \Delta f_i(x,Q^2) \,,
+\end{align}
+where $v_i^n(\mu^2)$ and $a_i^n(\mu^2)$ are reduced matrix elements of the appropriate twist-two operators~\cite{Gockeler:1995wg},
+\begin{equation}
+\begin{split}
+\frac{1}{2} \sum_s \langle p,s|\mathcal{O}^i_{\{\mu_1,\cdots,\mu_n\}}|p,s\rangle &= 2 v_i^n\, [p_{\mu_1}\cdots p_{\mu_n} - {\rm traces}] \,, \\
+\langle p,s|\mathcal{O}^{5\,i}_{\{\sigma \mu_1,\cdots,\mu_n\}}|p,s\rangle &= \frac{1}{n+1} a_i^n\, [s_\sigma p_{\mu_1}\cdots p_{\mu_n} - {\rm traces}] \\
+\end{split}
+\end{equation}
+and $c_{1,i}^n(\mu^2)$ and $e_{1,i}^n(\mu^2)$ are the corresponding Wilson coefficients
+\begin{equation}
+c_{1,i}^n(\mu^2) = \int_0^1 dy\, y^{n-1} c_{1,i}(y,\mu^2)\,, \quad
+e_{1,i}^n(\mu^2) = \int_0^1 dy\, y^n e_{1,i}(y,\mu^2)\,.
+\end{equation}
+The operators relevant for the lowest two moments are listed in Table \ref{Tab:twist2}. The operator $\mathcal{O}^q_{\mu_1\mu_2}$ decomposes into two different representations of $H(4)$~\cite{Gockeler:1996mu}, each with different lattice artifacts and renormalisation factors. In the continuum limit, however, both operators should lead to the same result. In contrast, the operator $\mathcal{O}^q_{\mu_1\mu_2\mu_3}$ splits into several representations transforming identically under $H(4)$, causing the corresponding operators to mix under renormalisation on the lattice.
+\begin{table}
+\caption{\label{Tab:twist2}
+Operators relevant to the lowest two Mellin moments of polarised and unpolarised PDFs.
+}
+\begin{ruledtabular}%Note this requires RevTeX, but makes the spacing look more professionally typeset.
+\begin{tabular}{ccc}
+Matrix element & Operator & Observable \\ 
+\vspace*{-10pt}\\
+\hline 
+\vspace*{-10pt}\\
+$v_q^2$\,, $v_{\bar{q}}^2$  & $\displaystyle \left(\frac{{\rm i}}{2}\right) \bar{q}(x)\gamma_{\mu_1} \overleftrightarrow{D}_{\mu_2} q(x)$ & $\langle x \rangle_q$\,, $\langle x \rangle_{\bar{q}}$   \\
+$v_q^3$\,, $v_{\bar{q}}^3$  & $\displaystyle \left(\frac{{\rm i}}{2}\right)^2 \bar{q}(x)\gamma_{\mu_1} \overleftrightarrow{D}_{\mu_2} \overleftrightarrow{D}_{\mu_3} q(x)$ & $\langle x^2 \rangle_q$\,, $\langle x^2 \rangle_{\bar{q}}$ \\
+$a_q^0$ & $\displaystyle \bar{q}(x)\gamma_{\sigma} \gamma_5 q(x)$ & $2\, \langle 1 \rangle_{\Delta q}$ \\
+$a_q^1$ & $\displaystyle \left(\frac{{\rm i}}{2}\right) \bar{q}(x)\gamma_{\sigma} \gamma_5 \overleftrightarrow{D}_{\mu_1} q(x)$ & $2\, \langle x \rangle_{\Delta q}$ \\
+$v_g^2$ & $\displaystyle - {\rm Tr}\, F_{\mu_1\alpha}F_{\mu_2\alpha}$ & $\langle x \rangle_g$ \\
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+\paragraph*{Higher-twist contributions} The discussion so far has focussed on the limit in which higher twist contributions, suppressed by powers of the momentum-transfer, have been ignored. In fact, higher twist contributions to the lowest moment of the structure function $F_1(x,Q^2)$ are found to be of ${\cal O}(1\, \mbox{GeV}^2/Q^2)$ \cite{Blumlein:2008kz}. For LQCD, typically $Q^2 \simeq 1/a^2$, and at present lattice spacings this corresponds to $Q^2 = O(10\,\mbox{GeV}^2)$ or a higher-twist contribution of $5 - 10\, \%$. With contributions of higher-twist included, the OPE reads
+\begin{equation}
+2 \int_0^1 dx\, x F_1^q(x,Q^2) = c_{1,q}^2(\mu^2)\, v_q^2(\mu^2)|_{\mu^2=Q^2} + \frac{\bar{c}_{1,q}^2(\mu^2)}{Q^2}\, \bar{v}_q^2(\mu^2)|_{\mu^2=Q^2} + \cdots \,,
+\label{tex}
+\end{equation}
+where $\bar{c}_{1,q}^2$ and $\bar{v}_q^2(\mu^2)$ are Wilson coefficient and reduced matrix element of a generic twist-four operator. Both twist-two and four contributions mix under renormalisation, to the extent that the perturbative series for the Wilson coefficients $c_{1,q}^2(\mu^2)$ diverges due to the presence of IR renormalon singularities. This ambiguity is cancelled by that in the twist-four matrix element $\bar{v}_q^2(\mu^2)$ that arises as a result of an UV renormalon singularity~\cite{Martinelli:1996pk}. If mixing effects are ignored, the uncertainties will be, at least, comparable to the power corrections themselves. Power corrections can be assessed most efficiently, and the twist expansion tested, by a direct LQCD evaluation of the Compton amplitude, which we discuss in Section \ref{Sec:InversionMethod}.
+
+\paragraph*{Beyond the first three moments} Moving beyond the lowest three moments requires overcoming the challenge of power-divergent mixing for LQCD twist-two operators. One novel approach to this problem~\cite{Davoudi:2012ya} builds upon the physical intuition that as long as the scale associated with the operator (for the twist-two operators, this is the renormalisation scale $\mu$) is taken to be much smaller than the hadronic scale but much larger than the inverse lattice spacing, no singularity necessarily arises as one takes the continuum limit. The operator can still probe the correct hadron structure at the scale $\mu$, but should be insensitive to the details of the discretisation of the operator at shorter distances. A simple way to incorporate an intrinsic ``smearing” scale for an operator is to sum over bilinears of quark fields that are displaced over many lattice sites in a small (compared to the scale $1/\mu$) region of Euclidean spacetime (an alternative approach appears in~\cite{Monahan:2015lha}). To ensure that the correct $SO(4)$ transformation properties of the matrix elements are recovered in the continuum limit, one must project the sum using hyperspherical harmonics. The properties of these operators, such as their mixing patterns and scaling properties, are discussed in detail in
+Ref.~\cite{Davoudi:2012ya}. In particular, while the classical mixing with lower and higher spin operators are both suppressed by $\sim a^2$ for spatially improved operators, the mixing at one-loop in lattice perturbation theory is suppressed by ${\cal O}(\ alpha_s a)$ or ${\cal O}(\ alpha_s a^2)$, depending on the lattice action used and provided that the gauge links used in constructing the gauge invariant bilinears are tadpole-improved and smeared over a region whose physical size is held fixed as the continuum limit is taken. In principle, this allows higher moments of PDFs to be obtained from LQCD, without power-divergences. Numerical investigations of this approach, which requires gauge configurations with very fine lattice spacings, are underway. 
 
 \subsubsection{The $x$-dependence of PDFs from lattice QCD}
 
