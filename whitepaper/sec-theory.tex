@@ -109,9 +109,72 @@ Ref.~\cite{Davoudi:2012ya}. In particular, while the classical mixing with lower
 
 \subsubsection{The $x$-dependence of PDFs from lattice QCD}
 
-\paragraph{Inversion method}
+\paragraph*{Inversion method}
 %\label{Sec:InversionMethod}
-\input{InversionMethod}
+%% \label{Sec:InversionMethod}
+%% \input{./InversionMethod}
+
+The Compton amplitude $T_{\mu\nu}(p.q)$ can be directly obtained in LQCD, including disconnected contributions,  by a simple extension~\cite{Chambers:2017dov} of existing implementations of the Feynman-Hellmann technique to LQCD~\cite{Horsley:2012pz,Chambers:2014qaa,Chambers:2015bka}. Provided one works at sufficiently large $Q^2$, the Compton amplitude will be dominated by twist-two contributions. Varying $Q^2$ allows one to test the twist expansion and, in particular, isolate twist-four contributions. Moreover, one can distinguish between contributions from up, down and strange quarks, connected and disconnected, by appropriate insertions of the electromagnetic current. %A conventional calculation of the four-point function $\langle p,s |J_\mu(x) J_\nu(0)|p,s\rangle$, in contrast, would involve all-to-all quark propagators, twice consecutively, which is not practicable.
+
+To compute the Compton amplitude from the Feynman-Hellmann relation, a perturbation to the QCD Lagrangian is introduced, for example,
+\begin{equation}
+\mathcal{L}(x) \rightarrow \mathcal{L}(x) + \lambda \mathcal{J}_3(x)\,, \quad \mathcal{J}_3(x)=Z_V\cos(\vec{q}\vec{x})\; e_q \,\bar{q}(x)\gamma_3 q(x) 
+\label{in}
+\end{equation}
+where $q$ is the quark field to which the photon is attached, and $e_q$ its electric charge. For simplicity, we consider the local vector current only, so that the renormalisation factor $Z_V$ is known and no further renormalisation is needed. Taking the second derivative of the nucleon two-point function 
+\begin{equation}
+\langle N(\vec{p},t) \bar{N}(\vec{p},0)\rangle_\lambda \simeq C_\lambda\, {\rm e}^{-E_\lambda(p,q)\,t}
+\end{equation}
+with respect to $\lambda$ on both sides, gives
+\begin{equation}
+-2 E_\lambda(p,q)\, \frac{\partial^2}{\partial\lambda^2}  E_\lambda(p,q)\,\big|_{\lambda=0} = T_{33}(p,q) \,.
+\end{equation}
+For $p_3=q_3=q_4=0$ this leaves us with
+\begin{equation}
+T_{33}(p,q) = 4 \omega^2 \int_0^1 dx\,  \frac{xF_1(x,Q^2)}{1-(\omega x)^2} \,.
+\label{ff}
+\end{equation}
+Note that to extract the polarised structure functions requires insertions of two different currents with $\mu\neq \nu$.  
+
+The idea is to solve (\ref{ff}) for $F_1(x,Q^2)$ numerically. Starting from a finite number of sampled points $T_i=T_{33}(\omega_i) \,,\; i=1, \cdots, N$ and approximating the integral and structure function by a discrete set of $M$ points, $0 < x_1 < x_2 < \cdots < x_M < 1$, 
+\begin{equation}
+K_{ij} = \frac{4\,\omega_i^2x_j}{1-(\omega_i x_j)^2} \,, \quad F_j = F_1(x_j)\,,
+\end{equation}
+the integral equation (\ref{ff}) reduces to the set of equations 
+\begin{equation}
+T_i = \epsilon \sum_{j=1}^M K_{ij}\, F_j \,,\; i=1, \cdots, N \,,
+\label{ieq}
+\end{equation}
+where, in general, $N < M$ and the dependence on $Q^2$ has been dropped. The simplest procedure uses equidistant step sizes, $\epsilon$, but the generalisation to adaptive step sizes is straightforward. The $N \times M$ matrix $K$ can be written as the product of a $N \times N$ orthogonal matrix $U$, a $N \times N$ diagonal, singular matrix $W$ with positive or zero eigenvalues $w_1 < w_2 < \cdots < w_N$, and the transpose of a row-orthogonal $M \times N$ matrix $V$,
+\begin{equation}
+K = U \,\left[{\rm diag}(w_1, \cdots, w_N)\right]\,V^T \,.
+\end{equation}
+Since the matrix $W$ is singular, singular value decomposition (SVD) is the method of choice for solving \eqref{ieq} under such conditions. The solution is
+\begin{equation}
+F_j = \sum_{i=1}^N K^{-1}_{ji}\epsilon^{-1}\, T_i \,, 
+\label{svd}
+\end{equation}
+where $K^{-1}$ is the pseudo-inverse
+\begin{equation}
+K^{-1} = V \,\left[{\rm diag}(1/w_1, \cdots, 1/w_K, 0, \cdots, 0)\right]\, U^T 
+\end{equation}
+with $1/w_k$ being replaced by zero if $w_k=0$, which is assumed for $K < k \leq N$. One has to exercise some discretion at deciding at
+what threshold to set $1/w_k$ to zero. Several routines, such as {\tt PseudoInverse} of {\it Mathematica}, solve this problem
+automatically. 
+
+In~\cite{Chambers:2017dov} it was shown that the unpolarised structure function $F_1(x,Q^2)$ can be computed from a lattice calculation of the Compton amplitude with unprecedented accuracy, devoid of any renormalisation and mixing issues. Furthermore, by extending the calculation to values $\omega > 1$ it becomes possible
+to compute the structure functions down to fractional momenta $x = {\cal O}(0.001)$.
+
+With the same method, the PDFs can be computed directly without the need to go through the structure functions, provided $Q^2$ is
+sufficiently large that power corrections can be neglected. In this case
+\begin{equation}
+T_i^q = \epsilon \sum_{j=1}^M K_{ij}\, f_q(x_j,Q^2) 
+\end{equation}
+where the index $q$ denotes the struck quark. The kernel now reads
+\begin{equation}
+K_{ij} =2 \omega_i^2 \int_0^1 dy\,y\,x_j\, \frac{c_{1,q}(y,\mu^2)|_{\mu^2=Q^2}\, }{1-(y\,\omega_i\, x_j)^2}
+\end{equation}
+with $c_{1,q}(y,\mu^2)$ a perturbative Wilson coefficient.
 
 \paragraph{RQCD Approach}
 %Gunnar Bali (0.5 page)
