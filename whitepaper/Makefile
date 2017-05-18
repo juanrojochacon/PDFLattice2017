@@ -6,4 +6,4 @@ default:
 	pdflatex PDFLattice2017	
 
 clean:
-	rm -rf *.bbl *~ *.out *.toc *.log nnpdf31.pdf *.aux *.blg *.pdf
+	rm -rf *.bbl *~ *.out *.toc *.log PDFLattice2017.pdf *.aux *.blg *.pdf
