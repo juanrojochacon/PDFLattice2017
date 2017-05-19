@@ -12,28 +12,179 @@ Special attention has been devoted to ensure a unified
 consistent notation among the various parts of the whole section.
 
 \subsection{Lattice QCD}
+
 \label{Sec:IntroLQCD}
-Quantum Chromodynamics draws together the ideas of the quark model, the concept of color, and the notion of constituent partons into a single gauge theory that captures our current understanding of the strong nuclear force. The viability of QCD at hadronic energy scales relies on two rather remarkable features, quark confinement and spontaneous chiral symmetry breaking. The study of these phenomena requires a tool that goes beyond perturbation theory, a tool that can handle both strongly-coupled fields at long distances and the ultraviolet divergences of the theory at short distances. This tool is Lattice Quantum Chromodynamics (LQCD).
 
-LQCD is QCD formulated on a finite Euclidean lattice and is generally studied by numerical computation of QCD correlation functions in the path-integral formalism, using methods adapted from statistical mechanics. To make contact with the physical world and experimental data, the numerical results are extrapolated to the infinite-volume and continuum limits. The past decade has seen significant progress in the development of efficient algorithms for the generation of gauge field configurations, which represent the QCD vacuum, and tools for extracting the relevant information from LQCD correlation functions. LQCD calculations have reached a level where they not only complement, but also guide current and forthcoming experimental programs.
+Quantum Chromodynamics (QCD) is the regnent theory of strong interactions. It provides the foundation 
+for the phenomenological ideas of the quark model, the concept of color, and partons. 
+The power of QCD to explain physics at the hadronic relies on two rather remarkable features,
+quark confinement and spontaneous chiral symmetry breaking. The study
+of these phenomena requires the development of tools that go far
+beyond perturbation theory, tools that can handle both strongly
+coupled fields at long distances and the ultraviolet divergences of
+the theory at short distances. This tool is Lattice Quantum
+Chromodynamics (LQCD).
 
-LQCD calculations suffer from several sources of systematic uncertainty, each of which must be controlled to make meaningful contact with experimental data: discretisation effects and the continuum limit; unphysical pion masses; finite volume effects; renormalisation; and lattice-spacing determination. We briefly review these main sources of systematic uncertainty here; for a fuller account see, for example, \cite{Aoki:2016frl}.
+LQCD is the synonym for QCD formulated on a finite Euclidean
+lattice. There is a fair degree of flexibility in discretizing the QCD
+action. This has led to a variety of formulations, which differ mainly
+by the choice of fermion action. All viable lattice actions must
+smoothly match onto QCD in the continuum limit. LQCD can be solved by
+numerical simulations using methods adapted from statistical
+mechanics. To make contact with the real world, the lattice needs to
+be removed at the end of the calculation by extrapolating the results
+to the infinite volume and continuum limits. Furthermore, lattice
+quantities, such as hadron matrix elements, have to be converted to a
+scheme that matches phenomenological conventions by
+renormalization. The past few years have seen significant progress in
+the development of efficient algorithms for the generation of
+background field configurations and tools for extracting relevant
+information from the lattice data. The calculations are now reaching a
+level, where they are able to not only complement, but also provide
+guidance to current and forthcoming experimental programs at the
+leading research facilities.
 
-\paragraph{Discretisation effects and the continuum limit} There is a fair degree of flexibility in discretising the QCD action. This has led to a variety of formulations, which differ mainly in the choice of fermion action. In the continuum limit, which corresponds to taking the lattice spacing $a$ to zero with all physical quantities fixed, the simplest discretisations differ from continuum QCD at ${\cal O}(a)$. In practice, one cannot afford to perform numerical simulations at arbitrarily small lattice spacings, because the cost of computation increases with a large inverse power of the lattice spacing, and ${\cal O}(a)$ effects can therefore be significant, even with current lattice spacings ranging from $0.3 \,\mbox{fm}$ to $0.05 \,\mbox{fm}$. To accelerate the convergence to the continuum limit, improved quark and gluon actions are widely used, which include higher-dimension operators to reduce the discretisation errors to $O(a^2)$ or better.
 
-\paragraph{Unphysical pion masses} The computational cost of the fermion contribution to the path integral increases with a large inverse power of the bare quark mass (or, equivalently, the pion mass). LQCD calculations are therefore often performed at unphysically heavy pion masses, although results at the physical point have become increasingly common, albeit with large errors. To obtain results at the physical pion mass, lattice data are generated at a sequence of pion masses and then extrapolated to the physical pion mass. To control the associated systematic uncertainties, these extrapolations are guided by effective theories. In particular, the pion-mass dependence can be parameterised with chiral perturbation theory ($\chi$PT), which accounts for the Nambu-Goldstone nature of the lowest excitations that occur in the presence of light quarks.
 
-\paragraph{Finite volume effects} Numerical LQCD calculations are necessarily restricted to a finite space-time volume. For most simple quantities, these effects decay exponentially with the size of the lattice, and therefore the easiest way to minimise or eliminate finite volume effects is to choose the volume sufficiently large in physical units. Unfortunately, this can be prohibitively expensive as one approaches the continuum limit and the number of lattice sites grows. Finite volume $\chi$PT is the preferred tool to develop systematic expansions that provide quantitative information on finite-volume effects. In general, finite volume effects of hadrons are dominated by their interactions with pions, which can travel around the (periodic) lattice many times. Numerical evidence suggests that lattice sizes of $m_\pi L \geq 4$, where $m_\pi$ is the pion mass, are generally sufficiently large that finite volume effects are negligible, with the current precision of LQCD calculations.
+LQCD is QCD formulated on a finite Euclidean lattice and is generally
+studied by numerical computation of QCD correlation functions in the
+path-integral formalism, using methods adapted from statistical
+mechanics. To make contact with the physical world and experimental
+data, the numerical results are extrapolated to the infinite-volume
+and continuum limits. The past decade has seen significant progress in
+the development of efficient algorithms for the generation of
+ensembles of gauge field configurations, which represent the QCD
+vacuum, and tools for extracting the relevant information from LQCD
+correlation functions. LQCD calculations have reached a level where
+they not only complement, but also guide current and forthcoming
+experimental programs.
 
-\paragraph{Renormalisation} The matrix elements extracted from a LQCD calculation at a given lattice spacing are bare matrix elements, rendered finite by the presence of the lattice spacing, which serves as a gauge-invariant UV regulator. To take the continuum limit, i.e. remove the regulator, one must renormalise the corresponding operators and fields. Although renormalisation is traditionally discussed in the framework of perturbation theory, at hadronic energy scales the renormalisation constants should be computed non-perturbatively to avoid uncontrolled perturbative truncation uncertainties. In QCD with only light quarks it is technically advantageous to employ so-called mass-independent renormalisation schemes. This requires a renormalisation condition that can be implemented on the lattice as well as in continuum perturbation theory, for example, the RI-MOM scheme~\cite{Martinelli:1994ty}. 
+LQCD calculations must demonstrate control over all sources of
+systematic uncertainty introduced by the discretization of QCD on the
+lattice to make meaningful contact with experimental data. These
+include discretisation effects that vanish in the continuum limit;
+extrapolation from unphysically heavy pion masses; finite volume
+effects; and renormalisation of composite operators. To take the 
+continuum limit requires accurate determinations of the lattice-spacing. 
+We briefly review these main sources of systematic
+uncertainty here; for a fuller account see, for
+example, \cite{Aoki:2016frl}.
 
-In addition, on a hyper-cubic lattice, the orthogonal group $O(4)$ of continuum Euclidean space-time is reduced to the hyper-cubic group $H(4)$. Thus, operators are classified according to irreducible representations of $H(4)$~\cite{Gockeler:1996mu}. Different irreducible representations belonging to the same $O(4)$ multiplet will, in general, give different answers at finite lattice spacing, an effect that can be reduced by improving the operators~\cite{Gockeler:2004wp}. Conversely, operators that lie in different irreducible representations $O(4)$, but the irreducible representations of $H(4)$, will mix at finite lattice spacing but not in the continuum. When these operators have differing mass dimension, the mixing coefficients scale with the inverse lattice spacing to some power, and diverge in the continuum limit. This power-divergent mixing must be removed non-perturbatively, and is a particular challenge for lattice calculations of the Mellin moments of PDFs (see Section \ref{Sec:MomentsLQCD}).
+\paragraph{Discretisation effects and the continuum limit} There is 
+a fair degree of flexibility in discretising the QCD action. This has
+led to a variety of formulations, which differ mainly in the choice of
+the action for quarks. In the continuum limit, which corresponds to taking
+the lattice spacing $a$ to zero with all physical quantities fixed,
+the simplest discretisations differ from continuum QCD at ${\cal
+O}(a)$. In practice, one cannot afford to perform numerical
+simulations at arbitrarily small lattice spacings, because the cost of
+computation increases with a large inverse power of the lattice
+spacing, therefore ${\cal O}(a)$ effects can be significant even
+with current lattice spacings ranging from $0.15 \,\mbox{fm}$ to
+$0.05 \,\mbox{fm}$. To accelerate the convergence to the continuum
+limit, improved quark and gluon actions are widely used, which include
+higher-dimension operators to reduce the discretisation errors to
+$O(a^2)$ or better.
 
-Finally, it is worth noting that factorisation, the key assumption of the operator product expansion (OPE), demands that the non-perturbatively renormalised hadron matrix elements match the perturbatively renormalised Wilson coefficients. This appears to be the case for scales $\mu^2 \gtrsim 10 \, \mbox{GeV}^2$ at least~\cite{Gockeler:2010yr}. This, however, is a fundamental aspect of QCD, and is not restricted to LQCD. The DGLAP evolution equations, for example, work best for $q^2_{\rm min} \approx 15 \, \mbox{GeV}^2$~\cite{Abramowicz:2015mha}, which should be kept in mind when comparing lattice results with phenomenology.
+\paragraph{Unphysical pion masses} 
+The computational cost of the fermion contribution to the path
+integral increases with a large inverse power of the bare quark mass
+(or, equivalently, the pion mass). LQCD calculations are therefore
+often performed at unphysically heavy pion masses, although results at
+the physical point have become increasingly common, albeit with large
+errors. To obtain results at the physical pion mass, lattice data are
+generated at a sequence of pion masses and then extrapolated to the
+physical pion mass. To control the associated systematic
+uncertainties, these extrapolations are guided by effective
+theories. In particular, the pion-mass dependence can be parameterised
+using chiral perturbation theory ($\chi$PT), which accounts for the
+Nambu-Goldstone nature of the lowest excitations that occur in the
+presence of light quarks.
 
-\paragraph{lattice-spacing determination} Numerical LQCD calculations naturally determine dimensionless quantities. Extracting physical values requires the introduction of a scale, taken from experiment or through a well-defined theoretical procedure, that is referred to as ``scale-setting''. Popular reference scales include light decay constants, hadron masses, scales defined in terms of the heavy quark potential or, most recently, the Wilson flow time $\sqrt{t_0}$~\cite{Luscher:2010iy}. The Wilson flow scale has become increasingly popular, because it can be computed rather cheaply and with high precision, unlike hadron masses, for example.
+\paragraph{Finite volume effects} Numerical LQCD 
+calculations are necessarily restricted to a finite spacetime
+volume. For most simple quantities, these effects decay exponentially
+with the size of the lattice, and therefore the easiest way to
+minimise or eliminate finite volume effects is to choose the volume
+sufficiently large in physical units. Unfortunately, this can be
+prohibitively expensive as one approaches the continuum limit, requiring the
+number of lattice sites to grow as $L/a$ in all four directions. Finite volume $\chi$PT is the preferred
+tool to develop systematic expansions that provide quantitative
+information on finite-volume effects. In general, finite volume
+effects of hadrons are dominated by their interactions with pions,
+which can travel around the (periodic) lattice many times. Numerical
+evidence suggests that lattice sizes of $m_\pi L \geq 4$, where
+$m_\pi$ is the pion mass, are generally sufficiently large that finite
+volume effects are negligible, within the current precision of LQCD
+calculations.
 
-These sources of systematic uncertainty all need to be under control when confronting experimental data with lattice results, or vice versa. For a coherent assessment of the present state of LQCD calculations of various quantities, the degree to which each systematic has been controlled in a given calculation is an important consideration. Therefore, in the following sections, we indicate the quality of the lattice calculations, based on criteria inspired by the FLAG analysis of flavour physics on the lattice~\cite{Aoki:2016frl}.
+\paragraph{Renormalisation} The matrix elements extracted from a 
+LQCD calculation at a given lattice spacing are bare matrix elements,
+rendered finite by the presence of the lattice spacing, which serves
+as a gauge-invariant UV regulator. To take the continuum limit,
+i.e. remove the regulator, one must renormalise the corresponding
+operators and fields and match them to some common scheme and scale used 
+by phenomenologists. Although renormalisation is traditionally
+discussed in the framework of perturbation theory, at hadronic energy
+scales the renormalisation constants should be computed
+non-perturbatively to avoid uncontrolled uncertainties due to 
+truncated perturbative results. In QCD with only light quarks it is technically
+advantageous to employ so-called mass-independent renormalisation
+schemes. This requires a renormalisation condition that can be
+implemented on the lattice as well as in continuum perturbation
+theory. A common choice is the RI-MOM scheme~\cite{Martinelli:1994ty}.
+
+In addition, on a hypercubic lattice, the orthogonal group $O(4)$ of
+continuum Euclidean spacetime is reduced to the hypercubic group
+$H(4)$. Thus, operators are classified according to irreducible
+representations of $H(4)$~\cite{Gockeler:1996mu}. Different
+irreducible representations belonging to the same $O(4)$ multiplet
+will, in general, give different answers at finite lattice spacing, an
+effect that can be reduced by improving the
+operators~\cite{Gockeler:2004wp}. Conversely, operators that lie in
+different irreducible representations of $O(4)$, but the same irreducible
+representations of $H(4)$, will mix at finite lattice spacing but not
+in the continuum. When these operators have differing mass dimension,
+the mixing coefficients scale with the inverse lattice spacing to some
+power, and diverge in the continuum limit. This power-divergent mixing
+must be removed non-perturbatively, and is a particular challenge for
+lattice calculations of the Mellin moments of PDFs (see
+Section \ref{Sec:MomentsLQCD}).
+
+Finally, it is worth noting that factorisation, the key assumption of
+the operator product expansion (OPE), demands that the
+non-perturbatively renormalised hadron matrix elements are matched to the
+perturbatively renormalised Wilson coefficients at a scale where the perturbative 
+expressions show convergence. This appears to be
+the case for scales $\mu^2 \gtrsim 10 \, \mbox{GeV}^2$ at
+least~\cite{Gockeler:2010yr}. This, however, is a fundamental aspect
+of QCD, and is not restricted to LQCD. The DGLAP evolution equations,
+for example, work best for $q^2_{\rm min} \approx
+15 \, \mbox{GeV}^2$~\cite{Abramowicz:2015mha}, which should be kept in
+mind when comparing lattice results with phenomenology.
+
+\paragraph{Lattice-spacing determination} Numerical LQCD calculations 
+naturally determine all dimensionful quantities in units of the
+lattice spacing. Thus, extracting physical values requires the
+determination of the lattice scale. This is achieved by matching a
+quantity with mass-dimension to its experimental value or through a
+well-defined theoretical procedure, that is referred to as
+``scale-setting''. Popular reference scales include light decay
+constants, hadron masses, scales defined in terms of the heavy quark
+potential or, most recently, the Wilson flow time
+$\sqrt{t_0}$~\cite{Luscher:2010iy}. The Wilson flow scale has become
+increasingly popular, because it can be computed rather cheaply and
+with high precision, unlike hadron masses, for example.
+
+These sources of systematic uncertainty all need to be under control
+when confronting experimental data with lattice results, or vice
+versa. For a coherent assessment of the present state of LQCD
+calculations of various quantities, the degree to which each
+systematic has been controlled in a given calculation is an important
+consideration. Therefore, in the following sections, we indicate the
+quality of the lattice calculations, based on criteria inspired by the
+FLAG analysis of flavour physics on the lattice~\cite{Aoki:2016frl}.
+
 
 \subsubsection{Mellin moments of PDFs from lattice QCD}
 \label{Sec:MomentsLQCD}
@@ -118,11 +269,9 @@ which requires gauge configurations with very fine lattice spacings, are underwa
 While the lowest three moments of PDFs provide important benchmarks for LQCD calculations of nucleon structure, and useful constraints in global extractions of PDFs, they are not in themselves sufficient to determine the $x$-dependence of PDFs, particularly at small $x$. In the following section we summarise recent approaches to determining the $x$-dependence of PDFs directly from LQCD.
 
 \paragraph*{Inversion method}
-%\label{Sec:InversionMethod}
-%% \label{Sec:InversionMethod}
-%% \input{./InversionMethod}
+\label{Sec:InversionMethod}
 
-The Compton amplitude $T_{\mu\nu}(p.q)$ can be directly obtained in LQCD, including disconnected contributions,  by a simple extension~\cite{Chambers:2017dov} of existing implementations of the Feynman-Hellmann technique to LQCD~\cite{Horsley:2012pz,Chambers:2014qaa,Chambers:2015bka}. Provided one works at sufficiently large $Q^2$, the Compton amplitude will be dominated by twist-two contributions. Varying $Q^2$ allows one to test the twist expansion and, in particular, isolate twist-four contributions. Moreover, one can distinguish between contributions from up, down and strange quarks, connected and disconnected, by appropriate insertions of the electromagnetic current. %A conventional calculation of the four-point function $\langle p,s |J_\mu(x) J_\nu(0)|p,s\rangle$, in contrast, would involve all-to-all quark propagators, twice consecutively, which is not practicable.
+The Compton amplitude $T_{\mu\nu}(p.q)$ can be directly obtained in LQCD, including disconnected contributions,  by a simple extension~\cite{Chambers:2017dov} of existing implementations of the Feynman-Hellmann technique to LQCD~\cite{Horsley:2012pz,Chambers:2014qaa,Chambers:2015bka}. Provided one works at sufficiently large $Q^2$, the Compton amplitude will be dominated by twist-two contributions. Varying $Q^2$ allows one to test the twist expansion and, in particular, isolate twist-four contributions. Moreover, one can distinguish between contributions from up, down and strange quarks, connected and disconnected, by appropriate insertions of the electromagnetic current.
 
 To compute the Compton amplitude from the Feynman-Hellmann relation, a perturbation to the QCD Lagrangian is introduced, for example,
 \begin{equation}
@@ -230,7 +379,9 @@ $p_z^{n-2}$ times $\Lambda^2_{\rm QCD}$. Thus, we conclude that
       \langle p| {\overline \psi}\gamma_ziD_z ... iD_z \psi|p\rangle
        = 2v^n(\mu^2) p_z^n\times \left[ 1 + {\cal O}\left(\frac{\Lambda^2_{\rm QCD}}{p_z^2},  \frac{m^2}{p_z^2}\right)\right],
 \end{equation}
-where the non-leading terms are power-suppressed in the large $p_z$ limit. Equating the renormalized moments on the right hand side of this equation with those that appear in Eq.~\eqref{eq:ope} leads to the relation between the quasi PDF and the light-front PDF expressed in Eq.~\eqref{eq:qPDFmatching}.
+where the non-leading terms are power-suppressed in the large $p_z$ limit. Equating the renormalized moments on the right hand side of this equation with those that appear in Eq.~aaa
+%\eqref{eq:ope}
+leads to the relation between the quasi PDF and the light-front PDF expressed in Eq.~\eqref{eq:qPDFmatching}.
 
 \paragraph*{Challenges and systematic uncertainties} Preliminary results from lattice calculations of quasi PDFs have been encouraging \cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp,Alexandrou:2016jqi}. There are a number of remaining challenges, however, that must be overcome for an {\it ab initio} determination of the $x$-dependence of PDFs directly from lattice QCD that incorporates complete control over systematic uncertainties.
 
