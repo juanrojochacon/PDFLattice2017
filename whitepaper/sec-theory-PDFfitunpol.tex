@@ -71,7 +71,8 @@ Thus, when performing a global fit, the PDFs can be parameterised at one arbitra
 DGLAP evolution
 Eq.~(\ref{eq:dglap}) to the higher scales $\mu$ that are probed by the data.
 This parameterisation takes the generic form
-\begin{equation}\label{eq:pdffunc}
+\begin{equation}
+\label{eq:pdffunc}
 f_{i}(x,Q_0,\{a_i\})\sim x^{a_1}(1-x)^{a_2}\:C(x,\{a_j\})\, ,
 \end{equation}
 where the parameters $\{a_i\}$ determine the PDF shape
@@ -157,6 +158,46 @@ and finite.
 As in the case of the valence sum rules, also the momentum
 sum rule is preserved by the DGLAP evolution equations.
 
+As a representative illustration of how the results of a typical global
+PDF analysis look like, in Fig.~\ref{fig:nnlopdfs} we show
+the results of the NNPDF3.1 NNLO fit both  a low scale
+    $Q^2=10~{\rm GeV}^2$  and at a typical LHC scale
+    $Q^2=10^4~{\rm GeV}^2$.
+    %
+    Specifically, we show the  $u_v$ and $d_v$ valence combinations, the $\bar{u}$,
+    $\bar{d}$, $s$ and $c$ sea quark PDFs, and the gluon (divided by a factor 10).
+    %
+    The evolution between $Q^2=10$ to $Q^2=10^4~{\rm GeV}^2$ is dictated
+    by the DGLAP evolution equations.
+    %
+    Note how the shape of the $u_v~(u^{-})$ and $d_v~(d^{-})$ valence quark combinations
+    reflects the constraints from the valence sum rules.
+    %
+    At small-$x$, there is a rapid growth of the gluon and the sea quark PDFs, implying
+    that the higher the collision center-of-mass energy $\sqrt{s}$, the more
+    important gluon- and sea-quark-initiated processes become.
+    %
+    The bands in Fig.~\ref{fig:nnlopdfs} represent the 68\% confidence level
+    PDF uncertainties, as discussed below.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t]
+\begin{center}
+  \includegraphics[scale=0.75]{plots/nnpdf31nnlo-10.pdf}
+  \includegraphics[scale=0.75]{plots/nnpdf31nnlo-1e4.pdf}
+  \caption{\small The NNPDF3.1 NNLO PDFs at a low scale
+    $Q^2=10~{\rm GeV}^2$ (left plot) and at a typical LHC scale
+    $Q^2=10^4~{\rm GeV}^2$ (right plot) as a function of $x$.
+    %
+    We show the $u_v$ and $d_v$ valence combinations, the $\bar{u}$,
+    $\bar{d}$, $s$ and $c$ sea quark PDFs, and the gluon (note that
+    the latter is divided by a factor 10).
+    \label{fig:nnlopdfs}
+  }
+\end{center}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsubsection*{Fitting PDFs from hard-scattering data}
 
 The global PDF fitting framework is based on a combination of three basic components:
@@ -180,8 +221,8 @@ The global PDF fitting framework is based on a combination of three basic compon
     datasets have been clustered together into families of
     related processes.
     %
-    We observe that the current dataset extends down to $x\simeq 5\,10^{-5}$
-    at low $x$ and up to few TeV at high $Q$.
+    We observe that the current dataset extends down to $x\simeq 5\cdot 10^{-5}$
+    at low $x$, and up to few TeV at high $Q$.
     %
     The fact that similar regions in the $(x,Q)$ plane are covered by
     different processes is essential in order to achieve quark
@@ -190,10 +231,16 @@ The global PDF fitting framework is based on a combination of three basic compon
   \item Theoretical calculations of DIS and hadronic cross-sections
     for the highest perturbative order available.
     %
-    Currently this means NNLO for the QCD corrections and NLO
+    Currently, this implies using NNLO for the QCD corrections and NLO
     for the electroweak and photon-induced effects.
     %
-    Moreover, these calculations should be provided in
+    Thanks to recent progress in higher-order calculations, these results
+    are available for most of the processes entering the global
+    PDF fits, including differential distributions with colored particles
+    in the final state.
+
+
+    Crucially, these calculations should be provided in
     a format such as the evaluation of the hadronic
     cross-sections Eq.~(\ref{eq:LHCxsec}) is not too burdensome
     from the computational point of view.
@@ -216,17 +263,18 @@ The global PDF fitting framework is based on a combination of three basic compon
     to be used in the global fit, for instance one frequently
     used definition is
     \begin{equation}
-\chi^2 = \sum_{i,j}^{N_{\rm dat}} (T_i - D_i) ({\rm cov^{-1}})_{ij} (T_j - D_j),
+\chi^2 = \sum_{i,j}^{N_{\rm dat}} (T_i(\{a_k\}) - D_i) ({\rm cov^{-1}})_{ij} (T_j(\{a_k\}) - D_j),
 \label{eq:chi2}
     \end{equation}
     where $N_{\rm dat}$ is the number of data points of a given experiment,
     and $T_i$ and $D_i$ are the corresponding theoretical calculations
     and the central values of the experimental data, respectively.
     %
-    The theoretical predictions $D_i$ depend on the input
-    PDF parametrization and thus on the fitting parameters.
+    The theoretical predictions $T_i(\{a_k\})$ depend on the input
+    PDF parametrization, and thus on the fitting parameters,
+    see Eq.~(\ref{eq:pdffunc}).
     %
-    Eq~(\ref{eq:chi2}) is therefore used as a  figure of merit to
+    Therefore, Eq~(\ref{eq:chi2}) can be  used as a  figure of merit to
     assess the agreement between theory
     and data.
 
@@ -251,8 +299,11 @@ T^{(0)}_{i} T^{(0)}_{j}\, ,
 \ee
 where $\sigma_{\rm stat}$ is the uncorrelated uncertainty,
 and $\sigma^{(c)}_{i,\alpha}$ ($\sigma^{(\cal L)}_{i,\beta}$)
-are the additive (multiplicative) systematic uncertainties.
-    
+are the various sources of additive (multiplicative) systematic uncertainties.
+%
+Note that theoretical uncertainties are not included in the $\chi^2$ definition
+used for most PDF fits.
+
 \end{itemize}
 The goal of a global PDF fit is therefore to combine together
 the best data and theory available in order to determine
@@ -276,6 +327,8 @@ of the $\chi^2$ estimator Eq.~(\ref{eq:chi2}).
 \end{center}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsubsection{PDF uncertainties}
 
 A central ingredient of the global PDF fitting framework is the determination
 of the various sources of experimental, theoretical and
@@ -389,6 +442,25 @@ Monte Carlo sample,
 In the rest of this document, when comparing the results of global PDF fits
 with the results of lattice QCD calculations we will use Eqns.~(\ref{eq:hessianmaster2}) and~(\ref{mastersig})
 to evaluate the PDF uncertainties of Hessian and Monte Carlo PDF sets, respectively.
+
+It is important to emphasize that there are additional sources of theoretical
+uncertainty that are not accounted for either in the Hessian nor
+in the MC methods.
+%
+The first one is the parametric uncertainty due to the finite uncertainties associated
+to the input values of the physical parameters used in the global fit, such
+as $\alpha_s(m_Z)$ and the charm mass $m_c$.
+%
+These can be accounted for my repeating the fits for different values of these
+physical parameters and then suitably combining the results.
+%
+The second source of theoretical uncertainty that in principle affects PDF fits
+is the one due to the truncation of the perturbative expansion, known
+as missing higher-order uncertainty (MHOU).
+%
+While this is expected to be small for NNLO fits, currently its size is unknown,
+something which should be taken into account when comparing with lattice
+QCD results that represent an ``all-order'' computation.
 
 \subsubsection{State-of-the-art global PDF fits}
 
