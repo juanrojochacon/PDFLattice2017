@@ -3,27 +3,28 @@
 
 \subsubsection*{General framework}
 
-We express the collinear unpolarized PDFs as $f_{i}(x,\mu)$
+In the following we express the collinear unpolarized PDFs as $f_{i}(x,\mu)$
 where the index $i$ represents the parton flavor $i=\{g,u,\bar{u},d,\bar{d},s,\bar{s},...\}$,
 $x$ is the fractional momentum carried by the parton, and $\mu$
 is the factorization  scale.\footnote{We could add an additional index to specify the particular hadron
 (proton, neutron, pion, nuclei, ...); as we mainly refer to the proton
-  in this work, we will omit such a designation unless necessary.}
+  in this paper, we will omit such a designation unless necessary.}
 %
 The value of $\mu$ is usually chosen to be the typical scale of the hard scattering
 process involving the PDFs.
 %
-The PDF is a scheme-dependent quantity, and we typically work in
+Beyond leading order, the PDFs themselves
+are scheme-dependent quantities, and we typically work in
 the $\overline{\rm MS}$ scheme; when this is convoluted with an appropriate
 hard cross section (Wilson coefficient), we obtain a scheme-independent
 physical observable (up to subleading terms in the perturbative expansion). 
-
 
 The unpolarized PDFs appear in the factorization formulae for both inclusive DIS and hadroproduction processes. Namely, the DIS structure functions are given by
 \begin{equation}
 F_i(x,Q^2)=x\sum_a \int_x^1 \frac{{\rm d}z}{z}\,C_{i,a}\left(\frac{x}{z},\alpha_S(Q^2)\right)f_a(z,Q^2)\, ,
 \end{equation}
-where $x=\frac{Q^2}{2p\cdot q}$ is the standard Bjorken variable, given in terms of the momenta $q$ of the virtual photon ($q^2=-Q^2$), and $p$ of the proton. 
+where $x=Q^2/2p\cdot q$ is the standard Bjorken variable, given in terms of the momenta $q$ of the virtual photon ($q^2=-Q^2$) and $p$ of the proton,
+and the sum over $a$ accounts for the effects of all active partons.
 %
 The hard coefficient functions $C_{i,a}$ can be computed perturbatively as an expansion in $\alpha_S$.
 %
@@ -58,34 +59,74 @@ evolution can be modified by $\ln(1/x)$ terms at small-$x$, and
 this is characterized by the BFLK (Balitsky-FadinKuraev-Lipatov) equations~\cite{Kuraev:1976ge,Kuraev:1977fs,Balitsky:1978ic}.
 %
 Additionally, at large-$x$ and small $\mu$ scale the above framework
-can receive corrections from non-factorizeable higher-twist (HT) corrections.} 
-%When performing the global fit to the data, we use the DGLAP equations to combine data from different $\mu$ scales when constraining the PDFs. 
+can receive corrections from non-factorizeable higher-twist (HT) corrections.}
+%
+The DGLAP evolution equations can be solved numerically using
+either $x$-space or Mellin $N$-space techniques by means of various
+publicly available
+codes~\cite{Bertone:2013vaa,Salam:2008qg,Botje:2010ay}, where the typical level of agreement
+for the results of the PDF evolution is $\mathcal{O}(10^{-5})$.
 
-Thus, when performing a global fit, the PDFs can be parameterised at one arbitrary input scale $Q_0\sim 1$ GeV, and these are connected directly via (\ref{eq:dglap}) to the higher scales $\mu$ that are probed by the data.
+Thus, when performing a global fit, the PDFs can be parameterised at one arbitrary input scale $Q_0\sim 1$ GeV, and these are connected directly via
+DGLAP evolution
+Eq.~(\ref{eq:dglap}) to the higher scales $\mu$ that are probed by the data.
 This parameterisation takes the generic form
 \begin{equation}\label{eq:pdffunc}
-f_{i}(x,Q_0)\sim x^{a}(1-x)^{b}\:C(x)\quad.
+f_{i}(x,Q_0,\{a_i\})\sim x^{a_1}(1-x)^{a_2}\:C(x,\{a_j\})\, ,
 \end{equation}
-The $(1-x)^b$ term, with $b_{f}>0$, ensures that the PDFs vanish in the elastic $x\to 1$ limit, as we would expect on basic physical grounds. 
-%Such a form is also expected from the quark counting rules~\cite{Brodsky:1973kr}. 
-The $x^a$ form, which dominates at low $x$, is predicted from general Regge theory considerations, although in modern fits the value of the power itself is left free. The interpolating function $C(x)$ determines the behaviour of the PDFs away from the $x\to 0$ and 1 limits, where it tends to a constant value. This is assumed to be a smoothly varying function of $x$, for which a variety of choices have been made in PDF fits.
+where the parameters $\{a_i\}$ determine the PDF shape
+and are different for each PDF flavour combination which
+is extracted from data.
+%
+The $(1-x)^{a_2}$ term, with $a_{2}>0$, ensures that the PDFs
+vanish in the elastic $x\to 1$ limit, as we would expect on basic physical grounds. 
+%
+Such a behaviour is also expected from the quark
+counting rules~\cite{Brodsky:1973kr,Ball:2016spl}.
+%
+The $x^{a_1}$ term, which dominates in the low $x$
+region, is expected from general Regge theory considerations, although in modern fits the value of the power itself is left free.
+%
+The interpolating function $C(x)$ affects the behaviour of the PDFs away from the $x\to 0$ and 1 limits.
+%
+This is assumed to be a smoothly varying function of $x$, for which a variety of choices have been made in PDF fits as we discuss below.
+%
+The heavy quark PDFs $c(x,\mu)$ and $b(x,\mu)$ are usually not
+parametrized as in  Eq.~(\ref{eq:pdffunc}) but rather
+generated by perturbative emission off gluons and light quarks,
+though it is also possible to fit the charm PDF on an equal footing
+to the light quarks~\cite{Ball:2016neh}.
 
-There are a few constraints we
-can impose on the $x$-dependence of the PDFs at this point. Since
+While the general $x$ dependence of the PDFs is fixed by
+non-perturbative QCD dynamics, there are still a number
+of theoretical constraints that any PDF set should satisfy and thus that
+should be imposed during the global fit.
+%
+First of all, since
 the proton has the quantum numbers of two up quarks and one down quark,
 we have the following quark number sum rules given in terms of first
 moments: 
 %
 \begin{eqnarray}
-\int_{0}^{1}dx\ \left[u(x,\mu)-\bar{u}(x,\mu)\right] & =\left\langle 1\right\rangle _{u^{-}}= & 2\\
-\int_{0}^{1}dx\ \left[d(x,\mu)-\bar{d}(x,\mu)\right] & =\left\langle 1\right\rangle _{d^{-}}= & 1\\
-\int_{0}^{1}dx\ \left[s(x,\mu)-\bar{s}(x,\mu)\right] & =\left\langle 1\right\rangle _{s^{-}}= & 0
+\int_{0}^{1}dx\ \left[u(x,\mu)-\bar{u}(x,\mu)\right] & =\left\langle 1\right\rangle _{u^{-}}= & 2 \, ,\nonumber \\
+\int_{0}^{1}dx\ \left[d(x,\mu)-\bar{d}(x,\mu)\right] & =\left\langle 1\right\rangle _{d^{-}}= & 1 \, ,\\
+\int_{0}^{1}dx\ \left[s(x,\mu)-\bar{s}(x,\mu)\right] & =\left\langle 1\right\rangle _{s^{-}}= & 0 \, \nonumber ,
 \end{eqnarray}
-with similar results for the heavy quarks: $\left\langle 1\right\rangle _{c^{-}}=\left\langle 1\right\rangle _{b^{-}}=\left\langle 1\right\rangle _{t^{-}}=0$. Thus for these valence distributions we must have $a>-1$ for the exponents in
-Eq.~(\ref{eq:pdffunc}) or these integrals will diverge.
+with similar constraints for the heavy quarks: $\left\langle 1\right\rangle _{c^{-}}=\left\langle 1\right\rangle _{b^{-}}=\left\langle 1\right\rangle _{t^{-}}=0$.
+%
+Note that these constraints hold for any scale $\mu$, and indeed it can be showed
+that if they hold at the input parametrization scale $Q_0$ they
+are respected by DGLAP evolution.
+%
+Therefore, for these valence distributions we must have $a_1>-1$ for the exponents in
+Eq.~(\ref{eq:pdffunc}), else the valence sum rules would be ill-defined.
 
+The second sum rule that we can impose on the PDFs arises
+from the basic conservation of energy-momentum derived from
+the QCD Lagrangian.
+%
 The fractional momentum carried
-by each parton flavor is given by the second moments: 
+by each parton flavor is given by the second moments of the PDFs, for instance
 %
 \begin{eqnarray}
 \int_{0}^{1}dx\ x\ \left[u(x,\mu)\right] & = & \left\langle x\right\rangle _{u}\\
@@ -95,15 +136,26 @@ by each parton flavor is given by the second moments:
 Here, $\left\langle x\right\rangle _{u}$ is the fractional momentum
 carried by the up-quark, $\left\langle x\right\rangle _{u^{+}}$ is
 the fractional momentum carried by the up-quark and anti-up-quark.
-Since the total momentum of the proton must equal the momentum of
-its constituents, we have the momentum sum rule constraint: 
 %
+The reader should notice that we are being particularly careful
+with the notation, and that we always refer to $q^+$ to indicate
+the sum of the quark and anti-quark PDF of the same flavour.
+%
+The so-called momentum sum rule then follows because the total
+proton's momentum should be equal to the sum of the momentum
+carried by all its constituents, namely
 \begin{eqnarray}\label{eq:mom}
 1 & = & \left\langle x\right\rangle _{g}+\left\langle x\right\rangle _{u^{+}}+\left\langle x\right\rangle _{d^{+}}+\left\langle x\right\rangle _{s^{+}}+\left\langle x\right\rangle _{c^{+}}+\left\langle x\right\rangle _{b^{+}}+\left\langle x\right\rangle _{t^{+}}+...
 \end{eqnarray}
 %
 where the ``...'' represents any other partonic components (such
-as a photon). Thus for non--valence distributions, we must have $a>-2$ to avoid a divergent contribution to (\ref{eq:mom}); typically we have $-2<a<-1$ for such distributions, and therefore for small $x$ the number of soft partons is infinite, although the momentum fraction carried by them is of course not.
+as a photon). Thus for non--valence distributions, we must have $a_1>-2$ to avoid a divergent contribution to
+Eq.~(\ref{eq:mom}); typically we have $-2<_1a<-1$ for such distributions, and therefore for small $x$ the number of soft partons
+grows very fast, although the momentum fraction carried by them is well-defined
+and finite.
+%
+As in the case of the valence sum rules, also the momentum
+sum rule is preserved by the DGLAP evolution equations.
 
 \subsubsection*{Fitting PDFs from hard-scattering data}
 
@@ -119,7 +171,7 @@ The global PDF fitting framework is based on a combination of three basic compon
   their usefulness for constraining PDFs, from top-quark pair production~\cite{Czakon:2016olj}
   to the $p_T$ of the $Z$ bosons~\cite{Boughezal:2017nla}
   and $D$ meson production in the forward region~\cite{Gauld:2016kpd}.
-  %
+
   In Fig.~\ref{fig:kinplot-report} we show the representative kinematical coverage in the
     $(x,Q^2)$ of the DIS and proton-proton hard-scattering measurements that are
     used as input in a global unpolarized PDF fit, in this case NNPDF3.1.
@@ -127,6 +179,13 @@ The global PDF fitting framework is based on a combination of three basic compon
     In order to facilitate visualization, different
     datasets have been clustered together into families of
     related processes.
+    %
+    We observe that the current dataset extends down to $x\simeq 5\,10^{-5}$
+    at low $x$ and up to few TeV at high $Q$.
+    %
+    The fact that similar regions in the $(x,Q)$ plane are covered by
+    different processes is essential in order to achieve quark
+    flavour separation and to constrain the gluon PDF.
 
   \item Theoretical calculations of DIS and hadronic cross-sections
     for the highest perturbative order available.
@@ -139,12 +198,13 @@ The global PDF fitting framework is based on a combination of three basic compon
     cross-sections Eq.~(\ref{eq:LHCxsec}) is not too burdensome
     from the computational point of view.
     %
-    To bypass these limitations, a number of fast interfaces have
+    To bypass the limitations of the lengthy (N)NLO
+    computations, a number of fast interfaces have
     been developed that allow the efficient calculation
     of NLO (and NNLO) fully differential hadronic cross-sections.
     %
-    The exploitation of fast interfaces such as {\tt APPLgrid},
-    {\tt FastNLO} and {\tt aMCfast} is of utmost importance
+    The exploitation of fast interfaces such as {\tt APPLgrid}~\cite{Carli:2010rw},
+    {\tt FastNLO} and {\tt aMCfast}~\cite{Bertone:2014zva} is of utmost importance
     for modern PDF fits given the wealth of collider data used.
 
   \item A fitting methodology that determines the best-fit
@@ -169,7 +229,7 @@ The global PDF fitting framework is based on a combination of three basic compon
     Eq~(\ref{eq:chi2}) is therefore used as a  figure of merit to
     assess the agreement between theory
     and data.
-    %
+
     The covariance matrix $({\rm cov})_{ij}$
     accounts for the various sources of experimental
     systematic uncertainties and
@@ -335,16 +395,92 @@ to evaluate the PDF uncertainties of Hessian and Monte Carlo PDF sets, respectiv
 Various collaborations provide regular updates of their global unpolarized
 PDF fits.
 %
-The latest fits from the three major global fitting collaborations, CT14~\cite{Dulat:2015mca}, MMHT14~\cite{Harland-Lang:2014zoa} and NNPDF3.1 are performed up to NNLO in the strong coupling, and include data from the HERA $e^{\pm} p$ collider, fixed (nuclear and proton) target experiments, the Tevatron $p\overline{p}$ collider and the LHC. 
+The latest fits from the three major global fitting collaborations
+are CT14~\cite{Dulat:2015mca}, MMHT14~\cite{Harland-Lang:2014zoa} and NNPDF3.1.
 %
-The ABMP16~\cite{Alekhin:2017kpj} set fits to a similar global data set, but differs in its treatment of errors and heavy flavours (see below). The HERAPDF2.0~\cite{Abramowicz:2015mha} set fits to the final combined HERA Run I + II data set only, with the aim of determining the PDFs from a completely consistent DIS data sample; in $x$ regions which are less constrained by HERA data, the uncertainties can be quite large. The CJ15~\cite{Accardi:2016qay} NLO set focuses on constraining the PDFs at higher $x$ by lowering $Q^2$ and $W^2$ cuts in DIS. This greatly increases the available data, but requires additional modelling of power--like $\sim 1/Q^2$ corrections.
+These fits are performed up to NNLO in the strong coupling, and include data from the HERA $e^{\pm} p$ collider, fixed (nuclear and proton) target experiments, the Tevatron $p\overline{p}$ collider and the LHC. 
+%
+The ABMP16~\cite{Alekhin:2017kpj} set fits to a similar global data set
+(although excluding jet production), but differs in its treatment of errors and heavy flavours.
+%
+The HERAPDF2.0~\cite{Abramowicz:2015mha} set fits to the final combined HERA Run I + II data set only, with the aim of determining the PDFs from a completely consistent DIS data sample; in $x$ regions which are less constrained by HERA data, the uncertainties can be quite large. The CJ15~\cite{Accardi:2016qay} NLO set focuses on constraining the PDFs at higher $x$ by lowering $Q^2$ and $W^2$ cuts in DIS. This greatly increases the available data, but requires additional modelling of power--like $\sim 1/Q^2$ corrections.
+%
+A detailed discussion of the similarities and differences between
+PDF sets, which is beyond the scope of this
+document,
+can be found in the PDF4LHC report~\cite{Butterworth:2015oua}.
+%
+Suffice here to say that all PDF sets listed above use the Hessian
+method to determine PDF errors, except NNPDF which instead
+is based on the Monte Carlo approach.
 
-As described above, to perform a fit, some form for the interpolating function $C(x)$ in (\ref{eq:pdffunc}) must be assumed. The simplest ansatz, which has been very widely used, is to take a basic polynomial form in $x$ (or $\sqrt{x}$), such as
+As discussed above, in order to perform a  PDF fit, some form for the interpolating function $C(x)$ in (\ref{eq:pdffunc}) must be assumed.
+%
+The simplest ansatz, which has been very widely used, is to take a basic polynomial form in $x$ (or $\sqrt{x}$), such as
 \begin{equation}\label{eq:lpower}
 C(x)=1+c\sqrt{x}+d x+...\;.
 \end{equation}
 Forms of this type are for example taken by CJ, HERAPDF and earlier MMHT and CT sets. More recently, the CT and MMHT collaborations instead expand in terms of a basis of  Bernstein and Chebyshev polynomials, respectively.
 %
-While formally equivalent to the simply polynomial expansion (\ref{eq:lpower}), these are much more convenient for fitting as the number of free parameters $n$ is increased. In the latest sets, there are $O(20-40)$ free parameters in total.
+While formally equivalent to the simply polynomial expansion
+Eq.~(\ref{eq:lpower}), these are much more convenient for fitting as the number of free parameters $n_{\rm par}$ is increased.
 %
-An alternative approach is taken by the NNPDF collaboration. Here, the interpolating function is modeled with a multi--layer feed forward neural network. In practice, this allows for a greatly increased number of free parameters, typically $\sim$ an order of magnitude higher than other sets. The form of (\ref{eq:pdffunc}) is still assumed, but these are pre--processing factors that speed up the minimisation procedure but which do not in principle have to be explicitly included. 
+In the latest CT and MMHT sets, there are $\mathcal{O}(20-40)$ free parameters in total, though some of these are kept fixed when evaluating the
+Hessian PDF uncertainties.
+
+An alternative approach is taken by the NNPDF collaboration. Here, the interpolating function is modeled with a multi--layer feed forward neural network. In practice, this allows for a greatly increased number of free parameters, typically $\sim$ an order of magnitude higher than other sets.
+%
+The form of Eq.~(\ref{eq:pdffunc}) is still assumed, but
+now $C(x)={\rm ANN}(x)$ is parametrized as an artificial
+neural network and the $x^a(1-x)^b$ term is understood
+as a pre--processing factors that speed up the minimisation procedure, but which do not in principle have to be explicitly included.
+%
+In the NNPDF approach the values of the preprocessing exponents
+$a$ and $b$ are varied at random within a wide range for each MC
+replica, where the range is determined by means of an iterative
+procedure.
+
+In Fig.~\ref{fig:globalfits}
+we present a snapshot of our current understanding
+of the proton structure in the global PDF fitting framework.
+%
+Comparison between the CT14, MMHT2014
+  and NNPDF3.1 NNLO PDF sets at $Q=100$ GeV, normalized
+  to the central value of the latter.
+  %
+  From top to bottom and from left to right we show the
+  $u$, $\bar{d}$ and $s$ quark PDFs as well as the gluon.
+  %
+  The error bands indicate the 1-$\sigma$ PDF uncertainties
+  associated to each set.
+  %
+  We observe that while for the up quark PDF the differences
+  are small, at the few percent level, greater differences
+  are observed for the sea quarks, in particular
+  in the medium and large-$x$ region.
+  %
+  For the gluon there is reasonable agreement except
+  for the large-$x$ region, where NNPDF3.1 is softer than
+  CT14 and MMHT14.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t]
+  \begin{center}
+ \includegraphics[scale=0.35]{plots/xu-31-nnlo-globalfits.pdf}
+    \includegraphics[scale=0.35]{plots/xdbar-31-nnlo-globalfits.pdf}
+  \includegraphics[scale=0.35]{plots/xs-31-nnlo-globalfits.pdf}
+   \includegraphics[scale=0.35]{plots/xg-31-nnlo-globalfits.pdf}
+  \caption{\small Comparison between the CT14, MMHT2014
+  and NNPDF3.1 NNLO PDF sets at $Q=100$ GeV, normalized
+  to the central value of the latter.
+  %
+  From top to bottom and from left to right we show the
+  $u$, $\bar{d}$ and $s$ quark PDFs as well as the gluon.
+  %
+  The error bands indicate the 1-$\sigma$ PDF uncertainties
+  associated to each set.
+    \label{fig:globalfits}
+  }
+\end{center}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
