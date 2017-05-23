@@ -15,7 +15,7 @@ consistent notation among the various parts of the whole section.
 
 \label{Sec:IntroLQCD}
 
-Quantum Chromodynamics (QCD) is the regnent theory of strong interactions. It provides the foundation 
+Quantum Chromodynamics (QCD) is the regent theory of strong interactions. It provides the foundation 
 for the phenomenological ideas of the quark model, the concept of color, and partons. 
 The power of QCD to explain physics at the hadronic relies on two rather remarkable features,
 quark confinement and spontaneous chiral symmetry breaking. The study
@@ -60,7 +60,7 @@ they not only complement, but also guide current and forthcoming
 experimental programs.
 
 LQCD calculations must demonstrate control over all sources of
-systematic uncertainty introduced by the discretization of QCD on the
+systematic uncertainty introduced by the discretisation of QCD on the
 lattice to make meaningful contact with experimental data. These
 include discretisation effects that vanish in the continuum limit;
 extrapolation from unphysically heavy pion masses; finite volume
@@ -102,7 +102,7 @@ Nambu-Goldstone nature of the lowest excitations that occur in the
 presence of light quarks.
 
 \paragraph{Finite volume effects} Numerical LQCD 
-calculations are necessarily restricted to a finite spacetime
+calculations are necessarily restricted to a finite space-time
 volume. For most simple quantities, these effects decay exponentially
 with the size of the lattice, and therefore the easiest way to
 minimise or eliminate finite volume effects is to choose the volume
@@ -134,8 +134,8 @@ schemes. This requires a renormalisation condition that can be
 implemented on the lattice as well as in continuum perturbation
 theory. A common choice is the RI-MOM scheme~\cite{Martinelli:1994ty}.
 
-In addition, on a hypercubic lattice, the orthogonal group $O(4)$ of
-continuum Euclidean spacetime is reduced to the hypercubic group
+In addition, on a hyper-cubic lattice, the orthogonal group $O(4)$ of
+continuum Euclidean space-time is reduced to the hyper-cubic group
 $H(4)$. Thus, operators are classified according to irreducible
 representations of $H(4)$~\cite{Gockeler:1996mu}. Different
 irreducible representations belonging to the same $O(4)$ multiplet
@@ -387,7 +387,7 @@ leads to the relation between the quasi PDF and the light-front PDF expressed in
 
 Lattice calculations of quasi PDFs are subject to the same sources of systematic uncertainty that plague all lattice calculations and are highlighted in Section \ref{Sec:IntroLQCD}, but here we focus on systematic uncertainties that are more specific to quasi PDFs. These are: uncertainties associated with the finite nucleon momentum of the lattice calculations and with the renormalisation of quasi PDFs.
 
-\paragraph*{Finite nucleon momentum} Preliminary nonperturbative studies of the quasi PDF used nucleon momenta in the range $p_z = 2\pi/L$ to $6\pi/L$, where $L$ is the physical extent of the lattice, corresponding to $p_z = 0.5$ to $1.3$ GeV  \cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp}. At such low momenta, higher-twist and target mass corrections are likely to be considerable.
+\paragraph*{Finite nucleon momentum} Preliminary non-perturbative studies of the quasi PDF used nucleon momenta in the range $p_z = 2\pi/L$ to $6\pi/L$, where $L$ is the physical extent of the lattice, corresponding to $p_z = 0.5$ to $1.3$ GeV  \cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp}. At such low momenta, higher-twist and target mass corrections are likely to be considerable.
 
 Target mass corrections can be removed to all orders \cite{Chen:2016utp}, and twist-4 contributions can be removed in principle \cite{Radyushkin:2016hsy,Chen:2016utp}, leaving higher-twist contamination. To reduce these remaining effects, the authors of \cite{Lin:2014zya,Chen:2016utp} extrapolated to infinite nucleon momentum using the fit ansatz $a + b/p_z$ for each value of $x$, but do not include a complete estimate of the corresponding systematic uncertainty. Although the effects of finite nucleon momentum can be mitigated, it is likely that reducing systematic uncertainties to less than 20\% at moderate values of $x$ require significantly larger values of nucleon momentum \cite{Gamberg:2014zwa}, and larger values of $x\simeq 1$ may require nucleon momentum as large as $p_z > 4$ GeV.
 
@@ -406,9 +406,9 @@ where $\delta m$ is the mass renormalisation of a test particle moving along the
 
 Once the linear divergence has been removed non-perturbatively, lattice perturbation theory can be used to renormalize the remaining logarithmic divergences in the quasi PDF \cite{Ishikawa:2016znu, Carlson:2017gpk}. A delicate point regarding the renormalisation is the mixing among certain subsets of these non-local operators. Such mixing has been identified at one-loop in perturbation theory in \cite{Constantiou:2017soon} for a variety of fermion/gluon actions. The mixing coefficients are necessary to disentangle the individual matrix elements for each quasi-PDF from lattice calculation data. Of particular interest is the case of the unpolarized quasi-PDF, which mixes with the scalar quasi-PDF if the Lorentz index of Eq.~\eqref{eq:qPDF} is in the same direction as the Wilson line. In contrast, the axial and transversity PDFs with a Lorentz index in the Wilson line direction do not exhibit any mixing (to one-loop in perturbation theory). 
 
-In addition, nonperturbative schemes, such as the regularization-independent RI/MOM scheme \cite{Martinelli:1994ty}, can be used to renormalize matrix elements determined on the lattice. Nonperturbative schemes avoid the use of lattice perturbation theory at low energy scales (usually chosen to be $\mu = \pi/a$), although perturbative matching between renormalisation schemes is still necessary for PDFs expressed in the $\overline{\rm MS}$ scheme. Combining a nonperturbative renormalisation scheme with a step-scaling procedure \cite{Luscher:1991wu} significantly reduces perturbative truncation uncertainties by providing a nonperturbative method for reaching high energy scales. The construction of nonperturbative renormalisation methods for quasi PDFs is an on-going endeavor for a number of groups. 
+In addition, nonperturbative schemes, such as the regularization-independent RI/MOM scheme~\cite{Martinelli:1994ty}, can be used to renormalize matrix elements determined on the lattice. Nonperturbative schemes avoid the use of lattice perturbation theory at low energy scales (usually chosen to be $\mu = \pi/a$), although perturbative matching between renormalisation schemes is still necessary for PDFs expressed in the $\overline{\rm MS}$ scheme. Combining a nonperturbative renormalisation scheme with a step-scaling procedure \cite{Luscher:1991wu} significantly reduces perturbative truncation uncertainties by providing a nonperturbative method for reaching high energy scales. The construction of nonperturbative renormalisation methods for quasi PDFs is an on-going endeavor for a number of groups. 
 
-An alternative approach to removing both the linear and logarithmic divergences is provided by the gradient flow, a deterministic evolution of the quark and gluon degrees of freedom in a new parameter, the flow time, that renders all correlation functions finite \cite{Narayanan:2006rf,Luscher:2011bx,Luscher:2013cpa}. By fixing the flow time in the continuum limit, finite continuum quasi PDFs can be extracted from lattice calculations and then directly matched to light-front PDFs using perturbation theory \cite{Monahan:2016bvm}.
+An alternative approach to removing both the linear and logarithmic divergences is provided by the gradient flow, a deterministic evolution of the quark and gluon degrees of freedom in a new parameter, the flow time, that renders all correlation functions finite \cite{Narayanan:2006rf,Luscher:2011bx,Luscher:2013cpa}. By fixing the flow time in the continuum limit, finite continuum quasi PDFs can be extracted from lattice calculations and then directly matched to light-front PDFs using perturbation theory~\cite{Monahan:2016bvm}.
 
 Ultimately, perturbative matching must be carried out at a sufficiently high scale that truncation uncertainties can be safely neglected. Until a nonperturbative step-scaling scheme has been devised for quasi PDFs, perturbative truncation uncertainties are likely to be, in conjunction with finite nucleon momentum effects, the dominant source of systematic uncertainty in lattice determinations of quasi PDFs.
 
@@ -416,61 +416,67 @@ Ultimately, perturbative matching must be carried out at a sufficiently high sca
 
 \subsection{Global PDF fits}
 
-Collinear unpolarized and polarized PDF analysis.
+In this section we describe the theoretical and methodological framework that underpins global
+determinations of parton distribution functions from hard-scattering data.
+%
+First we describe the general approach and its applications to unpolarized PDFs, and then
+move to succinctly review the determination of polarized PDFs.
+%
+The discussion here is restricted to the essential information that is required to connect
+with the lattice QCD discussion earlier in this document, more details about the
+global PDF fitting framework can be found in the reviews of
+Refs.~\cite{Ball:2012wy,Forte:2013wc,Rojo:2015acz,Butterworth:2015oua}.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Unpolarized PDFs}
 
-%- PDF parameterisation and evolution - Fred's contribution, with I would say a little more about how C(x) in Eq. (1) is modelled, some basic (DIS/DY) factorization formulae etc
-%- PDF uncertainties - need for tolerance, MC methods etc
-%- A brief summary of the latest fits, PDF4LHC recommendation...
-%- The main data sets used, and (briefly) what they constrain.
-%- Outlook at the LHC for further constraints.
-
-
-%\subsubsection*{Factorization and PDFs}
-
-\subsubsection*{General Properties}
+\subsubsection*{General framework}
 
 We express the collinear unpolarized PDFs as $f_{i}(x,\mu)$
 where the index $i$ represents the parton flavor $i=\{g,u,\bar{u},d,\bar{d},s,\bar{s},...\}$,
 $x$ is the fractional momentum carried by the parton, and $\mu$
-is the factorization (energy) scale.\footnote{We could add an additional index to specify the particular hadron
+is the factorization  scale.\footnote{We could add an additional index to specify the particular hadron
 (proton, neutron, pion, nuclei, ...); as we mainly refer to the proton
-in this work, we will omit such a designation unless necessary.} The PDF is a scheme-dependent quantity, and we typically work in
-the $\overline{MS}$ scheme; when this is convoluted with an appropriate
+  in this work, we will omit such a designation unless necessary.}
+%
+The value of $\mu$ is usually chosen to be the typical scale of the hard scattering
+process involving the PDFs.
+%
+The PDF is a scheme-dependent quantity, and we typically work in
+the $\overline{\rm MS}$ scheme; when this is convoluted with an appropriate
 hard cross section (Wilson coefficient), we obtain a scheme-independent
-physical observable. 
+physical observable (up to subleading terms in the perturbative expansion). 
 
 
 The unpolarized PDFs appear in the factorization formulae for both inclusive DIS and hadroproduction processes. Namely, the DIS structure functions are given by
 \begin{equation}
-F_i(x,Q^2)=x\sum_a \int_x^1 \frac{{\rm d}z}{z}\,C_{i,a}\left(\frac{x}{z},\alpha_S(Q^2)\right)f_a(z,Q^2)\,
+F_i(x,Q^2)=x\sum_a \int_x^1 \frac{{\rm d}z}{z}\,C_{i,a}\left(\frac{x}{z},\alpha_S(Q^2)\right)f_a(z,Q^2)\, ,
 \end{equation}
 where $x=\frac{Q^2}{2p\cdot q}$ is the standard Bjorken variable, given in terms of the momenta $q$ of the virtual photon ($q^2=-Q^2$), and $p$ of the proton. 
-%Here the sum runs over $a=q,\overline{q},g$ and t
-The hard coefficient functions $C_{i,a}$ can be computed perturbatively.
-
+%
+The hard coefficient functions $C_{i,a}$ can be computed perturbatively as an expansion in $\alpha_S$.
+%
 For the hadroproduction of an object $X$ in $pp$ collisions we have
 \begin{equation}
 \sigma_{pp\to X}=\sum_{a,b}\int {\rm d}x_1 {\rm d}x_2\, f_a(x_1,\mu_F^2)f_b(x_2,\mu_F^2)\,\hat{\sigma}_{ab\to X}(x_1,x_2,s;\mu_{F},\mu_R)\;,
 \end{equation}
-where the hard cross section $\hat{\sigma}$ can again be calculated perturbatively. The $x_i$ are related to the kinematics of the final state, with at LO $x_{1,2}=\frac{M_X}{\sqrt{s}}e^{\pm y_X}$, where $M_X$, $y_X$ are the invariant mass and rapidity of the produced object. The factorization and renormalization scales, $\mu_F$ and $\mu_R$, are typically taken to be of order the hard scale, $\sim M_X$, of the process.
+where the hard cross section $\hat{\sigma}$ can again be calculated perturbatively. The $x_i$ are related to the kinematics of the final state.
+%
+In particular, at leading order it can be shown that
+\be
+x_{1,2}=\frac{M_X}{\sqrt{s}}e^{\pm y_X} \, ,
+\ee
+where $M_X$, $y_X$ are the invariant mass and rapidity of the produced system respectively.
+%
+The factorization and renormalization scales, $\mu_F$ and $\mu_R$, are taken to be of order the hard scale, $\mu_F,\mu_R
+\sim Q$, of the process.
 
-%\textcolor{blue}{$\mu$-DEPENDENCE:} 
-
-%\subsubsection*{Scale dependence}
-
-%Thus the above expressions allow the PDFs at a generally high scale $\mu$ to be extracted by fitting to DIS and hadroproduction data.  
-
-While the PDFs themselves cannot be calculated using perturbative methods, their dependence on the scale $\mu$ can be, and is given by the well known
-%The $\mu$-dependence of the
-%PDFs is given by the 
-DGLAP evolution equation\cite{Dokshitzer:1977sg,Gribov:1972ri,Altarelli:1977zs}
-%\begin{eqnarray*}
-%\frac{\partial}{\partial\ln\mu^{2}}\:f_{i}(x,\mu) & = & \sum_{j=g,q,\bar{q}}\ P_{ij}(x)\otimes f_{j}(x,\mu)\quad.
-%\end{eqnarray*}
-\begin{equation}\label{eq:dglap}
+While the PDFs themselves cannot be calculated using perturbative methods, their dependence on the scale $\mu$ can be, and is given by the  
+DGLAP evolution equations~\cite{Dokshitzer:1977sg,Gribov:1972ri,Altarelli:1977zs},
+a set of integro-differential coupled equations of the form
+\begin{equation}
+  \label{eq:dglap}
 \frac{\partial f_i(x,\mu^2)}{\partial \ln \mu^2}=\sum_{j=g,q,\bar{q}}\int_x^1 \frac{{\rm d}z}{z}P_{ij}(x/z)f_j(z,\mu^2)\;,
 \end{equation}
 Here, the logarithmic derivative of the PDF is determined by a convolution
@@ -478,33 +484,13 @@ of the PDFs with the DGLAP kernel $P_{ij}$ which can be computed
 perturbatively in powers of $\alpha_{s}(\mu)$; $P_{ij}$ is known
 to NNLO.\footnote{The DGLAP (Dokshitzer\textendash Gribov\textendash Lipatov\textendash Altarelli\textendash Parisi)
 evolution can be modified by $\ln(1/x)$ terms at small-$x$, and
-this is characterized by the BFLK (Balitsky-FadinKuraev-Lipatov) equations.\cite{Kuraev:1976ge,Kuraev:1977fs,Balitsky:1978ic}
+this is characterized by the BFLK (Balitsky-FadinKuraev-Lipatov) equations~\cite{Kuraev:1976ge,Kuraev:1977fs,Balitsky:1978ic}.
+%
 Additionally, at large-$x$ and small $\mu$ scale the above framework
 can receive corrections from non-factorizeable higher-twist (HT) corrections.} 
 %When performing the global fit to the data, we use the DGLAP equations to combine data from different $\mu$ scales when constraining the PDFs. 
 
 Thus, when performing a global fit, the PDFs can be parameterised at one arbitrary input scale $Q_0\sim 1$ GeV, and these are connected directly via (\ref{eq:dglap}) to the higher scales $\mu$ that are probed by the data.
-%
-%\subsubsection*{Parameterisation and Sum Rules}
-%
-%\textcolor{blue}{HEADINGS: this is just for editing; we'll remove in the final. }
-%
-%\textcolor{blue}{INTRO:} 
-%We express the collinear unpolarized PDFs as $f_{i}(x,\mu)$
-%where the index $i$ represents the parton flavor $i=\{g,u,\bar{u},d,\bar{d},s,\bar{s},...\}$,
-%$x$ is the fractional momentum carried by the parton, and $\mu$
-%is the factorization (energy) scale.\footnote{We could add an additional index to specify the particular hadron
-%(proton, neutron, pion, nuclei, ...); as we mainly refer to the proton
-%in this work, we will omit such a designation unless necessary.} The PDF is a scheme-dependent quantity, and we typically work in
-%the $\overline{MS}$ scheme; when this is convoluted with an appropriate
-%hard cross section (Wilson coefficient), we obtain a scheme-independent
-%physical observable. 
-%
-%\textcolor{blue}{X-DEPENDENCE:} 
-%The $x$-dependence of the PDFs must
-%be deduced by comparing with experimental data in a global fit. For
-%this purpose, we often parameterize the $x$-dependence of the PDFs
-%in the generic form: 
 This parameterisation takes the generic form
 \begin{equation}\label{eq:pdffunc}
 f_{i}(x,Q_0)\sim x^{a}(1-x)^{b}\:C(x)\quad.
@@ -512,15 +498,6 @@ f_{i}(x,Q_0)\sim x^{a}(1-x)^{b}\:C(x)\quad.
 The $(1-x)^b$ term, with $b_{f}>0$, ensures that the PDFs vanish in the elastic $x\to 1$ limit, as we would expect on basic physical grounds. 
 %Such a form is also expected from the quark counting rules~\cite{Brodsky:1973kr}. 
 The $x^a$ form, which dominates at low $x$, is predicted from general Regge theory considerations, although in modern fits the value of the power itself is left free. The interpolating function $C(x)$ determines the behaviour of the PDFs away from the $x\to 0$ and 1 limits, where it tends to a constant value. This is assumed to be a smoothly varying function of $x$, for which a variety of choices have been made in PDF fits.
-
-%Here, the $x^{a}$ term controls the small-$x$ behavior, the $(1-x)^{b}$
-%term controls the large-$x$ behavior, and $C(x)$ represents the
-%remaining $x$-dependence. The $a$ exponent is negative and generally
-%in the range $-1$ to $-2$; thus, the PDFs diverge as $1/x^{\sim1.5}$
-%for small $x$ and the number of soft partons is infinite. The $a$
-%exponent must be larger than $-2$ or the momentum sum rule will diverge.
-%The $b$ exponent is positive, and this ensures the PDF goes to zero
-%as $x\to1$.
 
 There are a few constraints we
 can impose on the $x$-dependence of the PDFs at this point. Since
@@ -533,9 +510,9 @@ moments:
 \int_{0}^{1}dx\ \left[d(x,\mu)-\bar{d}(x,\mu)\right] & =\left\langle 1\right\rangle _{d^{-}}= & 1\\
 \int_{0}^{1}dx\ \left[s(x,\mu)-\bar{s}(x,\mu)\right] & =\left\langle 1\right\rangle _{s^{-}}= & 0
 \end{eqnarray}
-with similar results for the heavy quarks: $\left\langle 1\right\rangle _{c^{-}}=\left\langle 1\right\rangle _{b^{-}}=\left\langle 1\right\rangle _{t^{-}}=0$. Thus for these valence distributions we must have $a>-1$ for the exponents in (\ref{eq:pdffunc}) or these integrals will diverge.
+with similar results for the heavy quarks: $\left\langle 1\right\rangle _{c^{-}}=\left\langle 1\right\rangle _{b^{-}}=\left\langle 1\right\rangle _{t^{-}}=0$. Thus for these valence distributions we must have $a>-1$ for the exponents in
+Eq.~(\ref{eq:pdffunc}) or these integrals will diverge.
 
-%\textcolor{blue}{MOMENTUM SUM RULE:} 
 The fractional momentum carried
 by each parton flavor is given by the second moments: 
 %
@@ -557,26 +534,49 @@ its constituents, we have the momentum sum rule constraint:
 where the ``...'' represents any other partonic components (such
 as a photon). Thus for non--valence distributions, we must have $a>-2$ to avoid a divergent contribution to (\ref{eq:mom}); typically we have $-2<a<-1$ for such distributions, and therefore for small $x$ the number of soft partons is infinite, although the momentum fraction carried by them is of course not.
 
-%\textcolor{blue}{$\mu$-DEPENDENCE:} 
-%The $\mu$-dependence of the
-%PDFs is given by the DGLAP evolution equation\cite{Dokshitzer:1977sg,Gribov:1972ri,Altarelli:1977zs}
-%\begin{eqnarray*}
-%\frac{\partial}{\partial\ln\mu^{2}}\:f_{i}(x,\mu) & = & \sum_{j=g,q,\bar{q}}\ P_{ij}(x)\otimes f_{j}(x,\mu)\quad.
-%\end{eqnarray*}
-%Here, the logarithmic derivative of the PDF is determined by a convolution
-%of the PDFs with the DGLAP kernel $P_{ij}(x)$ which can be computed
-%perturbatively in powers of $\alpha_{s}(\mu)$; $P_{ij}(x)$ is known
-%to NNLO.\footnote{The DGLAP (Dokshitzer\textendash Gribov\textendash Lipatov\textendash Altarelli\textendash Parisi)
-%evolution can be modified by $\ln(1/x)$ terms at small-$x$, and
-%this is characterized by the BFLK (Balitsky-FadinKuraev-Lipatov) equations.\cite{Kuraev:1976ge,Kuraev:1977fs,Balitsky:1978ic}
-%Additionally, at large-$x$ and small $\mu$ scale the above framework
-%can receive corrections from non-factorizeable higher-twist (HT) corrections.} When performing the global fit to the data, we use the DGLAP equations
-%to combine data from different $\mu$ scales when constraining the
-%PDFs. 
+\subsubsection*{Fitting PDFs from hard-scattering data}
+
+The global PDF fitting framework is based on a combination of three basic components:
+\begin{itemize}
+\item A broad set of input hard-scattering cross-sections from deep-inelastic
+  scattering and proton-proton collisions, providing information on the PDFs
+  over a wide range of $x$ and for different flavour combinations.
+  %
+  While traditional PDF fits were based mostly on DIS structure function and Drell-Yan
+  and inclusive jet
+  cross-sections, in the recent years many other processes have demonstrated
+  their usefulness for constraining PDFs, from top-quark pair production~\cite{Czakon:2016olj}
+  to the $p_T$ of the $Z$ bosons~\cite{Boughezal:2017nla}
+  and $D$ meson production in the forward region~\cite{Gauld:2016kpd}.
+  %
+  In Fig.~\ref{fig:kinplot-report} we show the representative kinematical coverage in the
+    $(x,Q^2)$ of the DIS and proton-proton hard-scattering measurements that are
+    used as input in a global unpolarized PDF fit, in this case NNPDF3.1.
+    %
+    In order to facilitate visualization, different
+    datasets have been clustered together into families of
+    related processes.
+  
+  \end{itemize}
 
 
 
-\subsubsection*{PDF fits}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t]
+\begin{center}
+  \includegraphics[scale=0.60]{plots/kinplot-report.pdf}
+  \caption{\small Representative kinematical coverage in the
+    $(x,Q^2)$ of the DIS and proton-proton hard-scattering measurements that are
+    used as input in a global unpolarized PDF fit, in this case NNPDF3.1.
+    %
+    In order to facilitate visualization, different
+    datasets have been clustered together into families of
+    related processes.
+    \label{fig:kinplot-report} 
+  }
+\end{center}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 PDF fitting has seen a great deal of progress over the years, through the introduction of new data and the development of new theoretical techniques. For the sake of brevity, we will only consider the most recent fits here. The basic idea behind a global PDF fit is to include as wide a range of data as possible at different experiments and energies, in order to provide the maximal constraints on the PDFs. The latest fits from the three major global fitting collaborations, CT14~\cite{Dulat:2015mca}, MMHT14~\cite{Harland-Lang:2014zoa} and NNPDF3.1 are performed up to NNLO in the strong coupling, and include data from the HERA $e^{\pm} p$ collider, fixed (nuclear and proton) target experiments, the Tevatron $p\overline{p}$ collider and the LHC. 
 
@@ -593,11 +593,13 @@ Forms of this type are for example taken by CJ, HERAPDF and earlier MMHT and CT 
 %where $P_i$ are Bernstein (Chebyshev) polynomials for CT (MMHT). 
 While formally equivalent to the simply polynomial expansion (\ref{eq:lpower}), these are much more convenient for fitting as the number of free parameters $n$ is increased. In the latest sets, there are $O(20-40)$ free parameters in total.
 
-An alternative approach is taken by the NNPDF collaboration. Here, the interpolating function is modelled with a multi--layer feed forward neural network. In practice, this allows for a greatly increased number of free parameters, typically $\sim$ an order of magnitude higher than other sets. The form of (\ref{eq:pdffunc}) is still assumed, but these are pre--processing factors that speed up the minimisation procedure but which do not in principle have to be explicitly included. 
+An alternative approach is taken by the NNPDF collaboration. Here, the interpolating function is modeled with a multi--layer feed forward neural network. In practice, this allows for a greatly increased number of free parameters, typically $\sim$ an order of magnitude higher than other sets. The form of (\ref{eq:pdffunc}) is still assumed, but these are pre--processing factors that speed up the minimisation procedure but which do not in principle have to be explicitly included. 
 
 The uncertainties on the PDFs are calculated as follows...
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Polarized PDFs}
 
-
+The discussion above on unpolarized PDFs can be straightforwardly carried over to spin-dependent
+or polarized PDFs, which contain the information on how the nucleon's longitudinal spin
+is distributed among its quark and gluon constituents.
