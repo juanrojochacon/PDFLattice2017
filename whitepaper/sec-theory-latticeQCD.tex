@@ -1,0 +1,401 @@
+\subsection{Lattice QCD}
+
+\label{Sec:IntroLQCD}
+
+Quantum Chromodynamics (QCD) is the regent theory of strong interactions. It provides the foundation 
+for the phenomenological ideas of the quark model, the concept of color, and partons. 
+The power of QCD to explain physics at the hadronic relies on two rather remarkable features,
+quark confinement and spontaneous chiral symmetry breaking. The study
+of these phenomena requires the development of tools that go far
+beyond perturbation theory, tools that can handle both strongly
+coupled fields at long distances and the ultraviolet divergences of
+the theory at short distances. This tool is Lattice Quantum
+Chromodynamics (LQCD).
+
+LQCD is the synonym for QCD formulated on a finite Euclidean
+lattice. There is a fair degree of flexibility in discretizing the QCD
+action. This has led to a variety of formulations, which differ mainly
+by the choice of fermion action. All viable lattice actions must
+smoothly match onto QCD in the continuum limit. LQCD can be solved by
+numerical simulations using methods adapted from statistical
+mechanics. To make contact with the real world, the lattice needs to
+be removed at the end of the calculation by extrapolating the results
+to the infinite volume and continuum limits. Furthermore, lattice
+quantities, such as hadron matrix elements, have to be converted to a
+scheme that matches phenomenological conventions by
+renormalization. The past few years have seen significant progress in
+the development of efficient algorithms for the generation of
+background field configurations and tools for extracting relevant
+information from the lattice data. The calculations are now reaching a
+level, where they are able to not only complement, but also provide
+guidance to current and forthcoming experimental programs at the
+leading research facilities.
+
+
+
+LQCD is QCD formulated on a finite Euclidean lattice and is generally
+studied by numerical computation of QCD correlation functions in the
+path-integral formalism, using methods adapted from statistical
+mechanics. To make contact with the physical world and experimental
+data, the numerical results are extrapolated to the infinite-volume
+and continuum limits. The past decade has seen significant progress in
+the development of efficient algorithms for the generation of
+ensembles of gauge field configurations, which represent the QCD
+vacuum, and tools for extracting the relevant information from LQCD
+correlation functions. LQCD calculations have reached a level where
+they not only complement, but also guide current and forthcoming
+experimental programs.
+
+LQCD calculations must demonstrate control over all sources of
+systematic uncertainty introduced by the discretisation of QCD on the
+lattice to make meaningful contact with experimental data. These
+include discretisation effects that vanish in the continuum limit;
+extrapolation from unphysically heavy pion masses; finite volume
+effects; and renormalisation of composite operators. To take the 
+continuum limit requires accurate determinations of the lattice-spacing. 
+We briefly review these main sources of systematic
+uncertainty here; for a fuller account see, for
+example, \cite{Aoki:2016frl}.
+
+\paragraph{Discretisation effects and the continuum limit} There is 
+a fair degree of flexibility in discretising the QCD action. This has
+led to a variety of formulations, which differ mainly in the choice of
+the action for quarks. In the continuum limit, which corresponds to taking
+the lattice spacing $a$ to zero with all physical quantities fixed,
+the simplest discretisations differ from continuum QCD at ${\cal
+O}(a)$. In practice, one cannot afford to perform numerical
+simulations at arbitrarily small lattice spacings, because the cost of
+computation increases with a large inverse power of the lattice
+spacing, therefore ${\cal O}(a)$ effects can be significant even
+with current lattice spacings ranging from $0.15 \,\mbox{fm}$ to
+$0.05 \,\mbox{fm}$. To accelerate the convergence to the continuum
+limit, improved quark and gluon actions are widely used, which include
+higher-dimension operators to reduce the discretisation errors to
+$O(a^2)$ or better.
+
+\paragraph{Unphysical pion masses} 
+The computational cost of the fermion contribution to the path
+integral increases with a large inverse power of the bare quark mass
+(or, equivalently, the pion mass). LQCD calculations are therefore
+often performed at unphysically heavy pion masses, although results at
+the physical point have become increasingly common, albeit with large
+errors. To obtain results at the physical pion mass, lattice data are
+generated at a sequence of pion masses and then extrapolated to the
+physical pion mass. To control the associated systematic
+uncertainties, these extrapolations are guided by effective
+theories. In particular, the pion-mass dependence can be parameterised
+using chiral perturbation theory ($\chi$PT), which accounts for the
+Nambu-Goldstone nature of the lowest excitations that occur in the
+presence of light quarks.
+
+\paragraph{Finite volume effects} Numerical LQCD 
+calculations are necessarily restricted to a finite space-time
+volume. For most simple quantities, these effects decay exponentially
+with the size of the lattice, and therefore the easiest way to
+minimise or eliminate finite volume effects is to choose the volume
+sufficiently large in physical units. Unfortunately, this can be
+prohibitively expensive as one approaches the continuum limit, requiring the
+number of lattice sites to grow as $L/a$ in all four directions. Finite volume $\chi$PT is the preferred
+tool to develop systematic expansions that provide quantitative
+information on finite-volume effects. In general, finite volume
+effects of hadrons are dominated by their interactions with pions,
+which can travel around the (periodic) lattice many times. Numerical
+evidence suggests that lattice sizes of $m_\pi L \geq 4$, where
+$m_\pi$ is the pion mass, are generally sufficiently large that finite
+volume effects are negligible, within the current precision of LQCD
+calculations.
+
+\paragraph{Renormalisation} The matrix elements extracted from a 
+LQCD calculation at a given lattice spacing are bare matrix elements,
+rendered finite by the presence of the lattice spacing, which serves
+as a gauge-invariant UV regulator. To take the continuum limit,
+i.e. remove the regulator, one must renormalise the corresponding
+operators and fields and match them to some common scheme and scale used 
+by phenomenologists. Although renormalisation is traditionally
+discussed in the framework of perturbation theory, at hadronic energy
+scales the renormalisation constants should be computed
+non-perturbatively to avoid uncontrolled uncertainties due to 
+truncated perturbative results. In QCD with only light quarks it is technically
+advantageous to employ so-called mass-independent renormalisation
+schemes. This requires a renormalisation condition that can be
+implemented on the lattice as well as in continuum perturbation
+theory. A common choice is the RI-MOM scheme~\cite{Martinelli:1994ty}.
+
+In addition, on a hyper-cubic lattice, the orthogonal group $O(4)$ of
+continuum Euclidean space-time is reduced to the hyper-cubic group
+$H(4)$. Thus, operators are classified according to irreducible
+representations of $H(4)$~\cite{Gockeler:1996mu}. Different
+irreducible representations belonging to the same $O(4)$ multiplet
+will, in general, give different answers at finite lattice spacing, an
+effect that can be reduced by improving the
+operators~\cite{Gockeler:2004wp}. Conversely, operators that lie in
+different irreducible representations of $O(4)$, but the same irreducible
+representations of $H(4)$, will mix at finite lattice spacing but not
+in the continuum. When these operators have differing mass dimension,
+the mixing coefficients scale with the inverse lattice spacing to some
+power, and diverge in the continuum limit. This power-divergent mixing
+must be removed non-perturbatively, and is a particular challenge for
+lattice calculations of the Mellin moments of PDFs (see
+Section \ref{Sec:MomentsLQCD}).
+
+Finally, it is worth noting that factorisation, the key assumption of
+the operator product expansion (OPE), demands that the
+non-perturbatively renormalised hadron matrix elements are matched to the
+perturbatively renormalised Wilson coefficients at a scale where the perturbative 
+expressions show convergence. This appears to be
+the case for scales $\mu^2 \gtrsim 10 \, \mbox{GeV}^2$ at
+least~\cite{Gockeler:2010yr}. This, however, is a fundamental aspect
+of QCD, and is not restricted to LQCD. The DGLAP evolution equations,
+for example, work best for $q^2_{\rm min} \approx
+15 \, \mbox{GeV}^2$~\cite{Abramowicz:2015mha}, which should be kept in
+mind when comparing lattice results with phenomenology.
+
+\paragraph{Lattice-spacing determination} Numerical LQCD calculations 
+naturally determine all dimensionful quantities in units of the
+lattice spacing. Thus, extracting physical values requires the
+determination of the lattice scale. This is achieved by matching a
+quantity with mass-dimension to its experimental value or through a
+well-defined theoretical procedure, that is referred to as
+``scale-setting''. Popular reference scales include light decay
+constants, hadron masses, scales defined in terms of the heavy quark
+potential or, most recently, the Wilson flow time
+$\sqrt{t_0}$~\cite{Luscher:2010iy}. The Wilson flow scale has become
+increasingly popular, because it can be computed rather cheaply and
+with high precision, unlike hadron masses, for example.
+
+These sources of systematic uncertainty all need to be under control
+when confronting experimental data with lattice results, or vice
+versa. For a coherent assessment of the present state of LQCD
+calculations of various quantities, the degree to which each
+systematic has been controlled in a given calculation is an important
+consideration. Therefore, in the following sections, we indicate the
+quality of the lattice calculations, based on criteria inspired by the
+FLAG analysis of flavour physics on the lattice~\cite{Aoki:2016frl}.
+
+
+\subsubsection{Mellin moments of PDFs from lattice QCD}
+\label{Sec:MomentsLQCD}
+
+Parton distribution functions (PDFs) are defined as matrix elements of fields at light-like separations, which cannot be directly determined in Euclidean LQCD. Instead, the traditional approach for LQCD calculations is to determine the matrix elements of local twist-two operators, where twist is the dimension minus the spin, that can be related to the Mellin moments of PDFs. In principle, given a sufficient number of Mellin moments, PDFs can be reconstructed from the inverse Mellin transform. In practice, however, the calculation is limited to the lowest three moments, because power-divergent mixing occurs between twist-two operators on the lattice. Three moments is insufficient to reconstruct the momentum dependence of the PDFs without significant model dependence~\cite{Detmold:2003rq}.
+
+The lowest three moments do provide, however, useful information, both as benchmarks of LQCD calculations and as constraints in global extractions of PDFs. Here we briefly review the determination of Mellin moments of PDFs from LQCD. 
+
+PDFs are accessible, experimentally and theoretically, through the Compton amplitude
+\begin{equation}
+T_{\mu\nu}(p,q) = \int {\rm d}^4\!x\, {\rm e}^{iqx}  \langle p,s |T J_\mu(x) J_\nu(0)|p,s\rangle   
+\end{equation}
+at large photon momenta $q^2=-Q^2$. Here $T$ is the time-ordering operator, the $J_\mu(x)$ are local vector bilinears at space-time point $x$, and the external states are hadronic states with momentum $p$ and spin $s$. The most general form of the Compton amplitude $T_{\mu\nu}(p,q)$ for polarised deep-inelastic scattering from a proton targets reads
+\begin{align}
+T_{\mu\nu}(p,q) = {} & \left(\delta_{\mu\nu}-\frac{q_\mu q_\nu}{q^2}\right) \mathcal{F}_1(\omega,Q^2) + \left(p_\mu-\frac{pq}{q^2}q_\mu\right) \left(p_\nu-\frac{pq}{q^2}q_\nu\right) \frac{1}{pq} \mathcal{F}_2(\omega,Q^2)\\ 
+& {} \quad  + \epsilon_{\mu\nu\lambda\sigma}q_\lambda s_\sigma \frac{1}{pq}\mathcal{G}_1(\omega,Q^2) + \epsilon_{\mu\nu\lambda\sigma}q_\lambda \left(pq s_\sigma - sq p_\sigma\right) \frac{1}{(pq)^2}\mathcal{G}_2(\omega,Q^2)
+\end{align}
+where $\mathcal{F}_1$, $\mathcal{F}_2$, $\mathcal{G}_1$ and $\mathcal{G}_2$ have different physical interpretations [\textbf{Can we be more specific here?}]. The unpolarised and polarised PDFs can be deduced from $\mathcal{F}_1$ and $\mathcal{G}_1$ by first rewriting them in terms of the structure functions spin-independent and spin-dependent structure functions, $F_1(x,Q^2)$ and $g_1(x,Q^2)$,
+\begin{align}
+\mathcal{F}_1(\omega,Q^2) = {} & 4 \omega^2 \int_0^1 dx\,  \frac{xF_1(x,Q^2)}{1-(\omega x)^2} = \sum_{n=2,4,\cdots}^\infty 4\omega^n \int_0^1 dx\, x^{n-1} F_1(x,Q^2) \,, \\
+\mathcal{G}_1(\omega,Q^2) = {} & 4 \omega \int_0^1 dx\, \frac{g_1(x,Q^2)}{1-(\omega x)^2} = \sum_{n=1,3,\cdots}^\infty 4\omega^n \int_0^1 dx\, x^{n-1} g_1(x,Q^2).
+\end{align}
+Here $\omega=2pq/q^2$ and target mass corrections have been discarded. Odd moments may be obtained from the mixture of currents $J_\mu J_\nu^5$.
+
+At sufficiently high momentum transfer that power corrections can be neglected, factorisation~\cite{Sterman:1995fz} at the scale $\mu$ lets us write the structure functions $F_1(x,Q^2)$ and $g_1(x)$ of the proton as 
+\begin{align}
+F_1(x,Q^2) = {} & \sum_{i=u,d, \cdots, g} \int_x^1\frac{dy}{y}\, c_{1,i}(x/y,\mu^2)|_{\mu^2=Q^2}\, q_i(y,Q^2) \,,\\
+g_1(x,Q^2) = {} & \sum_{i=u,d, \cdots, g} \int_x^1\frac{dy}{y}\, e_{1,i}(x/y,\mu^2)|_{\mu^2=Q^2}\, \Delta q_i(y,Q^2) \,,
+\label{pdf}
+\end{align}
+where $c_{1,i}$ and $e_{1,i}$ are splitting functions and the $q_i(x,Q^2)$ and $\Delta q_i(x,Q^2)$ are the unpolarised and polarised PDFs, respectively. Here the sum runs over the quark and antiquark flavours, $u$, $d$, $\bar{u}$ and $\bar{d}$, and the gluon $g$.
+
+Using the operator product expansion (OPE), the Mellin moments of structure functions, and the corresponding PDFs, can be expressed in terms of matrix elements of local operators:
+\begin{align}
+2 \int_0^1 dx\, x^{n-1} F_1(x,Q^2) &= \sum_{i=u,d, \cdots, g} c_{1,i}^n(\mu^2)\, v_i^n(\mu^2)|_{\mu^2=Q^2} = \sum_{i=u,d, \cdots, g} c_{1,i}^n(\mu^2)\, \int_0^1 dx\, x^{n-1} q_i(x,Q^2)\,,\\
+4 \int_0^1 dx\, x^n g_1(x,Q^2) &= \sum_{i=u,d, \cdots, g} e_{1,i}^n(\mu^2)\, a_i^n(\mu^2)|_{\mu^2=Q^2} = \sum_{i=u,d, \cdots, g} e_{1,i}^n(\mu^2)\, \int_0^1 dx\, x^n\, 2 \Delta q_i(x,Q^2) \,,
+\end{align}
+where $v_i^n(\mu^2)$ and $a_i^n(\mu^2)$ are reduced matrix elements of the appropriate twist-two operators~\cite{Gockeler:1995wg},
+\begin{align}
+\frac{1}{2} \sum_s \langle p,s|\mathcal{O}^i_{\{\mu_1,\cdots,\mu_n\}}|p,s\rangle = {} & 2 v_i^n\, [p_{\mu_1}\cdots p_{\mu_n} - {\rm traces}] \,, \label{eq:twist2me}\\
+\langle p,s|\mathcal{O}^{5\,i}_{\{\sigma \mu_1,\cdots,\mu_n\}}|p,s\rangle = {} & \frac{1}{n+1} a_i^n\, [s_\sigma p_{\mu_1}\cdots p_{\mu_n} - {\rm traces}] \\
+\end{align}
+and $c_{1,i}^n(\mu^2)$ and $e_{1,i}^n(\mu^2)$ are the corresponding Wilson coefficients
+\begin{equation}
+c_{1,i}^n(\mu^2) = \int_0^1 dy\, y^{n-1} c_{1,i}(y,\mu^2)\,, \quad
+e_{1,i}^n(\mu^2) = \int_0^1 dy\, y^n e_{1,i}(y,\mu^2)\,.
+\end{equation}
+The trace terms include operators with at least one factor of the metric tensor $g^{\mu_i \mu_j}$ multiplied by
+operators of dimension $(n+2)$ with $n-2$ Lorentz indices. The operators relevant for the lowest two moments are listed in Table \ref{Tab:twist2}. The operator $\mathcal{O}^q_{\mu_1\mu_2}$ decomposes into two different representations of $H(4)$~\cite{Gockeler:1996mu}, each with different lattice artifacts and renormalisation factors. In the continuum limit, however, both operators should lead to the same result. In contrast, the operator $\mathcal{O}^q_{\mu_1\mu_2\mu_3}$ splits into several representations transforming identically under $H(4)$, causing the corresponding operators to mix under renormalisation on the lattice.
+\begin{table}
+\caption{\label{Tab:twist2}
+Operators relevant to the lowest two Mellin moments of polarised and unpolarised PDFs.
+}
+%\begin{ruledtabular}%Note this requires RevTeX, but makes the spacing look more professionally typeset.
+\begin{tabular}{ccc}
+Matrix element & Operator & Observable \\ 
+\vspace*{-10pt}\\
+\hline 
+\vspace*{-10pt}\\
+$v_q^2$\,, $v_{\bar{q}}^2$  & $\displaystyle \left(\frac{{\rm i}}{2}\right) \bar{q}(x)\gamma_{\mu_1} \overleftrightarrow{D}_{\mu_2} q(x)$ & $\langle x \rangle_q$\,, $\langle x \rangle_{\bar{q}}$   \\
+$v_q^3$\,, $v_{\bar{q}}^3$  & $\displaystyle \left(\frac{{\rm i}}{2}\right)^2 \bar{q}(x)\gamma_{\mu_1} \overleftrightarrow{D}_{\mu_2} \overleftrightarrow{D}_{\mu_3} q(x)$ & $\langle x^2 \rangle_q$\,, $\langle x^2 \rangle_{\bar{q}}$ \\
+$a_q^0$ & $\displaystyle \bar{q}(x)\gamma_{\sigma} \gamma_5 q(x)$ & $2\, \langle 1 \rangle_{\Delta q}$ \\
+$a_q^1$ & $\displaystyle \left(\frac{{\rm i}}{2}\right) \bar{q}(x)\gamma_{\sigma} \gamma_5 \overleftrightarrow{D}_{\mu_1} q(x)$ & $2\, \langle x \rangle_{\Delta q}$ \\
+$v_g^2$ & $\displaystyle - {\rm Tr}\, F_{\mu_1\alpha}F_{\mu_2\alpha}$ & $\langle x \rangle_g$ \\
+\end{tabular}
+%\end{ruledtabular}
+\end{table}
+
+\paragraph*{Higher-twist contributions} The discussion so far has focussed on the limit in which higher twist contributions, suppressed by powers of the momentum-transfer, have been ignored. In fact, higher twist contributions to the lowest moment of the structure function $F_1(x,Q^2)$ are found to be of ${\cal O}(1\, \mbox{GeV}^2/Q^2)$ \cite{Blumlein:2008kz}. For LQCD, typically $Q^2 \simeq 1/a^2$, and at present lattice spacings this corresponds to $Q^2 = O(10\,\mbox{GeV}^2)$ or a higher-twist contribution of $5 - 10\, \%$. With contributions of higher-twist included, the OPE reads
+\begin{equation}
+2 \int_0^1 dx\, x F_1^q(x,Q^2) = c_{1,q}^2(\mu^2)\, v_q^2(\mu^2)|_{\mu^2=Q^2} + \frac{\bar{c}_{1,q}^2(\mu^2)}{Q^2}\, \bar{v}_q^2(\mu^2)|_{\mu^2=Q^2} + \cdots \,,
+\label{tex}
+\end{equation}
+where $\bar{c}_{1,q}^2$ and $\bar{v}_q^2(\mu^2)$ are Wilson coefficient and reduced matrix element of a generic twist-four operator. Both twist-two and four contributions mix under renormalisation, to the extent that the perturbative series for the Wilson coefficients $c_{1,q}^2(\mu^2)$ diverges due to the presence of IR renormalon singularities. This ambiguity is canceled by that in the twist-four matrix element $\bar{v}_q^2(\mu^2)$ that arises as a result of an UV renormalon singularity~\cite{Martinelli:1996pk}. If mixing effects are ignored, the uncertainties will be, at least, comparable to the power corrections themselves. Power corrections can be assessed most efficiently, and the twist expansion tested, by a direct LQCD evaluation of the Compton amplitude, which we discuss in Section \ref{Sec:InversionMethod}.
+
+\paragraph*{Beyond the first three moments} Moving beyond the lowest three moments requires overcoming the challenge of power-divergent mixing for LQCD twist-two operators. One novel approach to this problem~\cite{Davoudi:2012ya} builds upon the physical intuition that as long as the scale associated with the operator (for the twist-two operators, this is the renormalisation scale $\mu$) is taken to be much smaller than the hadronic scale but much larger than the inverse lattice spacing, no singularity necessarily arises as one takes the continuum limit. The operator can still probe the correct hadron structure at the scale $\mu$, but should be insensitive to the details of the discretisation of the operator at shorter distances. A simple way to incorporate an intrinsic ``smearing” scale for an operator is to sum over bilinears of quark fields that are displaced over many lattice sites in a small (compared to the scale $1/\mu$) region of Euclidean space-time (an alternative approach appears in~\cite{Monahan:2015lha}). To ensure that the correct $SO(4)$ transformation properties of the matrix elements are recovered in the continuum limit, one must project the sum using hyper-spherical harmonics. The properties of these operators, such as their mixing patterns and scaling properties, are discussed in detail in
+Ref.~\cite{Davoudi:2012ya}. In particular, while the classical mixing with lower and higher spin operators are both suppressed by $\sim a^2$ for spatially improved operators, the mixing at one-loop in lattice perturbation theory is suppressed by ${\cal O}(\ alpha_s a)$ or ${\cal O}(\ alpha_s a^2)$, depending on the lattice action used and provided that the gauge links used in constructing the gauge invariant bilinears are tadpole-improved and smeared over a region whose physical size is held fixed as the continuum limit is taken. In principle, this allows higher moments of PDFs to be obtained from LQCD, without power-divergences. Numerical investigations of this approach,
+which requires gauge configurations with very fine lattice spacings, are underway.
+
+\subsubsection{The $x$-dependence of PDFs from lattice QCD}
+
+While the lowest three moments of PDFs provide important benchmarks for LQCD calculations of nucleon structure, and useful constraints in global extractions of PDFs, they are not in themselves sufficient to determine the $x$-dependence of PDFs, particularly at small $x$. In the following section we summarise recent approaches to determining the $x$-dependence of PDFs directly from LQCD.
+
+\paragraph*{Inversion method}
+\label{Sec:InversionMethod}
+
+The Compton amplitude $T_{\mu\nu}(p.q)$ can be directly obtained in LQCD, including disconnected contributions,  by a simple extension~\cite{Chambers:2017dov} of existing implementations of the Feynman-Hellmann technique to LQCD~\cite{Horsley:2012pz,Chambers:2014qaa,Chambers:2015bka}. Provided one works at sufficiently large $Q^2$, the Compton amplitude will be dominated by twist-two contributions. Varying $Q^2$ allows one to test the twist expansion and, in particular, isolate twist-four contributions. Moreover, one can distinguish between contributions from up, down and strange quarks, connected and disconnected, by appropriate insertions of the electromagnetic current.
+
+To compute the Compton amplitude from the Feynman-Hellmann relation, a perturbation to the QCD Lagrangian is introduced, for example,
+\begin{equation}
+\mathcal{L}(x) \rightarrow \mathcal{L}(x) + \lambda \mathcal{J}_3(x)\,, \quad \mathcal{J}_3(x)=Z_V\cos(\vec{q}\vec{x})\; e_q \,\bar{q}(x)\gamma_3 q(x) 
+\label{in}
+\end{equation}
+where $q$ is the quark field to which the photon is attached, and $e_q$ its electric charge. For simplicity, we consider the local vector current only, so that the renormalisation factor $Z_V$ is known and no further renormalisation is needed. Taking the second derivative of the nucleon two-point function 
+\begin{equation}
+\langle N(\vec{p},t) \bar{N}(\vec{p},0)\rangle_\lambda \simeq C_\lambda\, {\rm e}^{-E_\lambda(p,q)\,t}
+\end{equation}
+with respect to $\lambda$ on both sides, gives
+\begin{equation}
+-2 E_\lambda(p,q)\, \frac{\partial^2}{\partial\lambda^2}  E_\lambda(p,q)\,\big|_{\lambda=0} = T_{33}(p,q) \,.
+\end{equation}
+For $p_3=q_3=q_4=0$ this leaves us with
+\begin{equation}
+T_{33}(p,q) = 4 \omega^2 \int_0^1 dx\,  \frac{xF_1(x,Q^2)}{1-(\omega x)^2} \,.
+\label{ff}
+\end{equation}
+Note that to extract the polarised structure functions requires insertions of two different currents with $\mu\neq \nu$.  
+
+The idea is to solve (\ref{ff}) for $F_1(x,Q^2)$ numerically. Starting from a finite number of sampled points $T_\alpha=T_{33}(\omega_\alpha) \,,\; \alpha=1, \cdots, N$ and approximating the integral and structure function by a discrete set of $M$ points, $0 < x_1 < x_2 < \cdots < x_M < 1$, 
+\begin{equation}
+K_{\alpha\beta} = \frac{4\,\omega_\alpha^2x_\beta}{1-(\omega_\alpha x_\beta)^2} \,, \quad F_\beta = F_1(x_\beta)\,,
+\end{equation}
+the integral equation (\ref{ff}) reduces to the set of equations 
+\begin{equation}
+T_\alpha = \epsilon \sum_{\beta=1}^M K_{\alpha\beta}\, F_\beta \,,\; \alpha=1, \cdots, N \,,
+\label{ieq}
+\end{equation}
+where, in general, $N < M$ and the dependence on $Q^2$ has been dropped. The simplest procedure uses equidistant step sizes, $\epsilon$, but the generalisation to adaptive step sizes is straightforward. The $N \times M$ matrix $K$ can be written as the product of a $N \times N$ orthogonal matrix $U$, a $N \times N$ diagonal, singular matrix $W$ with positive or zero eigenvalues $w_1 < w_2 < \cdots < w_N$, and the transpose of a row-orthogonal $M \times N$ matrix $V$,
+\begin{equation}
+K = U \,\left[{\rm diag}(w_1, \cdots, w_N)\right]\,V^T \,.
+\end{equation}
+Since the matrix $W$ is singular, singular value decomposition (SVD) is the method of choice for solving \eqref{ieq} under such conditions. The solution is
+\begin{equation}
+F_\beta = \sum_{\alpha=1}^N K^{-1}_{\beta\alpha}\epsilon^{-1}\, T_\alpha \,, 
+\label{svd}
+\end{equation}
+where $K^{-1}$ is the pseudo-inverse
+\begin{equation}
+K^{-1} = V \,\left[{\rm diag}(1/w_1, \cdots, 1/w_K, 0, \cdots, 0)\right]\, U^T 
+\end{equation}
+with $1/w_\gamma$ being replaced by zero if $w_\gamma=0$, which is assumed for $K < \gamma\leq N$. One has to exercise some discretion at deciding at
+what threshold to set $1/w_\gamma$ to zero. Several routines, such as {\tt Pseudo-Inverse} of {\it Mathematica}, solve this problem
+automatically. 
+
+In~\cite{Chambers:2017dov} it was shown that the unpolarised structure function $F_1(x,Q^2)$ can be computed from a lattice calculation of the Compton amplitude with unprecedented accuracy, devoid of any renormalisation and mixing issues. Furthermore, by extending the calculation to values $\omega > 1$ it becomes possible
+to compute the structure functions down to fractional momenta $x = {\cal O}(0.001)$.
+
+With the same method, the PDFs can be computed directly without the need to go through the structure functions, provided $Q^2$ is
+sufficiently large that power corrections can be neglected. In this case
+\begin{equation}
+T_\alpha^q = \epsilon \sum_{j=1}^M K_{ab}\, q_i(x_\beta,Q^2) 
+\end{equation}
+where the index $i$ denotes the struck quark. The kernel now reads
+\begin{equation}
+K_{\alpha\beta} =2 \omega_\alpha^2 \int_0^1 dy\,y\,x_\beta\, \frac{c_{1,q}(y,\mu^2)|_{\mu^2=Q^2}\, }{1-(y\,\omega_\alpha\, x_\beta)^2}
+\end{equation}
+with $c_{1,q}(y,\mu^2)$ a perturbative Wilson coefficient.
+
+\paragraph{RQCD Approach}
+
+{\bf To be completed}
+
+%Gunnar Bali (0.5 page)
+
+% At present this section does not describe a lattice method, so should probably be put in the global extraction of PDFs part of the theory review.
+%\paragraph{PDFs from the Hadronic Tensor}
+%\label{sec:HadronicTensorMethod}
+%\input{HadronicTensorMethod}
+
+\paragraph{Quasi PDFs}
+%\label{Sec:QuasiPDFMethod}
+Quasi PDFs provide an alternative approach to determining the $x$-dependence of PDFs directly from lattice QCD \cite{Ji:2013dva,Ji:2014gla}. In the following discussion, we focus on the flavor-nonsinglet quasi PDF, for which we can ignore mixing with the gluon quasi PDF. The unpolarized quasi quark PDF is defined as the momentum-dependent
+nonlocal static matrix element
+\begin{align}\label{eq:qPDF}
+\widetilde{q}(x,\Lambda,p_z)  = \int \frac{dz}{4\pi} e^{-i x z p_z} 
+\frac{1}{2}\sum_{s=1}^2\left\langle p,s\right\vert \bar{\psi}(z)\gamma_\alpha e^{ig\int_0^z
+A_z(z^\prime) dz^\prime} \psi(0) \left\vert p,s\right\rangle ,
+\end{align}
+where $\Lambda$ is an ultraviolet (UV) cut-off scale, such as the inverse lattice spacing $1/a$. The Lorentz index $\alpha$ of the matrix $\gamma_\alpha$ has generally be chosen to be spatial, $\alpha = z$, but the alternative choice $\alpha = 4$ is also possible and removes the leading order twist-4 contamination \cite{Radyushkin:2016hsy}. Note that, because $p$ is finite, the momentum fraction $x$ can be larger than unity.
+
+The quasi PDF is defined for nucleon states at finite momentum and must be related to the corresponding light-front PDF, for which the nucleon momentum is taken to infinity.
+In the  large-momentum  effective field theory (LaMET) approach, the quasi PDF $\widetilde{q}(x,\Lambda,p_z)$ can be related to the $p_z$-independent
+light-front PDF $q(x,Q^2)$ through~\cite{Ji:2013dva,Ji:2014gla}
+\begin{equation} \label{eq:qPDFmatching}
+\widetilde{q}(x,\Lambda ,p_z) = 
+  \int_{-1}^1 \frac{dy}{\left\vert y\right\vert} 
+    Z\left( \frac{x}{y}, \frac{\mu}{p_z}, \frac{\Lambda}{p_z}\right)_{\mu^2 = Q^2} q(y,Q^2) +
+  \mathcal{O}\left( \frac{\Lambda_\text{QCD}^2}{p_z^2},\frac{m^2}{p_z^2}\right), 
+\end{equation}
+where $\mu$ is the renormalisation scale;
+$Z$ is a matching kernel; and $m$ is the nucleon mass.
+Here the $\mathcal{O}\left(m^2/p_z^2\right)$ terms are target-mass corrections and the $ \mathcal{O}\left(\Lambda_\text{QCD}^2/p_z^2\right)$ terms are higher twist effects, both of which are suppressed at large nucleon momentum. A complementary approach to LaMET views the quasi PDF as a ``lattice cross-section'' from which the light-front PDF can be factorized \cite{Ma:2014jla, Ma:2014jga}. 
+
+To understand the origin of the power-suppressed corrections, we apply the operator product expansion (OPE) to the matrix element that defines the PDF, which becomes a linear combination of local twist-2 operators, with matrix elements in the proton state given by Eq.~\eqref{eq:twist2me}. From this it follows that the light-cone correlation function is {\it kinematically} connected with the +-components of the nucleon four-momentum. To eliminate the time dependence, we consider matrix elements of twist-two operators with $\mu_1=\mu_2=...=\mu_n=z$ and nucleon states with large $p_z$, to give
+\begin{equation}
+\frac{1}{2} \sum_s \langle p,s|\mathcal{O}^i_{\{z,\cdots,z\}}|p,s\rangle = 2v_i^n(\mu^2)\left[p_z^n-\lambda M^2 p_z^{n-2}-...\right], 
+\end{equation}
+where $\lambda$ is a number of order unity, and the ellipsis represents terms
+with still lesser powers of $p_z$. Lorentz symmetry guarantees that the matrix elements of the trace terms are at most
+$p_z^{n-2}$ times $\Lambda^2_{\rm QCD}$. Thus, we conclude that
+\begin{equation}
+      \langle p| {\overline \psi}\gamma_ziD_z ... iD_z \psi|p\rangle
+       = 2v^n(\mu^2) p_z^n\times \left[ 1 + {\cal O}\left(\frac{\Lambda^2_{\rm QCD}}{p_z^2},  \frac{m^2}{p_z^2}\right)\right],
+\end{equation}
+where the non-leading terms are power-suppressed in the large $p_z$ limit. Equating the renormalized moments on the right hand side of this equation with those that appear in Eq.~aaa
+%\eqref{eq:ope}
+leads to the relation between the quasi PDF and the light-front PDF expressed in Eq.~\eqref{eq:qPDFmatching}.
+
+\paragraph*{Challenges and systematic uncertainties} Preliminary results from lattice calculations of quasi PDFs have been encouraging \cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp,Alexandrou:2016jqi}. There are a number of remaining challenges, however, that must be overcome for an {\it ab initio} determination of the $x$-dependence of PDFs directly from lattice QCD that incorporates complete control over systematic uncertainties.
+
+Lattice calculations of quasi PDFs are subject to the same sources of systematic uncertainty that plague all lattice calculations and are highlighted in Section \ref{Sec:IntroLQCD}, but here we focus on systematic uncertainties that are more specific to quasi PDFs. These are: uncertainties associated with the finite nucleon momentum of the lattice calculations and with the renormalisation of quasi PDFs.
+
+\paragraph*{Finite nucleon momentum} Preliminary non-perturbative studies of the quasi PDF used nucleon momenta in the range $p_z = 2\pi/L$ to $6\pi/L$, where $L$ is the physical extent of the lattice, corresponding to $p_z = 0.5$ to $1.3$ GeV  \cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp}. At such low momenta, higher-twist and target mass corrections are likely to be considerable.
+
+Target mass corrections can be removed to all orders \cite{Chen:2016utp}, and twist-4 contributions can be removed in principle \cite{Radyushkin:2016hsy,Chen:2016utp}, leaving higher-twist contamination. To reduce these remaining effects, the authors of \cite{Lin:2014zya,Chen:2016utp} extrapolated to infinite nucleon momentum using the fit ansatz $a + b/p_z$ for each value of $x$, but do not include a complete estimate of the corresponding systematic uncertainty. Although the effects of finite nucleon momentum can be mitigated, it is likely that reducing systematic uncertainties to less than 20\% at moderate values of $x$ require significantly larger values of nucleon momentum \cite{Gamberg:2014zwa}, and larger values of $x\simeq 1$ may require nucleon momentum as large as $p_z > 4$ GeV.
+
+Presently, the size of the nucleon momentum is restricted by the decreasing signal-to-noise ratio at large momenta, which requires very high statistics to extract a signal. New approaches to high-momentum nucleons are being investigated, with the most promising an approach that employs momentum smearing \cite{Bali:2016lva}. This method has been applied to quasi-PDFs in \cite{Alexandrou:2016jqi}, demonstrating a large improvement in the signal-to-noise ratio by reaching momenta of $\sim 2.5$ GeV, with small statistics.
+
+\paragraph*{Renormalisation} The leading-twist quasi PDFs and light-front PDFs are connected through the matching (or ``factorization'') relation of Eq.~\eqref{eq:qPDFmatching}. Provided the quasi and light-front PDFs share the same infrared (IR) behavior, the matching kernel can be determined in perturbation theory~\cite{Xiong:2013bka}. The factorization of the IR structure of quasi PDFs into light-front PDFs and an IR-safe matching kernel was claimed to hold to all orders in \cite{Ma:2014jla, Ma:2014jga}. However, Ref.~\cite{Li:2016amo} asserted that there might be subtleties beyond leading order in perturbation theory. A distinct, but similar, issue is the IR structure of extended operators in Euclidean and Minkowski spacetime. There are again subtleties in perturbation theory \cite{Carlson:2017gpk}, but arguments based on general field-theoretic grounds demonstrate that the quasi PDF extracted from a Euclidean correlation function is exactly the same matrix element as that determined from the LSZ reduction formula in Minkowski spacetime \cite{Briceno:2017cpo}.
+
+In contrast to the IR structure, the ultraviolet (UV) structure of the quasi PDF is quite different from the UV structure of the light-front PDF: the former has both linear and logarithmic divergences, while the latter contains only logarithmic divergences. Although there are no power-divergences in dimensional regularization, quasi PDFs determined on the lattice are regulated by the inverse lattice spacing. In the continuum limit (for which $a\to 0$, with all physical quantities held fixed) there is a divergence, associated with the length of the Wilson line $z$, that scales as $z/a$. This divergence must be removed non-perturbatively.
+
+For a general non-local bilinear operator with Lorentz structure $\Gamma$, the renormalised operator $O_{\Gamma}^{\rm (ren)}(z,\mu)$ is
+related to its bare operator $O^{(0)}_{\Gamma}(z)$ by \cite{Dotsenko:1979wb, Arefeva:1980zd, Craigie:1980qs,Dorn:1986dt}
+\begin{eqnarray}\label{eq:renorm_non-local}
+O_{\Gamma}^{\rm (ren)}(z,\mu)=e^{\delta m(\mu)|z|}Z_{\psi, z}(\mu,z)O^{(0)}_{\Gamma}(z),
+\end{eqnarray}
+where $\delta m$ is the mass renormalisation of a test particle moving along the Wilson line of length $z$ and $Z_{\psi, z}(\mu,z)$ removes the remaining logarithmic divergences associated with the Wilson line endpoints (the quark fields). This result holds to all orders in perturbation theory: the exponentiated counterterm $\delta m(\mu)$ completely removes the linear divergence. The multiplicative renormalizability of the remaining logarithmic UV divergence, however, has not been proven~\cite{Ji:2015jwa}. The exponentiated counterterm can be determined using a static heavy quark potential, which shares the same power-law divergence as the non-local quark bilinear \cite{Musch:2010ka,Ishikawa:2016znu, Chen:2016fxx}.
+
+Once the linear divergence has been removed non-perturbatively, lattice perturbation theory can be used to renormalize the remaining logarithmic divergences in the quasi PDF \cite{Ishikawa:2016znu, Carlson:2017gpk}. A delicate point regarding the renormalisation is the mixing among certain subsets of these non-local operators. Such mixing has been identified at one-loop in perturbation theory in \cite{Constantiou:2017soon} for a variety of fermion/gluon actions. The mixing coefficients are necessary to disentangle the individual matrix elements for each quasi-PDF from lattice calculation data. Of particular interest is the case of the unpolarized quasi-PDF, which mixes with the scalar quasi-PDF if the Lorentz index of Eq.~\eqref{eq:qPDF} is in the same direction as the Wilson line. In contrast, the axial and transversity PDFs with a Lorentz index in the Wilson line direction do not exhibit any mixing (to one-loop in perturbation theory). 
+
+In addition, nonperturbative schemes, such as the regularization-independent RI/MOM scheme~\cite{Martinelli:1994ty}, can be used to renormalize matrix elements determined on the lattice. Nonperturbative schemes avoid the use of lattice perturbation theory at low energy scales (usually chosen to be $\mu = \pi/a$), although perturbative matching between renormalisation schemes is still necessary for PDFs expressed in the $\overline{\rm MS}$ scheme. Combining a nonperturbative renormalisation scheme with a step-scaling procedure \cite{Luscher:1991wu} significantly reduces perturbative truncation uncertainties by providing a nonperturbative method for reaching high energy scales. The construction of nonperturbative renormalisation methods for quasi PDFs is an on-going endeavor for a number of groups. 
+
+An alternative approach to removing both the linear and logarithmic divergences is provided by the gradient flow, a deterministic evolution of the quark and gluon degrees of freedom in a new parameter, the flow time, that renders all correlation functions finite \cite{Narayanan:2006rf,Luscher:2011bx,Luscher:2013cpa}. By fixing the flow time in the continuum limit, finite continuum quasi PDFs can be extracted from lattice calculations and then directly matched to light-front PDFs using perturbation theory~\cite{Monahan:2016bvm}.
+
+Ultimately, perturbative matching must be carried out at a sufficiently high scale that truncation uncertainties can be safely neglected. Until a nonperturbative step-scaling scheme has been devised for quasi PDFs, perturbative truncation uncertainties are likely to be, in conjunction with finite nucleon momentum effects, the dominant source of systematic uncertainty in lattice determinations of quasi PDFs.
+
