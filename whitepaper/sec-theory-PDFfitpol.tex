@@ -4,14 +4,14 @@
 The fitting framework outlined in Sec.~\ref{sec:unpPDFs} can be applied
 to a determination of longitudinally polarised PDFs as well.
 %
-Here we delineate the aspect of this framework specific to the polarised
+Here we delineate the aspects of the framework specific to the polarised
 case, and give a review of current global polarised PDF fits.
 
 \paragraph{General framework.}
 %
 Longitudinally-polarised PDFs are defined as the net amount of parton 
 densities with spin aligned along ($\uparrow$) or opposite ($\downarrow$)
-the direction of polarisation of the parent nucleon
+the polarisation direction of the parent nucleon
 \begin{equation}
 \Delta f(x,\mu^2) \equiv f^{\uparrow}(x,\mu^2) - f^{\downarrow}(x,\mu^2)
 \,\mbox{,}
@@ -21,7 +21,7 @@ f=u,\bar{u},d,\bar{d},s,\bar{s},g
 \label{eq:polPDFs}
 \end{equation}
 %
-The interest in their determination is specifically related to the
+Their interest is mostly related to the
 first moments of the singlet and gluon polarised PDFs
 \begin{align}
 \Delta\Sigma(\mu^2)
@@ -39,27 +39,28 @@ first moments of the singlet and gluon polarised PDFs
 \,,
 \label{eq:moments}
 \end{align}
-which can be interpreted~\cite{} as the nucleon spin fraction carried 
-respectively by quarks/antiquarks and gluons.
+which can be interpreted~\cite{Leader:2013jra} as the nucleon spin fractions 
+carried by quarks/antiquarks and gluons respectively.
 
-As in the case of unpolarised PDFs, their dependence on the scale $\mu$ can 
+As in the case of unpolarised PDFs, the dependence on the scale $\mu$ can 
 be computed perturbatively with DGLAP evolution equations, 
 Eq.~(\ref{eq:dglap}).
 %
 The unpolarised splitting kernels $P_{ij}$ should be replaced with their
-polarised counterparts, $\Delta P_{ij}$, which have been computed up to 
-NNLO~\cite{} in the $\overline{\rm MS}$ renormalisation scheme.
+polarised counterparts, $\Delta P_{ij}$, which have been recently computed 
+up to NNLO~\cite{Moch:2014sna} in the $\overline{\rm MS}$ renormalisation 
+scheme.
 
 The dependence on the momentum fraction $x$, fixed by non-perturbative QCD 
-dynamics, should however satisfy some theoretical constraints.
+dynamics, should satisfy some theoretical constraints.
 %
 First, PDFs must lead to positive cross sections: 
 at leading order (LO), this implies that polarized 
 PDFs are bounded by their unpolarized counterparts\footnote{Beyond LO, more 
-complicate relations hold, but they have negligible impact on  
-PDFs~\cite{Altarelli:1998gn}.}, $|\Delta f(x,\mu^2)|\leq f(x,\mu^2)$.
+complicate relations hold~\cite{Altarelli:1998gn}; however they have little
+effect on PDFs.}, $|\Delta f(x,\mu^2)|\leq f(x,\mu^2)$.
 %
-Second, polarized PDFs must be integrable: this corresponds to the assumption 
+Second, PDFs must be integrable: this corresponds to the assumption 
 that the nucleon matrix element of the axial current for each flavor is finite.
 %
 Third, it follows from SU(2) and SU(3) flavor symmetry that 
@@ -67,8 +68,8 @@ the first moments of the nonsinglet $\mathcal{C}$-even PDF combinations,
 $\Delta T_3=\Delta u^+ -\Delta d^+$ and 
 $\Delta T_8 = \Delta u^+ +\Delta d^+ -2\Delta s^+$ 
 (where $\Delta q^+=\Delta q+\Delta\bar{q}$, $q=u,d,s$), are respectively
-related to the baryon octet $\beta$-decay constants, whose values are 
-well measured~\cite{Agashe:2014kda}:
+related to the baryon octet $\beta$-decay constants, whose 
+measured values values are~\cite{Olive:2016xmw}
 \begin{align}
  a_3
  & =
@@ -85,20 +86,26 @@ well measured~\cite{Agashe:2014kda}:
 
 The bulk of the experimental information on polarized PDFs comes from 
 neutral-current inclusive and semi-inclusive Deep-Inelastic Scattering 
-(DIS and SIDIS) with charged lepton beams and nuclear targets. Because of the
-way the corresponding observables factorize, inclusive DIS data constrain the 
-total quark combinations $\Delta q^+$, 
-while SIDIS data, with identified pions or kaons in the final state, 
-constrain individual quark and antiquark flavors. In principle, both DIS and 
-SIDIS data would constrain the gluon distribution $\Delta g$ via scaling 
-violations, but in practice their effect is rather weak because of the small 
-$Q^2$ range covered. 
+(DIS and SIDIS) with charged lepton beams and nuclear targets. 
+%
+Because of the way the corresponding observables factorise, inclusive DIS 
+data constrain the total quark combinations $\Delta q^+$ only, 
+while SIDIS data, especially with identified pions or kaons in the final state, 
+constrain individual quark and antiquark flavours. 
+%
+In principle, both DIS and SIDIS are also sensitive to the gluon 
+distribution $\Delta g$, as it directly enters the factorised expressions of
+the corresponding structure functions beyond LO, and indirectly via DGLAP 
+evolution.
+%
+In practice the constraining power of DIS and SIDIS data on $\Delta g$ is 
+rather weak, because of the limited $Q^2$ range covered by the data. 
 
 Beside DIS and SIDIS fixed-target data, a significant amount of data from
 longitudinally polarized proton-proton ($pp$) collisions at the Relativistic 
-Heavy Ion Collider (RHIC) have become available 
-recently~\cite{Aschenauer:2015eha}, though in a limited range of momentum 
-fractions, $0.05\lesssim x \lesssim 0.4$.
+Heavy Ion Collider (RHIC) have become available recently (see {\it e.g.} 
+Ref.~\cite{Aschenauer:2015eha}for an overview), although in a limited range 
+of momentum fractions, $0.05\lesssim x \lesssim 0.4$.
 %
 On the one hand, longitudinal (parity-violating) single-spin and 
 (parity-conserving) double-spin asymmetries for $W^\pm$ boson production are 
@@ -106,12 +113,47 @@ sensitive to the flavor decomposition of polarized quark and antiquark
 distributions, because of the chiral nature of the weak 
 interactions~\cite{Bourrely:1993dd}. 
 %
-On the other hand, double-spin asymmetries for jet and $\pi^0$ 
+On the other hand, double-spin asymmetries for jet, di-jet and $\pi^0$ 
 production are directly sensitive to the gluon polarization in 
 the proton, because of the dominance of gluon-gluon and quark-gluon initiated 
 subprocesses in the kinematic range accessed by RHIC~\cite{Bourrely:1990pz}.
 
-%Add here a plot with th ekinematic coverage of the data
+The kinematic coverage of the data which can be used to constrain polarised 
+PDFs is displayed in Fig.~\ref{fig:kinEIC}.
+%
+By comparison with Fig.~\ref{fig:kinplot-report}, it is apparent that the
+quantity of data points, their kinematic coverage and the variety of 
+available hard-scattering processes are much more limited in the polarised case
+than in teh unpolarised case.
+%
+Therefore polarised PDFs can currently be determined with much less 
+precision than their unpolarised counterparts.
+%
+The kinematic coverage is expected to be significantly extended in the future,
+with DIS and SIDIS data from JLab-12~\cite{Dudek:2012vr} and a polarised 
+high-energy Electron-Ion Collider (EIC)~\cite{Accardi:2012qut}.
+%
+Such an extended kinematic coverage is also displayed on Fig.\ref{fig:kinEIC}.
+%
+The eRHIC realisation of an EIC~\cite{Aschenauer:2014cki} has been considered.
+
+%-------------------------------------------------------------------------------
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\textwidth]{plots/kinEIC}\\
+\caption{\small Representative kinematic coverage, in the $(x,Q^2)$ plane,
+of the (neutral current) DIS, SIDIS and $pp$ hard-scattering measurements 
+that are used as input in a global polarised PDF fit.
+%
+The extended kinematic coverage achieved by 
+JLab-12~\cite{Dudek:2012vr} and by the eRHIC~\cite{Aschenauer:2014cki} 
+realisation of an EIC~\cite{Accardi:2012qut}
+(including projected charged-current (CC) DIS data) is also shown.
+%
+Figure taken from Ref.~\cite{Aschenauer:2014cki}.}
+\label{fig:kinEIC}
+\end{figure}
+%-------------------------------------------------------------------------------
 
 \paragraph{State-of-the-art global polarised PDF fits.}
 
