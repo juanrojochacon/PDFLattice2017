@@ -43,13 +43,23 @@ which can be interpreted~\cite{Leader:2013jra} as the nucleon spin fractions
 carried by quarks/antiquarks and gluons respectively.
 
 As in the case of unpolarised PDFs, the dependence on the scale $\mu$ can 
-be computed perturbatively with DGLAP evolution equations, 
+be computed perturbatively by means of DGLAP evolution equations, 
 Eq.~(\ref{eq:dglap}).
 %
 The unpolarised splitting kernels $P_{ij}$ should be replaced with their
 polarised counterparts, $\Delta P_{ij}$, which have been recently computed 
 up to NNLO~\cite{Moch:2014sna} in the $\overline{\rm MS}$ renormalisation 
 scheme.
+%
+Small-$x$ evolution equations which resum powers of $\alpha_s\ln^2(1/x)$
+in the polarisation-dependent evolution along with powers of $\alpha_s\ln(1/x)$
+in the unpolarised evolution have been recently proposed using the formalism
+of Wilson line-like operators~\cite{Kovchegov:2015pbl}.
+%
+Both numerical~\cite{Kovchegov:2016weo}
+and analytical~\cite{Kovchegov:2016zex,Kovchegov:2017jxc}
+solutions to these small-$x$ evolution equations have been derived
+for the flavour singlet combination of polarised PDFs.
 
 The dependence on the momentum fraction $x$, fixed by non-perturbative QCD 
 dynamics, should satisfy some theoretical constraints.
@@ -83,6 +93,13 @@ measured values values are~\cite{Olive:2016xmw}
  \,\mbox{.}
 \label{eq:decayconst}
 \end{align}
+%
+Fairly significant violations of SU(3) symmetry are advocated
+in the literature (see {\it e.g.} Ref.~\cite{Cabibbo:2003cu} for a review). 
+%
+In this case, an uncertainty on the octet axial charge, 
+larger up to $30\%$ than its experimental value in Eq.~\eqref{eq:decayconst}, 
+is found~\cite{FloresMendieta:1998ii}. 
 
 The bulk of the experimental information on polarized PDFs comes from 
 neutral-current inclusive and semi-inclusive Deep-Inelastic Scattering 
@@ -90,7 +107,7 @@ neutral-current inclusive and semi-inclusive Deep-Inelastic Scattering
 %
 Because of the way the corresponding observables factorise, inclusive DIS 
 data constrain the total quark combinations $\Delta q^+$ only, 
-while SIDIS data, especially with identified pions or kaons in the final state, 
+while SIDIS data with identified pions or kaons in the final state 
 constrain individual quark and antiquark flavours. 
 %
 In principle, both DIS and SIDIS are also sensitive to the gluon 
@@ -100,6 +117,19 @@ evolution.
 %
 In practice the constraining power of DIS and SIDIS data on $\Delta g$ is 
 rather weak, because of the limited $Q^2$ range covered by the data. 
+
+Note that, in the case of SIDIS, a reliable knowledge of 
+Fragmentation Functions is required in the factorised expressions of the 
+corresponding observables. 
+%
+Since FFs are non-perturbative objects on the 
+same footing as PDFs, they are likely an additional source of 
+bias in the PDF determination.
+%
+For this reason, a significant experimental and theoreticla effort has been
+put in improving the independent determination of 
+FFs~\cite{deFlorian:2014xna,deFlorian:2017lwf,
+Hirai:2016loo,Sato:2016tuz,Nocera:2017qgb,Bertone:2017xsf}.
 
 Beside DIS and SIDIS fixed-target data, a significant amount of data from
 longitudinally polarized proton-proton ($pp$) collisions at the Relativistic 
@@ -165,8 +195,8 @@ In particular, note the suppression of all polarised PDFs at small values of
 $x$, including polarised sea quark PDFs, with respect to their unpolarised 
 counterparts.
 %
-This is a consequence of the different structure of the unpolarised and 
-polarised splitting functions in the DGLAP evolution equations. 
+This is a consequence of the different structure of the polarised and 
+unpolarised splitting functions in the DGLAP evolution equations. 
 
 %-------------------------------------------------------------------------------
 \begin{figure}[!t]
@@ -176,22 +206,28 @@ polarised splitting functions in the DGLAP evolution equations.
 but for the polarised NNPDFpol1.1 NLO PDFs.}
 \label{fig:qPDFpol}
 \end{figure}
-
+%-------------------------------------------------------------------------------
 
 \paragraph{State-of-the-art global polarised PDF fits.}
 
-Several determinations of polarized PDFs of the proton (up to NLO and mostly 
+Several determinations of polarized PDFs of the proton (up to 
+NLO\footnote{A NNLO QCD analysis of polarised PDFs based on inclusive DIS
+data only was performed in Refs.~\cite{Shahri:2016uzl,Khanpour:2017cha}.
+Inclusive DIS is the only polarised process for which coefficient functions
+are known up to NNLO (all others are known only up to NLO).} 
+and mostly 
 in the $\overline{\rm MS}$ factorization scheme) are available in the 
 literature, aiming at unveiling how much large and uncertain are 
 $\Delta\Sigma$ and  $\Delta G$, Eq.~\eqref{eq:moments}. 
 %
-They differ among each other for the data set included in the analysis
-annd for the procedure used to determine PDFs from the data (for details, 
-see {\it e.g.} Chap.~3 in Ref.~\cite{Nocera:2014vla} 
+They differ among each other for the data set included in the analysis,
+for some details of the QCD analysis (like the treatment of higher-twist
+corrections) and for the procedure used to determine PDFs from the data 
+(for details, see {\it e.g.} Chap.~3 in Ref.~\cite{Nocera:2014vla} 
 and Ref.~\cite{Nocera:2016xhb}). 
 %
-In this respect, beside the standard Hesian procedure and the NNDPF
-procedure outlined in Sec.~\ref{sec:unpPDFs}
+In this respect, beside the standard and NNDPF
+procedures outlined in Sec.~\ref{sec:unpPDFs},
 an iterative Monte Carlo procedure has been developed by the JAM
 collaboration~\cite{Sato:2016tuz}.
 
@@ -204,16 +240,11 @@ DSSV08~\cite{deFlorian:2008mr} and
 NNPDFpol1.0~\cite{Ball:2013lla}, with data respectively on double-spin 
 asymmetries for inclusive jet production~\cite{Adamczyk:2014ozi} 
 and $\pi^0$ production~\cite{Adare:2014hsq}\footnote{Preliminary RHIC results 
-included in Ref.~\cite{deFlorian:2008mr} have been replaced in
+included in Ref.~\cite{deFlorian:2008mr} were replaced in
 Ref.~\cite{deFlorian:2014yva} with final results.}, 
 and on double-spin asymmetries for high-$p_T$ inclusive jet 
 production~\cite{Adamczyk:2014ozi,Adamczyk:2012qj,Adare:2010cc} and single-spin
 asymmetries for $W^\pm$ production~\cite{Adamczyk:2014xyw}.
-%
-Some new data by the COMPASS experiment have also been included in 
-DSSV14 and NNPDFpol1.1, respectively new DIS and SIDIS 
-data~\cite{Alekseev:2010hc,Alekseev:2010ub} and open-charm leptoproduction 
-data~\cite{Adolph:2012ca}. 
 %
 The new data have been included in NNPDFpol1.1 
 by means of Bayesian reweighting~\cite{Ball:2010gb},
@@ -227,46 +258,30 @@ fixed-target SIDIS and RHIC $\pi^0$ production measurements, included in
 DSSV14, but not in NNPDFpol1.1. 
 %
 The information brought in by these data is complementary to that provided by 
-RHIC $W^\pm$ production and inclusive jet production data respectively, 
-but this is less constraining~\cite{Nocera:2014gqa}. 
-%
-These data were not included in the NNPDFpol1.1 analysis because 
-fragmentation functions (FFs) enter the factorised expression of the 
-corresponding observables: since FFs are non-perturbative objects on the 
-same footing as PDFs, they are likely to introduce an additional source of 
-bias in the PDF determination. 
-%
-The NNPDF methodology aims at reducing this bias as much as possible, hence 
-the inclusion of these data would require a consistent determination 
-of FFs within the NNPDF methodology, which has been achieved only very 
-recently~\cite{Nocera:2017qgb,Bertone:2017xsf}. 
-%
-A significant progress on the determination of FFs, especially for charged
-pions and kaons, has also been accomplished by other 
-collaborations~\cite{deFlorian:2014xna,deFlorian:2017lwf,Hirai:2016loo,
-Sato:2016tuz}, including the first simultaneous determination of FFs and 
-polarised PDFs~\cite{Ethier:2017zbq}.
+RHIC $W^\pm$ production and inclusive jet production data respectively. 
 
-
-%I am here, below still to be revised
-%Mention somewhere the effect of the latest RHIC and COMPAS/JLAB data
-
-The effect of RHIC data on the polarized PDFs of the proton is twofold.  
+The effect of RHIC data on the polarized PDFs of the proton is twofold. 
+ 
 \begin{itemize}
+
 \item The 2012 STAR data sets on $W$ production~\cite{Adamczyk:2014xyw}, 
-included in {\tt NNPDFpol1.1}, provide evidence of a positive 
+included in NNPDFpol1.1, provide evidence of a positive 
 $\Delta\bar{u}$ distribution 
 and a negative $\Delta\bar{d}$ distribution, with 
-$|\Delta\bar{d}|>|\Delta\bar{u}|$~\cite{Nocera:2014gqa}. 
-The size of this flavor symmetry breaking for polarized sea quarks is 
+$|\Delta\bar{d}|>|\Delta\bar{u}|$~\cite{Nocera:2014gqa}.
+% 
+The size of the flavor symmetry breaking for polarized sea quarks is 
 quantified by the asymmetry $\Delta\bar{u}-\Delta\bar{d}$, which,
-in the {\tt NNPDFpol1.1} analysis, turned out to be roughly as large as its 
+in the NNPDFpol1.1 analysis, turned out to be roughly as large as its 
 unpolarized counterpart (in absolute value), 
-though much more uncertain~\cite{Nocera:2014rea}. Even within this uncertainty,
+though much more uncertain~\cite{Nocera:2014rea}. 
+%
+Even within this uncertainty,
 polarized and unpolarized light sea quark asymmetries show opposite sings,
 with the polarized being definitely positive.  
-This result starts to discriminate between different 
-models of nucleon structure, see left panel of Fig.~\ref{fig:RHICpdfs}: 
+%
+This result may discriminate between one model of nucleon structure and 
+another, see left panel of Fig.~\ref{fig:RHICpdfs}: 
 specifically, some meson-cloud (MC) models are disfavored, while a more 
 accurate experimental information is needed to establish whether 
 chiral quark-soliton (CQS), Pauli-blocking (PB) or statistical (ST)
@@ -274,26 +289,52 @@ models are preferred (these models are described in
 Ref.~\cite{Chang:2014jba}).
 
 \item The 2009 STAR and PHENIX data sets on jet and $\pi^0$ 
-production~\cite{Adamczyk:2014ozi,Adare:2014hsq}, included in both {\tt DSSV14}
-and {\tt NNPDFpol1.1}, provide first evidence
-of a sizable, positive gluon polarization in the proton. 
+production~\cite{Adamczyk:2014ozi,Adare:2014hsq}, included in DSSV14
+and NNPDFpol1.1, provide first the evidence
+of a sizable positive gluon polarization in the proton. 
+%
 A comparison of the gluon PDF in the two PDF sets is displayed in 
-Fig.~\ref{fig:RHICpdfs} (right panel). Comparable results, both central values 
-and uncertainties, are found in the $x$ region covered by RHIC data. 
+Fig.~\ref{fig:RHICpdfs} (right panel). 
+%
+Comparable results, both central values and uncertainties, are found in the 
+$x$ region covered by RHIC data. 
+%
 The agreement between the two analyses is optimal in the
 range $0.08\leq x \leq 0.2$, where the dominant experimental information comes
-from jet data; a slightly smaller central value is found in the {\tt DSSV14} 
-analysis, in comparison to the {\tt NNPDFpol1.1}, in the range 
+from jet data; a slightly smaller central value is found in the DSSV14 
+analysis, in comparison to the NNPDFpol1.1, in the range 
 $0.05\leq x \leq 0.08$, where the dominant experimental information comes from 
-$\pi^0$ production data. Indeed, these are included in {\tt DSSV14} but are not
-in {\tt NNPDFpol1.1}. Nevertheless, best fits lie well within each other error
-bands, though {\tt NNPDF} uncertainties tend to be larger than {\tt DSSV14}
+$\pi^0$ production data. 
+%
+Indeed, these are included in DSSV14 but are not
+in NNPDFpol1.1. 
+%
+Nevertheless, best fits lie well within each other error
+bands, though NNPDFpol1.1 uncertainties tend to be larger than DSSV14
 uncertainties outside the region covered by RHIC data.
+%
 Very well compatible values of the integral of $\Delta g$, 
 Eq.~\eqref{eq:moments}, truncated over the interval $0.05\leq x \leq 1$, are 
 found: at $Q^2=10$ GeV$^2$, this is $0.20^{+0.06}_{-0.07}$ for 
-{\tt DSSV14}~\cite{deFlorian:2014yva}, and $0.23\pm 0.06$ for 
-{\tt NNPDFpol1.1}~\cite{Nocera:2014gqa}.
+DSSV14~\cite{deFlorian:2014yva}, and $0.23\pm 0.06$ for 
+NNPDFpol1.1~\cite{Nocera:2014gqa}.
 \end{itemize}
 
-%briefly mention what are the open issues
+%------------------------------------------------------------------------------
+\begin{figure}[!t]
+\centering
+\includegraphics[scale=0.31]{plots/asysea_2}
+\includegraphics[scale=0.287]{plots/gluoncomp}\\
+\caption{(Left) The polarized light sea quark asymmetry 
+$x(\Delta\bar{u}-\Delta\bar{d})$ from the NNPDFpol1.1 and 
+DSSV08 PDF sets at $Q^2=10$ GeV$^2$, compared to expectations from 
+various models of nucleon structure~\cite{Chang:2014jba}. 
+(Right) The polarized gluon $x\Delta g$ from the 
+DSSV14 and NNPDFpol1.1 PDF sets at $Q^2=10$ GeV$^2$.}
+\label{fig:RHICpdfs}
+\end{figure}
+%------------------------------------------------------------------------------
+
+%briefly mention what are the open issues, 
+%specifically strangeness, small/large x, gluon
+%Mention future facilities
