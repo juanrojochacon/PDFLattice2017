@@ -2,13 +2,13 @@
 \subsubsection{Unpolarized PDFs}
 \label{sec:unpPDFs}
 
-Here first of all we present the global unpolarized PDF fitting framework.
+Here we first present the global unpolarized PDF fitting framework.
 %
 Then we discuss in more technical detail how PDFs are extracted
 from hard-scattering cross-sections, paying special attention
 to the assessment of the PDF uncertainties.
 %
-Finally we briefly discuss the state of the art of unpolarized
+Finally, we briefly discuss the state of the art of unpolarized
 global PDF fits.
 %
 We have made an effort to use a notation fully consistent
@@ -16,31 +16,7 @@ with the previous lattice QCD discussion.
 
 \paragraph{General framework}
 %
-In the following we express the collinear unpolarized PDFs as $f_{i}(x,\mu)$
-where the index $i$ represents the parton flavor $i=\{g,u,\bar{u},d,\bar{d},s,\bar{s},...\}$,
-$x$ is the fractional momentum carried by the parton, and $\mu$
-is the factorization  scale.\footnote{We could add an additional index to specify the particular hadron
-(proton, neutron, pion, nuclei, ...); as we mainly refer to the proton
-  in this paper, we will omit such a designation unless necessary.}
-%
-The value of $\mu$ is usually chosen to be the typical scale of the hard scattering
-process involving the PDFs.
-%
-Beyond leading order, the PDFs themselves
-are scheme-dependent quantities, and one typically works in
-the $\overline{\rm MS}$ scheme; when this is convoluted with an appropriate
-hard cross section (Wilson coefficient), we obtain a scheme-independent
-physical observable (up to subleading terms in the perturbative expansion). 
-
-The unpolarized PDFs appear in the factorization formulae for both inclusive DIS and hadroproduction processes. Namely, the DIS structure functions are given by
-\begin{equation}
-F_i(x,Q^2)=x\sum_a \int_x^1 \frac{{\rm d}z}{z}\,C_{i,a}\left(\frac{x}{z},\alpha_S(Q^2)\right)f_a(z,Q^2)\, ,
-\end{equation}
-where $x=Q^2/2p\cdot q$ is the standard Bjorken variable, given in terms of the momenta $q$ of the virtual photon ($q^2=-Q^2$) and $p$ of the proton,
-and the sum over $a$ accounts for the effects of all active partons.
-%
-The hard coefficient functions $C_{i,a}$ can be computed perturbatively as an expansion in $\alpha_S$.
-%
+The unpolarized PDFs appear in the factorization formulae for both inclusive DIS and hadroproduction processes. The unpolarised DIS structure functions are given in Eq.~\eqref{eq:Fi}.
 For the hadroproduction of a generic system $X$ in $pp$ collisions we have
 a corresponding factorized expression
 \begin{equation}
@@ -61,32 +37,7 @@ where $M_X$, $y_X$ are the invariant mass and rapidity of the produced system re
 The factorization and renormalization scales, $\mu_F$ and $\mu_R$, are taken to be of order the hard scale, $\mu_F,\mu_R
 \sim Q$, of the process.
 
-While the PDFs themselves cannot be calculated using perturbative methods, their dependence on the scale $\mu$ can be, and is given by the  
-DGLAP evolution equations~\cite{Dokshitzer:1977sg,Gribov:1972ri,Altarelli:1977zs},
-a set of integro-differential coupled equations of the form
-\begin{equation}
-  \label{eq:dglap}
-\frac{\partial f_i(x,\mu^2)}{\partial \ln \mu^2}=\sum_{j=g,q,\bar{q}}\int_x^1 \frac{{\rm d}z}{z}P_{ij}(x/z)f_j(z,\mu^2)\;,
-\end{equation}
-Here, the logarithmic derivative of the PDF is
-determined\footnote{The DGLAP (Dokshitzer\textendash Gribov\textendash Lipatov\textendash Altarelli\textendash Parisi)
-evolution can be modified by $\ln(1/x)$ terms at small-$x$, and
-this is characterized by the BFLK (Balitsky-FadinKuraev-Lipatov) equations~\cite{Kuraev:1976ge,Kuraev:1977fs,Balitsky:1978ic} by a convolution
-of the PDFs with the DGLAP kernel $P_{ij}$ which can be computed
-perturbatively in powers of $\alpha_{s}(\mu)$.
-%
-The splitting functions $P_{ij}$ are currently known to NNLO.
-%
-Additionally, at large-$x$ and small $\mu$ scale the above framework
-can receive corrections from non-factorizeable higher-twist (HT) corrections.}
-%
-The DGLAP evolution equations can be solved numerically using
-either $x$-space or Mellin $N$-space techniques by means of various
-publicly available
-codes~\cite{Bertone:2013vaa,Salam:2008qg,Botje:2010ay}, where the typical level of agreement
-for the results of the PDF evolution is $\mathcal{O}(10^{-5})$.
-
-Thus, when performing a global fit, the PDFs can be parameterised at one arbitrary input scale $Q_0\sim 1$ GeV, and these are connected directly via
+The DGLAP evolution of PDFs ensures that, when performing a global fit, the PDFs can be parameterised at one arbitrary input scale $Q_0\sim 1$ GeV, and these are connected directly via
 DGLAP evolution
 Eq.~(\ref{eq:dglap}) to the higher scales $\mu$ that are probed by the data.
 This input parameterisation takes the generic form
@@ -149,31 +100,16 @@ The second sum rule that we can impose on the PDFs arises
 from the basic conservation of energy-momentum derived from
 the QCD Lagrangian.
 %
-The fractional momentum carried
-by each parton flavor is given by the second moments of the PDFs, for instance
-%
-\begin{eqnarray}
-\int_{0}^{1}dx\ x\ \left[u(x,\mu)\right] & = & \left\langle x\right\rangle _{u}\\
-\int_{0}^{1}dx\ x\ \left[u(x,\mu)+\bar{u}(x,\mu)\right] & = & \left\langle x\right\rangle _{u^{+}}\ .
-\end{eqnarray}
-%
-Here, $\left\langle x\right\rangle _{u}$ is the fractional momentum
-carried by the up-quark, $\left\langle x\right\rangle _{u^{+}}$ is
-the fractional momentum carried by the up-quark and anti-up-quark.
-%
-The reader should notice that we are being particularly careful
-with the notation, and that we always refer to $q^+$ to indicate
-the sum of the quark and anti-quark PDF of the same flavour.
-%
-The so-called momentum sum rule then follows because the total
+This so-called momentum sum rule arises
+because the total
 proton's momentum should be equal to the sum of the momentum
 carried by all its constituents, namely
-\begin{eqnarray}\label{eq:mom}
-1 & = & \left\langle x\right\rangle _{g}+\left\langle x\right\rangle _{u^{+}}+\left\langle x\right\rangle _{d^{+}}+\left\langle x\right\rangle _{s^{+}}+\left\langle x\right\rangle _{c^{+}}+\left\langle x\right\rangle _{b^{+}}+\left\langle x\right\rangle _{t^{+}}+...
-\end{eqnarray}
+\begin{equation}\label{eq:mom}
+1 = \left\langle x\right\rangle _{g}+\left\langle x\right\rangle _{u^{+}}+\left\langle x\right\rangle _{d^{+}}+\left\langle x\right\rangle _{s^{+}}+\left\langle x\right\rangle _{c^{+}}+\left\langle x\right\rangle _{b^{+}}+\left\langle x\right\rangle _{t^{+}}+\ldots
+\end{equation}
 %
-where the ``...'' represents any other partonic components (such
-as a photon). Thus for non--valence distributions, we must have $a_1>-2$ to avoid a divergent contribution to
+where the ellipsis represents any other partonic components (such
+as a photon). The first moments, $\left\langle x\right\rangle _{f_i}$, are defined in analogy to Eq.~\eqref{eq:umoment1} and \eqref{eq:uplusmoment1}. Thus for non--valence distributions, we must have $a_1>-2$ to avoid a divergent contribution to
 Eq.~(\ref{eq:mom}); typically we have $-2<_1a<-1$ for such distributions, and therefore for small $x$ the number of soft partons
 grows very fast, although the momentum fraction carried by them is well-defined
 and finite.
