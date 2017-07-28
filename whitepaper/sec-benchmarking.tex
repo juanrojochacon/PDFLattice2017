@@ -3,10 +3,86 @@
 \label{sec:benchmarking}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In this section we present updated benchmarks between the most
-recent available lattice-QCD calculations and global PDF fits,
-both in terms of moments and of $x$-space PDFs by means of
-quasi-PDFs.
+In this section we present benchmarks for calculations of the low 
+Mellin moments of PDFs and of the $x$-dependence of PDFs. We provide a systematic
+comparison between lattice-QCD results and determinations from global fitting
+calculations.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Benchmark criteria for lattice QCD}
+To accurately assess the current state-of-the-art for lattice calculations, we
+follow a procedure inspired by the review of low-energy mesons undertaken 
+by the Flavor Lattice Averaging Group (FLAG) \cite{Aoki:2016frl}. For each
+lattice calculation, we assess the status of each source of uncertainty outlined
+in Sec.~\ref{Sec:IntroLQCD}. We use a rating system similar to FLAG, awarding a
+blue star (\bstar) for sources of uncertainty that are well-controlled or very conservatively
+estimated, a blue circle (\bcirc) for sources of uncertainty that have been controlled or estimated to some extent,
+and a red square (\rsquare) for uncertainties that have not met our criteria or for which no estimate is given.
+
+We present our determination of the current, state-of-the-art
+``world average'' for lattice-QCD results of the benchmark quantities. and 
+provide both summary tables and overview comparison plots. Following FLAG, we include only those results that
+are published in peer-reviewed journals or that have appeared as preprints. Where
+recent results are a clear update of previously published work, we do not 
+include the earlier results in the global average, but include them in the bibliography. Finally,
+we remark that our criteria, and the corresponding ratings, are chosen not only
+to provide as fair an assessment of the relative merits of various calculations as
+possible, but to be aspirational. Where lattice-QCD results do meet these
+standards, we hope that the lattice community will work towards improved calculations
+and greater precision as part of a concerted and inter-disciplinary effort to better understand
+nucleon structure.
+%
+We apply the following criteria and award a red square (\rsquare) wherever the criteria listed are not met.
+\paragraph{Discretisation effects and the continuum limit} We assume that the lattice actions are
+${\cal O}(a)$-improved, that is, that the discretization errors vanish quadratically with the lattice spacing. 
+For unimproved actions an additional lattice spacing is required. We require that these
+criteria are satisfied in each case for at least one pion mass below 300 MeV.
+\begin{itemize}
+\item[\bstar] At least three lattice spacings with at least two lattice spacings below 0.1 fm and
+a range of lattice spacings that satisfies $[a_{\mathrm{max}}/a_{\mathrm{min}}]^2 \geq 2$.
+\item[\bcirc] At least two lattice spacings with at least one point below 0.1 fm and a range of lattice spacings 
+satisfies $[a_{\mathrm{max}}/a_{\mathrm{min}}]^2 \geq 1.4$.
+\end{itemize}
+To receive a \bstar~or \bcirc~either a continuum extrapolation must be performed or the results must
+demonstrate no significant discretisation effects over the appropriate range of lattice spacings.
+
+\paragraph{Unphysical pion masses} For the following criteria, we define a physical pion mass ensemble 
+to be one with $M_\pi=135\pm 10$~MeV.
+\begin{itemize}
+\item[\bstar] One ensemble with a physical pion mass \emph{or} a chiral extrapolation with three or more pion masses,
+with at least two pion masses below 250 MeV and at least one below 200~MeV.
+\item[\bcirc] A chiral extrapolation with three or more pion mass, two of which are below 300~MeV.
+\end{itemize}
+
+\paragraph{Finite volume effects} For calculations that use a mixed action approach, that is,
+with different lattice actions for the valence and sea quarks, we apply the criteria for $M_\pi L$ to the valence quarks.
+\begin{itemize}
+\item[\bstar] Ensembles with $M_{\pi,\mathrm{min}}L\geq 4$, \emph{or} at least three volumes with spatial extent
+$L>2.5$~fm.
+\item[\bcirc] Ensembles with $M_{\pi,\mathrm{min}}L \geq 3.4$, \emph{or} at least two volumes with spatial extent
+$L>2.5$~fm.
+\end{itemize}
+
+\paragraph{Excited state contamination} The following criteria must be satisfied for every pion mass and lattice spacing.
+\begin{itemize}
+\item[\bstar] At least three source-sink  separations or a variational method to optimise the
+operator derived from at least a $3\times 3$ correlator matrix. 
+\item[\bcirc] Two source-sink separations at every pion mass and lattice spacing, or three or more source-sink separations at one pion mass
+below 300~MeV. For the variational method, an optimised operator derived from a $2\times 2$ correlator matrix at every pion mass and
+lattice spacing, or a $3\times 3$ correlator matrix for two pion masses below 300 MeV.
+\end{itemize}
+
+\paragraph{Renormalization} 
+\begin{itemize}
+\item[\bstar] Nonperturbative renormalisation.
+\item[\bcirc] Perturbative renormalisation.
+\end{itemize}
+For the axial coupling, $g_A$, we also award a \bstar~for calculations that use fermion actions for which $Z_A/Z_V=1$ or employ combinations of quantities for which the renormalisation is unity by construction.
+
+\paragraph{Lattice-spacing determination} For lattice-QCD calculations of nucleons, the lattice-spacing determination is generally 
+sufficiently precise that it is a very small or negligible source
+of systematic uncertainty. Therefore we do not include an assessment of the lattice-spacing
+determination in our criteria.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Moments}
@@ -16,7 +92,7 @@ lattice-QCD results and PDF fitting calculations
 for a number of moments both for unpolarized
 and for polarized PDFs.
 %
-We provide both summary tables and overview comparison plots.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Unpolarized parton distributions}
@@ -59,22 +135,18 @@ if the format is OK we can replace/update with the real benchmarks. }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[t]
+\renewcommand{\arraystretch}{1.2} 
 \centering
-\begin{tabular}{|c||c|c|c|}
+\begin{tabular}{@{}lccc@{}}
 \hline 
 \rule[-3 ex]{0pt}{7 ex}  %% add some extra space
 $\left\langle x\right\rangle _{u}-\left\langle x\right\rangle _{d}$ 
-   & Central Value & PDF error & Shift\\
+   & Central Value & PDF error (\%) & Shift (\%) \\
 \hline 
-\hline 
-NNPDF3.0 & 0.136 & 2.4\% & -\\
-\hline 
-CT14 & 0.140 & 3.4\% & +2.5\%\\
-\hline 
-MMHT14 & 0.134 & 2.6\% & -1.5\%\\
-\hline 
-ABMP16 & 0.150 & 1.9\% & +10\%\\
-\hline 
+NNPDF3.0 & 0.136 & 2.4 & -\\
+CT14 & 0.140 & 3.4 & +2.5 \\
+MMHT14 & 0.134 & 2.6 & -1.5 \\
+ABMP16 & 0.150 & 1.9 & +10 \\
 ... &  &  & \\
 \hline 
 \end{tabular}
@@ -90,26 +162,21 @@ ABMP16 & 0.150 & 1.9\% & +10\%\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[t]
+\renewcommand{\arraystretch}{1.2} 
 \centering
-\begin{tabular}{|c||c|c|c|}
+\begin{tabular}{@{}lccc@{}}
 \hline 
 \rule[-3 ex]{0pt}{7 ex}  %% add some extra space
 $\left\langle x\right\rangle _{u}-\left\langle x\right\rangle _{d}$ 
-   & Central Value & PDF error & Shift\\
+   & Central Value & PDF error (\%) & Shift (\%) \\
 \hline 
-\hline 
-NNPDF3.0 & 0.102 & 2.4\% & -\\
-\hline 
-CT14 & 0.104 & 3.2\% & +2.4\%\\
-\hline 
-MMHT14 & 0.101 & 2.6\% & -1.5\%\\
-\hline 
-ABMP16 & 0.113 & 1.9\% & +11\%\\
-\hline 
+NNPDF3.0 & 0.102 & 2.4 & -\\
+CT14 & 0.104 & 3.2 & +2.4\\
+MMHT14 & 0.101 & 2.6 & -1.5\\
+ABMP16 & 0.113 & 1.9 & +11\\
 ... &  &  & \\
 \hline 
 \end{tabular}
-
 \caption{Benchmark for $\left\langle x\right\rangle _{u}-\left\langle x\right\rangle _{d}$
 ... at $Q=100$ GeV}
 \end{table}
@@ -119,26 +186,21 @@ ABMP16 & 0.113 & 1.9\% & +11\%\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[t]
+\renewcommand{\arraystretch}{1.2} 
 \centering
-\begin{tabular}{|c||c|c|c|}
+\begin{tabular}{@{}lccc@{}}
 \hline 
 \rule[-3 ex]{0pt}{7 ex}  %% add some extra space
 $\left\langle x\right\rangle _{\bar{u}}-\left\langle x\right\rangle _{\bar{d}}$ 
-   & Central Value & PDF error & Shift\\
+   & Central Value & PDF error (\%) & Shift (\%)\\
 \hline 
-\hline 
-NNPDF3.0 & -0.0038 & 51\% & -\\
-\hline 
-CT14 & -0.0055 & 25\% & +43\%\\
-\hline 
-MMHT14 & -0.0060 & 14\% & +57\%\\
-\hline 
-ABMP16 & -0.0059 & 11\% & +54\%\\
-\hline 
+NNPDF3.0 & -0.0038 & 51 & -\\
+CT14 & -0.0055 & 25 & +43\\
+MMHT14 & -0.0060 & 14 & +57\\
+ABMP16 & -0.0059 & 11 & +54\\
 ... &  &  & \\
 \hline 
 \end{tabular}
-
 \caption{Benchmark for $\left\langle x\right\rangle _{\bar{u}}-\left\langle x\right\rangle _{\bar{d}}$
 ... at $Q=5$ GeV}
 \end{table}
@@ -148,22 +210,18 @@ ABMP16 & -0.0059 & 11\% & +54\%\\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[t]
+\renewcommand{\arraystretch}{1.2} 
 \centering
-\begin{tabular}{|c||c|c|c|}
+\begin{tabular}{@{}lccc@{}} 
 \hline 
 \rule[-3 ex]{0pt}{7 ex}  %% add some extra space
 $\left\langle x\right\rangle _{s^{+}}$ 
-   & Central Value & PDF error & Shift\\
+   & Central Value & PDF error (\%) & Shift (\%) \\
 \hline 
-\hline 
-NNPDF3.0 & 0.46 & 6\% & -\\
-\hline 
-CT14 & 0.43 & 18\% & -7\%\\
-\hline 
-MMHT14 & 0.43 & 16\% & -7\%\\
-\hline 
-ABMP16 & 0.47 & 3\% & +2\%\\
-\hline 
+NNPDF3.0 & 0.46 & 6 & -\\
+CT14 & 0.43 & 18 & -7\\
+MMHT14 & 0.43 & 16 & -7\\
+ABMP16 & 0.47 & 3 & +2\\
 ... &  &  & \\
 \hline 
 \end{tabular}
@@ -177,26 +235,21 @@ GeV}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[t]
+\renewcommand{\arraystretch}{1.2} 
 \centering
-\begin{tabular}{|c||c|c|c|}
+\begin{tabular}{@{}lccc@{}}
 \hline 
 \rule[-3 ex]{0pt}{7 ex}  %% add some extra space
 $\dfrac{\left\langle x\right\rangle _{s^{+}}}{\left\langle x\right\rangle _{\bar{u}}-\left\langle x\right\rangle _{\bar{d}}}$ 
-   & Central Value & PDF error & Shift\\
+   & Central Value & PDF error (\%) & Shift (\%)\\
 \hline 
-\hline 
-NNPDF3.0 & 0.64 & 8\% & -\\
-\hline 
-CT14 & 0.62 & 21\% & -3\%\\
-\hline 
-MMHT14 & 0.59 & 19\% & -7\%\\
-\hline 
-ABMP16 & 0.66 & 4\% & 4\%\\
-\hline 
+NNPDF3.0 & 0.64 & 8 & -\\
+CT14 & 0.62 & 21 & -3\\
+MMHT14 & 0.59 & 19 & -7\\
+ABMP16 & 0.66 & 4 & 4\\
 ... &  &  & \\
 \hline 
 \end{tabular}
-
 \caption{Benchmark for $\left\langle x\right\rangle _{s^{+}}/\left[\left\langle x\right\rangle _{\bar{u}}-\left\langle x\right\rangle _{\bar{d}}\right]$
 ... at $Q=5$ GeV}
 \end{table}
