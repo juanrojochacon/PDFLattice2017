@@ -11,6 +11,7 @@ correlation functions. Lattice-QCD calculations have reached a level where
 they not only complement, but also guide current and forthcoming
 experimental programs.
 
+\subsubsection{Systematic uncertainties}
 Lattice-QCD calculations must demonstrate control over all sources of
 systematic uncertainty introduced by the discretisation of QCD on the
 lattice to make meaningful contact with experimental data. These
@@ -22,7 +23,9 @@ We briefly review these main sources of systematic
 uncertainty here; for a fuller account see, for
 example, \cite{Aoki:2016frl}.
 
-\paragraph{Discretisation effects and the continuum limit} There is 
+\begin{itemize}
+
+\item {\bfseries Discretisation effects and the continuum limit.} There is 
 a fair degree of flexibility in discretising the QCD action. This has
 led to a variety of formulations, which differ mainly in the choice of
 the action for quarks. In the continuum limit, which corresponds to taking
@@ -38,7 +41,7 @@ limit, improved quark and gluon actions are widely used, which include
 higher-dimension operators to reduce the discretisation errors to
 $O(a^2)$ or better.
 
-\paragraph{Unphysical pion masses} 
+\item {\bfseries Unphysical pion masses.} 
 The computational cost of the fermion contribution to the path
 integral increases with a large inverse power of the bare quark mass
 (or, equivalently, the pion mass). Lattice-QCD calculations are therefore
@@ -51,9 +54,9 @@ uncertainties, these extrapolations are guided by effective
 theories. In particular, the pion-mass dependence can be parameterised
 using chiral perturbation theory ($\chi$PT), which accounts for the
 Nambu-Goldstone nature of the lowest excitations that occur in the
-presence of light quarks.
+presence of light quarks. 
 
-\paragraph{Finite volume effects} Numerical Lattice-QCD 
+\item {\bfseries Finite volume effects.} Numerical Lattice-QCD 
 calculations are necessarily restricted to a finite space-time
 volume. For most simple quantities, these effects decay exponentially
 with the size of the lattice, and therefore the easiest way to
@@ -70,7 +73,7 @@ $m_\pi$ is the pion mass, are generally sufficiently large that finite
 volume effects are negligible, within the current precision of Lattice-QCD
 calculations.
 
-\paragraph{Excited state contamination} At small Euclidean times, a lattice-QCD correlation function
+\item {\bfseries Excited state contamination.} At small Euclidean times, a lattice-QCD correlation function
 is a sum over a tower of states that behave as $e^{-m_it}$, where $m_i$ is the 
 mass of the state and $t$ is the Euclidean time. Thus, at large Euclidean times,
 ground-state quantities can be extracted by fitting to the dominant exponential behaviour.
@@ -82,7 +85,7 @@ the signal can be reliably extracted. This is a particular challenge for baryons
 until recently, was one of the largest sources of systematic uncertainties for
 nucleon matrix elements.
 
-\paragraph{Renormalisation} The matrix elements extracted from a 
+\item {\bfseries Renormalisation.} The matrix elements extracted from a 
 Lattice-QCD calculation at a given lattice spacing are bare matrix elements,
 rendered finite by the presence of the lattice spacing, which serves
 as a gauge-invariant UV regulator. To take the continuum limit,
@@ -127,7 +130,7 @@ for example, work best for $q^2_{\rm min} \approx
 15 \, \mbox{GeV}^2$~\cite{Abramowicz:2015mha}, which should be kept in
 mind when comparing lattice results with phenomenology.
 
-\paragraph{Lattice-spacing determination} Numerical lattice-QCD calculations 
+\item {\bfseries Lattice-spacing determination.} Numerical lattice-QCD calculations 
 naturally determine all dimensionful quantities in units of the
 lattice spacing. Thus, extracting physical values requires the
 determination of the lattice scale. This is achieved by matching a
@@ -139,6 +142,8 @@ potential or, most recently, the Wilson flow time
 $\sqrt{t_0}$~\cite{Luscher:2010iy}. The Wilson flow scale has become
 increasingly popular, because it can be computed rather cheaply and
 with high precision, unlike hadron masses, for example.
+
+\end{itemize}
 
 These sources of systematic uncertainty all need to be under control
 when confronting experimental data with lattice results, or vice
@@ -324,15 +329,16 @@ where the non-leading terms are power-suppressed in the large $p_z$ limit. Equat
 %\eqref{eq:ope}
 leads to the relation between the quasi PDF and the light-front PDF expressed in Eq.~\eqref{eq:qPDFmatching}.
 
-Preliminary results from lattice calculations of quasi PDFs have been encouraging \cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp,Alexandrou:2016jqi}. There are a number of remaining challenges, however, that must be overcome for an {\it ab initio} determination of the $x$-dependence of PDFs directly from lattice QCD that incorporates complete control over systematic uncertainties. Lattice calculations of quasi PDFs are subject to the same sources of systematic uncertainty that plague all lattice calculations and are highlighted in Section \ref{Sec:IntroLQCD}, but here we focus on systematic uncertainties that are more specific to quasi PDFs. These are: uncertainties associated with the finite nucleon momentum of the lattice calculations and with the renormalisation of quasi PDFs.
+Preliminary results from lattice calculations of quasi PDFs have been encouraging \cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp,Alexandrou:2016jqi}, as we illustrate in Fig.~\ref{fig:quasipdfs}. There are a number of remaining challenges, however, that must be overcome for an {\it ab initio} determination of the $x$-dependence of PDFs directly from lattice QCD that incorporates complete control over systematic uncertainties. Lattice calculations of quasi PDFs are subject to the same sources of systematic uncertainty that plague all lattice calculations and are highlighted in Section \ref{Sec:IntroLQCD}, but here we focus on systematic uncertainties that are more specific to quasi PDFs. These are: uncertainties associated with the finite nucleon momentum of the lattice calculations and with the renormalisation of quasi PDFs.
 
-Preliminary nonperturbative studies of the quasi PDF used nucleon momenta in the range $p_z = 2\pi/L$ to $6\pi/L$, where $L$ is the physical extent of the lattice, corresponding to $p_z = 0.5$ to $1.3$ GeV  \cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp}. At such low momenta, higher-twist and target mass corrections are likely to be considerable.
+\begin{itemize}
+ \item Preliminary nonperturbative studies of the quasi PDF used nucleon momenta in the range $p_z = 2\pi/L$ to $6\pi/L$, where $L$ is the physical extent of the lattice, corresponding to $p_z = 0.5$ to $1.3$ GeV  \cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp}. At such low momenta, higher-twist and target mass corrections are likely to be considerable.
 
 Target mass corrections can be removed to all orders \cite{Chen:2016utp}, and twist-4 contributions can be removed in principle \cite{Radyushkin:2016hsy,Chen:2016utp}, leaving higher-twist contamination. To reduce these remaining effects, the authors of \cite{Lin:2014zya,Chen:2016utp} extrapolated to infinite nucleon momentum using the fit ansatz $a + b/p_z$ for each value of $x$, but do not include a complete estimate of the corresponding systematic uncertainty. Although the effects of finite nucleon momentum can be mitigated, it is likely that reducing systematic uncertainties to less than 20\% at moderate values of $x$ require significantly larger values of nucleon momentum \cite{Gamberg:2014zwa}, and larger values of $x\simeq 1$ may require nucleon momentum as large as $p_z > 4$ GeV.
 
 Presently, the size of the nucleon momentum is restricted by the decreasing signal-to-noise ratio at large momenta, which requires very high statistics to extract a signal. New approaches to high-momentum nucleons are being investigated, with the most promising an approach that employs momentum smearing \cite{Bali:2016lva}. This method has been applied to quasi-PDFs in \cite{Alexandrou:2016jqi}, demonstrating a large improvement in the signal-to-noise ratio by reaching momenta of $\sim 2.5$ GeV, with small statistics.
 
-The leading-twist quasi PDFs and light-front PDFs are connected through the matching (or ``factorization'') relation of Eq.~\eqref{eq:qPDFmatching}. Provided the quasi and light-front PDFs share the same infrared (IR) behavior, the matching kernel can be determined in perturbation theory~\cite{Xiong:2013bka}. The factorization of the IR structure of quasi PDFs into light-front PDFs and an IR-safe matching kernel was claimed to hold to all orders in \cite{Ma:2014jla, Ma:2014jga}. However, Ref.~\cite{Li:2016amo} asserted that there might be subtleties beyond leading order in perturbation theory. A distinct, but similar, issue is the IR structure of extended operators in Euclidean and Minkowski spacetime. There are again subtleties in perturbation theory \cite{Carlson:2017gpk}, but arguments based on general field-theoretic grounds demonstrate that the quasi PDF extracted from a Euclidean correlation function is exactly the same matrix element as that determined from the LSZ reduction formula in Minkowski spacetime \cite{Briceno:2017cpo}.
+\item The leading-twist quasi PDFs and light-front PDFs are connected through the matching (or ``factorization'') relation of Eq.~\eqref{eq:qPDFmatching}. Provided the quasi and light-front PDFs share the same infrared (IR) behavior, the matching kernel can be determined in perturbation theory~\cite{Xiong:2013bka}. The factorization of the IR structure of quasi PDFs into light-front PDFs and an IR-safe matching kernel was claimed to hold to all orders in \cite{Ma:2014jla, Ma:2014jga}. However, Ref.~\cite{Li:2016amo} asserted that there might be subtleties beyond leading order in perturbation theory. A distinct, but similar, issue is the IR structure of extended operators in Euclidean and Minkowski spacetime. There are again subtleties in perturbation theory \cite{Carlson:2017gpk}, but arguments based on general field-theoretic grounds demonstrate that the quasi PDF extracted from a Euclidean correlation function is exactly the same matrix element as that determined from the LSZ reduction formula in Minkowski spacetime \cite{Briceno:2017cpo}.
 
 In contrast to the IR structure, the ultraviolet (UV) structure of the quasi PDF is quite different from the UV structure of the light-front PDF: the former has both linear and logarithmic divergences, while the latter contains only logarithmic divergences. Although there are no power-divergences in dimensional regularization, quasi PDFs determined on the lattice are regulated by the inverse lattice spacing. In the continuum limit (for which $a\to 0$, with all physical quantities held fixed) there is a divergence, associated with the length of the Wilson line $z$, that scales as $z/a$. This divergence must be removed nonperturbatively.
 
@@ -350,3 +356,20 @@ In addition, nonperturbative schemes, such as the regularization-independent RI/
 An alternative approach to removing both the linear and logarithmic divergences is provided by the gradient flow, a deterministic evolution of the quark and gluon degrees of freedom in a new parameter, the flow time, that renders all correlation functions finite \cite{Narayanan:2006rf,Luscher:2011bx,Luscher:2013cpa}. By fixing the flow time in the continuum limit, finite continuum quasi PDFs can be extracted from lattice calculations and then directly matched to light-front PDFs using perturbation theory~\cite{Monahan:2016bvm}.
 
 Ultimately, perturbative matching must be carried out at a sufficiently high scale that truncation uncertainties can be safely neglected. Until a nonperturbative step-scaling scheme has been devised for quasi PDFs, perturbative truncation uncertainties are likely to be, in conjunction with finite nucleon momentum effects, the dominant source of systematic uncertainty in lattice determinations of quasi PDFs.
+\end{itemize}
+
+\paragraph{Status} We review the current status of lattice calculations of Mellin moments of PDFs in Sec.~\ref{sec:benchmarking}. The study of the $x$-dependence of PDFs directly from lattice QCD is still in its infancy and at this stage it would be premature to attempt a global analysis, as we undertake for the moments of PDFs. Here, however, we illustrate the progress that has been made with a snapshot of the most recent results.
+
+Two groups have carried out lattice calculations of quasi-PDFs, and example results are shown in Fig.~\ref{fig:quasipdfs}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t]
+\begin{center}
+  \includegraphics[scale=0.75]{plots/nnpdf31nnlo-10.pdf}
+  \includegraphics[scale=0.75]{plots/nnpdf31nnlo-1e4.pdf}
+  \caption{\small Illustrative plots of quasi PDFs from \cite{XXX} (left) and \cite{YYY} (right).
+    \label{fig:quasidfs}
+  }
+\end{center}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
