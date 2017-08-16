@@ -31,7 +31,7 @@ class MomIntegral
   double Q;
   double xmin;
   double eps;
-  
+
  public:
   MomIntegral(double err = 1e-12) { eps = err;}
 
@@ -39,8 +39,8 @@ class MomIntegral
   // That is the type of moment that is being computed
   double momwrap(double x)
   {
-    // x*(u - d)
-    double xpdf = ( LHAPDF::xfx(x, Q, 2) + LHAPDF::xfx(x, Q, -1) );
+    // x*(u+ - d^+)
+    double xpdf = ( LHAPDF::xfx(x,Q,0) );
     
     return xpdf;
   }
@@ -48,7 +48,7 @@ class MomIntegral
   double getMom(double Q)
   {
     this->Q = Q;
-    xmin=1e-7;
+    xmin=1e-9;
     double result = dgauss(xmin, 1.0, eps);
     return result;
   }

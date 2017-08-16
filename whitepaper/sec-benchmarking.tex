@@ -34,9 +34,10 @@ $\langle 1 \rangle_{\Delta s^+}$ and $\langle x \rangle_{\Delta u^- - \Delta d^-
 %
 We use the notation outlined in Appendix~\ref{app:notation}.
 %
-Current lattice calculations of higher moments are not sufficiently controlled
-to allow for a meaningful comparison between lattice-QCD and global-PDF fit
-results.
+The focus on these quantities is motivated by the fact that
+current lattice calculations of higher moments and/or of other PDFs or PDF 
+combinations are not sufficiently controlled to allow for a meaningful 
+comparison between lattice-QCD and global-PDF fit results.
 %
 Therefore, these will not be considered here. 
 
@@ -155,18 +156,25 @@ determination in our criteria.
 
 \end{itemize}
 
+We now turn to summarise the current status of lattice-QCD calculations of
+the first moments of unpolarised and polarised PDFs respectively.
 %
-%We present our determination of the current, state-of-the-art
-%``world average'' for lattice-QCD results of the benchmark quantities. and 
-%provide both summary tables and overview comparison plots. 
-%
-Following FLAG, we consider only those results that
-are published in peer-reviewed journals or that have appeared as preprints. 
+Following FLAG, we consider only those results that are published in 
+peer-reviewed journals or that have appeared as preprints. 
 %
 Where recent results are a clear update of previously published work, we do 
-not include the earlier results, but only cite them in the bibliography. 
+not include the earlier results.
 %
-Finally we remark that our criteria, and the corresponding ratings, are chosen 
+A bibliographical compilation of the results available in the literature 
+is given for completeness in 
+Tabs.~\ref{tab:latticebibfirst}-\ref{tab:latticebiblast} 
+of Appendix~\ref{sec:LQCDtables}.
+%
+We characterise the state-of-the-art results according to the criteria 
+described above, and provide a prescription to combine those which satisfy 
+them into a single benchmark value.
+
+We remark that our criteria, and the corresponding ratings, are chosen 
 not only to provide as fair an assessment of the relative merits of various 
 calculations as possible, but to be aspirational. 
 %
@@ -175,98 +183,75 @@ community will work towards improved calculations and greater precision as
 part of a concerted and inter-disciplinary effort to better understand
 nucleon structure.
 
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Moments}
-
-We provide a systematic comparison between existing lattice-QCD computations
-and global PDF fit results for the lowest two moments of unpolarized
-and longitudinally polarized PDFs. 
+\paragraph{Unpolarised parton distributions.}{
+We summarise the current status of lattice-QCD calculations of the benchmark 
+moments of unpolarised PDFs listed in Sec.~\ref{subsubsec:BQ} in 
+Tab.~\ref{tab:unpolLQCDstatus1}. 
 %
-Current lattice calculations of higher moments are not sufficiently controlled 
-to allow for a meaningful comparison between lattice and global fit results.
+In the first column we indicate the computed moment, in the second column
+the collaboration who performed the computations and in the third column
+the corresponding reference.
 %
-With the exception of the axial coupling, $g_A$, there are no lattice calculations
-for which all systematics have been fully explored and controlled. Therefore, 
-for quantities other than $g_A$, we present a best-estimate band, rather than a global average. This band extends from the mean minus the error of the
-smallest result to the mean plus the error of the largest, and includes all results
-with two or more flavours of sea quarks, because current studies are not sufficiently
-precise to distinguish between results with different numbers of sea quark flavours.
-In three cases, $\langle x \rangle_{u,d,s}$, $\langle x \rangle_g$, $\langle 1 \rangle_{\Delta u,\Delta d}$, there is only one
-lattice result available. For these quantities, our best-estimate band is given by this single result, but 
-it should be noted that these results may underestimate some sources of uncertainty. We denote
-these cases in Tables \ref{tab:LQCDunpol} and \ref{tab:LQCDpol0} with a superscript dagger.
-In all benchmark tables, the moments are understood to be evaluated at a scale $\mu^2 = Q^2=4$ GeV$^2$. 
+In the fourth column we indicate the number of sea quark flavours, $N_f$, 
+and in the fifth column we show whether the calculation has been published (P) 
+or has appeared as a preprint (PreP).
 %
-We provide complete listings of available results in Appendix \ref{sec:LQCDtables}.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Unpolarized parton distributions}
-
-\paragraph{First moments}
+In the following five columns we assess each source of systematic uncertainty
+according to the criteria listed above. 
 %
-We summarise the current status of lattice-QCD calculations of the first moments of unpolarised PDFs
-in Table \ref{tab:unpolLQCDstatus1}, including $\langle x\rangle_{u^+-d^+}$, $\langle x\rangle_{q^+}$ and
-$\langle x\rangle_{g}$. We assess each calculation according 
-to the criteria listed above. In the second column we indicate the number of sea quark flavours, $N_f$, and
-in the third column we show whether the calculation has been published (P) or has appeared as a preprint (PreP).
-We do not list results that have not been extrapolated to the physical pion mass, nor do we include 
-quenched results in Table \ref{tab:unpolLQCDstatus1}. For completeness, we tabulate these results in Appendix 
-\ref{sec:LQCDtables}.
-\begin{table}
+In the last column, we report the computed value at at $\mu^2=Q^2=4$ GeV$^2$.
+%
+We do not list results that have not been extrapolated to the physical pion 
+mass, nor do we include quenched results in Tab.~\ref{tab:unpolLQCDstatus1}. 
+%
+For completeness, we tabulate these results in Appendix~\ref{sec:LQCDtables}.
+
+%-------------------------------------------------------------------------------
+\begin{table}[!t] 
 \renewcommand{\arraystretch}{1.2} 
-\centering % See https://tex.stackexchange.com/questions/23650/when-should-we-use-begincenter-instead-of-centering
-\makebox[\textwidth]{ % Centre table on page, even though it is a little wide
-\begin{tabular}{lllccccccl}\\[1cm]
-  Ref. & $N_f$ & Status & 
-\hspace{0.15cm}\begin{rotate}{70}{discretisation}\end{rotate}\hspace{-0.15cm} &
-\hspace{0.15cm}\begin{rotate}{70}{quark mass}\end{rotate}\hspace{-0.15cm} &
-\hspace{0.15cm}\begin{rotate}{70}{finite volume}\end{rotate}\hspace{-0.15cm} &
-\hspace{0.15cm}\begin{rotate}{70}{renormalisation}\end{rotate}\hspace{-0.15cm} &
-\hspace{0.15cm}\begin{rotate}{70}{excited states}\end{rotate}\hspace{-0.15cm}&
- &  \\
-  \hline%\hline
-\multicolumn{10}{c}{$\langle x\rangle_{u^+-d^+}$}\\\hline
-%\rowcolor{lightgray}
-  LHPC 14 \cite{Green:2012ud} &
-  2+1 & P & \rsquare & \bstar & \bstar & \bstar  &   \bstar & & 0.140(21)\\
-%\rowcolor{lightgray}
-  ETMC 17 \cite{Alexandrou:2017oeh} &
-  2 & P &\rsquare  & \bstar &\rsquare  & \bstar  &   \bstar & $*$  & 0.194(9)(11)\\
-%\rowcolor{lightgray}
-  RQCD 14 \cite{Bali:2014gha} &
-  2 &  P & \rsquare &\rsquare &\bcirc  & \bstar  &   \bstar & $**$ & 0.217(9) \\
-\hline
-\multicolumn{10}{c}{$\langle x\rangle_{u^+}$}\\\hline
-%\rowcolor{lightgray}
-  ETMC 17 \cite{Alexandrou:2017oeh} &
-  2 & PreP &\rsquare  & \bstar &\rsquare  & \bstar  &   \bstar & $*\triangleright$ & $0.453(57)(48)$\\
-%\rowcolor{lightgray}
-  \hline
-\multicolumn{10}{c}{$\langle x\rangle_{d^+}$}\\\hline
-  ETMC 17 \cite{Alexandrou:2017oeh} &  2 & PreP &\rsquare  & \bstar &\rsquare  & \bstar  &   \bstar & $*\triangleright$ & $0.259(57)(47)$\\
-  \hline
-\multicolumn{10}{c}{$\langle x\rangle_{s^+}$}\\\hline
-%\rowcolor{lightgray}
-  ETMC 17 \cite{Alexandrou:2017oeh} &  2 & PreP &\rsquare  & \bstar &\rsquare  & \bstar  &   \bstar & $*\triangleright$ & $0.092(41)(0)$\\
-  \hline
-\multicolumn{10}{c}{ $\langle x\rangle_{g}$}\\\hline
-%\rowcolor{lightgray}
-  ETMC 17 \cite{Alexandrou:2017oeh} &
-  2 & PreP &\rsquare  & \bstar &\rsquare  & \bcirc  &   \bstar & $*$ & 0.267(22)(27)\\
-\hline
-\multicolumn{10}{c}{$\langle x\rangle_{u^+-d^+}/\langle x\rangle_{u^++d^+-2s^+}$}\\\hline
-ETMC 15 \cite{Alexandrou:2015qia} &
-   2+1+1 & P & \rsquare & \rsquare & \bstar & \bstar & \rsquare & & $0.39(1)(4)$\\
-  \hline
+\centering 
+\begin{tabular}{llcllccccccl}
+Mom. & Collab. & Ref. & $N_f$ & Status & 
+\begin{rotate}{70}{discretisation}\end{rotate} &
+\begin{rotate}{70}{quark mass}\end{rotate} &
+\begin{rotate}{70}{finite volume}\end{rotate} &
+\begin{rotate}{70}{renormalisation}\end{rotate} &
+\begin{rotate}{70}{excited states}\end{rotate}&
+& Value\\
+\toprule
+$\langle x\rangle_{u^+-d^+}$ 
+& LHPC\,14  & \cite{Green:2012ud} &
+  2+1 & P  & \rsquare & \bstar   & \bstar   & \bstar & \bstar & & 0.140(21)\\
+& ETMC 17  & \cite{Alexandrou:2017oeh} &
+  2   & P  & \rsquare & \bstar   & \rsquare & \bstar & \bstar & $*$ & 0.194(9)(11)\\
+& RQCD 14  & \cite{Bali:2014gha} &
+  2   & P  & \rsquare & \rsquare & \bcirc   & \bstar & \bstar & $**$ & 0.217(9)\\
+\midrule
+$\langle x\rangle_{u^+}$
+&  ETMC 17  & \cite{Alexandrou:2017oeh} &
+  2 & PreP & \rsquare & \bstar   & \rsquare & \bstar & \bstar & $*\triangleright$ & $0.453(57)(48)$\\
+\midrule
+$\langle x\rangle_{d^+}$
+& ETMC 17  & \cite{Alexandrou:2017oeh} &  
+  2 & PreP & \rsquare & \bstar   & \rsquare & \bstar & \bstar & $*\triangleright$ & $0.259(57)(47)$\\
+\midrule
+$\langle x\rangle_{s^+}$
+& ETMC 17  & \cite{Alexandrou:2017oeh} &  
+  2 & PreP &\rsquare  & \bstar   & \rsquare & \bstar & \bstar & $*\triangleright$ & $0.092(41)(0)$\\
+\midrule
+$\langle x\rangle_{g}$
+& ETMC 17  & \cite{Alexandrou:2017oeh} &
+  2 & PreP & \rsquare & \bstar   & \rsquare & \bcirc & \bstar & $*$ & 0.267(22)(27)\\
+%\midrule
+%$\frac{\langle x\rangle_{u^+-d^+}}{\langle x\rangle_{u^++d^+-2s^+}}$
+%&  ETMC 15 & \cite{Alexandrou:2015qia} &
+%   2+1+1 & P & \rsquare & \rsquare & \bstar & \bstar & \rsquare & & $0.39(1)(4)$\\
+\bottomrule
 \end{tabular}
-} % End makebox
-\begin{minipage}{0.95\linewidth} % Align with left edge of table
+\begin{minipage}{\linewidth}
 {\footnotesize 
 \begin{itemize}
+\vspace{0.1cm}
 \item[$*$] Study employing a single physical pion mass ensemble.
 \item[$**$] Study employing a single ensemble with $m_\pi=150$~MeV.
 \item[$\triangleright$] The mixing with $\langle x\rangle_{g}$ is computed
@@ -274,375 +259,440 @@ perturbatively and found to be small, so is neglected.
 \end{itemize}
 }
 \end{minipage}
-\caption{Status of current lattice-QCD calculations of the first moments of unpolarised PDFs.}
+\caption{\small Status of current lattice-QCD calculations of the benchmark 
+first moments of unpolarised PDFs listed in Sec.~\ref{subsubsec:BQ}.
+%
+Values are shown at $\mu^2=Q^2=4$ GeV$^2$.}
 \label{tab:unpolLQCDstatus1}
 \end{table}
+%-------------------------------------------------------------------------------
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}
+As apparent from Tab.~\ref{tab:unpolLQCDstatus1}, there are no lattice 
+calculations of the considered first moments for which all systematics 
+have been fully explored and controlled. 
+%
+In the case of $\langle x\rangle_{u^+-d^+}$ three different results are available 
+in the literature.
+%
+We present the lattice-QCD benchmark value for this quantity 
+as a best-estimate band.
+% 
+This band extends from the mean minus the error of the smallest result to the 
+mean plus the error of the largest, and includes all results with two or more 
+flavours of sea quarks listed in Tab.~\ref{tab:unpolLQCDstatus1}, because 
+current studies are not sufficiently precise to distinguish between results 
+with different numbers of sea quark flavours.
+%
+In the case of $\langle x \rangle_{u^+}$, $\langle x \rangle_{d^+}$, 
+$\langle x \rangle_{s^+}$ and $\langle x \rangle_g$ there is only one
+lattice result available in the literature. 
+%
+For these quantities, we present our lattice-QCD benchmark value as
+a best-estimate band given by the single results.
+% 
+However, it should be noted that these results may underestimate some sources 
+of uncertainty. 
+
+Finally, we summarise the current status of lattice-QCD calculations of the 
+second moment of the unpolarised valence quark PDFs, specifically 
+$\langle x^2 \rangle_{u^-}$ and $\langle x^2\rangle_{u^--d^-}$
+in Appendix \ref{sec:LQCDtables}.
+% 
+The study of these moments is not sufficiently mature to provide benchmark 
+values and we only list the results for completeness.
+}
+
+\paragraph{Polarised parton distributions.}{
+The zeroth moment of the isotriplet polarised PDF combination is related to the 
+axial charge of the nucleon, $g_A\equiv \langle 1\rangle_{\Delta u^+-\Delta d^+}$.
+%
+This quantity is of central importance to nucleon physics and has long been 
+considered an important benchmark for lattice calculations. 
+%
+Historically, lattice-QCD calculations of the axial charge have underestimated 
+the experimental value $g_A^{\mathrm{exp}} = 1.2723(23)$~\cite{Olive:2016xmw}, 
+which is most precisely determined from cold neutron decays. 
+%
+Thus the axial charge has been the single most-studied moment in lattice QCD.
+%
+We provide a summary table of the current status of these calculations in 
+Tab.~\ref{tab:gAstatus} in the same format as in 
+Tab.~\ref{tab:unpolLQCDstatus1}.
+%
+All results are quoted at $\mu^2=Q^2=4$ GeV$^2$.
+
+%-------------------------------------------------------------------------------
+\begin{table}[t]
 \renewcommand{\arraystretch}{1.2} 
 \centering
-\begin{tabular}{cc}
-\hline 
-\rule[-4 ex]{0pt}{7 ex}  %% add some extra space
-Moment & Benchmark \vspace*{-10pt}\\
-\hline 
-$\langle x \rangle_{u^+ -d^+}$ & \numrange{0.119}{0.226} \\
-$\langle x \rangle_{u^+}$ & 0.453(75)$^\dagger$ \\
-$\langle x \rangle_{d^+}$ & 0.259(74)$^\dagger$  \\
-$\langle x \rangle_{s^+}$ & 0.092(41)$^\dagger$  \\
-$\langle x\rangle_{g}$ & 0.267(35)$^\dagger$  \\
-\hline 
-\end{tabular}
-\caption{Benchmark values for lattice calculations of the first moments of unpolarised PDFs. 
-Results with a superscript $\dagger$ are from a single lattice calculation; these values may underestimate some sources of uncertainty.}
-\label{tab:LQCDunpol}
-\end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\paragraph{Second moments}
-In Appendix \ref{sec:LQCDtables}, we summarise the current status of lattice-QCD calculations of the second moment of 
-the unpolarised valence quark PDFs, including $\langle x^2 \rangle_{u^-}$ and $\langle x^2\rangle_{u^--d^-}$. 
-The study of these moments is not sufficiently mature to provide benchmark values and we only list the results for completeness.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Polarized parton distributions}
-
-\paragraph{Zeroth moments}
-
-The zeroth moment of the helicity distribution is related to the axial charge of the 
-nucleon, $g_A\equiv \langle 1\rangle_{\Delta u^+-\Delta d^+}$.
-This quantity is of central importance to nucleon physics and
-has long been considered an important benchmark for lattice calculations. Historically, 
-lattice-QCD calculations of the axial charge have underestimated the experimental
-value $g_A^{\mathrm{exp}} = 1.2723(23)$ \cite{Olive:2016xmw}, which is most precisely determined from cold 
-neutron decays. Thus the axial charge has been the single most-studied moment in lattice QCD
-and we provide a summary table of the current status of these calculations in Table \ref{tab:gAstatus}.
-\begin{table}
-\renewcommand{\arraystretch}{1.2} 
-\centering
-\begin{tabular}{lllccccccl}\\[1cm]
-  Ref. & $N_f$ & Status & 
-\hspace{0.15cm}\begin{rotate}{70}{discretisation}\end{rotate}\hspace{-0.15cm} &
-\hspace{0.15cm}\begin{rotate}{70}{quark mass}\end{rotate}\hspace{-0.15cm} &
-\hspace{0.15cm}\begin{rotate}{70}{finite volume}\end{rotate}\hspace{-0.15cm} &
-\hspace{0.15cm}\begin{rotate}{70}{renormalisation}\end{rotate}\hspace{-0.15cm} &
-\hspace{0.15cm}\begin{rotate}{70}{excited states}\end{rotate}\hspace{-0.15cm}&
- &  \\\hline%\hline
-\multicolumn{10}{c}{$g_A\equiv \langle 1\rangle_{\Delta u^+-\Delta d^+}$}\\
-  \hline
-%\rowcolor{lightgray}
-  CalLat 17 \cite{Berkowitz:2017gql} &
-  2+1+1 & PreP & \rsquare  & \bstar  & \rsquare & \bstar &  \bstar& $\diamond$ & 1.278(21)(26) \\
-%\rowcolor{lightgray}
-  PNDME 16 \cite{Bhattacharya:2016zcn} &
-  2+1+1 & P & \bcirc &\bstar  & \bcirc & \bstar  &   \bstar & & 1.195(33)(20)\\%\hline
-  LHPC 14 \cite{Green:2012ud} &
-  2+1 & P & \rsquare & \bstar & \bstar & \bstar  &   \bstar & & 0.97(8)\\%\hline
-%\rowcolor{lightgray}
-  Mainz 17 \cite{Capitani:2017qpc} &
+\begin{tabular}{llcllccccccl}
+Mom. & Collab. & Ref. & $N_f$ & Status &  
+\begin{rotate}{70}{discretisation}\end{rotate} &
+\begin{rotate}{70}{quark mass}\end{rotate} &
+\begin{rotate}{70}{finite volume}\end{rotate} &
+\begin{rotate}{70}{renormalisation}\end{rotate} &
+\begin{rotate}{70}{excited states}\end{rotate}&
+& Value \\
+\toprule
+$g_A$
+& CalLat\,17 & \cite{Berkowitz:2017gql} &
+  2+1+1 & PreP & \rsquare & \bstar  & \rsquare & \bstar &  \bstar & $\diamond$ & 1.278(21)(26) \\
+& PNDME\,16  & \cite{Bhattacharya:2016zcn} &
+  2+1+1 & P    & \bcirc   & \bstar  & \bcirc   & \bstar &  \bstar & & 1.195(33)(20)\\
+& LHPC\,14    & \cite{Green:2012ud} &
+  2+1 & P & \rsquare & \bstar & \bstar & \bstar  &   \bstar & & 0.97(8)\\
+& Mainz\,17   & \cite{Capitani:2017qpc} &
   2 & PreP & \bstar & \bcirc & \bstar & \bstar  &   \bstar & & $1.278(68)({}^{+0}_{-0.087})$\\
-%\rowcolor{lightgray}
-  ETMC 17 \cite{Alexandrou:2017hac} &
+& ETMC\,17    & \cite{Alexandrou:2017hac} &
   2 & PreP &\rsquare  & \bstar &\rsquare  & \bstar  &   \bstar & $*$ & 1.212(33)(22)\\
-%\rowcolor{lightgray}
-  RQCD 15 \cite{Bali:2014nma} &
+& RQCD\,15    & \cite{Bali:2014nma} &
   2 &  P & \bcirc &\bcirc  &\bcirc  & \bstar  &   \bcirc & $\ddag$& 1.280(44)(46) \\
-  QCDSF 14 \cite{Horsley:2013ayv} &
-  2 &  P & \bcirc &\bcirc  &\bcirc  & \bstar  &   \rsquare & $\ddag$& 1.29(5)(3) \\\hline%\hline
+& QCDSF\,14   & \cite{Horsley:2013ayv} &
+  2 &  P & \bcirc &\bcirc  &\bcirc  & \bstar  &   \rsquare & $\ddag$& 1.29(5)(3) \\
+\bottomrule
 \end{tabular}
-\begin{minipage}{0.94\linewidth}
+\begin{minipage}{\linewidth}
 {\footnotesize 
 \begin{itemize}
+\vspace{0.1cm}
 \item[$*$] Study employing a single physical pion mass ensemble.
-\item[$^\ddag$] $g_A$ is determined via the ratio $g_A/f_\pi$ employing the physical
-value for $f_\pi$.
+\item[$^\ddag$] $g_A$ is determined via the ratio $g_A/f_\pi$ employing the 
+physical value for $f_\pi$.
 \item[$\diamond$] Approach inspired by the Feynman-Hellmann method is employed.
 \end{itemize}
 }
 \end{minipage}
-\caption{Status of current lattice-QCD calculations of the axial coupling, 
-$g_A\equiv \langle 1\rangle_{\Delta u^+-\Delta d^+}$. Studies with three or more red squares are omitted from this table.}
+\caption{\small Status of current lattice-QCD calculations of the axial 
+coupling, $g_A\equiv \langle 1\rangle_{\Delta u^+-\Delta d^+}$. 
+%
+Studies with three or more red squares are omitted from this table.}
 \label{tab:gAstatus}
 \end{table}
 
-To provide benchmarks for the axial coupling, we use an approach based on the FLAG procedure. We distinguish between
-calculations that use different numbers of sea quarks and exclude results that do not meet the criteria listed above. For 
-$N_f = 2+1+1$, there is only a single calculation that satisfies these criteria \cite{Bhattacharya:2016zcn}. For $N_f = 2$,
-we apply a weighted average of \cite{Capitani:2017qpc} and \cite{Bali:2014nma}, assuming correlations between the results and applying the procedure
-of \cite{XXX}. Thus we obtain
+To provide a benchmark value for the axial coupling, we use an approach based 
+on the FLAG procedure. 
+%
+We distinguish between calculations that use different numbers of sea quarks 
+and exclude results that do not meet the criteria listed above. 
+%
+For $N_f = 2+1+1$, there is only a single 
+calculation~\cite{Bhattacharya:2016zcn} that satisfies these criteria. 
+%
+For $N_f = 2$, we apply a weighted average of~\cite{Capitani:2017qpc} 
+and~\cite{Bali:2014nma}, assuming correlations between the results and 
+applying the procedure of \cite{XXX}. 
+%
+Thus we obtain
 \begin{equation}\label{eq:gAcriteria}
-g_A^{N_f=2+1+1} = 1.195(33)(20)\,,\qquad \mathrm{and}\qquad g_A^{N_f=2+1+1} = 1.279(50).
+g_A^{N_f=2+1+1} = 1.195(33)(20)
+\,,\qquad \mathrm{and}\qquad 
+g_A^{N_f=2+1+1} = 1.279(50)\,.
 \end{equation}
-
-For the $N_f = 2+1+1$ result, there is only a single calculation, and this value may underestimate some sources of systematic uncertainty. To incorporate
-information from the result of \cite{Berkowitz:2017gql}, which uses the same gauge configurations, we also carry out a simultaneous fit to the two
-sets of data. We use a fit function of the form
+%
+For the $N_f = 2+1+1$ result, there is only a single calculation, and this 
+value may underestimate some sources of systematic uncertainty. 
+%
+To incorporate information from the result of~\cite{Berkowitz:2017gql}, 
+which uses the same gauge configurations, we also carry out a simultaneous fit 
+to the two sets of data. 
+%
+We use a fit function of the form
 \begin{equation}
-g_A^{\mathrm{fit}} = c_0 + c_1a + c_2a^2 + c_3M_\pi^2 + c_4M_\pi^2 \exp(−M_\pi L) +c_5M_\pi^2 \log\left(\frac{M_\pi^2}{\Lambda_{\chi \mathrm{PT}}^2}\right).
+g_A^{\mathrm{fit}} 
+= 
+c_0 + 
+c_1a + 
+c_2a^2 + 
+c_3M_\pi^2 + 
+c_4M_\pi^2 \exp(−M_\pi L) +
+c_5M_\pi^2 \log\left(\frac{M_\pi^2}{\Lambda_{\chi \mathrm{PT}}^2}\right)\,.
 \end{equation}
-The coefficient $c_1$ captures ${\cal O}(a)$ effects
-present in the valence quark action of \cite{Bhattacharya:2016zcn}, while \cite{Berkowitz:2017gql} has discretisation effects starting at ${\cal O}(a^2)$. The 
-term proportional to $c_4$ captures the leading finite-volume effects and $c_3$ and $c_5$ represent chiral extrapolation terms. Modifications to this fit form,
-including  setting $c_5 = 0$,
-have negligible effect on the fit results, within extrapolation uncertainties, and the final result is in very good agreement with a weighted average
-of the two calculations, assuming 100\% correlations, which is $g_A^{N_f=2+1+1,\mathrm{avg}} = 1.243(36)$. Based on this fit, we find a best-estimate band
-of
+%
+The coefficient $c_1$ captures ${\cal O}(a)$ effects present in the valence 
+quark action of~\cite{Bhattacharya:2016zcn}, while~\cite{Berkowitz:2017gql} 
+has discretisation effects starting at ${\cal O}(a^2)$. 
+%
+The term proportional to $c_4$ captures the leading finite-volume effects and 
+$c_3$ and $c_5$ represent chiral extrapolation terms. 
+%
+Modifications to this fit form, including  setting $c_5 = 0$, have negligible 
+effect on the fit results, within extrapolation uncertainties, and the final 
+result is in very good agreement with a weighted average of the two 
+calculations, assuming 100\% correlations, which is 
+$g_A^{N_f=2+1+1,\mathrm{avg}} = 1.243(36)$. 
+%
+Based on this fit, we find a best-estimate band of
 \begin{equation}\label{eq:gAfit}
-g_A^{N_f=2+1+1,\mathrm{fit}} = \numrange{1.22}{1.28}.
+g_A^{N_f=2+1+1,\mathrm{fit}} = \numrange{1.22}{1.28}\,.
 \end{equation}
 
-We plot all lattice results for the axial coupling listed in Table \ref{tab:gAstatus} in Figure \ref{fig:gaLQCDstatus}. We show the world average experimental value as a vertical
-black line. The light grey bands for $N_f = 2+1+1$ and $N_f=2$ represent the best-estimate results of Equation \eqref{eq:gAcriteria} and the dark grey band for
-$N_f = 2+1+1$ is the combined fit band given in Equation \eqref{eq:gAfit}. The open symbols are results that are not included in the best-estimate values.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
-\begin{center}
-  \includegraphics[scale=0.5]{plots/ga_summary.pdf}
-  \caption{\small Summary of the current status of lattice-QCD calculations of the axial charge, $g_A\equiv \langle 1\rangle_{\Delta u^+-\Delta d^+}$.
-  The vertical black line represents the current experimental world average $g_A^{\mathrm{exp}} = 1.2723(23)$ \cite{Olive:2016xmw}. The light grey bands for $N_f = 2+1+1$ and $N_f=2$ represent the best-estimate results of Equation \eqref{eq:gAcriteria} and the dark grey band for
-$N_f = 2+1+1$ is the fit band of Equation \eqref{eq:gAfit}. The open symbols are results that are not included in the best-estimate values.
-    \label{fig:gaLQCDstatus}
-  }
-\end{center}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+We plot all lattice results for the axial coupling listed in 
+Tab.~\ref{tab:gAstatus} in Fig.~\ref{fig:gaLQCDstatus}. 
+%
+We show the world average experimental value as a vertical
+black line. 
+%
+The light grey bands for $N_f = 2+1+1$ and $N_f=2$ represent the best-estimate 
+results of Eq.~\eqref{eq:gAcriteria} and the dark grey band for
+$N_f = 2+1+1$ is the combined fit band given in Eq.~\eqref{eq:gAfit}. 
+%
+The open symbols are results that are not included in the best-estimate values.
 
-In addition to the axial charge, we summarise the zeroth moments of the individual quark helicity distributions
-in Table \ref{tab:polLQCDstatus0} and provide best-estimate benchmarks in Table \ref{tab:LQCDpol0}.
-\begin{table}
+%-------------------------------------------------------------------------------
+\begin{figure}[t]
+\centering
+\includegraphics[scale=0.7]{plots/ga_summary.pdf}\\
+\caption{\small Summary of the current status of lattice-QCD calculations of 
+the axial charge, $g_A\equiv \langle 1\rangle_{\Delta u^+-\Delta d^+}$.
+%
+The vertical black line represents the current experimental world average 
+$g_A^{\mathrm{exp}} = 1.2723(23)$~\cite{Olive:2016xmw}. 
+%
+The light grey bands for $N_f = 2+1+1$ and $N_f=2$ represent the best-estimate 
+results of Eq.~\eqref{eq:gAcriteria} and the dark grey band for
+$N_f = 2+1+1$ is the fit band of Eq.~\eqref{eq:gAfit}. 
+%
+The open symbols are results that are not included in the best-estimate values.
+}    
+\label{fig:gaLQCDstatus}
+\end{figure}
+%-------------------------------------------------------------------------------
+
+In addition to the axial charge, we summarise the zeroth moments of the 
+individual quark helicity distributions in Tab.~\ref{tab:polLQCDstatus0}. 
+%
+We summarise the status of lattice-QCD calculations of the
+first moments of the polarised PDF combination 
+$\langle x \rangle_{\Delta u^- - \Delta d^-}$ in Tab.~\ref{tab:polLQCDstatus1}. 
+
+%-------------------------------------------------------------------------------
+\begin{table}[t]
 \renewcommand{\arraystretch}{1.2} 
 \centering
-\makebox[\textwidth]{ % Centre table on page, even though it is a little wide
-\begin{tabular}{lllccccccl}\\[1cm]
-  Ref. & $N_f$ & Status & 
-\hspace{0.15cm}\begin{rotate}{70}{discretisation}\end{rotate}\hspace{-0.15cm} &
-\hspace{0.15cm}\begin{rotate}{70}{quark mass}\end{rotate}\hspace{-0.15cm} &
-\hspace{0.15cm}\begin{rotate}{70}{finite volume}\end{rotate}\hspace{-0.15cm} &
-\hspace{0.15cm}\begin{rotate}{70}{renormalisation}\end{rotate}\hspace{-0.15cm} &
-\hspace{0.15cm}\begin{rotate}{70}{excited states}\end{rotate}\hspace{-0.15cm}&
- &  \\
-  \hline%\hline
-\multicolumn{10}{c}{$\langle 1\rangle_{\Delta u^+}$}\\\hline
-%\rowcolor{lightgray}
-  ETMC 17 \cite{Alexandrou:2017oeh} &
-  2 & PreP &\rsquare  & \bstar &\rsquare  & \bstar  &   \bstar & $*$ & $0.830(26)(4)$\\
-\hline
-\multicolumn{10}{c}{$\langle 1\rangle_{\Delta d^+}$}\\\hline
-%\rowcolor{lightgray}
-  ETMC 17 \cite{Alexandrou:2017oeh} &
-  2 & PreP &\rsquare  & \bstar &\rsquare  & \bstar  &   \bstar & $*$ & $-0.386(16)(6)$\\
-\hline
-\multicolumn{10}{c}{$\langle 1\rangle_{\Delta s^+}$}\\\hline
-%\rowcolor{lightgray}
-  $\chi$QCD 17 \cite{Gong:2015iir} &
-  2+1 & P & \rsquare  & \bcirc & \bcirc  & \bstar  &  \bstar  & $\dagger$,$\triangleleft$ & -0.0403(44)(78)\\
-%\rowcolor{lightgray}
-  Engelhardt 12 \cite{Engelhardt:2012gd} &
+\begin{tabular}{llcllccccccl}
+Mom. & Collab. & Ref. & $N_f$ & Status &
+\begin{rotate}{70}{discretisation}\end{rotate} &
+\begin{rotate}{70}{quark mass}\end{rotate} &
+\begin{rotate}{70}{finite volume}\end{rotate} &
+\begin{rotate}{70}{renormalisation}\end{rotate} &
+\begin{rotate}{70}{excited states}\end{rotate}&
+& Value \\
+\midrule
+$\langle 1\rangle_{\Delta u^+}$
+&  ETMC\,17 & \cite{Alexandrou:2017oeh} &
+  2 & PreP & \rsquare & \bstar &\rsquare & \bstar & \bstar & $*$ & $0.830(26)(4)$\\
+\midrule
+$\langle 1\rangle_{\Delta d^+}$
+& ETMC\,17  &\cite{Alexandrou:2017oeh} &
+  2 & PreP &\rsquare & \bstar &\rsquare  & \bstar & \bstar & $*$ & $-0.386(16)(6)$\\
+\midrule
+$\langle 1\rangle_{\Delta s^+}$
+& $\chi$QCD\,17 & \cite{Gong:2015iir} &
+  2+1 & P & \rsquare  & \bcirc & \bcirc  & \bstar &  \bstar& $\dagger$,$\triangleleft$ & -0.0403(44)(78)\\
+& Engelhardt\,12 & \cite{Engelhardt:2012gd} &
   2+1 & P & \rsquare  & \rsquare & \bcirc  & \bstar  &  \bstar  & 
 $\triangleleft$ & -0.031(17)\\
-%\rowcolor{lightgray}
-  ETMC 17 \cite{Alexandrou:2017oeh} &
+& ETMC\,17 & \cite{Alexandrou:2017oeh} &
   2 & PreP &\rsquare  & \bstar &\rsquare  & \bstar  &   \bstar & $*$ & -0.042(10)(2)\\
-\hline
+\bottomrule
 \end{tabular}
-} % End makebox
 \begin{minipage}{\linewidth}
 {\footnotesize 
 \begin{itemize}
+\vspace{0.1cm}
 \item[$*$] Study employing a single physical pion mass ensemble.
-\item[$\dagger$] Partially quenched simulation with $m_\pi=330$~MeV. Criteria
-applied to the valence quarks. 
-\item[$\triangleleft$] Some parts of the renormalisation are estimated, see references for details.
+\item[$\dagger$] Partially quenched simulation with $m_\pi=330$~MeV. 
+Criteria applied to the valence quarks. 
+\item[$\triangleleft$] Some parts of the renormalisation are estimated, 
+see references for details.
 \end{itemize}
 }
 \end{minipage}
-\caption{Summary of the current status of lattice-QCD calculations of the zeroth moments of longitudinally polarised PDFs.}
+\caption{\small Summary of the current status of lattice-QCD calculations 
+of the zeroth moments of longitudinally polarised PDFs.}
 \label{tab:polLQCDstatus0}
 \end{table}
-
-\begin{table}
+%-------------------------------------------------------------------------------
+\begin{table}[t]
 \renewcommand{\arraystretch}{1.2} 
 \centering
-\begin{tabular}{cc}
-\hline 
-\rule[-4 ex]{0pt}{7 ex}  %% add some extra space
-Moment & Benchmark value \vspace*{-10pt}\\
-\hline 
-$\langle 1 \rangle_{\Delta u}$ & 0.830(26)$^\dagger$ \\
-$\langle 1 \rangle_{\Delta d}$ & -0.386(17)$^\dagger$  \\
-$\langle 1 \rangle_{\Delta s}$ & \numrange{0.119}{0.226} \\
-\hline 
-\end{tabular}
-\caption{Benchmark values for lattice calculations of the zeroth moments of polarised PDFs. Results with a superscript $\dagger$ are from a single lattice calculation; these values may underestimate some sources of uncertainty.}
-\label{tab:LQCDpol0}
-\end{table}
-
-
-
-\paragraph{First moments} We summarise the status of lattice-QCD calculations of the
-first moments of the longitudinally polarised PDF $\langle x \rangle_{\Delta u - \Delta d}$ in Table \ref{tab:polLQCDstatus1}. We
-list the corresponding best-estimate benchmark in Table \ref{tab:LQCDpol1}.
-\begin{table}
-\renewcommand{\arraystretch}{1.2} 
-\centering
-\makebox[\textwidth]{ % Centre table on page, even though it is a little wide
-\begin{tabular}{lllccccccl}\\[1cm]
-  Ref. & $N_f$ & Status & 
-\hspace{0.15cm}\begin{rotate}{70}{discretisation}\end{rotate}\hspace{-0.15cm} &
-\hspace{0.15cm}\begin{rotate}{70}{quark mass}\end{rotate}\hspace{-0.15cm} &
-\hspace{0.15cm}\begin{rotate}{70}{finite volume}\end{rotate}\hspace{-0.15cm} &
-\hspace{0.15cm}\begin{rotate}{70}{renormalisation}\end{rotate}\hspace{-0.15cm} &
-\hspace{0.15cm}\begin{rotate}{70}{excited states}\end{rotate}\hspace{-0.15cm}&
- &  \\
-  \hline
-\multicolumn{10}{c}{$\langle x\rangle_{\Delta u^--\Delta d^-}$}\\\hline
-%\rowcolor{lightgray}
-  RBC/UKQCD 10 \cite{Aoki:2010xg} &
-  2+1 & P &\rsquare  & \rsquare &\bstar  & \bstar  &   \rsquare &  & 0.256(23),0.205(59)\\
-%\rowcolor{lightgray}
-  LHPC 10 \cite{Bratt:2010jn} &
+\begin{tabular}{llcllccccccl}
+Mom. & Collab. & Ref. & $N_f$ & Status &
+\begin{rotate}{70}{discretisation}\end{rotate}  &
+\begin{rotate}{70}{quark mass}\end{rotate}      &
+\begin{rotate}{70}{finite volume}\end{rotate}   &
+\begin{rotate}{70}{renormalisation}\end{rotate} &
+\begin{rotate}{70}{excited states}\end{rotate}  &
+& Value \\
+\toprule
+$\langle x\rangle_{\Delta u^--\Delta d^-}$
+& RBC & \cite{Aoki:2010xg} &
+  2+1 & P &\rsquare  & \rsquare &\bstar  & \bstar  &   \rsquare &  & 0.256(23)\\
+& UKQCD\,10 & \cite{Aoki:2010xg} &
+  2+1 & P &\rsquare  & \rsquare &\bstar  & \bstar  &   \rsquare &  & 0.205(59)\\
+& LHPC\,10 & \cite{Bratt:2010jn} &
   2+1 & P &\rsquare  & \rsquare &\bcirc  & \bcirc  &   \rsquare &  & 0.1972(55)\\
-%\rowcolor{lightgray}
-  ETMC 15 \cite{Abdel-Rehim:2015owa} &
+& ETMC\,15 & \cite{Abdel-Rehim:2015owa} &
   2 & P &\rsquare  & \bstar &\rsquare  & \bstar  &   \bstar & $*$ & 0.229(33)\\
-\hline
+\bottomrule
 \end{tabular}
-} % End makebox
 \begin{minipage}{\linewidth}
 {\footnotesize 
 \begin{itemize}
+\vspace{0.1cm}
 \item[$*$] Study employing a single physical pion mass ensemble.
 \end{itemize}
 }
 \end{minipage}
-\caption{Summary of the current status of lattice-QCD calculations of moments of longitudinally polarised PDFs.}
+\caption{\small Summary of the current status of lattice-QCD calculations of 
+moments of longitudinally polarised PDFs.}
 \label{tab:polLQCDstatus1}
 \end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}
-\renewcommand{\arraystretch}{1.2} 
+%-------------------------------------------------------------------------------
+
+
+\subsubsection{Appraising global-PDF fit results}
+\label{subsubsec:GPDFfits}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Benchmark values}
+\label{subsec:BN}
+
+\subsubsection{Unpolarised parton distributions}
+
+%We denote these cases in Tab.\ref{tab:LQCDunpol} with a superscript dagger.
+%We provide a systematic comparison between existing lattice-QCD computations
+%and global PDF fit results for the lowest two moments of unpolarized
+%and longitudinally polarized PDFs. 
+%
+%Current lattice calculations of higher moments are not sufficiently controlled 
+%to allow for a meaningful comparison between lattice and global fit results.
+%
+%With the exception of the axial coupling, $g_A$, there are no lattice calculations
+%for which all systematics have been fully explored and controlled. Therefore, 
+%for quantities other than $g_A$, we present a best-estimate band, rather than a global average. 
+%This band extends from the mean minus the error of the
+%smallest result to the mean plus the error of the largest, and includes all results
+%with two or more flavours of sea quarks, because current studies are not sufficiently
+%precise to distinguish between results with different numbers of sea quark flavours.
+%In three cases, $\langle x \rangle_{u,d,s}$, $\langle x \rangle_g$, $\langle 1 \rangle_{\Delta u,\Delta d}$, there is only one
+%lattice result available. For these quantities, our best-estimate band is given by this single result, but 
+%it should be noted that these results may underestimate some sources of uncertainty. We denote
+%these cases in Tables \ref{tab:LQCDunpol} and \ref{tab:LQCDpol0} with a superscript dagger.
+%In all benchmark tables, the moments are understood to be evaluated at a scale $\mu^2 = Q^2=4$ GeV$^2$. 
+%
+%We provide complete listings of available results in Appendix \ref{sec:LQCDtables}.
+
+
+%-------------------------------------------------------------------------------
+\begin{table}[!t]
 \centering
-\begin{tabular}{cc}
-\hline 
-\rule[-4 ex]{0pt}{7 ex}  %% add some extra space
-Moment & Benchmark value \vspace*{-10pt}\\
-\hline 
-$\langle x \rangle_{\Delta u - \Delta d}$ & \numrange{0.146}{0.279}  \\
-\hline 
+\begin{tabular}{lcc}
+\toprule
+Moment & Lattice QCD & Global Fit\\
+\midrule
+$\langle x \rangle_{u^+ -d^+}$ 
+& \numrange{0.119}{0.226} 
+& $0.155\pm 0.005$\\
+$\langle x \rangle_{u^+}$     
+& 0.453(75)$^\dagger$ 
+& $0.347\pm 0.005$\\
+$\langle x \rangle_{d^+}$     
+& 0.259(74)$^\dagger$ 
+& $0.193\pm 0.006$\\
+$\langle x \rangle_{s^+}$     
+& 0.092(41)$^\dagger$ 
+& $0.036\pm 0.006$\\
+$\langle x\rangle_{g}$       
+& 0.267(35)$^\dagger$ 
+& $0.414\pm 0.009$\\
+\bottomrule
 \end{tabular}
-\caption{Benchmark value for lattice calculations of the first moments of polarised PDFs.}
-\label{tab:LQCDpol1}
+\caption{\small Benchmark values for lattice-QCD calculations and global-PDF 
+fit determinations of the benchmark moments of unpolarised PDFs.
+%
+All values are shown at $Q^2=4$ GeV$^2$.
+%
+Results with a superscript~$\dagger$ are from a single lattice 
+calculation; these values may underestimate some sources of uncertainty.}
+\label{tab:LQCDunpol}
 \end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-------------------------------------------------------------------------------
 
-\begin{comment}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Polarised parton distributions}
 
-\newpage
-\textcolor{blue}{FIO: added sample tables copied from presentations; 
-if the format is OK we can replace/update with the real benchmarks. }
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[t]
-\renewcommand{\arraystretch}{1.2} 
+%-------------------------------------------------------------------------------
+\begin{table}[!t]
 \centering
-\begin{tabular}{@{}lccc@{}}
-\hline 
-\rule[-3 ex]{0pt}{7 ex}  %% add some extra space
-$\left\langle x\right\rangle _{u}-\left\langle x\right\rangle _{d}$ 
-   & Central Value & PDF error (\%) & Shift (\%) \\
-\hline 
-NNPDF3.0 & 0.102 & 2.4 & -\\
-CT14 & 0.104 & 3.2 & +2.4\\
-MMHT14 & 0.101 & 2.6 & -1.5\\
-ABMP16 & 0.113 & 1.9 & +11\\
-... &  &  & \\
-\hline 
+\begin{tabular}{lcc}
+\toprule
+Moment & Lattice QCD & Global Fit\\
+\midrule
+$g_A\equiv\langle 1\rangle_{\Delta u^+ - \Delta d^+}$ 
+&  
+& \\
+$\langle 1 \rangle_{\Delta u^+}$     
+& 0.830(26)$^\dagger$ 
+& \\
+$\langle 1 \rangle_{\Delta d^+}$     
+& -0.386(17)$^\dagger$ 
+& \\
+$\langle 1 \rangle_{\Delta s^+}$     
+& 0.119-0.226 
+& \\
+$\langle x\rangle_{\Delta u^- - \Delta d^-}$       
+& 0.146-0.279 
+& \\
+\bottomrule
 \end{tabular}
-\caption{Benchmark for $\left\langle x\right\rangle _{u}-\left\langle x\right\rangle _{d}$
-... at $Q=100$ GeV}
+\caption{\small Benchmark values for lattice-QCD calculations and global-PDF 
+fit determinations of the benchmark moments of polarised PDFs.
+%
+All values are shown at $Q^2=4$ GeV$^2$.
+%
+Results with a superscript~$\dagger$ are from a single lattice 
+calculation; these values may underestimate some sources of uncertainty.}
+\label{tab:LQCDunpol}
 \end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-------------------------------------------------------------------------------
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[t]
-\renewcommand{\arraystretch}{1.2} 
-\centering
-\begin{tabular}{@{}lccc@{}}
-\hline 
-\rule[-3 ex]{0pt}{7 ex}  %% add some extra space
-$\left\langle x\right\rangle _{\bar{u}}-\left\langle x\right\rangle _{\bar{d}}$ 
-   & Central Value & PDF error (\%) & Shift (\%)\\
-\hline 
-NNPDF3.0 & -0.0038 & 51 & -\\
-CT14 & -0.0055 & 25 & +43\\
-MMHT14 & -0.0060 & 14 & +57\\
-ABMP16 & -0.0059 & 11 & +54\\
-... &  &  & \\
-\hline 
-\end{tabular}
-\caption{Benchmark for $\left\langle x\right\rangle _{\bar{u}}-\left\langle x\right\rangle _{\bar{d}}$
-... at $Q=5$ GeV}
-\end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[t]
-\renewcommand{\arraystretch}{1.2} 
-\centering
-\begin{tabular}{@{}lccc@{}} 
-\hline 
-\rule[-3 ex]{0pt}{7 ex}  %% add some extra space
-$\left\langle x\right\rangle _{s^{+}}$ 
-   & Central Value & PDF error (\%) & Shift (\%) \\
-\hline 
-NNPDF3.0 & 0.46 & 6 & -\\
-CT14 & 0.43 & 18 & -7\\
-MMHT14 & 0.43 & 16 & -7\\
-ABMP16 & 0.47 & 3 & +2\\
-... &  &  & \\
-\hline 
-\end{tabular}
 
-\caption{Benchmark for $\left\langle x\right\rangle _{s^{+}}$ ... at $Q=5$
-GeV}
-\end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[t]
-\renewcommand{\arraystretch}{1.2} 
-\centering
-\begin{tabular}{@{}lccc@{}}
-\hline 
-\rule[-3 ex]{0pt}{7 ex}  %% add some extra space
-$\dfrac{\left\langle x\right\rangle _{s^{+}}}{\left\langle x\right\rangle _{\bar{u}}-\left\langle x\right\rangle _{\bar{d}}}$ 
-   & Central Value & PDF error (\%) & Shift (\%)\\
-\hline 
-NNPDF3.0 & 0.64 & 8 & -\\
-CT14 & 0.62 & 21 & -3\\
-MMHT14 & 0.59 & 19 & -7\\
-ABMP16 & 0.66 & 4 & 4\\
-... &  &  & \\
-\hline 
-\end{tabular}
-\caption{Benchmark for $\left\langle x\right\rangle _{s^{+}}/\left[\left\langle x\right\rangle _{\bar{u}}-\left\langle x\right\rangle _{\bar{d}}\right]$
-... at $Q=5$ GeV}
-\end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\end{comment}
+
+
+
+
+
+
+%\begin{table}[!t]
+%\renewcommand{\arraystretch}{1.2} 
+%\centering
+%\begin{tabular}{cc}
+%\hline 
+%\rule[-4 ex]{0pt}{7 ex}  %% add some extra space
+%Moment & Benchmark value \vspace*{-10pt}\\
+%\hline 
+%$\langle 1 \rangle_{\Delta u^+}$ & 0.830(26)$^\dagger$ \\
+%$\langle 1 \rangle_{\Delta d^+}$ & -0.386(17)$^\dagger$  \\
+%$\langle 1 \rangle_{\Delta s^+}$ & \numrange{0.119}{0.226} \\
+%\hline 
+%\end{tabular}
+%\caption{Benchmark values for lattice calculations of the zeroth moments of pol%arised PDFs. Results with a superscript $\dagger$ are from a single lattice cal%culation; these values may underestimate some sources of uncertainty.}
+%\label{tab:LQCDpol0}
+%\end{table}
+%%------------------------------------------------------------------------------%-
+%\begin{table}
+%\renewcommand{\arraystretch}{1.2} 
+%\centering
+%\begin{tabular}{cc}
+%\hline 
+%\rule[-4 ex]{0pt}{7 ex}  %% add some extra space
+%Moment & Benchmark value \vspace*{-10pt}\\
+%\hline 
+%$\langle x \rangle_{\Delta u^- - \Delta d^-}$ & \numrange{0.146}{0.279}  \\
+%\hline 
+%\end{tabular}
+%\caption{Benchmark value for lattice calculations of the first moments of polar%ised PDFs.}
+%\label{tab:LQCDpol1}
+%\end{table}

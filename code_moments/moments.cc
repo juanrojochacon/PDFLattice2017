@@ -15,7 +15,7 @@ int main(int argc, char **argv)
   int const nrepmax=101;
 
   // Scale at which moments are evaluated
-  double const Q = 5; 
+  double const Q = 2; 
 
   LHAPDF::setVerbosity(0);
   MomIntegral *lum = new MomIntegral(eps);
@@ -31,13 +31,23 @@ int main(int argc, char **argv)
   // List of PDF sets for which we
   // want to compute moments
   
+  // PDF4LHC2015
+  pdfname.push_back("PDF4LHC15_nnlo_mc");
+  // This is a Monte Carlo set
+  pdfertype.push_back("mc");
+
+  // NNPDF3.0 NNLO
+  pdfname.push_back("NNPDF30_nnlo_as_0118");
+  // This is a Monte Carlo set
+  pdfertype.push_back("mc");
+
   // NNPDF3.1 NNLO
   pdfname.push_back("NNPDF31_nnlo_as_0118");
   // This is a Monte Carlo set
   pdfertype.push_back("mc");
 
   // CT14NNLO
-  pdfname.push_back("CT14NNLO");
+  pdfname.push_back("CT14nnlo");
   // This is a Hessian set
   pdfertype.push_back("hessianCT");
 
@@ -47,7 +57,7 @@ int main(int argc, char **argv)
   pdfertype.push_back("hessian");
   
   // ABMP16 NNLO
-  pdfname.push_back("ABMP16_5_nnlo");
+  pdfname.push_back("ABMP16_4_nnlo");
   // This is a symmetric Hessian set
   pdfertype.push_back("symhessian");
 
