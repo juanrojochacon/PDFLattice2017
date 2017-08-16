@@ -3,99 +3,191 @@
 \label{sec:benchmarking}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In this section we present benchmarks for calculations of the low 
-Mellin moments of PDFs and of the $x$-dependence of PDFs. We provide a systematic
-comparison between lattice-QCD results and determinations from global fitting
-calculations.
+The aim of this section is to provide a quantitative comparison between 
+current lattice-QCD and global-PDF fit results.
 %
+To this purpose, we shall identify the appropriate benchmark quantities, 
+and define the criteria to carefully appraise the corresponding determinations
+available in the literature.
+%
+For each benchmark quantity, we shall specify the prescription adopted to 
+select and combine, on the one hand, lattice-QCD calculations, and, on the 
+other hand, global PDF-fit determinations.
+%
+We finally present our benchmark numbers from each side and compare them.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Benchmark criteria for lattice QCD}
-To accurately assess the current state-of-the-art for lattice calculations, we
-follow a procedure inspired by the review of low-energy mesons undertaken 
-by the Flavor Lattice Averaging Group (FLAG) \cite{Aoki:2016frl}. For each
-lattice calculation, we assess the status of each source of uncertainty outlined
-in Sec.~\ref{Sec:IntroLQCD}. We use a rating system inspired by FLAG, awarding a
-blue star (\bstar) for sources of uncertainty that are well-controlled or very conservatively
-estimated, a blue circle (\bcirc) for sources of uncertainty that have been controlled or estimated to some extent,
-and a red square (\rsquare) for uncertainties that have not met our criteria or for which no estimate is given.
+\subsection{Benchmark criteria}
+\label{subsec:BC}
 
-We present our determination of the current, state-of-the-art
-``world average'' for lattice-QCD results of the benchmark quantities. and 
-provide both summary tables and overview comparison plots. Following FLAG, we include only those results that
-are published in peer-reviewed journals or that have appeared as preprints. Where
-recent results are a clear update of previously published work, we do not 
-include the earlier results in the global average, but include them in the bibliography. Finally,
-we remark that our criteria, and the corresponding ratings, are chosen not only
-to provide as fair an assessment of the relative merits of various calculations as
-possible, but to be aspirational. Where lattice-QCD results do meet these
-standards, we hope that the lattice community will work towards improved calculations
-and greater precision as part of a concerted and inter-disciplinary effort to better understand
-nucleon structure.
+\subsubsection{Benchmark quantities}
+\label{subsubsec:BQ}
+
+We identify our benchmark quantities with the lowest moments of unpolarised 
+and polarised PDFs, or of some of their combinations, specifically: 
+$\langle x\rangle_{u^+-d^+}$, $\langle x \rangle_{u^+}$, $\langle x \rangle_{d^+}$, 
+$\langle x \rangle_{s^+}$ and $\langle x \rangle_{g}$ (in the unpolarised case); 
+$g_A\equiv\langle 1 \rangle_{\Delta u^+ - \Delta d ^+}$, 
+$\langle 1 \rangle_{\Delta u^+}$, $\langle 1 \rangle_{\Delta d^+}$,  
+$\langle 1 \rangle_{\Delta s^+}$ and $\langle x \rangle_{\Delta u^- - \Delta d^-}$ 
+(in the polarised case).
 %
+We use the notation outlined in Appendix~\ref{app:notation}.
+%
+Current lattice calculations of higher moments are not sufficiently controlled
+to allow for a meaningful comparison between lattice-QCD and global-PDF fit
+results.
+%
+Therefore, these will not be considered here. 
 
-Where the following criteria are not met, we award a red square (\rsquare).
+\subsubsection{Appraising lattice-QCD calculations}
+\label{subsubsec:BClQCD}
+
+To accurately assess the current state-of-the-art for lattice calculations
+available in the literature, we follow a procedure inspired by the review of 
+low-energy mesons undertaken by the Flavor Lattice Averaging Group 
+(FLAG)~\cite{Aoki:2016frl}. 
+%
+For each lattice calculation, we assess the status of each source of 
+uncertainty outlined in Sec.~\ref{Sec:IntroLQCD}. 
+%
+We use a rating system inspired by FLAG, awarding a blue star (\bstar) for 
+sources of uncertainty that are well-controlled or very conservatively 
+estimated, a blue circle (\bcirc) for sources of uncertainty that have been 
+controlled or estimated to some extent, and a red square (\rsquare) for 
+uncertainties that have not met our criteria or for which no estimate is given.
+%
+Specifically, the rating system works as follows.
+
 \begin{itemize}
-\item {\bfseries Discretisation effects and the continuum limit.} We assume that the lattice actions are
-${\cal O}(a)$-improved, that is, that the discretization errors vanish quadratically with the lattice spacing. 
-For unimproved actions an additional lattice spacing is required. We require that these
-criteria are satisfied in each case for at least one pion mass below 300 MeV.
+\item {\bfseries Discretisation effects and the continuum limit.} 
+We assume that the lattice actions are ${\cal O}(a)$-improved, {\it i.e.}, 
+that the discretization errors vanish quadratically with the lattice spacing. 
+%
+For unimproved actions an additional lattice spacing is required. 
+%
+We require that these criteria are satisfied in each case for at least one 
+pion mass below 300 MeV.
+%
 \begin{itemize}
-\item[\bstar] At least three lattice spacings with at least two lattice spacings below 0.1 fm and
-a range of lattice spacings that satisfies $[a_{\mathrm{max}}/a_{\mathrm{min}}]^2 \geq 2$.
-\item[\bcirc] At least two lattice spacings with at least one point below 0.1 fm and a range of lattice spacings 
-that satisfies $[a_{\mathrm{max}}/a_{\mathrm{min}}]^2 \geq 1.4$.
+%
+\item[\bstar] At least three lattice spacings with at least two lattice 
+spacings below 0.1 fm and a range of lattice spacings that satisfies 
+$[a_{\mathrm{max}}/a_{\mathrm{min}}]^2 \geq 2$.
+%
+\item[\bcirc] At least two lattice spacings with at least one point below 
+0.1 fm and a range of lattice spacings that satisfies 
+$[a_{\mathrm{max}}/a_{\mathrm{min}}]^2 \geq 1.4$.
+%
 \end{itemize}
-To receive a \bstar~or \bcirc~either a continuum extrapolation must be performed or the results must
-demonstrate no significant discretisation effects over the appropriate range of lattice spacings.
+%
+To receive a \bstar~or \bcirc~either a continuum extrapolation must be 
+performed or the results must demonstrate no significant discretisation 
+effects over the appropriate range of lattice spacings.
 
-\item {\bfseries Unphysical pion masses.} For the following criteria, we define a physical pion mass ensemble 
+\item {\bfseries Unphysical pion masses.} 
+For the following criteria, we define a physical pion mass ensemble 
 to be one with $M_\pi=135\pm 10$~MeV.
+%
 \begin{itemize}
-\item[\bstar] One ensemble with a physical pion mass \emph{or} a chiral extrapolation with three or more pion masses,
-with at least two pion masses below 250 MeV and at least one below 200~MeV.
-\item[\bcirc] A chiral extrapolation with three or more pion mass, two of which are below 300~MeV.
+\item[\bstar] One ensemble with a physical pion mass \emph{or} a chiral 
+extrapolation with three or more pion masses, with at least two pion masses 
+below 250 MeV and at least one below 200~MeV.
+%
+\item[\bcirc] A chiral extrapolation with three or more pion mass, two of 
+which are below 300~MeV.
+%
 \end{itemize}
 
-\item {\bfseries Finite volume effects.} For calculations that use a mixed action approach, that is,
-with different lattice actions for the valence and sea quarks, we apply the criteria for $M_\pi L$ to the valence quarks.
+\item {\bfseries Finite volume effects.} 
+%
+For calculations that use a mixed action approach, {\it i.e.},
+with different lattice actions for the valence and sea quarks, 
+we apply the criteria for $M_\pi L$ to the valence quarks.
+%
 \begin{itemize}
-\item[\bstar] Ensembles with $M_{\pi,\mathrm{min}}L\geq 4$, \emph{or} at least three volumes with spatial extent
-$L>2.5$~fm.
-\item[\bcirc] Ensembles with $M_{\pi,\mathrm{min}}L \geq 3.4$, \emph{or} at least two volumes with spatial extent
-$L>2.5$~fm.
+%
+\item[\bstar] Ensembles with $M_{\pi,\mathrm{min}}L\geq 4$, \emph{or} at least 
+three volumes with spatial extent $L>2.5$~fm.
+\item[\bcirc] Ensembles with $M_{\pi,\mathrm{min}}L \geq 3.4$, \emph{or} at least 
+two volumes with spatial extent $L>2.5$~fm.
 \end{itemize}
 
-\item {\bfseries Excited state contamination.} The following criteria must be satisfied for every pion mass and lattice spacing.
+\item {\bfseries Excited state contamination.} 
+The following criteria must be satisfied for every pion mass and lattice 
+spacing.
+%
 \begin{itemize}
-\item[\bstar] At least three source-sink  separations or a variational method to optimise the
-operator derived from at least a $3\times 3$ correlator matrix. 
-\item[\bcirc] Two source-sink separations at every pion mass and lattice spacing, or three or more source-sink separations at one pion mass
-below 300~MeV. For the variational method, an optimised operator derived from a $2\times 2$ correlator matrix at every pion mass and
-lattice spacing, or a $3\times 3$ correlator matrix for two pion masses below 300 MeV.
+%
+\item[\bstar] At least three source-sink separations or a variational method 
+to optimise the operator derived from at least a $3\times 3$ correlator matrix.
+% 
+\item[\bcirc] Two source-sink separations at every pion mass and lattice 
+spacing, or three or more source-sink separations at one pion mass below 
+300~MeV. 
+%
+For the variational method, an optimised operator derived from a $2\times 2$ 
+correlator matrix at every pion mass and lattice spacing, or a $3\times 3$ 
+correlator matrix for two pion masses below 300 MeV.
+%
 \end{itemize}
 
 \item {\bfseries Renormalization.} 
 \begin{itemize}
+%
 \item[\bstar] Nonperturbative renormalisation.
+%
 \item[\bcirc] Perturbative renormalisation.
+%
 \end{itemize}
-For the axial coupling, $g_A$, we also award a \bstar~for calculations that use fermion actions for which $Z_A/Z_V=1$ or employ combinations of quantities for which the renormalisation is unity by construction.
+%
+For $g_A$ we also award a \bstar~for calculations that use fermion actions 
+for which $Z_A/Z_V=1$ or employ combinations of quantities for which the 
+renormalisation is unity by construction.
 
-\item {\bfseries Lattice-spacing determination.} For lattice-QCD calculations of nucleons, the lattice-spacing determination is generally 
-sufficiently precise that it is a very small or negligible source
-of systematic uncertainty. Therefore we do not include an assessment of the lattice-spacing
+\item {\bfseries Lattice-spacing determination.} 
+For lattice-QCD calculations of nucleons, the lattice-spacing determination is 
+generally sufficiently precise that it is a very small or negligible source
+of systematic uncertainty. 
+%
+Therefore we do not include an assessment of the lattice-spacing
 determination in our criteria.
 
 \end{itemize}
 
+%
+%We present our determination of the current, state-of-the-art
+%``world average'' for lattice-QCD results of the benchmark quantities. and 
+%provide both summary tables and overview comparison plots. 
+%
+Following FLAG, we consider only those results that
+are published in peer-reviewed journals or that have appeared as preprints. 
+%
+Where recent results are a clear update of previously published work, we do 
+not include the earlier results, but only cite them in the bibliography. 
+%
+Finally we remark that our criteria, and the corresponding ratings, are chosen 
+not only to provide as fair an assessment of the relative merits of various 
+calculations as possible, but to be aspirational. 
+%
+Where lattice-QCD results do meet these standards, we hope that the lattice 
+community will work towards improved calculations and greater precision as 
+part of a concerted and inter-disciplinary effort to better understand
+nucleon structure.
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Moments}
 
-We provide a systematic comparison between existing
-lattice-QCD results and PDF fitting calculations
-for the lowest two moments of both unpolarized
-and polarized PDFs. Current lattice calculations of higher moments are not sufficiently
-controlled to allow meaningful comparison between lattice results and global fits.
+We provide a systematic comparison between existing lattice-QCD computations
+and global PDF fit results for the lowest two moments of unpolarized
+and longitudinally polarized PDFs. 
+%
+Current lattice calculations of higher moments are not sufficiently controlled 
+to allow for a meaningful comparison between lattice and global fit results.
+%
 With the exception of the axial coupling, $g_A$, there are no lattice calculations
 for which all systematics have been fully explored and controlled. Therefore, 
 for quantities other than $g_A$, we present a best-estimate band, rather than a global average. This band extends from the mean minus the error of the
@@ -106,18 +198,16 @@ In three cases, $\langle x \rangle_{u,d,s}$, $\langle x \rangle_g$, $\langle 1 \
 lattice result available. For these quantities, our best-estimate band is given by this single result, but 
 it should be noted that these results may underestimate some sources of uncertainty. We denote
 these cases in Tables \ref{tab:LQCDunpol} and \ref{tab:LQCDpol0} with a superscript dagger.
-In all benchmark tables, the moments are understood to be evaluated at a scale $\mu^2 = Q^2$, as outlined in Appendix 
-\ref{sec:notation}. We provide complete listings of available results in Appendix \ref{sec:LQCDtables}.
-%In all the cases, $\mu$ should be identified with the QCD
-%factorization scale, the scale that separates long-distance from short-distance dynamics in perturbative
-%factorization. Note that it is customary in PDF fits to assume
-%$\mu=\mu_F=\mu_R$, though in principle the two scales
-%could have different values.
+In all benchmark tables, the moments are understood to be evaluated at a scale $\mu^2 = Q^2=4$ GeV$^2$. 
+%
+We provide complete listings of available results in Appendix \ref{sec:LQCDtables}.
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Unpolarized parton distributions}
 
 \paragraph{First moments}
+%
 We summarise the current status of lattice-QCD calculations of the first moments of unpolarised PDFs
 in Table \ref{tab:unpolLQCDstatus1}, including $\langle x\rangle_{u^+-d^+}$, $\langle x\rangle_{q^+}$ and
 $\langle x\rangle_{g}$. We assess each calculation according 
