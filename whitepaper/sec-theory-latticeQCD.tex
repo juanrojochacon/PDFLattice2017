@@ -329,10 +329,10 @@ where the non-leading terms are power-suppressed in the large $p_z$ limit. Equat
 %\eqref{eq:ope}
 leads to the relation between the quasi PDF and the light-front PDF expressed in Eq.~\eqref{eq:qPDFmatching}.
 
-Preliminary results from lattice calculations of quasi PDFs have been encouraging \cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp,Alexandrou:2016jqi}, as we illustrate in Fig.~\ref{fig:quasipdfs}. There are a number of remaining challenges, however, that must be overcome for an {\it ab initio} determination of the $x$-dependence of PDFs directly from lattice QCD that incorporates complete control over systematic uncertainties. Lattice calculations of quasi PDFs are subject to the same sources of systematic uncertainty that plague all lattice calculations and are highlighted in Section \ref{Sec:IntroLQCD}, but here we focus on systematic uncertainties that are more specific to quasi PDFs. These are: uncertainties associated with the finite nucleon momentum of the lattice calculations and with the renormalisation of quasi PDFs.
+Preliminary results from lattice calculations of quasi PDFs have been encouraging \cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp,Alexandrou:2016jqi}, as we illustrate in Figs.~\ref{fig:final_pdf}-\ref{fig:matched}. There are a number of remaining challenges, however, that must be overcome for an {\it ab initio} determination of the $x$-dependence of PDFs directly from lattice QCD that incorporates complete control over systematic uncertainties. Lattice calculations of quasi PDFs are subject to the same sources of systematic uncertainty that plague all lattice calculations and are highlighted in Section \ref{Sec:IntroLQCD}, but here we focus on systematic uncertainties that are more specific to quasi PDFs. These are: uncertainties associated with the finite nucleon momentum of the lattice calculations and with the renormalisation of quasi PDFs.
 
 \begin{itemize}
- \item Preliminary nonperturbative studies of the quasi PDF used nucleon momenta in the range $p_z = 2\pi/L$ to $6\pi/L$, where $L$ is the physical extent of the lattice, corresponding to $p_z = 0.5$ to $1.3$ GeV  \cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp}. At such low momenta, higher-twist and target mass corrections are likely to be considerable.
+ \item Preliminary nonperturbative studies of the quasi PDF used nucleon momenta in the range $p_z = 2\pi/L$ to $6\pi/L$, where $L$ is the physical extent of the lattice, corresponding to $p_z = 0.5$ to $2.5$ GeV~\cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp,Alexandrou:2016jqi}. At such low momenta, higher-twist and target mass corrections are likely to be considerable.
 
 Target mass corrections can be removed to all orders \cite{Chen:2016utp}, and twist-4 contributions can be removed in principle \cite{Radyushkin:2016hsy,Chen:2016utp}, leaving higher-twist contamination. To reduce these remaining effects, the authors of \cite{Lin:2014zya,Chen:2016utp} extrapolated to infinite nucleon momentum using the fit ansatz $a + b/p_z$ for each value of $x$, but do not include a complete estimate of the corresponding systematic uncertainty. Although the effects of finite nucleon momentum can be mitigated, it is likely that reducing systematic uncertainties to less than 20\% at moderate values of $x$ require significantly larger values of nucleon momentum \cite{Gamberg:2014zwa}, and larger values of $x\simeq 1$ may require nucleon momentum as large as $p_z > 4$ GeV.
 
@@ -351,25 +351,70 @@ where $\delta m$ is the mass renormalisation of a test particle moving along the
 
 Once the linear divergence has been removed nonperturbatively, lattice perturbation theory can be used to renormalize the remaining logarithmic divergences in the quasi PDF \cite{Ishikawa:2016znu, Carlson:2017gpk}. A delicate point regarding the renormalisation is the mixing among certain subsets of these non-local operators. Such mixing has been identified at one-loop in perturbation theory in \cite{Constantiou:2017soon} for a variety of fermion/gluon actions. The mixing coefficients are necessary to disentangle the individual matrix elements for each quasi-PDF from lattice calculation data. Of particular interest is the case of the unpolarized quasi-PDF, which mixes with the scalar quasi-PDF if the Lorentz index of Eq.~\eqref{eq:qPDF} is in the same direction as the Wilson line. In contrast, the axial and transversity PDFs with a Lorentz index in the Wilson line direction do not exhibit any mixing (to one-loop in perturbation theory). 
 
-In addition, nonperturbative schemes, such as the regularization-independent RI/MOM scheme~\cite{Martinelli:1994ty}, can be used to renormalize matrix elements determined on the lattice. Nonperturbative schemes avoid the use of lattice perturbation theory at low energy scales (usually chosen to be $\mu = \pi/a$), although perturbative matching between renormalisation schemes is still necessary for PDFs expressed in the $\overline{\rm MS}$ scheme. Combining a nonperturbative renormalisation scheme with a step-scaling procedure \cite{Luscher:1991wu} significantly reduces perturbative truncation uncertainties by providing a nonperturbative method for reaching high energy scales. Two such nonperturbative renormalisation methods for quasi PDFs have recently been constructed \cite{Alexandrou:2017huk,Chen:2017mzz}. 
+In addition, nonperturbative schemes, such as the regularization-independent RI/MOM scheme~\cite{Martinelli:1994ty}, can be used to renormalize matrix elements determined on the lattice. Nonperturbative schemes avoid the use of lattice perturbation theory at low energy scales (usually chosen to be $\mu = \pi/a$), although perturbative matching between renormalisation schemes is still necessary for PDFs expressed in the $\overline{\rm MS}$ scheme. Combining a nonperturbative renormalisation scheme with a step-scaling procedure \cite{Luscher:1991wu} significantly reduces perturbative truncation uncertainties by providing a nonperturbative method for reaching high energy scales. 
 
-An alternative approach to removing both the linear and logarithmic divergences is provided by the gradient flow, a deterministic evolution of the quark and gluon degrees of freedom in a new parameter, the flow time, that renders all correlation functions finite \cite{Narayanan:2006rf,Luscher:2011bx,Luscher:2013cpa}. By fixing the flow time in the continuum limit, finite continuum quasi PDFs can be extracted from lattice calculations and then directly matched to light-front PDFs using perturbation theory~\cite{Monahan:2016bvm}.
+ A nonperturbative renormalisation method for quasi PDFs have recently been constructed and applied in 
+Refs.~\cite{Alexandrou:2017huk,Chen:2017mzz}. Such a prescription, developed in a fully non-perturbative 
+manner, opens up new possibilities for obtaining PDFs from first principles in a fully controlled way, 
+which will be a stringent test of non-perturbative aspects of QCD. 
 
-Ultimately, perturbative matching must be carried out at a sufficiently high scale that truncation uncertainties can be safely neglected. Until a nonperturbative step-scaling scheme has been devised for quasi PDFs, perturbative truncation uncertainties are likely to be, in conjunction with finite nucleon momentum effects, the dominant source of systematic uncertainty in lattice determinations of quasi PDFs.
+The aforementioned techniques rely on the RI$'$ renormalization prescription that removes both the 
+logarithmic and linear divergences. The latter is present in the matrix elements of fermion operators with 
+Wilson lines. With this method, the elimination of the mixing between the unpolarized quasi PDF and the 
+twist-3 scalar operator is also feasible via the construction of a $2\times2$ mixing matrix. Note that 
+this mixing appears in certain lattice regularizations that break chiral symmetry. The mixing coefficient 
+does not contain any divergences and vanishes at the continuum limit. Presentation of the extraction of 
+the renormalization functions is beyond the scope of this paper and details can be found in
+Refs.~\cite{Alexandrou:2017huk,Chen:2017mzz}. Here we only highlight results on the $x$-dependence 
+of the unpolarized and polarized PDFs, as extracted from lattice QCD. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=.6\textwidth]{plots/pdf_nonorm}
+\caption{The renormalized unpolarized isovector quark distribution after one-loop matching and mass correction at the renormalization scale $\mu=2.4$~GeV. The red band shows the extrapolation to infinite momentum. The negative-$x$ part is related to the antiquark distribution via $\bar{u}(x)-\bar{d}(x) = - u(-x)+ d(-x)$ for $x>0$.
+} \label{fig:final_pdf}
+\end{figure}
+
+The renormalized unpolarized PDF is shown in Fig.~\ref{fig:final_pdf}, in which the mixing is not taken into
+account~\cite{Chen:2017mzz}. The leading higher-twist contributions are removed as explained in 
+Ref.~\cite{Chen:2016utp}. The sea flavor asymmetry is hardly visible, mainly due to the rapid increase 
+of the renormalization factor with distance, which amplifies the error. The peak in the positive-$x$ 
+region is slightly shifted toward $x{=}0$, which is expected because the renormalization enhances the 
+long-range correlation. Thereby it enhances the contribution in the small $x$ region when Fourier 
+transformed to momentum space. After renormalization the unphysical dip near $x=0$ in the previous 
+result also vanishes. 
+
+
+In Fig.~\ref{fig:matched} we show the helicity PDF computed in Ref.~\cite{Alexandrou:2017huk}. The blue line corresponds to
+the fully renormalized matrix elements, and the magenta line comes from the bare matrix elements multiplied by the local axial vector 
+current renormalization function. We observe that the blue data move towards the phenomenological PDFs, which is very 
+promising. In particular, the antiquark asymmetry is not overestimated any longer and actually this asymmetry becomes 
+compatible with zero under current uncertainties. In the quark part, there is an enhancement of the matched PDF for all 
+values of x. We emphasize that the comparison with the phenomenological PDFs should be understood as only qualitative. 
+For quantitative comparison, a careful investigation of a number of systematic effects is still needed. An extensive study 
+on upper bounds of the systematic uncertainties is presented in Ref.~\cite{Alexandrou:2017huk}.
+\bigskip
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.4,angle=-90]{plots/qmatched_bare_vs_fit69v2}\,\,\,
+\vspace*{-0.3cm}
+\begin{minipage}{15cm}
+\hspace*{3cm}
+\caption{Comparison of matched helicity PDF obtained from quasi PDF computed with either fully renormalized matrix elements (blue) 
+or with bare matrix elements multiplied by the local ($z{=}0$) axial current $Z$-factor, $Z_A$ (magenta). For purely orientational purposes, 
+we also plot phenomenological PDFs (DSSV08 \cite{deFlorian:2009vb} and JAM15 \cite{Sato:2016tuz}).}
+\label{fig:matched} 
+\end{minipage}
+\end{figure}
+%Two such nonperturbative renormalisation methods for quasi PDFs have recently been constructed \cite{Alexandrou:2017huk,Chen:2017mzz}. 
+
+%An alternative approach to removing both the linear and logarithmic divergences is provided by the gradient flow, a deterministic evolution of the quark and gluon degrees of freedom in a new parameter, the flow time, that renders all correlation functions finite \cite{Narayanan:2006rf,Luscher:2011bx,Luscher:2013cpa}. By fixing the flow time in the continuum limit, finite continuum quasi PDFs can be extracted from lattice calculations and then directly matched to light-front PDFs using perturbation theory~\cite{Monahan:2016bvm}.
+
+%Ultimately, perturbative matching must be carried out at a sufficiently high scale that truncation uncertainties can be safely neglected. Until a nonperturbative step-scaling scheme has been devised for quasi PDFs, perturbative truncation uncertainties are likely to be, in conjunction with finite nucleon momentum effects, the dominant source of systematic uncertainty in lattice determinations of quasi PDFs.
 \end{itemize}
 
-\paragraph{Status} We review the current status of lattice calculations of Mellin moments of PDFs in Sec.~\ref{sec:benchmarking}. The study of the $x$-dependence of PDFs directly from lattice QCD is still in its infancy and at this stage it would be premature to attempt a global analysis, as we undertake for the moments of PDFs. Here, however, we illustrate the progress that has been made with a snapshot of the most recent results.
+%\paragraph{Status} We review the current status of lattice calculations of Mellin moments of PDFs in Sec.~\ref{sec:benchmarking}. The study of the $x$-dependence of PDFs directly from lattice QCD is still in its infancy and at this stage it would be premature to attempt a global analysis, as we undertake for the moments of PDFs. Here, however, we illustrate the progress that has been made with a snapshot of the most recent results.
 
-Two groups have carried out lattice calculations of quasi-PDFs, and example results are shown in Fig.~\ref{fig:quasipdfs}.
+%Two groups have carried out lattice calculations of quasi-PDFs, and example results are shown in Fig.~\ref{fig:quasipdfs}.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[t]
-\begin{center}
-  \includegraphics[scale=0.75]{plots/nnpdf31nnlo-10.pdf}
-  \includegraphics[scale=0.75]{plots/nnpdf31nnlo-1e4.pdf}
-  \caption{\small Illustrative plots of quasi PDFs from \cite{XXX} (left) and \cite{YYY} (right).
-    \label{fig:quasidfs}
-  }
-\end{center}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+

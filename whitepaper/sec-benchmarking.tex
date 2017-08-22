@@ -162,7 +162,7 @@ determination in our criteria.
 \end{itemize}
 
 We now turn to summarise the current status of lattice-QCD calculations of
-the first moments of unpolarised and polarised PDFs respectively.
+our benchmark moments of unpolarised and polarised PDFs respectively.
 %
 Following FLAG, we consider only those results that are published in 
 peer-reviewed journals or that have appeared as preprints. 
@@ -830,27 +830,50 @@ moments of longitudinally polarised PDFs.}
 
 The current state-of-the-art for global PDF fit determinations and their 
 uncertainties has been carefully assessed in dedicated reviews
-recently~\cite{Forte:2013wc,Jimenez-Delgado:2013sma}. 
+recently~\cite{Forte:2013wc,Jimenez-Delgado:2013sma} and summarised in
+Sec.~\ref{sec:unpPDFs}. 
 %
-It is now recognised that the PDF uncertainty receives various contributions 
-of comparable importance: the measurement uncertainty propagated from the
+It is now recognised that the PDF uncertainty receives various contributions: 
+the measurement uncertainty propagated from the
 experimental data, uncertainties associated with incompatibility of the 
 fitted experiments, procedural uncertainties such as those related to the
 functional form of PDFs, and the handling of systematic errors.
 %
+As outlined in Sec.~\ref{sec:unpPDFs}, in principle all these uncertainties 
+can be accounted for through suitable methods either in the Hessian or the 
+MC frameworks.
+%
+In practice, there is a significant spread in the sophistication 
+of those methods between unpolarised and polarised PDF fits, as we will 
+delineate in the following.
 
+In Sec.~\ref{sec:unpPDFs}, it was also emphasised that there are additional 
+theoretical uncertainties on PDFs coming from the uncertainties associated to 
+the input values of the physical parameters used in the fit (such as the 
+reference value of the strong coupling) and to missing higher order
+uncertainties (given that fits are usually performed with fixed-order
+perturbation theory).
+%
+The size of the former can be accounted for by studying the stability of the 
+results upon variation of the input parameters; the size of the latter are 
+currently unknown, although it is supposed to be subdominant.
+%
+Therefore, theoretical uncertainties will not be considered in the following.
 
-
-%Here say something about how uncertainties are asseses in PDF fits.
-%Say that, in comparison to lattice, the field is much more developed.
+We now turn to summarise the results for our benchmark moments listed in 
+Sec.~\ref{subsubsec:BQ} based on current global-fit determinations of
+unpolarised and polarised PDFs respectively.
+%
+We critically assess the corresponding uncertainties and specify how the
+available results are combined into a single benchmark value.
 
 \paragraph{Unpolarised parton distributions}
 
-We summarise the current status of global-PDF fits results of the benchmark
+We summarise the current status of global-fit results of the benchmark
 moments of unpolarised PDFs listed in Sec.~\ref{subsubsec:BQ} 
 in Tab.~\ref{tab:unpPDFmoms}.
 %
-In the first columns we indicate the computed momentum, and in the subsequent 
+In the first column we indicate the computed momentum, and in the subsequent 
 six columns its value as obtained from the most recent available PDF 
 determinations: NNPDF3.1~\cite{Ball:2017nwa},
 CT14~\cite{Dulat:2015mca}, MMHT2014~\cite{Harland-Lang:2014zoa},
@@ -861,15 +884,14 @@ HERAPDF2.0~\cite{Abramowicz:2015mha} respectively.
 The most relevant features of these PDF sets have been presented in 
 Sec.~\ref{sec:unpPDFs}.
 %
-All values in Tab.~\ref{tab:unpPDFmoms} have been computed 
+All values in Tab.~\ref{tab:unpPDFmoms} are displayed
 at $\mu^2=Q^2=4$ GeV$^2$. 
 %
 They have been obtained from the default PDF sets at the highest available 
 perturbative order, which is NNLO for all of them, except for CJ15, 
 for which it is NLO.
 %
-Uncertainties correspond to 68\% confidence levels and denote the PDF
-uncertainty only.
+%Comment on the meaning of the uncertainties.
 %
 In the case of the HERAPDF2.0 set, the PDF error band is the sum in quadrature 
 of the statistical, model and parametrisation uncertainties.
@@ -894,7 +916,7 @@ $\langle x \rangle_{g}$
 & 0.410(4) & 0.416(9) & 0.411(9) & 0.412(4) & 0.416(1) & 0.401(10)\\
 \bottomrule
 \end{tabular}
-\caption{\small Status of current global-PDF fit determinations of the 
+\caption{\small Status of current global-fit determinations of the 
 benchmark first moments of unpolarised PDFs listed in Sec.~\ref{subsubsec:BQ}.
 All values are shown at $\mu^2=Q^2=4$ GeV$^2$.}
 \label{tab:unpPDFmoms}
@@ -936,8 +958,8 @@ general-mass variable-flavour number scheme with up to $n_f^{\rm max}=5$
 active quark flavours.
 %
 \item The central value of the strong coupling at the $Z$-boson mass,
-$\alpha_S(M_Z^2)$ should be fixed at an agred common value, consistent with the 
-PDF world-average~\cite{Olive:2016xmw}.
+$\alpha_S(M_Z^2)$ should be fixed at an agreed common value, consistent 
+with the PDF world-average~\cite{Olive:2016xmw} ($\alpha_s(M_Z)=0.118$).
 %
 \item All known experimental and procedural sources of uncertainty should be 
 properly accounted for.
