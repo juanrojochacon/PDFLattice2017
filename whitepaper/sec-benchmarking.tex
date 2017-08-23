@@ -603,8 +603,6 @@ We show the world average experimental value as a vertical black line.
 The light gray bands for $N_f=2+1+1$ and $N_f=2$ represent the best-estimate 
 results of Eq.~\eqref{eq:gAcriteria} and the dashed gray band for
 $N_f=2+1+1$ is the combined fit band given in Eq.~\eqref{eq:gAfit}. 
-%
-%The open symbols are results that are not included in the best-estimate values.
 
 %-------------------------------------------------------------------------------
 \begin{figure}[t]
@@ -618,10 +616,7 @@ $g_A^{\mathrm{exp}} = 1.2723(23)$~\cite{Olive:2016xmw}.
 %
 The light gray bands for $N_f=2+1+1$ and $N_f=2$ represent the best-estimate 
 results of Eq.~\eqref{eq:gAcriteria} and the dashed gray band for
-$N_f=2+1+1$ is the fit band of Eq.~\eqref{eq:gAfit}. 
-%
-%The open symbols are results that are not included in the best-estimate values.
-}    
+$N_f=2+1+1$ is the fit band of Eq.~\eqref{eq:gAfit}.}    
 \label{fig:gaLQCDstatus}
 \end{figure}
 %-------------------------------------------------------------------------------
@@ -757,6 +752,7 @@ of the zeroth moments of longitudinally polarised PDFs.}
 \begin{table}[t] 
 \renewcommand{\arraystretch}{1.2}
 \centering
+\vspace{2cm}
 \begin{threeparttable}
 \begin{tabular}{llcllccccccl}
 Mom. & Collab. & Ref. & $N_f$ & Status &
@@ -768,26 +764,26 @@ Mom. & Collab. & Ref. & $N_f$ & Status &
 & Value \\
 \toprule
 $\langle x\rangle_{\Delta u^--\Delta d^-}$
-& RBC 
-  & \cite{Aoki:2010xg} 
-  & 2+1 
-  & P 
-  & \rsquare  
-  & \rsquare 
-  & \bstar  
-  & \bstar  
-  & \rsquare 
+& RBC/ 
+  & \multirow{2}{*}{\cite{Aoki:2010xg}} 
+  & \multirow{2}{*}{2+1} 
+  & \multirow{2}{*}{P} 
+  & \multirow{2}{*}{\rsquare}  
+  & \multirow{2}{*}{\rsquare} 
+  & \multirow{2}{*}{\bstar}  
+  & \multirow{2}{*}{\bstar}  
+  & \multirow{2}{*}{\rsquare} 
   &  
-  & 0.256(23)\\
+  & 0.256(23)/\\
 & UKQCD\,10 
-  & \cite{Aoki:2010xg} 
-  & 2+1 
-  & P 
-  & \rsquare  
-  & \rsquare 
-  & \bstar  
-  & \bstar  
-  & \rsquare 
+  &  
+  &  
+  &  
+  &   
+  &  
+  &   
+  &   
+  &  
   &  
   & 0.205(59)\\
 & LHPC\,10 
@@ -867,7 +863,7 @@ unpolarised and polarised PDFs respectively.
 We critically assess the corresponding uncertainties and specify how the
 available results are combined into a single benchmark value.
 
-\paragraph{Unpolarised parton distributions}
+\paragraph{Unpolarised parton distributions.}
 
 We summarise the current status of global-fit results of the benchmark
 moments of unpolarised PDFs listed in Sec.~\ref{subsubsec:BQ} 
@@ -891,25 +887,30 @@ They have been obtained from the default PDF sets at the highest available
 perturbative order, which is NNLO for all of them, except for CJ15, 
 for which it is NLO.
 %
-%Comment on the meaning of the uncertainties.
+The uncertainties correspond to 68\% CL bands, except for the CT14 PDF set,
+where they denote the 90\% CL band.
+%
+Note however that no tolerance is used for the CJ15 PDF set, hence the 
+smaller uncertainties w.r.t. all the other PDF sets.
 %
 In the case of the HERAPDF2.0 set, the PDF error band is the sum in quadrature 
 of the statistical, model and parametrisation uncertainties.
 
 %-------------------------------------------------------------------------------
-\begin{table}[t]
+\begin{table}[!t]
 \centering
+\renewcommand{\arraystretch}{1.2}
 \begin{tabular}{lcccccc}
 \toprule
 Mom. 
 & NNPDF3.1 & CT14 & MMHT2014 & ABMP2016 & CJ15 & HERAPDF2.0 \\
 \midrule
 $\langle x \rangle_{u^+-d^+}$ 
-& 0.152(3) & 0.158(6) & 0.151(4) & 0.167(4) & 0.152(2) & 0.188(3)\\
+& 0.152(3) & 0.158(6) & 0.151(4) & 0.167(4) & 0.152(2) & 0.188(3)\ \,\\
 $\langle x \rangle_{u^+}$    
-& 0.348(4) & 0.348(5) & 0.348(5) & 0.353(3) & 0.348(1) & 0.372(4)\\
+& 0.348(4) & 0.348(5) & 0.348(5) & 0.353(3) & 0.348(1) & 0.372(4)\ \,\\
 $\langle x \rangle_{d^+}$    
-& 0.196(3) & 0.190(5) & 0.197(5) & 0.186(3) & 0.196(1) & 0.185(7)\\
+& 0.196(3) & 0.190(5) & 0.197(5) & 0.186(3) & 0.196(1) & 0.185(7)\ \,\\
 $\langle x \rangle_{s^+}$    
 & 0.039(3) & 0.035(9) & 0.035(9) & 0.041(2) & 0.031(1) & 0.035(11)\\
 $\langle x \rangle_{g}$     
@@ -917,7 +918,7 @@ $\langle x \rangle_{g}$
 \bottomrule
 \end{tabular}
 \caption{\small Status of current global-fit determinations of the 
-benchmark first moments of unpolarised PDFs listed in Sec.~\ref{subsubsec:BQ}.
+benchmark moments of unpolarised PDFs listed in Sec.~\ref{subsubsec:BQ}.
 All values are shown at $\mu^2=Q^2=4$ GeV$^2$.}
 \label{tab:unpPDFmoms}
 \end{table}
@@ -933,7 +934,7 @@ suggested~\cite{Accardi:2016ndt}, we find it useful to apply them here as well.
 %
 The reason is twofold.
 %
-First, in this benchmark exercise we aim at accuracy and precision, which are 
+First, this benchmark exercise aims at accuracy and precision,  
 two of the guiding principles underlying the recommendations.
 %
 Second, they led to the release of specific PDF sets which can be easily 
@@ -965,19 +966,111 @@ with the PDF world-average~\cite{Olive:2016xmw} ($\alpha_s(M_Z)=0.118$).
 properly accounted for.
 %
 \end{itemize}
- 
+%
+The ABMP2016 set (as well as its previous versions) does not fulfill the second 
+and third criteria; the CJ15 set does not fulfill the first, second and fourth
+criteria, while the HERAPDF2.0 set does not fulfill the first criterion.
+%
+Hence they were not included in the PDF4LHC2015 PDF sets.
 
+\paragraph{Polarised parton distributions.}
+%
+We summarise the current status of global-fit results of the benchmark
+moments of polarised PDFs listed in Sec.~\ref{subsubsec:BQ} in 
+Tab.~\ref{tab:polPDFmoms}.
+%
+In the first column we indicate the computed momentum, and in the subsequent 
+two columns its value as obtained from the most recent available PDF 
+determinations: NNPDFpol1.1~\cite{Nocera:2014gqa}, 
+DSSV08~\cite{deFlorian:2009vb}~\footnote{The DSSV08 analysis has been updated
+by the DSSV14 analysis~\cite{deFlorian:2014yva} only in the determination
+of the gluon PDF. The moments in Tab.~\ref{tab:polPDFmoms} are therefore  
+unchanged in the two analyses.} and JAM15~\cite{Sato:2016tuz}.
+%
+The most relevant features of these PDF sets have been presented in
+Sec.~\ref{sec:polPDFs}.
+%
+All values in Tab.~\ref{tab:unpPDFmoms} are displayed
+at $\mu^2=Q^2=4$ GeV$^2$ at NLO.
+%
+The uncertainties correspond to 68\% CL bands, with no tolerance used for the 
+DSS08 PDF set.
+%
+In the case of the JAM15 fit, we do not provide a value for 
+$\langle x \rangle _{\Delta u^--\Delta d^-}$.
+%
+The fit is based on inclusive DIS data sets only, which are not sensitive to 
+the valence distribution $\Delta u^- - \Delta d^-$.
 
+%-------------------------------------------------------------------------------
+\begin{table}[!t]
+\centering
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{lccc}
+\toprule
+Mom. 
+& NNPDFpol1.1 & DSSV08 & JAM15 \\
+\midrule
+$\langle 1 \rangle_{\Delta u^+-\Delta d^+}$ &
+\ 1.250(16) & \ 1.260(18) & 1.314(6)\, \\
+$\langle 1 \rangle_{\Delta u^+}$ &
+\ 0.794(46) & \ 0.814(12) & \ 0.831(21)\\
+$\langle 1 \rangle_{\Delta d^+}$ &  
+-0.453(52)  &  -0.456(11) &  -0.476(22)\\
+$\langle 1 \rangle_{\Delta s^+}$ &  
+-0.120(81)  &  -0.112(23) &  -0.109(20)\\
+$\langle x \rangle_{\Delta u^- - \Delta d^-}$ &     
+\ 0.195(14) &  0.203(9)\, &  --- \\
+\bottomrule
+\end{tabular}
+\caption{\small Status of current global-fit determinations of the 
+benchmark moments of polarised PDFs listed in Sec.~\ref{subsubsec:BQ}.
+All values are shown at $\mu^2=Q^2=4$ GeV$^2$.}
+\label{tab:polPDFmoms}
+\end{table}
+%-------------------------------------------------------------------------------
 
+As outlined in Sec.~\ref{sec:polPDFs}, polarised PDFs cannot be determined in a 
+global QCD analysis with the same accuracy as their unpolarised counterparts.
+%
+Also, because they do not enter precision physics studies at the LHC, the
+selection and combination of different PDF sets have received much less
+attention.
+%
+No recommendations analogous to those from the PDF4LHC working group
+exist for polarised PDFs.
+%
+Therefore, in order to provide a benchmark value for the relevant moments of 
+polarised PDFs listed in Tab.~\ref{tab:polPDFmoms}, we apply an unweighted 
+average of the NNPDFpol1.1, DSSV08 and JAM15 PDF sets.
 
-
-\paragraph{Polarised parton distributions}
-
-
-
+The rationale for this choice is twofold.
+%
+On the one hand, we maximise the amount of experimental information 
+that can determine the central value of our benchmark moments.
+%
+As explained in sec.~\ref{sec:polPDFs}, the NNPDFpol1.1 and the DSSV08 PDF 
+sets are based on a very similar set of inclusive DIS data, while the JAM15 
+PDF set is based on a much wider number of data points.
+%
+This wider set can help constraining the moments of the total quark 
+distributions.
+%
+The NNPDFpol1.1 and the DSSV08 PDF sets are based respectively on $pp$ and 
+SIDIS data to disentangle the quark and antiquark distributions.
+%
+This can help constraining the moments of the valence distributions.
+%
+On the other hand, we balance the rather different uncertainties among the 
+three PDF sets, specifically the very conservative NNPDFpol1.1 estimate
+against the smaller DSSV08 and JAM15 values.
+%
+This way we avoid in particular a possible underestimation of the procedural
+uncertainties induced by the choice of a simple PDF parametrisation 
+adopted in the DSSV08 and JAM15 fits.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Benchmark values}
+\subsection{Comparing lattice-QCD and global-fit benchmark moments}
 \label{subsec:BN}
 
 \subsubsection{Unpolarised parton distributions}
@@ -1007,8 +1100,9 @@ properly accounted for.
 
 
 %-------------------------------------------------------------------------------
-\begin{table}[t]
+\begin{table}[!t]
 \centering
+\renewcommand{\arraystretch}{1.2}
 \begin{tabular}{lcc}
 \toprule
 Moment & Lattice QCD & Global Fit\\
@@ -1030,51 +1124,48 @@ $\langle x\rangle_{g}$
 & 0.414(9)\\
 \bottomrule
 \end{tabular}
-\caption{\small Benchmark values for lattice-QCD calculations and global-PDF 
-fit determinations of the benchmark moments of unpolarised PDFs.
+\caption{\small Benchmark values for lattice-QCD calculations and global-fit 
+fdeterminations of the benchmark moments of unpolarised PDFs.
 %
-All values are shown at $Q^2=4$ GeV$^2$.
+All values are shown at $\mu^2=Q^2=4$ GeV$^2$.
 %
 Results with a superscript~$\dagger$ are from a single lattice 
-calculation; these values may underestimate some sources of uncertainty.}
-\label{tab:LQCDunpol}
+calculation; they may underestimate some sources of uncertainty.}
+\label{tab:BMunp}
 \end{table}
 %-------------------------------------------------------------------------------
 
 \subsubsection{Polarised parton distributions}
 
 %-------------------------------------------------------------------------------
-\begin{table}[t]
+\begin{table}[!t]
 \centering
+\renewcommand{\arraystretch}{1.2}
 \begin{tabular}{lcc}
 \toprule
 Moment & Lattice QCD & Global Fit\\
 \midrule
-$g_A\equiv\langle 1\rangle_{\Delta u^+ - \Delta d^+}$ 
-&  
-& \\
+\multirow{2}{*}{$g_A\equiv\langle 1\rangle_{\Delta u^+ - \Delta d^+}$} 
+& 1.195(39) ($N_f=2+1+1$) 
+& \multirow{2}{*}{\ 1.275(12)} \\
+& 1.279(50) ($N_f=2$) \\
 $\langle 1 \rangle_{\Delta u^+}$     
 & 0.830(26)$^\dagger$ 
-& \\
+& \ 0.813(25)\\
 $\langle 1 \rangle_{\Delta d^+}$     
 & -0.386(17)$^\dagger$ 
-& \\
+& -0.462(29)\\
 $\langle 1 \rangle_{\Delta s^+}$     
-& -0.052- -0.014
-& \\
+& -0.052\,--\,-0.014
+& -0.114(43)\\
 $\langle x\rangle_{\Delta u^- - \Delta d^-}$       
-& 0.146-0.279 
-& \\
+& \numrange{0.146}{0.279} 
+& \ 0.199(16)\\
 \bottomrule
 \end{tabular}
-\caption{\small Benchmark values for lattice-QCD calculations and global-PDF 
-fit determinations of the benchmark moments of polarised PDFs.
-%
-All values are shown at $Q^2=4$ GeV$^2$.
-%
-Results with a superscript~$\dagger$ are from a single lattice 
-calculation; these values may underestimate some sources of uncertainty.}
-\label{tab:LQCDunpol}
+\caption{\small Same as Tab.~\ref{tab:BMunp}, but for the polarised benchmark 
+moments.}
+\label{tab:BMpol}
 \end{table}
 %-------------------------------------------------------------------------------
 
