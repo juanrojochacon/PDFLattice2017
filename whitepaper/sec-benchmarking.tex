@@ -4,7 +4,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The aim of this section is to provide a quantitative comparison between 
-current lattice-QCD and global-PDF fit results.
+current lattice-QCD and global-fit results.
 %
 To this purpose, we shall identify the appropriate benchmark quantities, 
 and define the criteria to carefully appraise the corresponding determinations
@@ -42,7 +42,7 @@ We use the notation outlined in Appendix~\ref{app:notation}.
 The focus on these quantities is motivated by the fact that
 current lattice calculations of higher moments and/or of other PDFs or PDF 
 combinations are not sufficiently controlled to allow for a meaningful 
-comparison between lattice-QCD and global-PDF fit results.
+comparison between lattice-QCD and global-fit results.
 %
 Therefore, these will not be considered here. 
 
@@ -216,7 +216,7 @@ For completeness, we report these results in Tab.~\ref{tab:unpolLQCDstatus1B}
 of Appendix~\ref{sec:LQCDtables}.
 
 %-------------------------------------------------------------------------------
-\begin{table}[t] 
+\begin{table}[!t] 
 \renewcommand{\arraystretch}{1.2} 
 \centering 
 \begin{threeparttable}
@@ -403,7 +403,7 @@ Tab.~\ref{tab:unpolLQCDstatus1}.
 All results are quoted at $\mu^2=Q^2=4$ GeV$^2$.
 
 %-------------------------------------------------------------------------------
-\begin{table}[t]
+\begin{table}[!t]
 \renewcommand{\arraystretch}{1.2} 
 \centering
 \begin{threeparttable}
@@ -605,7 +605,7 @@ results of Eq.~\eqref{eq:gAcriteria} and the dashed gray band for
 $N_f=2+1+1$ is the combined fit band given in Eq.~\eqref{eq:gAfit}. 
 
 %-------------------------------------------------------------------------------
-\begin{figure}[t]
+\begin{figure}[!t]
 \centering
 \includegraphics[scale=0.7]{plots/ga_summary.pdf}\\
 \caption{\small Summary of the current status of lattice-QCD calculations of 
@@ -658,7 +658,7 @@ We include all results with two or more flavours of sea quarks listed in
 Tabs.~\ref{tab:polLQCDstatus0}-\ref{tab:polLQCDstatus1} respectively.
 
 %-------------------------------------------------------------------------------
-\begin{table}[t]
+\begin{table}[!t]
 \renewcommand{\arraystretch}{1.2} 
 \centering
 \begin{threeparttable}
@@ -749,7 +749,7 @@ of the zeroth moments of longitudinally polarised PDFs.}
 %-------------------------------------------------------------------------------
 
 %-------------------------------------------------------------------------------
-\begin{table}[t] 
+\begin{table}[!t] 
 \renewcommand{\arraystretch}{1.2}
 \centering
 \vspace{2cm}
@@ -821,7 +821,7 @@ moments of longitudinally polarised PDFs.}
 \end{table}
 %-------------------------------------------------------------------------------
 
-\subsubsection{Appraising global-PDF fit results}
+\subsubsection{Appraising global-fit results}
 \label{subsubsec:GPDFfits}
 
 The current state-of-the-art for global PDF fit determinations and their 
@@ -1073,31 +1073,23 @@ adopted in the DSSV08 and JAM15 fits.
 \subsection{Comparing lattice-QCD and global-fit benchmark moments}
 \label{subsec:BN}
 
-\subsubsection{Unpolarised parton distributions}
+We can now compare the lattice QCD and global fit results illustrated in 
+Secs.~\ref{subsubsec:BClQCD}-\ref{subsubsec:GPDFfits} for the unpolarised
+and polarised PDF moments respectively.
 
-%We denote these cases in Tab.\ref{tab:LQCDunpol} with a superscript dagger.
-%We provide a systematic comparison between existing lattice-QCD computations
-%and global PDF fit results for the lowest two moments of unpolarized
-%and longitudinally polarized PDFs. 
+\paragraph{Unpolarised parton distributions.}
 %
-%Current lattice calculations of higher moments are not sufficiently controlled 
-%to allow for a meaningful comparison between lattice and global fit results.
+The benchmark values of the first moments of the unpolarised PDFs, obtained
+as described in Secs.~\ref{subsubsec:BClQCD}-\ref{subsubsec:GPDFfits}, 
+are summarised in Tab.~\ref{tab:BMunp}.
 %
-%With the exception of the axial coupling, $g_A$, there are no lattice calculations
-%for which all systematics have been fully explored and controlled. Therefore, 
-%for quantities other than $g_A$, we present a best-estimate band, rather than a global average. 
-%This band extends from the mean minus the error of the
-%smallest result to the mean plus the error of the largest, and includes all results
-%with two or more flavours of sea quarks, because current studies are not sufficiently
-%precise to distinguish between results with different numbers of sea quark flavours.
-%In three cases, $\langle x \rangle_{u,d,s}$, $\langle x \rangle_g$, $\langle 1 \rangle_{\Delta u,\Delta d}$, there is only one
-%lattice result available. For these quantities, our best-estimate band is given by this single result, but 
-%it should be noted that these results may underestimate some sources of uncertainty. We denote
-%these cases in Tables \ref{tab:LQCDunpol} and \ref{tab:LQCDpol0} with a superscript dagger.
-%In all benchmark tables, the moments are understood to be evaluated at a scale $\mu^2 = Q^2=4$ GeV$^2$. 
+Results from a single lattice calculation, which might underestimate some 
+sources of uncertainty, are denote with superscript~$\dagger$.
 %
-%We provide complete listings of available results in Appendix \ref{sec:LQCDtables}.
-
+All values are at $\mu^2=Q^2=2$ GeV$^2$.
+%
+For ease of comparison, they are also displayed in 
+the left panel of Fig.~\ref{fig:Bmoms}.
 
 %-------------------------------------------------------------------------------
 \begin{table}[!t]
@@ -1125,7 +1117,7 @@ $\langle x\rangle_{g}$
 \bottomrule
 \end{tabular}
 \caption{\small Benchmark values for lattice-QCD calculations and global-fit 
-fdeterminations of the benchmark moments of unpolarised PDFs.
+determinations of the benchmark moments of unpolarised PDFs.
 %
 All values are shown at $\mu^2=Q^2=4$ GeV$^2$.
 %
@@ -1135,7 +1127,76 @@ calculation; they may underestimate some sources of uncertainty.}
 \end{table}
 %-------------------------------------------------------------------------------
 
-\subsubsection{Polarised parton distributions}
+%-------------------------------------------------------------------------------
+\begin{figure}[!t]
+\centering
+\includegraphics[scale=0.44,angle=270]{plots/unpmoms}
+\includegraphics[scale=0.44,angle=270]{plots/polmoms}\\
+\caption{\small A comparison of the unpolarised (left) and polarised (right) 
+PDF benchmark moments between lattice QCD computations and global fit results.
+%
+all values are shown at $\mu^2=Q^2=4$ GeV$^2$.}
+\label{fig:Bmoms}
+\end{figure}
+%-------------------------------------------------------------------------------
+
+As apparent from Tab.~\ref{tab:BMunp} and Fig.~\ref{fig:Bmoms}, there is a 
+significant difference in the uncertainties between the lattice QCD and 
+global fit results, with the latter always about one order of magnitude 
+smaller than the former.
+%
+Moreover, even within their large uncertainties, the lattice QCD results are 
+not compatible with the global fit results for the first moments of the 
+total up and strange quark and the gluon PDFs.
+%
+In the case of quarks, the discrepancy is below 2$\sigma$ (in units of the 
+lattice QCD uncertainty), while in the case of the gluon the discrepancy is
+slightly larger than 3$\sigma$.
+
+We note that the amount of experimental information that constrains the
+total up quark distribution is the largest among all distributions.
+%
+Therefore it seems unlikely that its global-fit central value could vary 
+significantly in the future and become compatible with the current
+lattice result.
+%
+Conversely, the amount of experimental information that constrains the
+total strange distribution in a global fit is less abundant and accurate.
+%
+A slight shift in its central value, towards the current lattice QCD results,
+might be observed in the future, as soon as new data sensitive to the strange 
+quark will become available.
+%
+Finally, in order to reconcile the lattice-QCD and the global-fit results
+of the first moment of the gluon PDF, one should assume a completely
+different behaviour of the gluon PDF below the HERA kinematic
+coverage, $x\sim10^{-5}$ (see Fig.~\ref{fig:kinplot-report}).
+%
+Such a kinematic region remains completely unexplored.
+
+All these remarks still hold if individual lattice-QCD and/or global-fit
+results in Tabs.~\ref{tab:unpolLQCDstatus1}-\ref{tab:unpPDFmoms} are 
+compared instead of their benchmark values in Tab.~\ref{tab:BMunp}. 
+%
+These results suggest that both greater accuracy and greater precision are
+required to lattice QCD calculations in order to match the accuracy and 
+precision of the first moments of unpolarised PDFs determined from a global
+fit to the data.
+
+\paragraph{Polarised parton distributions.}
+%
+%
+The benchmark values of the first moments of the unpolarised PDFs, obtained
+as described in Secs.~\ref{subsubsec:BClQCD}-\ref{subsubsec:GPDFfits}, 
+are summarised in Tab.~\ref{tab:BMpol}.
+%
+Results from a single lattice calculation, which might underestimate some 
+sources of uncertainty, are denote with superscript~$\dagger$.
+%
+All values are at $\mu^2=Q^2=2$ GeV$^2$.
+%
+For ease of comparison, they are also displayed in 
+the right panel of Fig.~\ref{fig:Bmoms}.
 
 %-------------------------------------------------------------------------------
 \begin{table}[!t]
@@ -1179,3 +1240,25 @@ moments.}
 
 
 
+%We denote these cases in Tab.\ref{tab:LQCDunpol} with a superscript dagger.
+%We provide a systematic comparison between existing lattice-QCD computations
+%and global PDF fit results for the lowest two moments of unpolarized
+%and longitudinally polarized PDFs. 
+%
+%Current lattice calculations of higher moments are not sufficiently controlled 
+%to allow for a meaningful comparison between lattice and global fit results.
+%
+%With the exception of the axial coupling, $g_A$, there are no lattice calculations
+%for which all systematics have been fully explored and controlled. Therefore, 
+%for quantities other than $g_A$, we present a best-estimate band, rather than a global average. 
+%This band extends from the mean minus the error of the
+%smallest result to the mean plus the error of the largest, and includes all results
+%with two or more flavours of sea quarks, because current studies are not sufficiently
+%precise to distinguish between results with different numbers of sea quark flavours.
+%In three cases, $\langle x \rangle_{u,d,s}$, $\langle x \rangle_g$, $\langle 1 \rangle_{\Delta u,\Delta d}$, there is only one
+%lattice result available. For these quantities, our best-estimate band is given by this single result, but 
+%it should be noted that these results may underestimate some sources of uncertainty. We denote
+%these cases in Tables \ref{tab:LQCDunpol} and \ref{tab:LQCDpol0} with a superscript dagger.
+%In all benchmark tables, the moments are understood to be evaluated at a scale $\mu^2 = Q^2=4$ GeV$^2$. 
+%
+%We provide complete listings of available results in Appendix \ref{sec:LQCDtables}.
