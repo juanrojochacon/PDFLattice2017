@@ -1084,7 +1084,7 @@ as described in Secs.~\ref{subsubsec:BClQCD}-\ref{subsubsec:GPDFfits},
 are summarised in Tab.~\ref{tab:BMunp}.
 %
 Results from a single lattice calculation, which might underestimate some 
-sources of uncertainty, are denote with superscript~$\dagger$.
+sources of uncertainty, are denoted with superscript~$\dagger$.
 %
 All values are at $\mu^2=Q^2=2$ GeV$^2$.
 %
@@ -1191,7 +1191,16 @@ as described in Secs.~\ref{subsubsec:BClQCD}-\ref{subsubsec:GPDFfits},
 are summarised in Tab.~\ref{tab:BMpol}.
 %
 Results from a single lattice calculation, which might underestimate some 
-sources of uncertainty, are denote with superscript~$\dagger$.
+sources of uncertainty, are denoted with superscript~$\dagger$.
+%
+In the case of $g_A$, we report the two values with $N_f=2+1+1$ and
+$N_f$ sea quarks on the lattice QCD side, and the two values from the 
+unweighted average of the NNPDFpol1.1, DSSV08 and JAM15 DPF fits
+(as described in Sec.~\ref{subsubsec:GPDFfits}) and from the 
+JAM17~\cite{Ethier:2017zbq} fit.
+%
+At variance with the former, in the latter the experimental value of $g_A$
+is not an input of the PDF fit.
 %
 All values are at $\mu^2=Q^2=2$ GeV$^2$.
 %
@@ -1208,8 +1217,9 @@ Moment & Lattice QCD & Global Fit\\
 \midrule
 \multirow{2}{*}{$g_A\equiv\langle 1\rangle_{\Delta u^+ - \Delta d^+}$} 
 & 1.195(39) ($N_f=2+1+1$) 
-& \multirow{2}{*}{\ 1.275(12)} \\
-& 1.279(50) ($N_f=2$) \\
+& \ 1.275(12) \\
+& 1.279(50) ($N_f=2$) 
+& 1.24(4) (JAM17)\\
 $\langle 1 \rangle_{\Delta u^+}$     
 & 0.830(26)$^\dagger$ 
 & \ 0.813(25)\\
@@ -1230,35 +1240,86 @@ moments.}
 \end{table}
 %-------------------------------------------------------------------------------
 
-
-
-
-
-
-
-
-
-
-
-%We denote these cases in Tab.\ref{tab:LQCDunpol} with a superscript dagger.
-%We provide a systematic comparison between existing lattice-QCD computations
-%and global PDF fit results for the lowest two moments of unpolarized
-%and longitudinally polarized PDFs. 
+As apparent from Tab.~\ref{tab:BMpol} and Fig.~\ref{fig:Bmoms}, the size of 
+the uncertainties on the moments is in general comparable between the lattice 
+QCD and the global fit results, at variance with the unpolarised case.
 %
-%Current lattice calculations of higher moments are not sufficiently controlled 
-%to allow for a meaningful comparison between lattice and global fit results.
+The corresponding central values are also in reasonable agreement within their
+mutual uncertainties.
+
+In the case of $g_A$, the global fit result obtained from the unweighted 
+average of the NNPDFpol1.1, DSSV08 and JAM15 fits shows a preference for the
+lattice QCD result obtained with $N_f=2$ sea quarks (with respect to that with 
+$N_f=2+1+1$ sea quarks).
 %
-%With the exception of the axial coupling, $g_A$, there are no lattice calculations
-%for which all systematics have been fully explored and controlled. Therefore, 
-%for quantities other than $g_A$, we present a best-estimate band, rather than a global average. 
-%This band extends from the mean minus the error of the
-%smallest result to the mean plus the error of the largest, and includes all results
-%with two or more flavours of sea quarks, because current studies are not sufficiently
-%precise to distinguish between results with different numbers of sea quark flavours.
-%In three cases, $\langle x \rangle_{u,d,s}$, $\langle x \rangle_g$, $\langle 1 \rangle_{\Delta u,\Delta d}$, there is only one
-%lattice result available. For these quantities, our best-estimate band is given by this single result, but 
-%it should be noted that these results may underestimate some sources of uncertainty. We denote
-%these cases in Tables \ref{tab:LQCDunpol} and \ref{tab:LQCDpol0} with a superscript dagger.
-%In all benchmark tables, the moments are understood to be evaluated at a scale $\mu^2 = Q^2=4$ GeV$^2$. 
+Its uncertainty is however four times smaller than that of both lattice results.
 %
-%We provide complete listings of available results in Appendix \ref{sec:LQCDtables}.
+This is not unexpected, since in all the three fits that are combined, the 
+experimental value of $g_A$ is imposed in the fits themselves.
+%
+The final uncertainty on the global fit value of $g_A$ is thus shrinked by 
+the uncertainty of its experimental value $g_A^{\rm exp}$, which is almost
+one order of magnitude smaller than the uncertainty on the lattice QCD results
+(see Fig.~\ref{fig:gaLQCDstatus}).
+%
+If the experimental value of $g_A$ is not imposed as a boundary condition in 
+the fit, as in the JAM17 analysis, the size of the uncertainty on $g_A$ is 
+comparable to that of the lattice results, although it is not able to 
+discriminate between the $N_f=2$ or the $N_f=2=1+1$ results.
+%
+Overall, this is a noteworthy confirmation of SU(2) symmetry in QCD to
+almost 2\%.
+
+In the case of the zeroth moments of the total polarised quark distributions,
+the uncertanty on the lattice QCD result is comparable to or smaller than the 
+uncertainty on the global fit result.
+%
+This is particularly remarkable for the first moments of the total down and 
+strange quark distributions.
+%
+In this case, the lattice QCD and teh global fit results are discrepant
+within each other uncertainties by two$\sigma$ at most (in units of the
+lattice QCD uncertainty).
+%
+On the one hand, we observe that the uncertainty on th elattice QCD results 
+might have been underestimated because of the lack of a full control over
+all systematics (see Sec.~\ref{subsubsec:BClQCD}).
+%
+On the other hand, we observe that the global fit result has been obtained
+by requiring SU(3) symmetry, {\i.e.} by imposing in the fit the experimental
+value (with a possibly inflated uncertainty) of the octet PDF combination,
+as explained in Sec.~\ref{sec:polPDFs}.
+%
+Relaxing this constraint might reconcile the discrepancy observed between 
+the lattice QCD and the global fit result for the zeroth moments of the 
+total down and strange PDFs.
+%
+In Sec.~\ref{sec:projections}, we will study whether replacing the experimental
+value of the ocetet PDF combination with its lattice prediction
+will result in a deterioration in the description of the data, and how it will
+affect the resulting polarised PDFs.
+ 
+In the case of the first moment of the valence distribution 
+$\Delta u^--\Delta d^-$, the lattice QCD and the global fit results are 
+in excellent agreement, although the uncertainty of the former is five times
+larger than that of the latter.
+
+All these remarks still hold if individual lattice-QCD and/or global-fit
+results are in Tabs.~\ref{tab:gAstatus}-~\ref{tab:polLQCDstatus0}-\ref{tab:polLQCDstatus1}-\ref{tab:polPDFmoms}
+are compared instead of their benchmark values in Tab.~\ref{tab:BMpol}.
+%
+These results suggest that lattice QCD calculations could provide a useful
+input to global fit of polarised PDFs, especially in determining the
+extrapolation in the completely unknown small-$x$ region.
+%
+This will be more and more useful once a full control over all sources of
+systematic uncertainties will be achieved.
+
+
+
+
+
+
+
+
+
