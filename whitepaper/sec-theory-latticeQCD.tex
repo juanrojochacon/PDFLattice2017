@@ -34,7 +34,7 @@ the simplest discretisations differ from continuum QCD at ${\cal
 O}(a)$. In practice, one cannot afford to perform numerical
 simulations at arbitrarily small lattice spacings, because the cost of
 computation increases with a large inverse power of the lattice
-spacing, therefore ${\cal O}(a)$ effects can be significant even
+spacing, and ${\cal O}(a)$ effects can be significant even
 with current lattice spacings ranging from $0.15 \,\mbox{fm}$ to
 $0.05 \,\mbox{fm}$. To accelerate the convergence to the continuum
 limit, improved quark and gluon actions are widely used, which include
@@ -56,7 +56,7 @@ using chiral perturbation theory ($\chi$PT), which accounts for the
 Nambu-Goldstone nature of the lowest excitations that occur in the
 presence of light quarks. 
 
-\item {\bfseries Finite volume effects.} Numerical Lattice-QCD 
+\item {\bfseries Finite volume effects.} Numerical lattice-QCD 
 calculations are necessarily restricted to a finite space-time
 volume. For most simple quantities, these effects decay exponentially
 with the size of the lattice, and therefore the easiest way to
@@ -70,7 +70,7 @@ effects of hadrons are dominated by their interactions with pions,
 which can travel around the (periodic) lattice many times. Numerical
 evidence suggests that lattice sizes of $m_\pi L \geq 4$, where
 $m_\pi$ is the pion mass, are generally sufficiently large that finite
-volume effects are negligible, within the current precision of Lattice-QCD
+volume effects are negligible, within the current precision of lattice-QCD
 calculations.
 
 \item {\bfseries Excited state contamination.} At small Euclidean times, a lattice-QCD correlation function
@@ -86,7 +86,7 @@ until recently, was one of the largest sources of systematic uncertainties for
 nucleon matrix elements.
 
 \item {\bfseries Renormalisation.} The matrix elements extracted from a 
-Lattice-QCD calculation at a given lattice spacing are bare matrix elements,
+lattice-QCD calculation at a given lattice spacing are bare matrix elements,
 rendered finite by the presence of the lattice spacing, which serves
 as a gauge-invariant UV regulator. To take the continuum limit,
 i.e. remove the regulator, one must renormalise the corresponding
@@ -162,15 +162,15 @@ PDFs cannot be directly determined in Euclidean lattice QCD, because their
 field-theoretic definition involves fields at light-like separations. Instead, 
 the traditional approach for lattice-QCD calculations has been to determine the matrix elements of local twist-two operators, where twist is the dimension minus the spin, that can be related to the Mellin moments of PDFs. In principle, given a sufficient number of Mellin moments, PDFs can be reconstructed from the inverse Mellin transform. In practice, however, the calculation is limited to the lowest three moments, because power-divergent mixing occurs between twist-two operators on the lattice. Three moments is insufficient to reconstruct the momentum dependence of the PDFs without significant model dependence~\cite{Detmold:2003rq}. The lowest three moments do provide, however, useful information, both as benchmarks of lattice-QCD calculations and as constraints in global extractions of PDFs. Here we briefly review the determination of Mellin moments of PDFs from lattice QCD. 
 
-Using the operator product expansion (OPE), the Mellin moments of structure functions, and the corresponding PDFs, can be expressed in terms of matrix elements of local operators:
+Using the OPE, the Mellin moments of structure functions, and the corresponding PDFs, can be expressed in terms of matrix elements of local operators:
 \begin{align}
-\!\!\!2 \int_0^1 dx\, x^{n-1} F_1(x,Q^2) &= \sum_a C_{1,a}^n(\mu^2)\, v_a^n(\mu^2)|_{\mu^2=Q^2} = \sum_a c_{1,a}^n(\mu^2)\, \int_0^1 dx\, x^{n-1} f_a(x,Q^2),\\
-4 \int_0^1 dx\, x^n g_1(x,Q^2) &= \sum_a e_{1,a}^n(\mu^2)\, a_a^n(\mu^2)|_{\mu^2=Q^2} = \sum_a e_{1,a}^n(\mu^2)\, \int_0^1 dx\, x^n\, 2 \Delta f_a(x,Q^2),
+\!\!\!2 \int_0^1 dx\, x^{n-1} F_1(x,Q^2) &= \sum_a C_{1,a}^n(\mu^2)\, v_a^n(\mu^2)|_{\mu^2=Q^2} = \sum_a c_{1,a}^n(\mu^2)\, \int_0^1 dx\, x^{n-1} f_a(x,Q^2)\,,\\
+4 \int_0^1 dx\, x^n g_1(x,Q^2) &= \sum_a e_{1,a}^n(\mu^2)\, a_a^n(\mu^2)|_{\mu^2=Q^2} = \sum_a e_{1,a}^n(\mu^2)\, \int_0^1 dx\, x^n\, 2 \Delta f_a(x,Q^2)\,,
 \end{align}
 where $v_i^n(\mu^2)$ and $a_i^n(\mu^2)$ are reduced matrix elements of the appropriate twist-two operators~\cite{Gockeler:1995wg},
 \begin{align}
-\frac{1}{2} \sum_s \langle p,s|\mathcal{O}^i_{\{\mu_1,\cdots,\mu_n\}}|p,s\rangle = {} & 2 v_i^n\, [p_{\mu_1}\cdots p_{\mu_n} - {\rm traces}] , \label{eq:twist2me}\\
-\langle p,s|\mathcal{O}^{5\,i}_{\{\sigma \mu_1,\cdots,\mu_n\}}|p,s\rangle = {} & \frac{1}{n+1} a_i^n\, [s_\sigma p_{\mu_1}\cdots p_{\mu_n} - {\rm traces}]
+\frac{1}{2} \sum_s \langle p,s|\mathcal{O}^i_{\{\mu_1,\cdots,\mu_n\}}|p,s\rangle = {} & 2 v_i^n\, [p_{\mu_1}\cdots p_{\mu_n} - {\rm traces}] \,, \label{eq:twist2me}\\
+\langle p,s|\mathcal{O}^{5\,i}_{\{\sigma \mu_1,\cdots,\mu_n\}}|p,s\rangle = {} & \frac{1}{n+1} a_i^n\, [s_\sigma p_{\mu_1}\cdots p_{\mu_n} - {\rm traces}]\,,
 \end{align}
 and $C_{1,i}^n(\mu^2)$ and $e_{1,i}^n(\mu^2)$ are the Mellin moments of the corresponding Wilson coefficients
 \begin{equation}
@@ -201,7 +201,7 @@ Operators relevant to the lowest two Mellin moments of polarised and unpolarised
 }
 \end{table}
 
-\paragraph*{Higher-twist contributions} The discussion so far has focussed on the limit in which higher twist contributions, suppressed by powers of the momentum-transfer, have been ignored. In fact, higher twist contributions to the lowest moment of the structure function $F_1(x,Q^2)$ are found to be of ${\cal O}(1\, \mbox{GeV}^2/Q^2)$ \cite{Blumlein:2008kz}. For lattice QCD, typically $Q^2 \simeq 1/a^2$, and at present lattice spacings this corresponds to $Q^2 = O(10\,\mbox{GeV}^2)$ or a higher-twist contribution of $5 - 10\, \%$. With contributions of higher-twist included, the OPE reads
+\paragraph*{Higher-twist contributions} The discussion so far has focussed on the limit in which higher twist contributions, suppressed by powers of the momentum-transfer, have been ignored. In fact, higher twist contributions to the lowest moment of the structure function $F_1(x,Q^2)$ are found to be of ${\cal O}(1\, \mbox{GeV}^2/Q^2)$ \cite{Blumlein:2008kz}. For lattice QCD, typically $Q^2 \simeq 1/a^2$, and at present lattice spacings this corresponds to $Q^2 = {\cal O}(10\,\mbox{GeV}^2)$ or a higher-twist contribution of $5 - 10\, \%$. With contributions of higher-twist included, the OPE reads
 \begin{equation}
 2 \int_0^1 dx\, x F_1^q(x,Q^2) = C_{1,q}^2(\mu^2)\, v_q^2(\mu^2)|_{\mu^2=Q^2} + \frac{\bar{C}_{1,q}^2(\mu^2)}{Q^2}\, \bar{v}_q^2(\mu^2)|_{\mu^2=Q^2} + \cdots \,,
 \label{tex}
@@ -209,7 +209,7 @@ Operators relevant to the lowest two Mellin moments of polarised and unpolarised
 where $\bar{C}_{1,q}^2$ and $\bar{v}_q^2(\mu^2)$ are the Wilson coefficient and reduced matrix element of a generic twist-four operator. Both twist-two and four contributions mix under renormalisation, to the extent that the perturbative series for the Wilson coefficients $C_{1,q}^2(\mu^2)$ diverges due to the presence of IR renormalon singularities. This ambiguity is canceled by that in the twist-four matrix element $\bar{v}_q^2(\mu^2)$ that arises as a result of an UV renormalon singularity~\cite{Martinelli:1996pk}. If mixing effects are ignored, the uncertainties will be, at least, comparable to the power corrections themselves. Power corrections can be assessed most efficiently, and the twist expansion tested, by a direct lattice-QCD evaluation of the Compton amplitude, which we discuss in Section \ref{Sec:InversionMethod}.
 
 \paragraph*{Beyond the first three moments} Moving beyond the lowest three moments requires overcoming the challenge of power-divergent mixing for lattice-QCD twist-two operators. One novel approach to this problem~\cite{Davoudi:2012ya} builds upon the physical intuition that as long as the scale associated with the operator (for the twist-two operators, this is the renormalisation scale $\mu$) is taken to be much smaller than the hadronic scale but much larger than the inverse lattice spacing, no singularity necessarily arises as one takes the continuum limit. The operator can still probe the correct hadron structure at the scale $\mu$, but should be insensitive to the details of the discretisation of the operator at shorter distances. A simple way to incorporate an intrinsic ``smearing” scale for an operator is to sum over bilinears of quark fields that are displaced over many lattice sites in a small (compared to the scale $1/\mu$) region of Euclidean space-time (an alternative approach appears in~\cite{Monahan:2015lha}). To ensure that the correct $SO(4)$ transformation properties of the matrix elements are recovered in the continuum limit, one must project the sum using hyper-spherical harmonics. The properties of these operators, such as their mixing patterns and scaling properties, are discussed in detail in
-Ref.~\cite{Davoudi:2012ya}. In particular, while the classical mixing with lower and higher spin operators are both suppressed by $\sim a^2$ for spatially improved operators, the mixing at one-loop in lattice perturbation theory is suppressed by ${\cal O}(\ alpha_s a)$ or ${\cal O}(\ alpha_s a^2)$, depending on the lattice action used and provided that the gauge links used in constructing the gauge invariant bilinears are tadpole-improved and smeared over a region whose physical size is held fixed as the continuum limit is taken. In principle, this allows higher moments of PDFs to be obtained from lattice QCD, without power-divergences. Numerical investigations of this approach,
+Ref.~\cite{Davoudi:2012ya}. In particular, while the classical mixing with lower and higher spin operators are both suppressed by $\sim a^2$ for spatially improved operators, the mixing at one-loop in lattice perturbation theory is suppressed by ${\cal O}(\alpha_s a)$ or ${\cal O}(\alpha_s a^2)$, depending on the lattice action used and provided that the gauge links used in constructing the gauge-invariant bilinears are tadpole-improved and smeared over a region whose physical size is held fixed as the continuum limit is taken. In principle, this allows higher moments of PDFs to be obtained from lattice QCD, without power-divergences. Numerical investigations of this approach,
 which requires gauge configurations with very fine lattice spacings, are underway.
 
 \subsubsection{The $x$-dependence of PDFs from lattice QCD}
@@ -239,7 +239,7 @@ For $p_3=q_3=q_4=0$ this leaves us with
 T_{33}(p,q) = 4 \omega^2 \int_0^1 dx\,  \frac{xF_1(x,Q^2)}{1-(\omega x)^2} \,.
 \label{ff}
 \end{equation}
-Note that to extract the polarised structure functions requires insertions of two different currents with $\mu\neq \nu$. The idea is then to solve \eqref{ff} for $F_1(x,Q^2)$ numerically.
+Note that to extract the polarised structure functions requires insertions of two different currents with $\mu\neq \nu$. The idea is then to solve Eq.~\eqref{ff} for $F_1(x,Q^2)$ numerically.
 %
 %\textbf{This section is clearly too technical and long.}
 %Starting from a finite number of sampled points $T_\alpha=T_{33}(\omega_\alpha) \,,\; \alpha=1, \cdots, N$ and approximating the integral and structure function by a discrete set of $M$ points, $0 < x_1 < %x_2 < \cdots < x_M < 1$, 
@@ -268,7 +268,7 @@ Note that to extract the polarised structure functions requires insertions of tw
 %what threshold to set $1/w_\gamma$ to zero. Several routines, such as {\tt Pseudo-Inverse} of {\it Mathematica}, solve this problem
 %automatically. 
 In~\cite{Chambers:2017dov} it was shown that the unpolarised structure function $F_1(x,Q^2)$ can be computed from a lattice calculation of the Compton amplitude with unprecedented accuracy, devoid of any renormalisation and mixing issues. Furthermore, by extending the calculation to values $\omega > 1$ it becomes possible
-to compute the structure functions down to fractional momenta $x = {\cal O}(0.001)$. With the same method, the PDFs can be computed directly without the need to go through the structure functions, provided $Q^2$ is sufficiently large that power corrections can be neglected. 
+to compute the structure functions down to fractional momenta $x = {\cal O}(0.001)$. With the same method, PDFs can be computed directly without the need to go through the structure functions, provided $Q^2$ is sufficiently large that power corrections can be neglected. 
 %In this case
 %\begin{equation}
 %T_\alpha^q = \epsilon \sum_{j=1}^M K_{ab}\, q_i(x_\beta,Q^2) 
@@ -292,7 +292,7 @@ to compute the structure functions down to fractional momenta $x = {\cal O}(0.00
 
 \paragraph{Quasi PDFs}
 %\label{Sec:QuasiPDFMethod}
-Quasi PDFs provide an alternative approach to determining the $x$-dependence of PDFs directly from lattice QCD \cite{Ji:2013dva,Ji:2014gla}. In the following discussion, we focus on the flavor-nonsinglet quasi PDF, for which we can ignore mixing with the gluon quasi PDF. The unpolarized quasi quark PDF is defined as the momentum-dependent
+Quasi PDFs provide an alternative approach to determining the $x$-dependence of PDFs directly from lattice QCD \cite{Ji:2013dva,Ji:2014gla}. In the following discussion, we focus on the flavour-nonsinglet quasi PDF, for which we can ignore mixing with the gluon quasi PDF. The unpolarised quasi quark PDF is defined as the momentum-dependent
 nonlocal static matrix element
 \begin{align}\label{eq:qPDF}
 \widetilde{q}(x,\Lambda,p_z)  = \int \frac{dz}{4\pi} e^{-i x z p_z} 
@@ -312,9 +312,9 @@ light-front PDF $q(x,Q^2)$ through~\cite{Ji:2013dva,Ji:2014gla}
 \end{equation}
 where $\mu$ is the renormalisation scale;
 $Z$ is a matching kernel; and $m$ is the nucleon mass.
-Here the $\mathcal{O}\left(m^2/p_z^2\right)$ terms are target-mass corrections and the $ \mathcal{O}\left(\Lambda_\text{QCD}^2/p_z^2\right)$ terms are higher twist effects, both of which are suppressed at large nucleon momentum. A complementary approach to LaMET views the quasi PDF as a ``lattice cross-section'' from which the light-front PDF can be factorized \cite{Ma:2014jla, Ma:2014jga}. 
+Here the $\mathcal{O}\left(m^2/p_z^2\right)$ terms are target-mass corrections and the $ \mathcal{O}\left(\Lambda_\text{QCD}^2/p_z^2\right)$ terms are higher twist effects, both of which are suppressed at large nucleon momentum. A complementary approach to LaMET views the quasi PDF as a ``lattice cross-section'' from which the light-front PDF can be factorised \cite{Ma:2014jla, Ma:2014jga} and an alternative, but related, construction is proposed in \cite{Radyushkin:2016hsy,Radyushkin:2017cyf} and explored in \cite{Orginos:2017kos}.
 
-To understand the origin of the power-suppressed corrections, we apply the operator product expansion (OPE) to the matrix element that defines the PDF, which becomes a linear combination of local twist-2 operators, with matrix elements in the proton state given by Eq.~\eqref{eq:twist2me}. From this it follows that the light-cone correlation function is {\it kinematically} connected with the +-components of the nucleon four-momentum. To eliminate the time dependence, we consider matrix elements of twist-two operators with $\mu_1=\mu_2=...=\mu_n=z$ and nucleon states with large $p_z$, to give
+To understand the origin of the power-suppressed corrections, we apply the OPE to the matrix element that defines the PDF, which becomes a linear combination of local twist-2 operators, with matrix elements in the proton state given by Eq.~\eqref{eq:twist2me}. From this it follows that the light-cone correlation function is {\it kinematically} connected with the +-components of the nucleon four-momentum. To eliminate the time dependence, we consider matrix elements of twist-two operators with $\mu_1=\mu_2=...=\mu_n=z$ and nucleon states with large $p_z$, to give
 \begin{equation}
 \frac{1}{2} \sum_s \langle p,s|\mathcal{O}^i_{\{z,\cdots,z\}}|p,s\rangle = 2v_i^n(\mu^2)\left[p_z^n-\lambda M^2 p_z^{n-2}-...\right], 
 \end{equation}
@@ -325,11 +325,11 @@ $p_z^{n-2}$ times $\Lambda^2_{\rm QCD}$. Thus, we conclude that
       \langle p| {\overline \psi}\gamma_ziD_z ... iD_z \psi|p\rangle
        = 2v^n(\mu^2) p_z^n\times \left[ 1 + {\cal O}\left(\frac{\Lambda^2_{\rm QCD}}{p_z^2},  \frac{m^2}{p_z^2}\right)\right],
 \end{equation}
-where the non-leading terms are power-suppressed in the large $p_z$ limit. Equating the renormalized moments on the right hand side of this equation with those that appear in Eq.~\eqref{aaa}
+where the non-leading terms are power-suppressed in the large $p_z$ limit. Equating the renormalised moments on the right hand side of this equation with those that appear in Eq.~\eqref{aaa}
 %\eqref{eq:ope}
 leads to the relation between the quasi PDF and the light-front PDF expressed in Eq.~\eqref{eq:qPDFmatching}.
 
-Preliminary results from lattice calculations of quasi PDFs have been encouraging \cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp,Alexandrou:2016jqi}, as we illustrate in Figs.~\ref{fig:final_pdf}-\ref{fig:matched}. There are a number of remaining challenges, however, that must be overcome for an {\it ab initio} determination of the $x$-dependence of PDFs directly from lattice QCD that incorporates complete control over systematic uncertainties. Lattice calculations of quasi PDFs are subject to the same sources of systematic uncertainty that plague all lattice calculations and are highlighted in Section \ref{Sec:IntroLQCD}, but here we focus on systematic uncertainties that are more specific to quasi PDFs. These are: uncertainties associated with the finite nucleon momentum of the lattice calculations and with the renormalisation of quasi PDFs.
+Although there are some theoretical subtleties \cite{Rossi:2017muf,Ji:2017rah}, preliminary results from lattice calculations of quasi PDFs have been encouraging \cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp,Alexandrou:2016jqi}, as we illustrate in Figs.~\ref{fig:final_pdf}-\ref{fig:matched}. There are a number of remaining challenges, however, that must be overcome for an {\it ab initio} determination of the $x$-dependence of PDFs directly from lattice QCD that incorporates complete control over systematic uncertainties. Lattice calculations of quasi PDFs are subject to the same sources of systematic uncertainty that plague all lattice calculations and are highlighted in Section \ref{Sec:IntroLQCD}, but here we focus on systematic uncertainties that are more specific to quasi PDFs. These are: uncertainties associated with the finite nucleon momentum of the lattice calculations and with the renormalisation of quasi PDFs.
 
 \begin{itemize}
  \item Preliminary nonperturbative studies of the quasi PDF used nucleon momenta in the range $p_z = 2\pi/L$ to $6\pi/L$, where $L$ is the physical extent of the lattice, corresponding to $p_z = 0.5$ to $2.5$ GeV~\cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp,Alexandrou:2016jqi}. At such low momenta, higher-twist and target mass corrections are likely to be considerable.
@@ -338,7 +338,7 @@ Target mass corrections can be removed to all orders \cite{Chen:2016utp}, and tw
 
 Presently, the size of the nucleon momentum is restricted by the decreasing signal-to-noise ratio at large momenta, which requires very high statistics to extract a signal. New approaches to high-momentum nucleons are being investigated, with the most promising an approach that employs momentum smearing \cite{Bali:2016lva}. This method has been applied to quasi-PDFs in \cite{Alexandrou:2016jqi}, demonstrating a large improvement in the signal-to-noise ratio by reaching momenta of $\sim 2.5$ GeV, with small statistics.
 
-\item The leading-twist quasi PDFs and light-front PDFs are connected through the matching (or ``factorization'') relation of Eq.~\eqref{eq:qPDFmatching}. Provided the quasi and light-front PDFs share the same infrared (IR) behavior, the matching kernel can be determined in perturbation theory~\cite{Xiong:2013bka}. The factorization of the IR structure of quasi PDFs into light-front PDFs and an IR-safe matching kernel was claimed to hold to all orders in \cite{Ma:2014jla, Ma:2014jga}. However, Ref.~\cite{Li:2016amo} asserted that there might be subtleties beyond leading order in perturbation theory. A distinct, but similar, issue is the IR structure of extended operators in Euclidean and Minkowski spacetime. There are again subtleties in perturbation theory \cite{Carlson:2017gpk}, but arguments based on general field-theoretic grounds demonstrate that the quasi PDF extracted from a Euclidean correlation function is exactly the same matrix element as that determined from the LSZ reduction formula in Minkowski spacetime \cite{Briceno:2017cpo}.
+\item The leading-twist quasi PDFs and light-front PDFs are connected through the matching (or ``factorisation'') relation of Eq.~\eqref{eq:qPDFmatching}. Provided the quasi and light-front PDFs share the same infrared (IR) behavior, the matching kernel can be determined in perturbation theory~\cite{Xiong:2013bka}. The factorisation of the IR structure of quasi PDFs into light-front PDFs and an IR-safe matching kernel was claimed to hold to all orders in \cite{Ma:2014jla, Ma:2014jga}. However, Ref.~\cite{Li:2016amo} asserted that there might be subtleties beyond leading order in perturbation theory. A distinct, but similar, issue is the IR structure of extended operators in Euclidean and Minkowski spacetime. There are again subtleties in perturbation theory \cite{Carlson:2017gpk}, but arguments based on general field-theoretic grounds demonstrate that the quasi PDF extracted from a Euclidean correlation function is exactly the same matrix element as that determined from the LSZ reduction formula in Minkowski spacetime \cite{Briceno:2017cpo}.
 
 In contrast to the IR structure, the ultraviolet (UV) structure of the quasi PDF is quite different from the UV structure of the light-front PDF: the former has both linear and logarithmic divergences, while the latter contains only logarithmic divergences. Although there are no power-divergences in dimensional regularization, quasi PDFs determined on the lattice are regulated by the inverse lattice spacing. In the continuum limit (for which $a\to 0$, with all physical quantities held fixed) there is a divergence, associated with the length of the Wilson line $z$, that scales as $z/a$. This divergence must be removed nonperturbatively.
 
@@ -347,51 +347,38 @@ related to its bare operator $O^{(0)}_{\Gamma}(z)$ by \cite{Dotsenko:1979wb, Are
 \begin{eqnarray}\label{eq:renorm_non-local}
 O_{\Gamma}^{\rm (ren)}(z,\mu)=e^{\delta m(\mu)|z|}Z_{\psi, z}(\mu,z)O^{(0)}_{\Gamma}(z),
 \end{eqnarray}
-where $\delta m$ is the mass renormalisation of a test particle moving along the Wilson line of length $z$ and $Z_{\psi, z}(\mu,z)$ removes the remaining logarithmic divergences associated with the Wilson line endpoints (the quark fields). This result holds to all orders in perturbation theory: the exponentiated counterterm $\delta m(\mu)$ completely removes the linear divergence. The multiplicative renormalizability of the remaining logarithmic UV divergence, however, has not been proven~\cite{Ji:2015jwa}. The exponentiated counterterm can be determined using a static heavy quark potential, which shares the same power-law divergence as the non-local quark bilinear \cite{Musch:2010ka,Ishikawa:2016znu, Chen:2016fxx}.
+where $\delta m$ is the mass renormalisation of a test particle moving along the Wilson line of length $z$ and $Z_{\psi, z}(\mu,z)$ removes the remaining logarithmic divergences associated with the Wilson line endpoints (the quark fields). This result holds to all orders in perturbation theory: the exponentiated counterterm $\delta m(\mu)$ completely removes the linear divergence and the quasi-PDF can be renormalised multiplicatively~\cite{Ji:2015jwa,Ji:2017oey}. The exponentiated counterterm can be determined using a static heavy quark potential, which shares the same power-law divergence as the non-local quark bilinear \cite{Musch:2010ka,Ishikawa:2016znu, Chen:2016fxx}. An alterative approach for controlling the power divergence has been proposed in \cite{Monahan:2016bvm}.
 
-Once the linear divergence has been removed nonperturbatively, lattice perturbation theory can be used to renormalize the remaining logarithmic divergences in the quasi PDF \cite{Ishikawa:2016znu, Carlson:2017gpk}. A delicate point regarding the renormalisation is the mixing among certain subsets of these non-local operators. Such mixing has been identified at one-loop in perturbation theory in \cite{Constantiou:2017soon} for a variety of fermion/gluon actions. The mixing coefficients are necessary to disentangle the individual matrix elements for each quasi-PDF from lattice calculation data. Of particular interest is the case of the unpolarized quasi-PDF, which mixes with the scalar quasi-PDF if the Lorentz index of Eq.~\eqref{eq:qPDF} is in the same direction as the Wilson line. In contrast, the axial and transversity PDFs with a Lorentz index in the Wilson line direction do not exhibit any mixing (to one-loop in perturbation theory). 
+Once the linear divergence has been removed nonperturbatively, lattice perturbation theory can be used to renormalise the remaining logarithmic divergences in the quasi PDF \cite{Ishikawa:2016znu, Carlson:2017gpk}. A delicate point regarding the renormalisation is the mixing among certain subsets of these non-local operators. Such mixing has been identified at one-loop in perturbation theory in \cite{Constantiou:2017soon} for a variety of fermion/gluon actions. The mixing coefficients are necessary to disentangle the individual matrix elements for each quasi-PDF from lattice calculation data. Of particular interest is the case of the unpolarised quasi-PDF, which mixes with the scalar quasi-PDF if the Lorentz index of Eq.~\eqref{eq:qPDF} is in the same direction as the Wilson line. In contrast, the axial and transversity PDFs with a Lorentz index in the Wilson line direction do not exhibit any mixing (to one-loop in perturbation theory). 
 
-In addition, nonperturbative schemes, such as the regularization-independent RI/MOM scheme~\cite{Martinelli:1994ty}, can be used to renormalize matrix elements determined on the lattice. Nonperturbative schemes avoid the use of lattice perturbation theory at low energy scales (usually chosen to be $\mu = \pi/a$), although perturbative matching between renormalisation schemes is still necessary for PDFs expressed in the $\overline{\rm MS}$ scheme. Combining a nonperturbative renormalisation scheme with a step-scaling procedure \cite{Luscher:1991wu} significantly reduces perturbative truncation uncertainties by providing a nonperturbative method for reaching high energy scales. 
+In addition, nonperturbative schemes, such as the regularization-independent RI/MOM scheme~\cite{Martinelli:1994ty}, can be used to renormalise matrix elements determined on the lattice. Nonperturbative schemes avoid the use of lattice perturbation theory at low energy scales (usually chosen to be $\mu = \pi/a$), although perturbative matching between renormalisation schemes is still necessary for PDFs expressed in the $\overline{\rm MS}$ scheme. Combining a nonperturbative renormalisation scheme with a step-scaling procedure \cite{Luscher:1991wu} significantly reduces perturbative truncation uncertainties by providing a nonperturbative method for reaching high energy scales. 
+Nonperturbative renormalisation methods for quasi PDFs have recently been constructed and applied in Refs.~\cite{Alexandrou:2017huk,Chen:2017mzz}.
 
- A nonperturbative renormalisation method for quasi PDFs have recently been constructed and applied in 
-Refs.~\cite{Alexandrou:2017huk,Chen:2017mzz}. Such a prescription, developed in a fully non-perturbative 
-manner, opens up new possibilities for obtaining PDFs from first principles in a fully controlled way, 
-which will be a stringent test of non-perturbative aspects of QCD. 
+These nonperturbative procedures also enable the elimination of the mixing between the unpolarised quasi PDF and the 
+twist-3 scalar operator, which occurs for lattice regularisations that break chiral symmetry, through the construction of a $2\times2$ mixing matrix. The mixing coefficients 
+do not contain any divergences and vanish in the continuum limit. Further details can be found in
+Refs.~\cite{Alexandrou:2017huk,Chen:2017mzz}. 
+\end{itemize}
 
-The aforementioned techniques rely on the RI$'$ renormalization prescription that removes both the 
-logarithmic and linear divergences. The latter is present in the matrix elements of fermion operators with 
-Wilson lines. With this method, the elimination of the mixing between the unpolarized quasi PDF and the 
-twist-3 scalar operator is also feasible via the construction of a $2\times2$ mixing matrix. Note that 
-this mixing appears in certain lattice regularizations that break chiral symmetry. The mixing coefficient 
-does not contain any divergences and vanishes at the continuum limit. Presentation of the extraction of 
-the renormalization functions is beyond the scope of this paper and details can be found in
-Refs.~\cite{Alexandrou:2017huk,Chen:2017mzz}. Here we only highlight results on the $x$-dependence 
-of the unpolarized and polarized PDFs, as extracted from lattice QCD. 
+Lattice calculations of the $x$-dependence of PDFs have not matured sufficiently that all of these sources of systematic uncertainty have been controlled. Recent progress, however, has lead to preliminary results that are encouraging and here we highlight these results for the $x$-dependence
+of the unpolarised and polarised PDFs extracted from lattice QCD. 
 
+We show the preliminary results from \cite{Chen:2017mzz} for the renormalised unpolarised PDF in Fig.~\ref{fig:final_pdf}. The leading higher-twist contributions have been removed \cite{Chen:2016utp}, but mixing under renormalisation has been neglected. The sea flavour asymmetry is hardly visible, mainly due to the rapid increase 
+of the renormalization factor with Wilson line length, which amplifies the error. The peak in the positive-$x$ 
+region is slightly shifted toward $x{=}0$. This is expected because renormalisation enhances long-range correlations, thereby enhancing the contribution in the small $x$ region when Fourier transformed to momentum space. After renormalization the unphysical dip near $x=0$ apparent in earlier 
+results also vanishes.
 \begin{figure}[h]
 \centering
 \includegraphics[width=.6\textwidth]{plots/pdf_nonorm}
-\caption{The renormalized unpolarized isovector quark distribution after one-loop matching and mass correction at the renormalization scale $\mu=2.4$~GeV. The red band shows the extrapolation to infinite momentum. The negative-$x$ part is related to the antiquark distribution via $\bar{u}(x)-\bar{d}(x) = - u(-x)+ d(-x)$ for $x>0$.
+\caption{The renormalised unpolarised isovector quark distribution after one-loop matching and mass correction at the renormalisation scale $\mu=2.4$~GeV. The red band shows the extrapolation to infinite momentum. The negative-$x$ part is related to the antiquark distribution via $\bar{u}(x)-\bar{d}(x) = - u(-x)+ d(-x)$ for $x>0$.
 } \label{fig:final_pdf}
 \end{figure}
 
-The renormalized unpolarized PDF is shown in Fig.~\ref{fig:final_pdf}, in which the mixing is not taken into
-account~\cite{Chen:2017mzz}. The leading higher-twist contributions are removed as explained in 
-Ref.~\cite{Chen:2016utp}. The sea flavor asymmetry is hardly visible, mainly due to the rapid increase 
-of the renormalization factor with distance, which amplifies the error. The peak in the positive-$x$ 
-region is slightly shifted toward $x{=}0$, which is expected because the renormalization enhances the 
-long-range correlation. Thereby it enhances the contribution in the small $x$ region when Fourier 
-transformed to momentum space. After renormalization the unphysical dip near $x=0$ in the previous 
-result also vanishes. 
-
-
 In Fig.~\ref{fig:matched} we show the helicity PDF computed in Ref.~\cite{Alexandrou:2017huk}. The blue line corresponds to
-the fully renormalized matrix elements, and the magenta line comes from the bare matrix elements multiplied by the local axial vector 
-current renormalization function. We observe that the blue data move towards the phenomenological PDFs, which is very 
-promising. In particular, the antiquark asymmetry is not overestimated any longer and actually this asymmetry becomes 
-compatible with zero under current uncertainties. In the quark part, there is an enhancement of the matched PDF for all 
-values of x. We emphasize that the comparison with the phenomenological PDFs should be understood as only qualitative. 
-For quantitative comparison, a careful investigation of a number of systematic effects is still needed. An extensive study 
+the fully renormalised matrix elements, and the magenta line is the bare matrix elements multiplied by the local axial vector 
+current renormalisation function. The plot illustrates that proper renormalisation (the blue data) moves the ``approximately renormalised'' results (the magenta data) towards the phenomenological PDFs. In particular, the antiquark asymmetry is no longer overestimated and this asymmetry is 
+compatible with zero under current uncertainties. In the quark sector, there is an enhancement of the matched PDF for all 
+values of $x$. As the authors of~\cite{Alexandrou:2017huk} emphasise, the comparison with phenomenological PDFs should be understood as only qualitative and for quantitative comparison, a careful investigation of a number of systematic effects is still needed. An extensive study 
 on upper bounds of the systematic uncertainties is presented in Ref.~\cite{Alexandrou:2017huk}.
 \bigskip
 \begin{figure}[h!]
@@ -400,21 +387,9 @@ on upper bounds of the systematic uncertainties is presented in Ref.~\cite{Alexa
 \vspace*{-0.3cm}
 \begin{minipage}{15cm}
 \hspace*{3cm}
-\caption{Comparison of matched helicity PDF obtained from quasi PDF computed with either fully renormalized matrix elements (blue) 
+\caption{Comparison of matched helicity PDF obtained from quasi PDF computed with either fully renormalised matrix elements (blue) 
 or with bare matrix elements multiplied by the local ($z{=}0$) axial current $Z$-factor, $Z_A$ (magenta). For purely orientational purposes, 
-we also plot phenomenological PDFs (DSSV08 \cite{deFlorian:2009vb} and JAM15 \cite{Sato:2016tuz}).}
+phenomenological PDFs (DSSV08 \cite{deFlorian:2009vb} and JAM15 \cite{Sato:2016tuz}) are also shown.}
 \label{fig:matched} 
 \end{minipage}
 \end{figure}
-%Two such nonperturbative renormalisation methods for quasi PDFs have recently been constructed \cite{Alexandrou:2017huk,Chen:2017mzz}. 
-
-%An alternative approach to removing both the linear and logarithmic divergences is provided by the gradient flow, a deterministic evolution of the quark and gluon degrees of freedom in a new parameter, the flow time, that renders all correlation functions finite \cite{Narayanan:2006rf,Luscher:2011bx,Luscher:2013cpa}. By fixing the flow time in the continuum limit, finite continuum quasi PDFs can be extracted from lattice calculations and then directly matched to light-front PDFs using perturbation theory~\cite{Monahan:2016bvm}.
-
-%Ultimately, perturbative matching must be carried out at a sufficiently high scale that truncation uncertainties can be safely neglected. Until a nonperturbative step-scaling scheme has been devised for quasi PDFs, perturbative truncation uncertainties are likely to be, in conjunction with finite nucleon momentum effects, the dominant source of systematic uncertainty in lattice determinations of quasi PDFs.
-\end{itemize}
-
-%\paragraph{Status} We review the current status of lattice calculations of Mellin moments of PDFs in Sec.~\ref{sec:benchmarking}. The study of the $x$-dependence of PDFs directly from lattice QCD is still in its infancy and at this stage it would be premature to attempt a global analysis, as we undertake for the moments of PDFs. Here, however, we illustrate the progress that has been made with a snapshot of the most recent results.
-
-%Two groups have carried out lattice calculations of quasi-PDFs, and example results are shown in Fig.~\ref{fig:quasipdfs}.
-
-
