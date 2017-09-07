@@ -1,44 +1,59 @@
-Lattice QCD is QCD formulated on a finite Euclidean lattice and is generally
+The lattice QCD method is based on
+representing QCD on a finite Euclidean lattice and is generally
 studied by numerical computation of QCD correlation functions in the
 path-integral formalism, using methods adapted from statistical
-mechanics. To make contact with the physical world and experimental
+mechanics.
+%
+To make contact with the physical world and experimental
 data, the numerical results are extrapolated to the continuum 
-and infinite-volume limits. The past decade has seen significant progress in
+and infinite-volume limits.
+%
+The past decade has seen significant progress in
 the development of efficient algorithms for the generation of
 ensembles of gauge field configurations, which represent the QCD
 vacuum, and tools for extracting the relevant information from lattice-QCD
 correlation functions.
 %
-Lattice-QCD calculations have reached a level where
+In this respect, lattice-QCD calculations have reached a level where
 they not only complement, but also guide current and forthcoming
 experimental programs.
 
 \subsubsection{Systematic uncertainties}
 Lattice-QCD calculations must demonstrate control over all sources of
 systematic uncertainty introduced by the discretisation of QCD on the
-lattice to make meaningful contact with experimental data. These
+lattice to make meaningful contact with experimental data.
+%
+These
 include discretisation effects that vanish in the continuum limit;
 extrapolation from unphysically heavy pion masses; finite volume
-effects; and renormalisation of composite operators. To take the 
+effects; and renormalisation of composite operators.
+%
+To take the 
 continuum limit requires accurate determinations of the lattice-spacing. 
 We briefly review these main sources of systematic
 uncertainty here; for a fuller account see, for
-example, \cite{Aoki:2016frl}.
+example, Ref.~\cite{Aoki:2016frl}.
 
 \begin{itemize}
 
 \item {\bfseries Discretisation effects and the continuum limit.} There is 
 a fair degree of flexibility in discretising the QCD action. This has
 led to a variety of formulations, which differ mainly in the choice of
-the action for quarks. In the continuum limit, which corresponds to taking
+the action for quarks.
+%
+In the continuum limit, which corresponds to taking
 the lattice spacing $a$ to zero with all physical quantities fixed,
 the simplest discretisations differ from continuum QCD at ${\cal
-O}(a)$. In practice, one cannot afford to perform numerical
+O}(a)$.
+%
+In practice, one cannot afford to perform numerical
 simulations at arbitrarily small lattice spacings, because the cost of
 computation increases with a large inverse power of the lattice
 spacing, and ${\cal O}(a)$ effects can be significant even
 with current lattice spacings ranging from $0.15 \,\mbox{fm}$ to
-$0.05 \,\mbox{fm}$. To accelerate the convergence to the continuum
+$0.05 \,\mbox{fm}$.
+%
+To accelerate the convergence to the continuum
 limit, improved quark and gluon actions are widely used, which include
 higher-dimension operators to reduce the discretisation errors to
 $O(a^2)$ or better.
@@ -46,30 +61,46 @@ $O(a^2)$ or better.
 \item {\bfseries Unphysical pion masses.} 
 The computational cost of the fermion contribution to the path
 integral increases with a large inverse power of the bare quark mass
-(or, equivalently, the pion mass). Lattice-QCD calculations are therefore
+(or, equivalently, the pion mass).
+%
+Lattice-QCD calculations are therefore
 often performed at unphysically heavy pion masses, although results calculated
 directly with physical pion masses have become increasingly common, albeit with large
-errors. To obtain results at the physical pion mass, lattice data are
+errors.
+%
+To obtain results at the physical pion mass, lattice data are
 generated at a sequence of pion masses and then extrapolated to the
-physical pion mass. To control the associated systematic
+physical pion mass.
+%
+To control the associated systematic
 uncertainties, these extrapolations are guided by effective
-theories. In particular, the pion-mass dependence can be parameterised
+theories.
+%
+In particular, the pion-mass dependence can be parameterised
 using chiral perturbation theory ($\chi$PT), which accounts for the
 Nambu-Goldstone nature of the lowest excitations that occur in the
 presence of light quarks. 
 
 \item {\bfseries Finite volume effects.} Numerical lattice-QCD 
 calculations are necessarily restricted to a finite space-time
-volume. For most simple quantities, these effects decay exponentially
+volume.
+%
+For most simple quantities, these effects decay exponentially
 with the size of the lattice, and therefore the easiest way to
 minimise or eliminate finite volume effects is to choose the volume
-sufficiently large in physical units. Unfortunately, this can be
+sufficiently large in physical units.
+%
+Unfortunately, this can be
 prohibitively expensive as one approaches the continuum limit, requiring the
 number of lattice sites to grow as $L/a$ in all four directions. Finite volume $\chi$PT is the preferred
 tool to develop systematic expansions that provide quantitative
-information on finite-volume effects. In general, finite volume
+information on finite-volume effects.
+%
+In general, finite volume
 effects of hadrons are dominated by their interactions with pions,
-which can travel around the (periodic) lattice many times. Numerical
+which can travel around the (periodic) lattice many times.
+%
+Numerical
 evidence suggests that lattice sizes of $m_\pi L \geq 4$, where
 $m_\pi$ is the pion mass, are generally sufficiently large that finite
 volume effects are negligible, within the current precision of lattice-QCD
@@ -97,28 +128,40 @@ by phenomenologists. Although renormalisation is traditionally
 discussed in the framework of perturbation theory, at hadronic energy
 scales the renormalisation constants should be computed
 nonperturbatively to avoid uncontrolled uncertainties due to 
-truncated perturbative results. In QCD with only light quarks it is technically
+truncated perturbative results.
+%
+In QCD with only light quarks it is technically
 advantageous to employ so-called mass-independent renormalisation
-schemes. This requires a renormalisation condition that can be
+schemes.
+%
+This requires a renormalisation condition that can be
 implemented on the lattice as well as in continuum perturbation
 theory. A common choice is the RI-MOM scheme~\cite{Martinelli:1994ty}.
 
 In addition, on a hyper-cubic lattice, the orthogonal group $O(4)$ of
 continuum Euclidean space-time is reduced to the hyper-cubic group
-$H(4)$. Thus, operators are classified according to irreducible
-representations of $H(4)$~\cite{Gockeler:1996mu}. Different
+$H(4)$.
+%
+Thus, operators are classified according to irreducible
+representations of $H(4)$~\cite{Gockeler:1996mu}.
+%
+Different
 irreducible representations belonging to the same $O(4)$ multiplet
 will, in general, give different answers at finite lattice spacing, an
 effect that can be reduced by improving the
-operators~\cite{Gockeler:2004wp}. Conversely, operators that lie in
+operators~\cite{Gockeler:2004wp}.
+%
+Conversely, operators that lie in
 different irreducible representations of $O(4)$, but the same irreducible
 representations of $H(4)$, will mix at finite lattice spacing but not
 in the continuum. When these operators have differing mass dimension,
 the mixing coefficients scale with the inverse lattice spacing to some
-power, and diverge in the continuum limit. This power-divergent mixing
+power, and diverge in the continuum limit.
+%
+This power-divergent mixing
 must be removed nonperturbatively, and is a particular challenge for
 lattice calculations of the Mellin moments of PDFs (see
-Section \ref{Sec:MomentsLQCD}).
+Sect.~\ref{Sec:MomentsLQCD}).
 
 Finally, it is worth noting that factorisation, the key assumption of
 the operator product expansion (OPE), demands that the
@@ -149,10 +192,14 @@ with high precision, unlike hadron masses, for example.
 
 These sources of systematic uncertainty all need to be under control
 when confronting experimental data with lattice results, or vice
-versa. For a coherent assessment of the present state of lattice-QCD
+versa.
+%
+For a coherent assessment of the present state of lattice-QCD
 calculations of various quantities, the degree to which each
 systematic has been controlled in a given calculation is an important
-consideration. Therefore, in the following sections, we indicate the
+consideration.
+%
+Therefore, in the following sections, we indicate the
 quality of the lattice calculations, based on criteria inspired by the
 FLAG analysis of flavour physics on the lattice~\cite{Aoki:2016frl}.
 
@@ -161,8 +208,17 @@ FLAG analysis of flavour physics on the lattice~\cite{Aoki:2016frl}.
 \label{Sec:MomentsLQCD}
 
 PDFs cannot be directly determined in Euclidean lattice QCD, because their 
-field-theoretic definition involves fields at light-like separations. Instead, 
-the traditional approach for lattice-QCD calculations has been to determine the matrix elements of local twist-two operators, where twist is the dimension minus the spin, that can be related to the Mellin moments of PDFs. In principle, given a sufficient number of Mellin moments, PDFs can be reconstructed from the inverse Mellin transform. In practice, however, the calculation is limited to the lowest three moments, because power-divergent mixing occurs between twist-two operators on the lattice. Three moments is insufficient to reconstruct the momentum dependence of the PDFs without significant model dependence~\cite{Detmold:2003rq}. The lowest three moments do provide, however, useful information, both as benchmarks of lattice-QCD calculations and as constraints in global extractions of PDFs. Here we briefly review the determination of Mellin moments of PDFs from lattice QCD. 
+field-theoretic definition involves fields at light-like separations.
+%
+Instead, 
+the traditional approach for lattice-QCD calculations has been to determine the matrix elements of local twist-two operators, where twist is the dimension minus the spin, that can be related to the Mellin moments of PDFs.
+%
+In principle, given a sufficient number of Mellin moments, PDFs can be reconstructed from the inverse Mellin transform. In practice, however, the calculation is limited to the lowest three moments, because power-divergent mixing occurs between twist-two operators on the lattice.
+%
+On the other hand,
+three moments are insufficient to fully reconstruct the momentum dependence of the PDFs without significant model dependence~\cite{Detmold:2003rq}.
+%
+The lowest three moments do provide, however, useful information, both as benchmarks of lattice-QCD calculations and as constraints in global extractions of PDFs. Here we briefly review the determination of Mellin moments of PDFs from lattice QCD. 
 
 Using the OPE, the Mellin moments of structure functions, and the corresponding PDFs, can be expressed in terms of matrix elements of local operators:
 \begin{align}
@@ -181,12 +237,14 @@ e_{1,i}^n(\mu^2) = \int_0^1 dy\, y^n e_{1,i}(y,\mu^2)\,.
 \end{equation}
 The trace terms include operators with at least one factor of the metric tensor $g^{\mu_i \mu_j}$ multiplied by
 operators of dimension $(n+2)$ with $n-2$ Lorentz indices. The operators relevant for the lowest two moments are listed in Table \ref{Tab:twist2}. The operator $\mathcal{O}^q_{\mu_1\mu_2}$ decomposes into two different representations of $H(4)$~\cite{Gockeler:1996mu}, each with different lattice artifacts and renormalisation factors. In the continuum limit, however, both operators should lead to the same result. In contrast, the operator $\mathcal{O}^q_{\mu_1\mu_2\mu_3}$ splits into several representations transforming identically under $H(4)$, causing the corresponding operators to mix under renormalisation on the lattice.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}
 \renewcommand{\arraystretch}{1.6} 
 \centering
 \begin{tabular}{@{}ccc@{}}
 \hline 
-Matrix element & Operator & Observable \\ 
+Matrix element & Operator & PDF moment \\ 
 \hline
 $v_q^2$\,, $v_{\bar{q}}^2$  & $\displaystyle \left({\rm i}/2\right) \bar{q}(x)\gamma_{\mu_1} \overleftrightarrow{D}_{\mu_2} q(x)$ & $\langle x \rangle_q$\,, $\langle x \rangle_{\bar{q}}$   \\
 $v_q^3$\,, $v_{\bar{q}}^3$  & $\displaystyle \left({\rm i}/2\right)^2 \bar{q}(x)\gamma_{\mu_1} \overleftrightarrow{D}_{\mu_2} \overleftrightarrow{D}_{\mu_3} q(x)$ & $\langle x^2 \rangle_q$\,, $\langle x^2 \rangle_{\bar{q}}$ \\
@@ -196,29 +254,65 @@ $v_g^2$ & $\displaystyle - {\rm Tr}\, F_{\mu_1\alpha}F_{\mu_2\alpha}$ & $\langle
 \hline
 \end{tabular}
 \caption{\label{Tab:twist2}
-Operators relevant to the lowest two Mellin moments of polarised and unpolarised PDFs.
+\small List of operators relevant for
+the computation of the lowest two Mellin moments of polarised and unpolarised PDFs.
+%
+Here we indicate, for each operator, the corresponding matrix element and
+the specific PDF moment that can be evaluated (see
+Appendix~\ref{app:notation} for the notation used).
 }
 \end{table}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\paragraph*{Higher-twist contributions} The discussion so far has FO cussed on the limit in which higher twist contributions, suppressed by powers of the momentum-transfer, have been ignored. In fact, higher twist contributions to the lowest moment of the structure function $F_1(x,Q^2)$ are found to be of ${\cal O}(1\, \mbox{GeV}^2/Q^2)$ \cite{Blumlein:2008kz}. For lattice QCD, typically $Q^2 \simeq 1/a^2$, and at present lattice spacings this corresponds to $Q^2 = {\cal O}(10\,\mbox{GeV}^2)$ or a higher-twist contribution of $5 - 10\, \%$. With contributions of higher-twist included, the OPE reads
+\paragraph*{Higher-twist contributions}
+%
+The discussion so far has FO cussed on the limit in which higher twist contributions, suppressed by powers of the momentum-transfer, have been ignored. In fact, higher twist contributions to the lowest moment of the structure function $F_1(x,Q^2)$ are found to be of ${\cal O}(1\, \mbox{GeV}^2/Q^2)$ \cite{Blumlein:2008kz}.
+%
+For lattice QCD, typically $Q^2 \simeq 1/a^2$, and at present lattice spacings this corresponds to $Q^2 = {\cal O}(10\,\mbox{GeV}^2)$ or a higher-twist contribution of $5 - 10\, \%$. With contributions of higher-twist included, the OPE reads
 \begin{equation}
 2 \int_0^1 dx\, x F_1^q(x,Q^2) = C_{1,q}^2(\mu^2)\, v_q^2(\mu^2)|_{\mu^2=Q^2} + \frac{\bar{C}_{1,q}^2(\mu^2)}{Q^2}\, \bar{v}_q^2(\mu^2)|_{\mu^2=Q^2} + \cdots \,,
 \label{tex}
 \end{equation}
-where $\bar{C}_{1,q}^2$ and $\bar{v}_q^2(\mu^2)$ are the Wilson coefficient and reduced matrix element of a generic twist-four operator. Both twist-two and four contributions mix under renormalisation, to the extent that the perturbative series for the Wilson coefficients $C_{1,q}^2(\mu^2)$ diverges due to the presence of IR renormalon singularities. This ambiguity is canceled by that in the twist-four matrix element $\bar{v}_q^2(\mu^2)$ that arises as a result of an UV renormalon singularity~\cite{Martinelli:1996pk}. If mixing effects are ignored, the uncertainties will be, at least, comparable to the power corrections themselves. Power corrections can be assessed most efficiently, and the twist expansion tested, by a direct lattice-QCD evaluation of the Compton amplitude, which we discuss in Section \ref{Sec:InversionMethod}.
+where $\bar{C}_{1,q}^2$ and $\bar{v}_q^2(\mu^2)$ are the Wilson coefficient and reduced matrix element of a generic twist-four operator. Both twist-two and four contributions mix under renormalisation, to the extent that the perturbative series for the Wilson coefficients $C_{1,q}^2(\mu^2)$ diverges due to the presence of IR renormalon singularities.
+%
+This ambiguity is canceled by that in the twist-four matrix element $\bar{v}_q^2(\mu^2)$ that arises as a result of an UV renormalon singularity~\cite{Martinelli:1996pk}. If mixing effects are ignored, the uncertainties will be, at least, comparable to the power corrections themselves.
+%
+Power corrections can be assessed most efficiently, and the twist expansion tested, by a direct lattice-QCD evaluation of the Compton amplitude, which we discuss in Sect.~\ref{Sec:InversionMethod}.
 
-\paragraph*{Beyond the first three moments} Moving beyond the lowest three moments requires overcoming the challenge of power-divergent mixing for lattice-QCD twist-two operators. One novel approach to this problem~\cite{Davoudi:2012ya} builds upon the physical intuition that as long as the scale associated with the operator (for the twist-two operators, this is the renormalisation scale $\mu$) is taken to be much smaller than the hadronic scale but much larger than the inverse lattice spacing, no singularity necessarily arises as one takes the continuum limit. The operator can still probe the correct hadron structure at the scale $\mu$, but should be insensitive to the details of the discretisation of the operator at shorter distances. A simple way to incorporate an intrinsic ``smearing” scale for an operator is to sum over bilinears of quark fields that are displaced over many lattice sites in a small (compared to the scale $1/\mu$) region of Euclidean space-time (an alternative approach appears in~\cite{Monahan:2015lha}). To ensure that the correct $SO(4)$ transformation properties of the matrix elements are recovered in the continuum limit, one must project the sum using hyper-spherical harmonics. The properties of these operators, such as their mixing patterns and scaling properties, are discussed in detail in
-Ref.~\cite{Davoudi:2012ya}. In particular, while the classical mixing with lower and higher spin operators are both suppressed by $\sim a^2$ for spatially improved operators, the mixing at one-loop in lattice perturbation theory is suppressed by ${\cal O}(\alpha_s a)$ or ${\cal O}(\alpha_s a^2)$, depending on the lattice action used and provided that the gauge links used in constructing the gauge-invariant bilinears are tadpole-improved and smeared over a region whose physical size is held fixed as the continuum limit is taken. In principle, this allows higher moments of PDFs to be obtained from lattice QCD, without power-divergences. Numerical investigations of this approach,
+\paragraph*{Beyond the first three moments}
+%
+Moving beyond the lowest three moments requires overcoming the challenge of power-divergent mixing for lattice-QCD twist-two operators.
+%
+One novel approach to this problem~\cite{Davoudi:2012ya} builds upon the physical intuition that as long as the scale associated with the operator (for the twist-two operators, this is the renormalisation scale $\mu$) is taken to be much smaller than the hadronic scale but much larger than the inverse lattice spacing, no singularity necessarily arises as one takes the continuum limit.
+%
+The operator can still probe the correct hadron structure at the scale $\mu$, but should be insensitive to the details of the discretisation of the operator at shorter distances.
+%
+A simple way to incorporate an intrinsic ``smearing” scale for an operator is to sum over bilinears of quark fields that are displaced over many lattice sites in a small (compared to the scale $1/\mu$) region of Euclidean space-time (an alternative approach appears in~\cite{Monahan:2015lha}).
+
+
+To ensure that the correct $SO(4)$ transformation properties of the matrix elements are recovered in the continuum limit, one must project the sum using hyper-spherical harmonics.
+%
+The properties of these operators, such as their mixing patterns and scaling properties, are discussed in detail in
+Ref.~\cite{Davoudi:2012ya}.
+%
+In particular, while the classical mixing with lower and higher spin operators are both suppressed by $\sim a^2$ for spatially improved operators, the mixing at one-loop in lattice perturbation theory is suppressed by ${\cal O}(\alpha_s a)$ or ${\cal O}(\alpha_s a^2)$, depending on the lattice action used and provided that the gauge links used in constructing the gauge-invariant bilinears are tadpole-improved and smeared over a region whose physical size is held fixed as the continuum limit is taken. In principle, this allows higher moments of PDFs to be obtained from lattice QCD, without power-divergences. Numerical investigations of this approach,
 which requires gauge configurations with very fine lattice spacings, are underway.
 
 \subsubsection{The $x$-dependence of PDFs from lattice QCD}
 
-While the lowest three moments of PDFs provide important benchmarks for lattice-QCD calculations of nucleon structure, and useful constraints in global extractions of PDFs, they are not in themselves sufficient to determine the $x$-dependence of PDFs, particularly at small $x$. In the following section we summarise recent approaches to determining the $x$-dependence of PDFs directly from lattice QCD.
+While the lowest three moments of PDFs provide important benchmarks for lattice-QCD calculations of nucleon structure, and useful constraints in global extractions of PDFs, they are not in themselves sufficient to determine the $x$-dependence of PDFs, particularly at small $x$.
+%
+In the following section we summarise recent approaches to determining the $x$-dependence of PDFs directly from lattice QCD.
 
-\paragraph*{Inversion method} 
+\paragraph*{The inversion method} 
 \label{Sec:InversionMethod}
 
-The Compton amplitude $T_{\mu\nu}(p.q)$ can be directly obtained in lattice QCD, including disconnected contributions,  by a simple extension~\cite{Chambers:2017dov} of existing implementations of the Feynman-Hellmann technique to lattice QCD~\cite{Horsley:2012pz,Chambers:2014qaa,Chambers:2015bka}. Provided one works at sufficiently large $Q^2$, the Compton amplitude will be dominated by twist-two contributions. Varying $Q^2$ allows one to test the twist expansion and, in particular, isolate twist-four contributions. Moreover, one can distinguish between contributions from up, down and strange quarks, connected and disconnected, by appropriate insertions of the electromagnetic current.
+The Compton amplitude $T_{\mu\nu}(p.q)$, Eq.~(\ref{eq:Compton}) can be
+directly obtained in lattice QCD, including disconnected contributions,  by a simple extension~\cite{Chambers:2017dov} of existing implementations of the Feynman-Hellmann technique to lattice QCD~\cite{Horsley:2012pz,Chambers:2014qaa,Chambers:2015bka}.
+%
+Provided one works at sufficiently large $Q^2$, the Compton amplitude will be dominated by twist-two contributions.
+%
+Varying $Q^2$ allows one to test the twist expansion and, in particular, isolate twist-four contributions. Moreover, one can distinguish between contributions from up, down and strange quarks, connected and disconnected, by appropriate insertions of the electromagnetic current.
 
 To compute the Compton amplitude from the Feynman-Hellmann relation, a perturbation to the QCD Lagrangian is introduced, for example,
 \begin{equation}
@@ -281,7 +375,7 @@ where the non-leading terms are power-suppressed in the large $p_z$ limit. Equat
 leads to the relation between the quasi PDF and the light-front
 PDF expressed in Eq.~\eqref{eq:qPDFmatching}.
 
-Although there are some theoretical subtleties \cite{Rossi:2017muf,Ji:2017rah}, preliminary results from lattice calculations of quasi PDFs have been encouraging \cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp,Alexandrou:2016jqi}, as we illustrate in Figs.~\ref{fig:final_pdf}-\ref{fig:matched}. There are a number of remaining challenges, however, that must be overcome for an {\it ab initio} determination of the $x$-dependence of PDFs directly from lattice QCD that incorporates complete control over systematic uncertainties. Lattice calculations of quasi PDFs are subject to the same sources of systematic uncertainty that plague all lattice calculations and are highlighted in Section \ref{Sec:IntroLQCD}, but here we focus on systematic uncertainties that are more specific to quasi PDFs. These are: uncertainties associated with the finite nucleon momentum of the lattice calculations and with the renormalisation of quasi PDFs.
+Although there are some theoretical subtleties \cite{Rossi:2017muf,Ji:2017rah}, preliminary results from lattice calculations of quasi PDFs have been encouraging \cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp,Alexandrou:2016jqi}, as we illustrate in Figs.~\ref{fig:final_pdf}-\ref{fig:matched}. There are a number of remaining challenges, however, that must be overcome for an {\it ab initio} determination of the $x$-dependence of PDFs directly from lattice QCD that incorporates complete control over systematic uncertainties. Lattice calculations of quasi PDFs are subject to the same sources of systematic uncertainty that plague all lattice calculations and are highlighted in Sect.~\ref{Sec:IntroLQCD}, but here we focus on systematic uncertainties that are more specific to quasi PDFs. These are: uncertainties associated with the finite nucleon momentum of the lattice calculations and with the renormalisation of quasi PDFs.
 
 \begin{itemize}
  \item Preliminary non-perturbative studies of the quasi PDF used nucleon momenta in the range $p_z = 2\pi/L$ to $6\pi/L$, where $L$ is the physical extent of the lattice, corresponding to $p_z = 0.5$ to $2.5$ GeV~\cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp,Alexandrou:2016jqi}. At such low momenta, higher-twist and target mass corrections are likely to be considerable.
@@ -321,34 +415,43 @@ of the renormalization factor with Wilson line length, which amplifies the error
 The peak in the positive-$x$ 
 region is slightly shifted toward $x{=}0$. This is expected because renormalisation enhances long-range correlations, thereby enhancing the contribution in the small $x$ region when Fourier transformed to momentum space. After renormalization the unphysical dip near $x=0$ apparent in earlier 
 results also vanishes.
+%
+Note that in this plot, the negative-$x$ part is related to the antiquark distribution via
+the following relation,
+\be
+\bar{u}(x)-\bar{d}(x) = - u(-x)+ d(-x)\, , \qquad {\rm for}\quad x>0 \, .
+\ee
+The same convention is used for the polarized PDFs, discussed below.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[t]
 \centering
 \includegraphics[width=.6\textwidth]{plots/pdf_nonorm}
-\caption{The renormalised unpolarised isovector quark distribution after one-loop matching and mass correction at the renormalisation scale $\mu=2.4$~GeV. The red band shows the extrapolation to infinite momentum. The negative-$x$ part is related to the antiquark distribution via $\bar{u}(x)-\bar{d}(x) = - u(-x)+ d(-x)$ for $x>0$.
+\caption{\small The renormalised unpolarised isovector quark distribution after one-loop matching and mass correction at the renormalisation scale $\mu=2.4$~GeV. The red band shows the extrapolation to infinite momentum. 
 } \label{fig:final_pdf}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In Fig.~\ref{fig:matched} we show the helicity PDF computed in Ref.~\cite{Alexandrou:2017huk}. The blue line corresponds to
 the fully renormalised matrix elements, and the magenta line is the bare matrix elements multiplied by the local axial vector 
-current renormalisation function. The plot illustrates that proper renormalisation (the blue data) moves the ``approximately renormalised'' results (the magenta data) towards the phenomenological PDFs. In particular, the antiquark asymmetry is no longer overestimated and this asymmetry is 
+current renormalisation function.
+%
+The plot illustrates that proper renormalisation (the blue data) moves the ``approximately renormalised'' results (the magenta data) towards the phenomenological PDFs. In particular, the antiquark asymmetry is no longer overestimated and this asymmetry is 
 compatible with zero under current uncertainties. In the quark sector, there is an enhancement of the matched PDF for all 
 values of $x$. As the authors of~\cite{Alexandrou:2017huk} emphasise, the comparison with phenomenological PDFs should be understood as only qualitative and for quantitative comparison, a careful investigation of a number of systematic effects is still needed. An extensive study 
 on upper bounds of the systematic uncertainties is presented in Ref.~\cite{Alexandrou:2017huk}.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[t]
 \centering
 \includegraphics[scale=0.4,angle=-90]{plots/qmatched_bare_vs_fit69v2}\,\,\,
 \vspace*{-0.3cm}
 \begin{minipage}{15cm}
 \hspace*{3cm}
-\caption{Comparison of matched helicity PDF obtained from quasi PDF computed with either fully renormalised matrix elements (blue) 
+\caption{\small Comparison of matched helicity PDF obtained from quasi PDF computed with either fully renormalised matrix elements (blue) 
 or with bare matrix elements multiplied by the local ($z{=}0$) axial current $Z$-factor, $Z_A$ (magenta). For purely illustration purposes, 
 phenomenological PDFs (DSSV08 \cite{deFlorian:2009vb} and JAM15 \cite{Sato:2016tuz}) are also shown.}
 \label{fig:matched} 
 \end{minipage}
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
