@@ -2,28 +2,36 @@
 \subsubsection{Unpolarised PDFs}
 \label{sec:unpPDFs}
 
-Here we present the global PDF fitting framework, starting with unpolarised PDFs.
+Here we present the global PDF fitting framework,
+starting with unpolarised PDFs, and then moving to polarized
+PDFs.
 %
-Then we discuss in more technical detail how PDFs are extracted
+We discuss in some technical detail how PDFs are extracted
 from hard-scattering cross-sections, paying special attention
 to the assessment of the PDF uncertainties.
 %
-Finally, we briefly discuss the state of the art of unpolarised
+We also briefly discuss the state of the art of unpolarised
 global PDF fits.
 %
-We have made an effort to use a notation fully consistent
+Through this section,
+we have made an effort to use a notation fully consistent
 with the previous lattice QCD discussion.
 
 \paragraph{General framework}
 %
-Unpolarised PDFs appear in the factorisation formulae for both inclusive DIS and hadroproduction processes. The unpolarised DIS structure functions are given in Eq.~\eqref{eq:Fi}.
-For the hadroproduction of a generic system $X$ in $pp$ collisions we have
+Unpolarised PDFs appear in the factorisation formulae for both
+deep-inelastic scattering (DIS) and for proton-proton collisions.
+%
+The unpolarised DIS structure functions were defined in Eq.~\eqref{eq:Fi}.
+%
+For the hadroproduction of a generic final-state $X$ in $pp$ collisions, we have
 a corresponding factorised expression
 \begin{equation}
   \label{eq:LHCxsec}
-\sigma_{pp\to X}=\sum_{a,b}\int {\rm d}x_1 {\rm d}x_2\, f_a(x_1,\mu_F^2)f_b(x_2,\mu_F^2)\,\hat{\sigma}_{ab\to X}(x_1,x_2,s;\mu_{F},\mu_R)\;,
+\sigma_{pp\to X}(s,\mu_F,\mu_R)=\sum_{a,b}\int {\rm d}x_1 {\rm d}x_2\, f_a(x_1,\mu_F^2)f_b(x_2,\mu_F^2)\,\hat{\sigma}_{ab\to X}(x_1,x_2,s;\mu_{F},\mu_R)\;,
 \end{equation}
-where the hard cross section $\hat{\sigma}$ can again be calculated perturbatively as an expansion in the QCD and EW couplings.
+where the hard cross section $\hat{\sigma}_{ab\to X}$ can
+be calculated perturbatively as an expansion in the QCD and EW running couplings.
 %
 The specific values of the momentum fractions
 $x_i$ are related to the kinematics of the final state.
@@ -454,7 +462,7 @@ The ABMP16~\cite{Alekhin:2017kpj} set fits to a similar global data set
 (although excluding jet production)
 but differs in its treatment of errors and heavy flavours.
 %
-The HERAPDF2.0~\cite{Abramowicz:2015mha} set fits to the final combined HERA Run I + II data set only, with the aim of determining the PDFs from a completely consistent DIS data sample; in $x$ regions that are less constrained by HERA data, the uncertainties can be quite large. The CJ15~\cite{Accardi:2016qay} NLO set focuses on constraining the PDFs at higher $x$ by lowering $Q^2$ and $W^2$ cuts in DIS. This greatly increases the available data, but requires additional modelling of power--like ${\cal O}(1/Q^2)$ corrections.
+The HERAPDF2.0~\cite{Abramowicz:2015mha} set fits to the final combined HERA Run I + II data set only, with the aim of determining the PDFs from a completely consistent DIS data sample; in $x$ regions that are less constrained by HERA data, the uncertainties can be quite large. The CJ15~\cite{Accardi:2016qay} NLO set focuses on constraining the PDFs at higher $x$ by lowering $Q^2$ and $W^2$ cuts in DIS. This greatly increases the available data, but requires additional modeling of power--like ${\cal O}(1/Q^2)$ corrections.
 %
 A detailed discussion of the similarities and differences between
 PDF sets, which is beyond the scope of this document,
