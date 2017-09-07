@@ -1,28 +1,28 @@
-\section{Conventional notation}
+\section{Definition of the PDF moments}
 \label{app:notation}
 
-In this appendix, we summarise the convention adopted in this paper to denote 
+In this appendix, we summarise the convention adopted in this paper to denote the
 moments of relevant unpolarised and longitudinally polarised PDF combinations.
 %
-We restrict to quantities which can be presently computed in lattice QCD,
-although those used for benchmarks in Sec.~\ref{sec:benchmarking} are only
+Here we restrict ourselves to those
+quantities which can be presently computed in lattice QCD,
+although those used for benchmarks in Sect.~\ref{sec:benchmarking} are only
 a subset of them.
 %
-In the equations below, we use the shorthand notation 
-$(\Delta)q^\pm=(\Delta)q\pm(\Delta)\bar{q}$, $q=u,d,s,c$;
-$\mu$ should be identified with the QCD factorisation scale,
-and $Q^2$ should be identified with the characteristic scale of a given 
+In the equations below, we use the shorthand notation
+\be
+(\Delta)q^\pm \equiv (\Delta)q\pm(\Delta)\bar{q}\, ,\qquad q=u,d,s,c \, .
+\ee
+Moreover, we will identify $\mu$  with the QCD factorisation scale,
+and $Q$ with the characteristic scale of a given 
 hard-scattering process.
-
-The following notation has been agreed by the two communities during the 
-workshop.
 %
-Its usage is then recommended in any future work whenever PDF moments are 
-referred to.
+The use of these conventions is strongly recommended for any future
+comparison between lattice QCD and global fit calculations of PDF moments.
 
 \begin{itemize}
 
-\item Unpolarised moments
+\item Unpolarised moments:
 
 \begin{enumerate}
 
@@ -30,7 +30,7 @@ referred to.
 \begin{equation}
 \left.\langle x\rangle_{u^+-d^+}(\mu^2)\right|_{\mu^2=Q^2}
 =
-\int_0^1 dx\, x\left\{u(x,Q^2)+\bar{u}(x,Q^2)-d(x,Q^2)-\bar{d}(x,Q^2)\right\}
+\int_0^1 dx\, x\left\{u(x,Q^2)+\bar{u}(x,Q^2)-d(x,Q^2)-\bar{d}(x,Q^2)\right\} \, .
 \label{eq:unpfmumdtot}
 \end{equation}
 
@@ -38,7 +38,7 @@ referred to.
 \begin{equation}
 \left.\langle x^2\rangle_{u^--d^-}(\mu^2)\right|_{\mu^2=Q^2}
 =
-\int_0^1 dx\, x^2\left\{u(x,Q^2)-\bar{u}(x,Q^2)-d(x,Q^2)+\bar{d}(x,Q^2)\right\}
+\int_0^1 dx\, x^2\left\{u(x,Q^2)-\bar{u}(x,Q^2)-d(x,Q^2)+\bar{d}(x,Q^2)\right\} \, .
 \label{eq:unpsmumdval}  
 \end{equation}
 
@@ -46,7 +46,7 @@ referred to.
 \begin{equation}
 \left.\langle x\rangle_{q^+=u^+,d^+,s^+,c^+}(\mu^2)\right|_{\mu^2=Q^2}
 =
-\int_0^1 dx\, x\left\{q(x,Q^2)+\bar{q}(x,Q^2)\right\}
+\int_0^1 dx\, x\left\{q(x,Q^2)+\bar{q}(x,Q^2)\right\} \, .
 \label{eq:unpfmiqtot}
 \end{equation}
 
@@ -54,7 +54,7 @@ referred to.
 \begin{equation}
 \left.\langle x^2\rangle_{q^-=u^-,d^-,s^-,c^-}(\mu^2)\right|_{\mu^2=Q^2}
 =
-\int_0^1 dx\, x^2\left\{q(x,Q^2)-\bar{q}(x,Q^2)\right\}
+\int_0^1 dx\, x^2\left\{q(x,Q^2)-\bar{q}(x,Q^2)\right\} \, .
 \label{eq:unpsmiqval}
 \end{equation}
 
@@ -62,14 +62,13 @@ referred to.
 \begin{equation}
 \left.\langle x \rangle_g(\mu^2)\right|_{\mu^2=Q^2}
 =
-\int_0^1 dx\, x\, g(x,Q^2)
+\int_0^1 dx\, x\, g(x,Q^2) \, .
 \label{eq:unpfmg}
 \end{equation}
 
 \end{enumerate}
 
-
-\item Longitudinally polarised moments
+\item Longitudinally polarised moments:
 
 \begin{enumerate}
 
@@ -77,7 +76,7 @@ referred to.
 \begin{equation}
 \left.\langle 1 \rangle_{\Delta u^+-\Delta d^+}(\mu^2)\right|_{\mu^2=Q^2}
 =
-\int_0^1 dx \left\{\Delta u(x,Q^2)+\Delta\bar{u}(x,Q^2)-\Delta d(x,Q^2)-\Delta\bar{d}(x,Q^2)\right\}
+\int_0^1 dx \left\{\Delta u(x,Q^2)+\Delta\bar{u}(x,Q^2)-\Delta d(x,Q^2)-\Delta\bar{d}(x,Q^2)\right\} \, .
 \label{eq:polzmumdtot}
 \end{equation}
 
@@ -93,7 +92,7 @@ referred to.
 \begin{equation}
 \left.\langle 1\rangle_{q^+=\Delta u^+,\Delta d^+,\Delta s^+,\Delta c^+}(\mu^2)\right|_{\mu^2=Q^2}
 =
-\int_0^1 dx \left\{\Delta q(x,Q^2)+\Delta\bar{q}(x,Q^2)\right\}
+\int_0^1 dx \left\{\Delta q(x,Q^2)+\Delta\bar{q}(x,Q^2)\right\} \, .
 \label{eq:polzmiqtot}
 \end{equation}
 
@@ -101,7 +100,7 @@ referred to.
 \begin{equation}
 \left.\langle x\rangle_{\Delta q^-=\Delta u^-,\Delta d^-,\Delta s^-,\Delta c^-}(\mu^2)\right|_{\mu^2=Q^2}
 =
-\int_0^1 dx\, x\left\{\Delta q(x,Q^2)-\Delta\bar{q}(x,Q^2)\right\}
+\int_0^1 dx\, x\left\{\Delta q(x,Q^2)-\Delta\bar{q}(x,Q^2)\right\} \, .
 \label{eq:polfmiqval}
 \end{equation}
 
@@ -109,6 +108,17 @@ referred to.
 
 \end{itemize}
 
+As discussed in Sect.~\ref{Sec:IntroPDFs}, some of these moments have a direct
+physical interpretation, for instance Eq.~(\ref{eq:unpfmiqtot}) corresponds
+to the proton's momentum fraction carried by a given quark flavour (and its
+corresponding antiquark) at the scale $\mu$, while
+Eq.~(\ref{eq:polzmiqtot}) is related to the contribution of the quark flavour
+$q$ to the total proton spin.
+%
+Moreover, we should emphasize here that other flavour combinations as well as higher
+moments are trivially computable within the global PDF fitting framework,
+but we have not considered them since their evaluation within the lattice
+QCD approach is outside the reach of present and future capabilities.
 
 
 

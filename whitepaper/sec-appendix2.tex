@@ -1,22 +1,128 @@
-\section{Moments from lattice QCD}
+\section{PDF moments from lattice QCD}
 \label{sec:LQCDtables}
 
-In this appendix, we summarise available results for the moments of both 
+In this appendix, we present an extensive summarise available results for the moments of both 
 unpolarised and polarised PDFs from lattice QCD, including those results 
 that do not include a chiral extrapolation to the physical pion mass and 
 quenched results. 
 %
-We show summary plots of the zeroth and first moments in 
-Fig.~\ref{fig:latt_res}. 
-%
 We also provide bibliographic tables with full
 details of the available lattice-QCD results.
+%
+The discussion on the various sources of systematic uncertainty which
+affect each specific calculation can be found in Sects.~\ref{Sec:IntroLQCD}
+and~\ref{subsubsec:BClQCD}.
+%
+See appendix~\ref{app:notation} for the definitions and conventions used
+for the various PDF moments considered here.
+
+The results for the lattice-QCD calculations of PDF moments that are summarized
+in this appendix are the following:
+\begin{itemize}
+
+  \item In Table~\ref{tab:unpolLQCDstatus1B}
+we summarize the status of current  of the
+first moments of unpolarised PDFs $\la x\ra_{u^+-d^+}$, $\la x\ra_{q^+}$,
+and $\la x\ra_g$.
+
+\item In Table~\ref{tab:unpolLQCDstatus2B} we show
+  the status of current lattice-QCD calculations of the second moments of unpolarised PDFs
+  $\la x^2\ra_{u^--d^-}$, $\la x^2\ra_{u^-}$,
+and $\la x^2\ra_{d^-}$.
+
+\item In Table~\ref{tab:polLQCDstatus1B} we show
+  a summary of the current status of lattice-QCD calculations of zeroth moments of
+  longitudinally polarised PDFs,
+  $\la 1\ra_{\Delta u^+,\Delta d^+}$ and $\la 1\ra_{\Delta s^+}$.
+
+\item In Table~\ref{tab:polLQCDstatus2B} we display a summary of the current status of lattice-QCD calculations of the first moments of longitudinally polarised PDFs,
+  $\la x\ra_{\Delta u^-,\Delta d^-}$, $\la x\ra_{\Delta u^-}$, and  $\la x\ra_{\Delta d^-}$.
+
+\item In Table~\ref{tab:latticebibfirst} we show the full details of lattice-QCD calculations
+  of the axial coupling $g_A\equiv\langle 1\rangle_{\Delta u^+-\Delta d^+}$.
+  %
+  In this comparison we do not include
+quenched results, perturbatively renormalized results, and conference proceedings.
+
+\item In Table~\ref{tablenonisovectorquarkspins} we show
+  the full details of lattice-QCD calculations of the non-isovector quark spins.
+  %
+  Note that
+  earlier results are summarized in Ref.~\cite{Liu:1995kb}.
+
+\item In Table~\ref{tab:unpolarizedisotriplet} we provide the full details of
+  lattice-QCD calculations of the $\langle x\rangle_{u^+-d^+}$.
+  %
+  In this comparison we
+  omit quenched and non-renormalized results.
+
+\item In Table~\ref{tab:nonisovectormomfrac}
+  we summarize
+  the full details of lattice-QCD calculations of the non-isovector momentum fractions.
+
+\item In Table~\ref{tab:nonisopolcase}
+  we show the full details of lattice-QCD calculations of $\langle x\rangle_{\Delta u^--\Delta d^-}$.
+
+\item Finally, in  Table~\ref{tab:latticebiblast} we
+  give full details of lattice-QCD calculations of higher moments of unpolarised
+  and polarised PDFs.
+
+\end{itemize}
+
+A representative subset of the results contained in
+Tables~\ref{tab:unpolLQCDstatus1B} to~\ref{tab:latticebiblast}
+is compared graphically in  
+Fig.~\ref{fig:latt_res}.
+%
+Specifically, in this figure we show from left to right and from top to bottom
+an overview of 
+  the results for $\la x\ra_{u^+-d^+}$, $\la x\ra_{q^+}$, $\la x\ra_{g}$,
+  $\la 1 \ra_{\Delta s^+}$, $\la 1\ra_{\Delta q^+}$, and finally
+  $\la x\ra_{\Delta u^- - \Delta d^-}$.
+  %
+  See the corresponding entries of each table for
+  the details of the differences and similarities for each
+  of the results that enter this comparison.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[t]
+\begin{center}
+\centerline{
+\subfloat[]{\includegraphics[width=0.49\textwidth]{plots/x_world.pdf}}
+\subfloat[]{\includegraphics[width=0.47\textwidth]{plots/xq_world_ud.pdf}}
+}
+\centerline{
+\subfloat[]{\includegraphics[width=0.49\textwidth]{plots/xg_world.pdf}}
+\subfloat[]{\includegraphics[width=0.49\textwidth]{plots/ga_world_strange.pdf}}
+}
+\centerline{
+\subfloat[]{\includegraphics[width=0.47\textwidth]{plots/ga_world_ud.pdf}}
+\subfloat[]{\includegraphics[width=0.49\textwidth]{plots/xdeltaq_isovector.pdf}}
+}
+\end{center}
+\caption{\small Comparison of lattice-QCD results for
+  the  zeroth and first moments
+  of unpolarised and polarised PDFs,
+  see Tables~\ref{tab:unpolLQCDstatus1B} to~\ref{tab:latticebiblast}
+  for more details.
+  %
+  From left to right and from top to bottom, we show
+  the results for $\la x\ra_{u^+-d^+}$, $\la x\ra_{q^+}$, $\la x\ra_{g}$,
+  $\la 1 \ra_{\Delta s^+}$, $\la 1\ra_{\Delta q^+}$, and finally
+  $\la x\ra_{\Delta u^- - \Delta d^-}$.
+}
+\label{fig:latt_res}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %-------------------------------------------------------------------------------
-\begin{table}
+\begin{table}[t]
+  \small
 \renewcommand{\arraystretch}{1.2} 
 \centering 
 \makebox[\textwidth]{ %
+  \footnotesize
 \begin{tabular}{lllccccccl}\\[1cm]
   Ref. & $N_f$ & Status & 
 \hspace{0.15cm}\begin{rotate}{70}{discretisation}\end{rotate}\hspace{-0.15cm} &
@@ -56,23 +162,24 @@ $\langle x\rangle_{s^+}=0.024(6)$\\
 {\footnotesize 
 \begin{itemize}
 \item[$\&$] Non-singlet renormalisation is applied.
-\item[$\dagger$] The lightest $m_\pi$ has $Lm_\pi\ge 4.0$, however, $L\sim 1.6$~fm.\\
-\item[$\dagger\dagger$] The lightest $m_\pi$ has $Lm_\pi\ge 4.0$, however, $L\sim 1.6$~fm.\\
-\item[$\ddag$] The connected contribution is only evaluated at one $t_{sep}$.\\
+\item[$\dagger$] The lightest $m_\pi$ has $Lm_\pi\ge 4.0$, however, $L\sim 1.6$~fm.
+\item[$\dagger\dagger$] The lightest $m_\pi$ has $Lm_\pi\ge 4.0$, however, $L\sim 1.6$~fm.
+\item[$\ddag$] The connected contribution is only evaluated at one $t_{sep}$.
 \end{itemize}
 }
 \end{minipage}
-\caption{Status of current lattice-QCD calculations of the first moments of unpolarised PDFs.}
+\caption{\small Status of current lattice-QCD calculations of the first moments of unpolarised PDFs.}
 \label{tab:unpolLQCDstatus1B}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}
+\begin{table}[t]
 \renewcommand{\arraystretch}{1.2} 
 \centering % See https://tex.stackexchange.com/questions/23650/when-should-we-use-begincenter-instead-of-centering
 \makebox[\textwidth]{ % Centre table on page, even though it is a little wide
+  \footnotesize
 \begin{tabular}{lllccccccl}\\[1cm]
   Ref. & $N_f$ & Status & 
 \hspace{0.15cm}\begin{rotate}{70}{discretisation}\end{rotate}\hspace{-0.15cm} &
@@ -105,21 +212,21 @@ $\langle x\rangle_{s^+}=0.024(6)$\\
 {\footnotesize 
 \begin{itemize}
 \item[$\ast$] Only the connected contribution is included.
-%\item[$\ddag$] The lightest $m_\pi$ has $Lm_\pi\ge 4.0$, however, $L < 2.5$~fm.
 \end{itemize}
 }
 \end{minipage}
-\caption{Status of current lattice-QCD calculations of the second moments of unpolarised PDFs.}
+\caption{\small Status of current lattice-QCD calculations of the second moments of unpolarised PDFs.}
 \label{tab:unpolLQCDstatus2B} 
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}
+\begin{table}[t]
 \renewcommand{\arraystretch}{1.2} 
 \centering
 \makebox[\textwidth]{ % Centre table on page, even though it is a little wide
+  \footnotesize
 \begin{tabular}{lllccccccl}\\[1cm]
   Ref. & $N_f$ & Status & 
 \hspace{0.15cm}\begin{rotate}{70}{discretisation}\end{rotate}\hspace{-0.15cm} &
@@ -160,17 +267,18 @@ The mixing with $\langle x\rangle_{q^+}$ is small so only the excited state anal
 \end{itemize}
 }
 \end{minipage}
-\caption{Summary of the current status of lattice-QCD calculations of zeroth moments of longitudinally polarised PDFs.}
+\caption{\small Summary of the current status of lattice-QCD calculations of zeroth moments of longitudinally polarised PDFs.}
 \label{tab:polLQCDstatus1B}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}
+\begin{table}[t]
 \renewcommand{\arraystretch}{1.2} 
 \centering
 \makebox[\textwidth]{ % Centre table on page, even though it is a little wide
+  \footnotesize
 \begin{tabular}{lllccccccl}\\[1cm]
   Ref. & $N_f$ & Status & 
 \hspace{0.15cm}\begin{rotate}{70}{discretisation}\end{rotate}\hspace{-0.15cm} &
@@ -205,41 +313,20 @@ The mixing with $\langle x\rangle_{q^+}$ is small so only the excited state anal
 \end{itemize}
 }
 \end{minipage}
-\caption{Summary of the current status of lattice-QCD calculations of the first moments of longitudinally polarised PDFs.}
+\caption{\small Summary of the current status of lattice-QCD calculations of the first moments of longitudinally polarised PDFs.}
 \label{tab:polLQCDstatus2B}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}[p]
-\begin{center}
-\centerline{
-\subfloat[]{\includegraphics[width=0.4\textwidth]{plots/x_world.pdf}}
-\subfloat[]{\includegraphics[width=0.38\textwidth]{plots/xq_world_ud.pdf}}
-}
-\centerline{
-\subfloat[]{\includegraphics[width=0.4\textwidth]{plots/xg_world.pdf}}
-\subfloat[]{\includegraphics[width=0.4\textwidth]{plots/ga_world_strange.pdf}}
-}
-\centerline{
-\subfloat[]{\includegraphics[width=0.4\textwidth]{plots/ga_world_ud.pdf}}
-\subfloat[]{\includegraphics[width=0.4\textwidth]{plots/xdeltaq_isovector.pdf}}
-}
-\end{center}
-\caption{Physical and unphysical pion mass results for lattice-QCD calculations of the zeroth and first moments
-of unpolarised and polarised PDFs.}
-\label{fig:latt_res}
-\end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}
+\begin{table}[t]
 \renewcommand{\arraystretch}{1.2} 
 \centering
 \makebox[\textwidth]{ % Centre table on page, even though it is a little wide
+  \footnotesize
 \begin{tabular}{llllll}
   Ref. & Sea quarks & Valence quarks & Renormalisation & $N_{\Delta t}$ & $m_\pi$ (MeV)\\
 \hline
@@ -335,7 +422,7 @@ of unpolarised and polarised PDFs.}
 \end{itemize}
 }
 \end{minipage}
-\caption{Full details of lattice-QCD calculations of the axial coupling $g_A\equiv\langle 1\rangle_{\Delta u^+-\Delta d^+}$.
+\caption{\small Full details of lattice-QCD calculations of the axial coupling $g_A\equiv\langle 1\rangle_{\Delta u^+-\Delta d^+}$.
 We omit quenched results, perturbatively renormalized results, and conference proceedings.}
 \label{tab:latticebibfirst}
 \end{table}
@@ -343,11 +430,12 @@ We omit quenched results, perturbatively renormalized results, and conference pr
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}
+\begin{table}[t]
 \renewcommand{\arraystretch}{1.2} 
 \centering
 \makebox[\textwidth]{ % Centre table on page, even though it is a little wide
-\begin{tabular}{lllll}
+  \footnotesize
+  \begin{tabular}{lllll}
   Ref. & Flavours & Sea quarks & Valence quarks & Renormalisation \\
 \hline
 
@@ -409,16 +497,20 @@ We omit quenched results, perturbatively renormalized results, and conference pr
 \end{itemize}
 }
 \end{minipage}
-\caption{Full details of lattice-QCD calculations of the non-isovector quark spins. Early works are summarized in Ref.~\cite{Liu:1995kb}. \emph{ADD NEW ETMC PAPER!!!!}}
+\caption{\small Full details of lattice-QCD calculations of the non-isovector quark spins.
+  Earlier results are summarized in Ref.~\cite{Liu:1995kb}.
+\label{tablenonisovectorquarkspins}
+}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}
+\begin{table}[t]
 \renewcommand{\arraystretch}{1.2} 
 \centering
 \makebox[\textwidth]{ % Centre table on page, even though it is a little wide
+  \footnotesize
 \begin{tabular}{llllll}
   Ref. & Sea quarks & Valence quarks & Renormalisation & $N_{\Delta t}$ & $m_\pi$ (MeV)\\
 \hline
@@ -481,16 +573,19 @@ We omit quenched results, perturbatively renormalized results, and conference pr
 \end{itemize}
 }
 \end{minipage}
-\caption{Full details of lattice-QCD calculations of the $\langle x\rangle_{u^+-d^+}$. We omit quenched and non-renormalized results.}
+\caption{\small Full details of lattice-QCD calculations of the $\langle x\rangle_{u^+-d^+}$. We omit quenched and non-renormalized results.
+\label{tab:unpolarizedisotriplet}
+}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}
+\begin{table}[t]
 \renewcommand{\arraystretch}{1.2} 
 \centering
 \makebox[\textwidth]{ % Centre table on page, even though it is a little wide
+  \footnotesize
 \begin{tabular}{lllll}
   Ref. & Flavours & Sea quarks & Valence quarks & Renormalisation \\
 \hline
@@ -509,7 +604,7 @@ We omit quenched results, perturbatively renormalized results, and conference pr
   $u,d,s,g$ & quenched & Wilson & sum rule + one-loop \\
 
   QCDSF-UKQCD '12 \cite{Horsley:2012pz} &
-  $g$ & quenched & clover & nonperturbative \\
+  $g$ & quenched & clover & non-perturbative \\
 \hline
 \end{tabular}
 } % End makebox
@@ -520,17 +615,20 @@ We omit quenched results, perturbatively renormalized results, and conference pr
 \end{itemize}
 }
 \end{minipage}
-\caption{Full details of lattice-QCD calculations of the non-isovector momentum fractions. }
+\caption{\small
+  Full details of lattice-QCD calculations of the non-isovector momentum fractions.
+\label{tab:nonisovectormomfrac}}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}
+\begin{table}[t]
 \renewcommand{\arraystretch}{1.2} 
 \centering
 \makebox[\textwidth]{ % Centre table on page, even though it is a little wide
+  \footnotesize
 \begin{tabular}{lllll}
   Ref. & Sea quarks & Valence quarks & Renormalisation & $N_{\Delta t}$ \\
   \hline
@@ -578,34 +676,19 @@ We omit quenched results, perturbatively renormalized results, and conference pr
 \end{itemize}
 }
 \end{minipage}
-\caption{Full details of lattice-QCD calculations of $\langle x\rangle_{\Delta u^--\Delta d^-}$. }
+\caption{\small Full details of lattice-QCD calculations of $\langle x\rangle_{\Delta u^--\Delta d^-}$.
+\label{tab:nonisopolcase}
+}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}
+\begin{table}[t]
 \renewcommand{\arraystretch}{1.2} 
 \centering
 \makebox[\textwidth]{ % Centre table on page, even though it is a little wide
-\begin{tabular}{lllll}
-  Ref. & Flavours & Sea quarks & Valence quarks & Renormalisation \\
-\hline
-  ETMC '14 \cite{Abdel-Rehim:2013wlz} &
-  $u+d$ & 2+1+1 twisted mass & twisted mass & non-singlet Rome-Southampton\\
-  \hline
-\end{tabular}
-} % End makebox
-\caption{Full details of lattice-QCD calculations of non-isovector polarized momentum fractions. }
-\end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}
-\renewcommand{\arraystretch}{1.2} 
-\centering
-\makebox[\textwidth]{ % Centre table on page, even though it is a little wide
+  \footnotesize
 \begin{tabular}{lllll}
   Ref. & Observables & Sea quarks & Valence quarks & Renormalisation \\
 \hline
@@ -682,7 +765,9 @@ We omit quenched results, perturbatively renormalized results, and conference pr
 \end{itemize}
 }
 \end{minipage}
-\caption{Full details of lattice-QCD calculations of higher moments of unpolarised and polarised PDFs. }
+\caption{\small Full details of lattice-QCD calculations of higher moments of unpolarised and polarised PDFs. }
 \label{tab:latticebiblast}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\clearpage
