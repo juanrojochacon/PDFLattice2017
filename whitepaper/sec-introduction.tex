@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Introduction and Motivation}
+\section{Introduction and motivation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The detailed understanding of the internal structure of protons is an active
@@ -17,41 +17,45 @@ so-called parton distribution functions (PDFs).
 By combining a variety of experimental data on hard-scattering processes
 with state-of-the-art perturbative calculations through a robust statistical
 methodology, it is possible to achieve a reasonably precise determination
-of these nonperturbative PDFs for unpolarised and polarised nucleons.
+of these non-perturbative PDFs for unpolarized and polarized nucleons.
 %
 In this context, several collaborations provide regular updates of
 phenomenological PDF determinations, both
-in the unpolarised~\cite{Ball:2012cx,Ball:2014uwa,Harland-Lang:2014zoa,
+in the unpolarized~\cite{Ball:2012cx,Ball:2014uwa,Harland-Lang:2014zoa,
 Dulat:2015mca,Alekhin:2017kpj,Owens:2012bv} and in
-the polarised~\cite{Nocera:2014gqa,deFlorian:2009vb} cases.
+the polarized~\cite{Nocera:2014gqa,deFlorian:2009vb} cases.
+%
+See Refs.~\cite{Rojo:2015acz,Butterworth:2015oua,Ball:2012wy,
+Alekhin:2011sk,Forte:2013wc,Forte:2010dt,Perez:2012um,DeRoeck:2011na,
+Accardi:2016ndt} for recent reviews of the global PDF fitting framework.
 
 Alternatively, one can compute quantities related to PDFs directly 
-from QCD using the nonperturbative formulation known as lattice QCD.
+from QCD, without resorting to
+experimental data, by using the non-perturbative formulation known as lattice QCD.
 %
 This method introduces an ultraviolet cutoff that allows the direct 
 computation of the QCD path integral in discretised finite-volume 
-Euclidean spacetime. To connect to experimental observations, a 
+Euclidean space-time. To connect to experimental observations, a 
 continuum-limit extrapolation is necessary to remove the cutoff dependence 
-and finite-volume effects can be removed by suitable extrapolation. 
+and finite-volume effects can be removed by suitable extrapolation.
+%
 Lattice-QCD calculations require minimal external input: one needs only to 
 set the hadronic scale $\Lambda_\text{QCD}$ and the quark masses. 
 For calculations relevant to low-energy hadron structure, this means
 setting the up, down and strange quark masses,
-which is usually done using the pion and kaon masses as external inputs. 
+which is usually done using the pion and kaon masses as external inputs.
+%
 The overall hadronic scale can be set using well-determined baryon masses 
-such as that of the $\Omega$ baryon. Many QCD quantities can be predicted 
+such as that of the $\Omega$ baryon.
+%
+Many QCD quantities can be predicted 
 using lattice QCD, including quantities that are challenging to obtain from experiments. 
 
-%using large-momentum effective theory (LaMET)~\cite{Ji:2014gla}, computing quasi-PDFs within nucleons having finite momentum boost~.
-
-%Recently, there has been very significant progress in our understanding
-%of the polarised and unpolarised partonic structure of the nucleon from both
-%the global PDF fitting and lattice-QCD communities.
-%
 For global PDF fits, the availability of a wealth of high-precision collider measurements
 from HERA, the Tevatron and the LHC, together with that of the corresponding
 NNLO QCD and NLO electroweak perturbative calculations, are pushing the
 accuracy frontier and leading to improved PDFs with reduced uncertainties.
+%
 A paradigmatic illustration of this progress is provided by the gluon PDF, which has been
 affected by rather large uncertainties due to the limited experimental
 information, but is known nowadays rather more precisely from small to large-$x$
@@ -120,22 +124,29 @@ interactions between the two communities.
 
 The outline of this document is as follows:
 %
-In Sec.~\ref{sec:theoryoverview} we present an overview of
+In Sect.~\ref{sec:theoryoverview} we present an overview of
 the global QCD fit and lattice-QCD methods for the evaluation
 of polarised and unpolarised parton distributions.
 %
-Then in Sec.~\ref{sec:benchmarking}
+Then in Sect.~\ref{sec:benchmarking}
 we summarise state-of-the-art benchmark
 calculations between the most
 recent available lattice QCD calculations and global PDF fits,
 both in terms of moments and of $x$-space PDFs by means of
 quasi-PDFs.
 %
-In Sec.~\ref{sec:projections} we quantify the impact that
+In Sect.~\ref{sec:projections} we quantify the impact that
 upcoming lattice calculations could have on unpolarised
-and polarised PDFs and estimate the impact of these improvements
-on collider phenomenology.
+and polarised PDFs for a number of scenarios for which
+different PDF-related quantities could be computed in the future with
+lattice QCD.
 %
-Finally, in Sec.~\ref{sec:outlook} we summarise our studies
+Finally, in Sect.~\ref{sec:outlook} we summarise our studies
 and discuss the outlook for future interactions between
 the global QCD fit and lattice-QCD communities.
+%
+In addition, Appendix~\ref{app:notation} summarizes the conventions
+that are adopted in this report for the definition of PDF
+moments, and
+Appendix~\ref{sec:LQCDtables} contains an exhaustive summary of existing calculations
+of those moments in lattice QCD.
