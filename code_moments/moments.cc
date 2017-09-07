@@ -31,6 +31,10 @@ int main(int argc, char **argv)
   // List of PDF sets for which we
   // want to compute moments
   
+
+  
+  //Unpolarised PDF sets
+
   // PDF4LHC2015
   pdfname.push_back("PDF4LHC15_nnlo_mc");
   // This is a Monte Carlo set
@@ -60,6 +64,32 @@ int main(int argc, char **argv)
   pdfname.push_back("ABMP16_4_nnlo");
   // This is a symmetric Hessian set
   pdfertype.push_back("symhessian");
+
+  // CJ15 NLO
+  pdfname.push_back("CJ15nlo");
+  // This is a symmetric Hessian set
+  pdfertype.push_back("hessian");
+
+  // HERAPDF20 (EIG)
+  pdfname.push_back("HERAPDF20_NNLO_EIG");
+  // This is a symmetric Hessian set
+  pdfertype.push_back("hessian");
+
+  // HERAPDF20 (VAR)
+  pdfname.push_back("HERAPDF20_NNLO_VAR");
+  // This is a symmetric Hessian set
+  pdfertype.push_back("symhessian");
+  
+  /*
+  //Polarised PDF sets
+ 
+   
+  //NNPDFpol1.1
+  pdfname.push_back("NNPDFpol11_100");
+  // This is a Monte Carlo set
+  pdfertype.push_back("mc");
+  */
+
 
   double cv_ref=0;
 

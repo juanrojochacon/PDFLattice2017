@@ -40,7 +40,7 @@ class MomIntegral
   double momwrap(double x)
   {
     // x*(u+ - d^+)
-    double xpdf = ( LHAPDF::xfx(x,Q,0) );
+    double xpdf = ( LHAPDF::xfx(x,Q,-3) + LHAPDF::xfx(x,Q,3));
     
     return xpdf;
   }
@@ -48,7 +48,7 @@ class MomIntegral
   double getMom(double Q)
   {
     this->Q = Q;
-    xmin=1e-9;
+    xmin=1e-5;
     double result = dgauss(xmin, 1.0, eps);
     return result;
   }
