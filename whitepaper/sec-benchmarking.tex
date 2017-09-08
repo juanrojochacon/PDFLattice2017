@@ -30,22 +30,28 @@ available in the literature.
 \label{subsubsec:BQ}
 
 We identify our benchmark quantities with the lowest moments of unpolarised 
-and polarised PDFs, or of some of their combinations, specifically: 
+and polarised PDFs, as well as of some specific quark
+flavor combinations, specifically:
+\begin{itemize}
+  \item
 $\langle x\rangle_{u^+-d^+}$, $\langle x \rangle_{u^+}$, $\langle x \rangle_{d^+}$, 
-$\langle x \rangle_{s^+}$ and $\langle x \rangle_{g}$ (in the unpolarised case); 
-$g_A\equiv\langle 1 \rangle_{\Delta u^+ - \Delta d ^+}$, 
+$\langle x \rangle_{s^+}$ and $\langle x \rangle_{g}$ in the unpolarised case; 
+\item $g_A\equiv\langle 1 \rangle_{\Delta u^+ - \Delta d ^+}$, 
 $\langle 1 \rangle_{\Delta u^+}$, $\langle 1 \rangle_{\Delta d^+}$,  
 $\langle 1 \rangle_{\Delta s^+}$ and $\langle x \rangle_{\Delta u^- - \Delta d^-}$ 
-(in the polarised case).
+  in the polarised case.
+  \end{itemize}
 %
-We use the notation outlined in Appendix~\ref{app:notation}.
+In the following, we adopt the notation and conventions
+described in Appendix~\ref{app:notation}.
 %
 We focus on these quantities because current lattice 
-calculations of higher moments and/or of moments of other PDFs or PDF 
+calculations of higher moments and/or of moments of other PDF 
 combinations are not sufficiently controlled to allow for a meaningful 
-comparison between lattice-QCD and global-fit results.
+comparison between the lattice-QCD and the global-fit results.
 %
-Therefore, these will not be considered here. 
+Therefore, these will not be considered here, although we plan to revisit
+them in future installments of this benchmarking exercise.
 
 \subsubsection{Appraising lattice-QCD calculations}
 \label{subsubsec:BClQCD}
@@ -623,6 +629,7 @@ Tabs.~\ref{tab:polLQCDstatus0}-\ref{tab:polLQCDstatus1} respectively.
 \renewcommand{\arraystretch}{1.2} 
 \centering
 \begin{threeparttable}
+    \vspace{2cm}
 \begin{tabular}{llcllccccccl}
 Mom. & Collab. & Ref. & $N_f$ & Status &
 \begin{rotate}{70}{discretisation}\end{rotate} &
@@ -795,10 +802,11 @@ recently~\cite{Forte:2013wc,Jimenez-Delgado:2013sma}, and further
 summarised in Sect.~\ref{sec:unpPDFs}. 
 %
 It is now recognised that the PDF uncertainty receives various contributions: 
-the measurement uncertainty propagated from the
-experimental data, uncertainties associated with incompatibility of the 
-fitted experiments, procedural uncertainties such as those related to the
-functional form of PDFs, and the handling of systematic errors.
+the  one associated to the propagated of the
+experimental errors from the fitted cross-sections,
+the one associated with incompatibility of the 
+fitted experiments, and procedural uncertainties such as those related to the choice
+functional form of PDFs and the handling of systematic errors, among others.
 %
 As outlined in Sect.~\ref{sec:unpPDFs}, in principle all of these uncertainties 
 can be accounted for with suitable methods, both in the Hessian and the 
@@ -881,9 +889,12 @@ $\langle x \rangle_{g}$
 & 0.410(4) & 0.416(9) & 0.411(9) & 0.412(4) & 0.416(1) & 0.401(10)\\
 \bottomrule
 \end{tabular}
-\caption{\small Status of current global-fit determinations of the 
+\caption{\small Status of current global PDF fit determinations of the 
 benchmark moments of unpolarised PDFs listed in Sect.~\ref{subsubsec:BQ}.
-All values are shown at $\mu^2=Q^2=4$ GeV$^2$.}
+All values are shown at $\mu^2=Q^2=4$ GeV$^2$.
+%
+See text for details about the calculation of PDF uncertainties in each case.
+}
 \label{tab:unpPDFmoms}
 \end{table}
 %-------------------------------------------------------------------------------
@@ -906,7 +917,8 @@ which can be easily used to compute all the needed benchmark values.
 
 While we refer the reader to Ref.~\cite{Butterworth:2015oua} for details,
 here we only mention that the PDF4LHC15 PDF set was constructed by means of
-a statistical combination (an unweighted average) of the 
+a statistical
+combination~\cite{Carrazza:2015hva,Gao:2013bia,Watt:2012tq,Carrazza:2015aoa} (an unweighted average) of the 
 NNPDF3.0~\cite{Ball:2014uwa}, CT14 and MMHT2014 PDF sets.\footnote{The 
 NNPDF3.1 PDF set was not available when the recommendations were formulated.}
 %
@@ -935,7 +947,8 @@ The ABMP2016 set (as well as its previous versions) does not fulfill the second
 and third criteria; the CJ15 set does not fulfill the first, second and fourth
 criteria, while the HERAPDF2.0 set does not fulfill the first criterion.
 %
-Hence they were not included in the PDF4LHC2015 PDF set.
+Hence they were not included in the PDF4LHC2015 PDF set, although the possibility
+of including them in future versions of the recommendation remains open.
 
 \paragraph{Polarised parton distributions.}
 %
