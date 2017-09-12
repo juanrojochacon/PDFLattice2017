@@ -1,0 +1,338 @@
+%stylefile for "Progress in Particle and Nuclear Physics" from 20. March 2003
+\documentclass[twoside,12pt]{article}
+\usepackage{epsfig}
+
+\def\Journal#1#2#3#4{{#1} {#2} (#4) #3 }
+\def\NCA{{\em Nuovo Cimento} A}
+\def\PHYS{{\em Physica}}
+\def\NPA{{\em Nucl. Phys.} A}
+\def\MATH{{\em J. Math. Phys.}}
+\def\PRO{{\em Prog. Theor. Phys.}}
+\def\NPB{{\em Nucl. Phys.} B}
+\def\PLA{{\em Phys. Lett.} A}
+\def\PLB{{\em Phys. Lett.} B}
+\def\PLD{{\em Phys. Lett.} D}
+\def\PL{{\em Phys. Lett.}}
+\def\PRL{\em Phys. Rev. Lett.}
+\def\PREV{\em Phys. Rev.}
+\def\PREP{\em Phys. Rep.}
+\def\PRA{{\em Phys. Rev.} A}
+\def\PRD{{\em Phys. Rev.} D}
+\def\PRC{{\em Phys. Rev.} C}
+\def\PRB{{\em Phys. Rev.} B}
+\def\ZPC{{\em Z. Phys.} C}
+\def\ZPA{{\em Z. Phys.} A}
+\def\ANNP{\em Ann. Phys. (N.Y.)}
+\def\RMP{{\em Rev. Mod. Phys.}}
+\def\CHEM{{\em J. Chem. Phys.}}
+\def\INT{{\em Int. J. Mod. Phys.} E}
+\def\r{\vec r}
+\def\R{\vec R}
+\def\p{\vec p}
+\def\P{\vec P}
+\def\q{\vec q}
+\def\ss{\mbox{\boldmath $\sigma$}}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\nn}{\nonumber}
+\topmargin-2.8cm
+\oddsidemargin-1cm
+\evensidemargin-1cm
+\textwidth18.5cm
+\textheight25.0cm
+\begin{document}
+
+\title{ \vspace{1cm} New Nuclei around the N = Z in the A = 80-90 region}
+\author{N.\ Marginean,$^{1,2}$ C.\ Rossi Alvarez,$^3$ D.\ Bucurescu,$^2$ C. A.\
+Ur,$^{3,2}$\\ 
+A.\ Gadea,$^4$ S.\ Lunardi,$^3$ D.\ Bazzacco,$^3$ G.\ de Angelis,$^1$ 
+M.\ Axiotis,$^1$\\ 
+M.\ De Poli,$^1$ E.\ Farnea,$^{1,3}$ M.\ Ionescu-Bujor,$^2$ 
+A.\ Iordachescu,$^2$ S. M.\ Lenzi,$^3$\\ 
+Th.\ Kr\"oll,$^{1,3}$ T.\
+Martinez,$^1$ R.\ Menegazzo,$^3$ D. R.\ Napoli,$^1$\\ 
+G.\ Nardelli,$^5$ P.\
+Pavan,$^3$ B.\ Quintana,$^{3,6}$ P.\ Spolaore$^1$\\
+\\
+$^1$INFN, Laboratori Nazionali di Legnaro, Italy\\
+$^2$H. Hulubei National Inst. for Phys. and Nucl. Eng., Bucharest,
+Romania\\
+$^3$Dipartimento di Fisica dell'Universit\`a and INFN, Sez. di Padova,
+Italy\\
+$^4$Instituto de Fisica Corpuscular, Valencia, Spain\\
+$^5$Dip. di Chi. Fis. dell'Universit\`a di Venezia and INFN, Sez. di Padova,
+Italy\\
+$^6$ Grupo de Fisica Nuclear, Universidad de Salamanca, Spain}
+\maketitle
+\begin{abstract} Correlations in the nuclear wave-function beyond the mean-field 
+or Hartree-Fock approximation are very important to describe basic properties of
+nuclear structure. Various approaches to account for such correlations are
+described and compared to each other. This includes the hole-line expansion, the
+coupled cluster or ``exponential S'' approach, the self-consistent evaluation of
+Greens functions, variational approaches using correlated basis functions and
+recent developments employing quantum Monte-Carlo techniques. Details of these 
+correlations are explored and their sensitivity to the underlying 
+nucleon-nucleon interaction. Special
+attention is paid to the attempts to investigate these correlations in
+exclusive nucleon knock-out experiments induced by electron scattering.
+Another important issue of nuclear structure physics is the role of relativistic
+effects as contained in phenomenological mean field models.  The sensitivity of 
+various nuclear structure observables on these
+relativistic features are investigated. The report includes the discussion of
+nuclear matter as well as finite nuclei.
+\end{abstract}
+%\eject
+%\tableofcontents
+\section{Introduction}
+One of the central challenges of theoretical nuclear physics is the attempt to
+describe the basic properties of nuclear systems in terms of a realistic
+nucleon-nucleon (NN) interaction. Such an attempt typically contains two major
+steps. In the first step one has to consider a specific model for the NN
+interaction. This could be a model which is inspired by the
+quantum-chromo-dynamics\cite{faes0}, a meson-exchange or One-Boson-Exchange
+model\cite{rupr0,nijm0} or a purely phenomenological ansatz in terms of
+two-body spin-isospin operators multiplied 
+by local potential
+functions\cite{argo0,urbv14}. Such models are considered as a realistic
+description of the NN interaction, if the adjustment of parameters within the
+model yields a good fit to the NN scattering data at energies below the
+threshold for pion production as well as energy and other observables of the
+deuteron.
+
+After the definition of the nuclear hamiltonian,
+ the second
+step implies the solution of the many-body problem of $A$ nucleons interacting
+in terms of such a realistic two-body NN interaction. The simplest approach to
+this many-body problem of interacting fermions one could think of would be the
+mean field or Hartree-Fock approximation. This procedure yields very good
+results for the bulk properties of nuclei, binding energies and radii, 
+if one employs simple phenomenological NN forces like e.g.~the Skyrme forces, 
+which are adjusted to describe such nuclear structure data\cite{skyrme}.
+However, employing realistic NN interactions the Hartree-Fock approximation
+fails very badly: it leads to unbound nuclei\cite{art99}. 
+
+
+\begin{figure}[tb]
+%\epsfysize=9.0cm
+\begin{center}
+\begin{minipage}[t]{8 cm}
+\epsfig{file=emblem.ps,scale=0.5}
+\end{minipage}
+\begin{minipage}[t]{16.5 cm}
+\caption{Cartoon of a nucleus, displaying the size of the nucleons as compared
+to the typical distance to nearest neighbors. Also indicated are the internal
+structure of nucleons and mesons.\label{fig1}}
+\end{minipage}
+\end{center}
+\end{figure}
+
+The calculation scheme discussed so far, determine the interaction of two
+nucleons in the vacuum in a first step and then solve the many-body problem of
+nucleons interacting by such realistic potentials in a second step, is of course
+based on the picture that nucleons are elementary particles with properties,
+which are not affected by the presence of other nucleons in the nuclear medium. 
+One knows, of course, that this is a rather simplified picture: nucleons are
+built out of quarks and their properties might very well be influenced by the
+surrounding medium. A cartoon of this feature is displayed in Fig.~\ref{fig1}.
+
+\section{Many-Body Approaches}
+\subsection{\it Hole - Line Expansion \label{sec:holeline}}
+As it has been discussed already above one problem of nuclear structure
+calculations based on realistic NN interactions is to deal with the strong
+short-range components contained in all such interactions. This problem is 
+evident in particular when
+so-called hard-core potentials are employed, which are infinite for relative
+distances smaller than the radius of the hard core $r_c$. The matrix elements
+of such a potential $V$ evaluated for an uncorrelated two-body wave function
+$\Phi (r)$ diverges since $\Phi (r)$ is different from zero also for relative
+distances $r$ smaller than the hard-core radius $r_c$ (see the schematic picture
+in Fig.~\ref{fig3}. A way out of this problem is to account for the two-body
+correlations induced by the NN interaction in the correlated wave function
+$\Psi (r)$ or by defining an effective operator, which acting on the
+uncorrelated wave function $\Phi (r)$ yields the same result as the bare
+interaction $V$ acting on $\Psi (r)$. This concept is well known for example in
+dealing with the scattering matrix $T$, which is defined by
+\be
+<\Phi \vert T \vert \Phi > = <\Phi \vert V \vert \Psi > \; . \label{eq:tmat}
+\ee
+As it is indicated in the schematic Fig.~\ref{fig3}, the correlations tend to 
+enhance the amplitude
+of the correlated wave function $\Psi$ relative to the uncorrelated one
+at distances $r$ for which the interaction is attractive. A reduction of
+the amplitude is to be expected for small distances for which $V(r)$ is
+repulsive. From this discussion we see that the
+correlation effects tend to make the matrix elements of $T$ more attractive
+than those of the bare potential $V$.  For two nucleons in the vacuum the $T$
+matrix can be determined by solving a Lippmann-Schwinger equation
+\bea
+T \vert \Phi > &= &V \left\{ \vert \Phi > + \frac{1}{\omega  - H_0 +
+i\epsilon } V \vert \Psi >\right\}\nonumber \\
+& = &  \left\{ V + V \frac{1 }{\omega  - H_0 +i\epsilon } T\right\} \vert 
+\Phi >\, . \label{eq:lipschw}
+\eea
+
+\begin{figure}[tb]
+%\epsfysize=9.0cm
+\begin{center}
+\begin{minipage}[t]{8 cm}
+\epsfig{file=fig3.eps,scale=0.7}
+\end{minipage}
+\begin{minipage}[t]{16.5 cm}
+\caption{Schematic picture of a NN interaction with hard core and its effect on
+the correlated NN wave function $\Psi(r)$. \label{fig3}}
+\end{minipage}
+\end{center}
+\end{figure}
+
+Therefore it seems quite natural to define the single-particle potential $U$ in
+analogy to the Hartree-Fock definition with the bare interaction $V$ replaced
+by the corresponding $G$-matrix. To be more precise, the Brueckner-Hartree-Fock
+(BHF) definition of $U$ is given by
+\be
+<\alpha \vert U \vert \beta> = \cases{ \sum_{\nu \le F} <\alpha \nu \vert
+\frac{1} {2} \left( G(\omega_{\alpha \nu}) + G(\omega_{\beta \nu}) \right)
+\vert \beta \nu >, & if $\alpha$ and $\beta$ $\le F$ \cr \sum_{\nu \le F}
+<\alpha \nu \vert G(\omega_{\alpha \nu}) \vert \beta \nu >, & if $\alpha\le F$
+and $\beta > F$ \cr 0 & if $\alpha$ and $\beta$ $>F$, \cr}\, . \label{eq:ubhf}
+\ee               
+
+\subsection{\it Many-Body Theory in Terms of Green's Functions
+\label{subsec:green}}
+ 
+The two-body approaches discussed so far, the hole-line expansion as well as the
+CCM, are essentially restricted to the evaluation of ground-state properties.
+The Green's function approach, which  will
+shortly be introduced in this section
+also yields results for dynamic properties like e.g.~the single-particle
+spectral function which is closely related to the cross section of particle
+knock-out and pick-up reactions. It is based on the time-dependent
+perturbation expansion and also assumes a separation of the total hamiltonian
+into an single-particle part $H_0$ and a perturbation $H_1$. 
+A more detailed description can be found e.g.~in the textbook
+of Fetter and Walecka\cite{fetwal}. 
+
+\section{Effects of Correlations derived from Realistic Interactions}
+\subsection{\it Models for the NN Interaction\label{sec:nninter}}
+ 
+In our days there is a general agreement between physicists working on this
+field, that quantum chromo dynamics (QCD) provides the basic theory of
+the strong
+interaction. Therefore also the roots of the strong interaction between two
+nucleons must be hidden in QCD. For nuclear structure calculations, however, one
+needs to determine the NN interaction at low energies and momenta, a region in
+which one cannot treat QCD by means of perturbation theory. On the other hand,
+the
+system of two interacting nucleons is by far too complicate to be treated by
+means of lattice QCD calculations. Therefore one has to consider
+phenomenological models for the NN interaction.   
+
+With the OBE ansatz one can now solve the Blankenbecler--Sugar or a
+corresponding scattering equation and adjust the parameter of the OBE model to
+reproduce the empirical NN scattering phase shifts as well as binding energy and
+other observables for the deuteron. Typical sets of parameters resulting from
+such fits are listed in table~\ref{tab:obe}.
+ 
+\begin{table}
+\begin{center}
+\begin{minipage}[t]{16.5 cm}
+\caption{Parameters of the realistic OBE potentials Bonn $A$, $B$ and $C$ (see
+table A.1 of \protect{\cite{rupr0}}).
+The second column displays the type of
+meson: pseudoscalar (ps), vector (v) and scalar (s) and the third its
+isospin $T_{\rm iso}$.}
+\label{tab:obe}
+\end{minipage}
+\begin{tabular}{rrrr|rr|rr|rr}
+\hline
+&&&&&&&&&\\[-2mm]
+&&&&\multicolumn{2}{c}{Bonn A}&\multicolumn{2}{c}{Bonn
+B}&\multicolumn{2}{c}{Bonn C}\\
+Meson &&$T_{\rm iso}$&$m_{\alpha}$&$g^2_{\alpha}/4\pi$&$\Lambda_{\alpha}$
+&$g^2_{\alpha}/4\pi$&$\Lambda_{\alpha}$&$g^2_{\alpha}/4\pi$&$\Lambda_{\alpha}$\\
+&&&[MeV]&&[MeV]&[MeV]&[MeV]\\
+&&&&&&&&&\\[-2mm]
+\hline
+&&&&&&&&&\\[-2mm]
+$\pi$ & ps & 1 & 138.03 & 14.7 & 1300 & 14.4 & 1700 & 14.2 & 3000\\[2mm]
+$\eta$ & ps & 0 & 548.8 & 4 & 1500 & 3 & 1500 & 0 & -\\[2mm]
+$\rho$ & v & 1 & 769 & 0.86$^{\rm a}$ & 1950 & 0.9$^{\rm a}$ & 1850 &
+1.0$^{\rm a}$ & 1700 \\[2mm]       
+$\omega$ & v & 0 & 782.6 & 25$^{\rm a}$ & 1350 & 24.5$^{\rm a}$ & 1850 &
+24$^{\rm a}$ & 1400\\[2mm]
+$\delta$ & s & 1 & 983 & 1.3 & 2000 & 2.488 & 2000 & 4.722 & 2000\\[2mm]
+$\sigma^{\rm b}$ & s & 0 & 550$^{\rm b}$ & 8.8 & 2200 & 8.9437 & 1900 & 8.6289 &
+1700\\
+&&&(710-720)$^{\rm b}$ & 17.194 & 2000 & 18.3773 & 2000 & 17.5667 & 2000\\
+&&&&&&&&&\\[-2mm]\hline
+\end{tabular}
+%noalign{\smallskip\hrule}\cr}
+\begin{minipage}[t]{16.5 cm}
+\vskip 0.5cm
+\noindent
+$^{\rm a}$ The tensor coupling constants are $f_{\rho}$=6.1 $g_{\rho}$
+and $f_{\omega}$ = 0. \\
+$^{\rm b}$ The $\sigma$ parameters in the first line apply for NN channels
+with isospin 1, while those in the second line refer to isospin 0 channels. In
+this case the masses for the $\sigma$ meson of 710 (Bonn A) and 720 MeV (Bonn B
+and C) were considered.
+\end{minipage}
+\end{center}
+\end{table}     
+
+\subsection{\it Ground state Properties of Nuclear Matter and Finite Nuclei}
+ 
+In the first part of this section we would like to discuss the convergence of
+the many-body approaches and compare results for nuclear matter as obtained from
+various calculation schemes presented in section 2.
+The convergence of the hole-line expansion for nuclear matter has been
+investigated during the last few years in particular by the group in
+Catania\cite{song1,song2}. Continuing the earlier work of Day\cite{day81} they
+investigated the effects of the three-hole-line contributions for various
+choices of the auxiliary potential $U$ (see Eq.~\ref{eq:ubhf}). In particular
+they considered the standard or conventional choice, which assumes a
+single-particle potential $U=0$ for single-particle states above the Fermi level,
+and the so-called ``continuous choice''. This continuous choice supplements the definition of the
+auxiliary potential of the hole states in Eq.~(\ref{eq:ubhf}) with a
+corresponding definition (real part of the BHF self-energy) also for the
+particle states with momenta above the Fermi momentum, $k >k_F$. In this way
+one does not have any gap in the single-particle spectrum at $k=k_F$. 
+
+\section{Conclusion}
+ 
+The main aim of this review has been to demonstrate that nuclear systems
+are very intriguing many-body systems.  They are non-trivial
+systems in the sense that they require the treatment of correlations beyond the
+mean field or Hartree-Fock approximation. Therefore, from the point of view of
+many-body
+theory, they can be compared to other quantum many-body systems like liquid He,
+electron gas, clusters of atoms etc. A huge amount of experimental data is
+available for real nuclei with finite number of particles as well as for the
+infinite limit of nuclear matter or the matter of a neutron star.    
+
+\begin{thebibliography}{99}
+\itemsep -2pt 
+\bibitem{faes0} A. Valcarce, A. Buchmann, F. Fern\'andez, and Amand Faessler,
+\Journal{\PRC} {51}{1480} {1995} 
+\bibitem{rupr0} R. Machleidt, \Journal{\em Adv. Nucl. Phys.}{19}{189}{1989}
+\bibitem{nijm0} M.M. Nagels, T.A. Rijken, and J.J. de Swart, \Journal{\PRD} 
+{17} {768} {1978}
+\bibitem{argo0} R.B. Wiringa, R.A. Smith, and T.L. Ainsworth, \Journal{\PRC}
+{29} {1207} {1984}
+\bibitem{urbv14} I.E. Lagaris and V.R. Pandharipande, \Journal{\NPA}{359} 
+{331} {1981}
+\bibitem{skyrme} M. Brack, C. Guet, and H.-B, Hakansson, \Journal {\PREP}{123}
+{275}{1985}
+\bibitem{art99} H. M\"uther and A. Polls, \Journal{\PRC} {}{in press}{1999}, 
+preprint nucl-th/9908002.
+\bibitem{fetwal} A.L. Fetter and J.D. Walecka, {\it Quantum Theory of Many 
+Particle Systems} (McGraw-Hill New York, 1971)
+\bibitem{song1} H.Q. Song, M. Baldo, U. Lombardo, and G. Giansiracusa,
+\Journal{\PLB} {411}{237}{1997}
+\bibitem{song2} H.Q. Song, M. Baldo, G. Giansiracusa, annd U. Lombardo, 
+\Journal{\PRL} {81} {1584}{1998}
+\bibitem{day81} B.D. Day, \Journal{\PRC} {24}{1203}{1981}
+
+\end{thebibliography}
+\end{document}
