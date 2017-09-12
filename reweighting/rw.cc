@@ -376,8 +376,6 @@ int main(int argc, char **argv)
 	cout<<"Mean +- Std = "<<unp_mom_xdp_mean_rw<<"  "<<unp_mom_xdp_std_rw<<
 	  "  ( "<<100*unp_mom_xdp_std_rw/unp_mom_xdp_mean_rw<<" % )"<<endl;
 
-	exit(-10);
-	
 	// -- xup -------------------------------------------------------
 	
 	if(ipol==0){
