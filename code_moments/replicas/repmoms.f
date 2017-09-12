@@ -19,7 +19,7 @@
       double precision xminpol, xmaxpol
       parameter(xminpol=1d-5,xmaxpol=1d0)
       double precision eps
-      parameter(eps=1d-4)
+      parameter(eps=1d-6)
       double precision momunp(mxmom,mxrep), mompol(mxmom,mxrep)
       double precision momunp_wrp, mompol_wrp
       double precision dgauss 
@@ -79,7 +79,7 @@
          
          do imom=1, nmompol
 
-            mompol(imom,irep) = dgauss(mompol_wrp,xminunp,xmaxunp,eps)
+            mompol(imom,irep) = dgauss(mompol_wrp,xminpol,xmaxpol,eps)
 
          enddo
 
