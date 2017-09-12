@@ -42,7 +42,7 @@ int main(int argc, char **argv)
   int const NrepPol=100;
   int nrep=0;
 
-  for(int ipol=0;ipol<1;ipol++){
+  for(int ipol=1;ipol<2;ipol++){
 
     // Set number of replicas
     if(ipol==0) nrep=NrepUnpol;
@@ -73,6 +73,7 @@ int main(int argc, char **argv)
     for(int irep=1;irep<=nrep;irep++){
       int idum=0;
       in1>>idum>> unp_mom_rep_xup[irep];
+      cout<<irep<<" "<<unp_mom_rep_xup[irep]<<endl;
       if(idum!=irep){
 	cout<<"Error when reading replica file"<<endl;
 	exit(-10);
@@ -267,8 +268,8 @@ int main(int argc, char **argv)
 	total_latQCD_sysunc[2] = 0.05;
       }
       if(ipol==1){
-	total_latQCD_sysunc[0] = 0.05;
-	total_latQCD_sysunc[1] = 0.15;
+	total_latQCD_sysunc[0] = 0.10;
+	total_latQCD_sysunc[1] = 0.20;
 	total_latQCD_sysunc[2] = 0.30;
       }
       
@@ -433,6 +434,9 @@ int main(int argc, char **argv)
 	if(ipol==0){
 	  cout<<"\nOriginal Moment: \\int_0^1 x * ( g(x,Q) )"<<endl;
 	}
+	if(ipol==1){
+	  cout<<"\nOriginal Moment: \\int_0^1 * x * ( Delta_u(x,Q) - Delta_ubar(x,Q) - Delta_d(x,Q) + Delta_dbar(x,Q) )"<<endl;
+	}
 	cout<<"Mean +- Std = "<<unp_mom_xg_mean<<"  "<<unp_mom_xg_std<<
 	  "  ( "<<100*unp_mom_xg_std/unp_mom_xg_mean<<" % )"<<endl;
 	
@@ -455,6 +459,9 @@ int main(int argc, char **argv)
 	
 	if(ipol==0){
 	  cout<<"\nOriginal Moment: \\int_0^1 x * ( u(x,Q)+ubar(x,Q) - d(x,Q)+dbar(x,Q) )"<<endl;
+	}
+	if(ipol==1){
+	  cout<<"\nOriginal Moment: \\int_0^1 *( Delta_u(x,Q) + Delta_ubar(x,Q) - Delta_d(x,Q) - Delta_dbar(x,Q) )" <<endl;
 	}
 	cout<<"Mean +- Std = "<<unp_mom_xupmdp_mean<<"  "<<unp_mom_xupmdp_std<<
 	  "  ( "<<100*unp_mom_xupmdp_std/unp_mom_xupmdp_mean<<" % )"<<endl;
@@ -546,19 +553,28 @@ int main(int argc, char **argv)
 		cv_rw[ix]+=weights[irep] * xpdflh/nrep;
 		err_rw[ix]+=weights[irep] * pow(xpdflh,2.0)/nrep;
 	      }
+
+	    /*
+	    cout<<"x = "<<x[ix]<<endl;
+	    cout<<"cv, err = "<<cv[ix]<<" "<<err[ix]<<endl;
+	    cout<<"cv_rw, err_rw = "<<cv_rw[ix]<<" "<<err_rw[ix]<<endl;
+	    */
 	    
 	    err[ix] = pow(err[ix]-pow(cv[ix],2.0),0.5);
 	    err_rw[ix] = pow(err_rw[ix]-pow(cv_rw[ix],2.0),0.5);
 	    
 	    for(int iPdf=0;iPdf<2;iPdf++){
-	      
+
+	      // Take absolute value to avoid negative centrak values
+	      // Specially relevant for the polarized case
+	      // Maybe show instead the absolute PDF uncertainty
 	      if(iPdf==0){
-		cvLuxRel[iPdf]->SetPoint(ix, x[ix], 100*err[ix]/cv[ix]);
-		
+		//cvLuxRel[iPdf]->SetPoint(ix, x[ix], 100*err[ix]/fabs( cv[ix]) );
+		cvLuxRel[iPdf]->SetPoint(ix, x[ix], err[ix] );
 	      }
 	      if(iPdf==1){
-		cvLuxRel[iPdf]->SetPoint(ix, x[ix], 100*err_rw[ix]/cv_rw[ix]);
-		
+		//cvLuxRel[iPdf]->SetPoint(ix, x[ix], 100*err_rw[ix]/fabs( cv_rw[ix]) );
+		cvLuxRel[iPdf]->SetPoint(ix, x[ix], err_rw[ix] );
 	      }
 	    }
 	    
@@ -599,19 +615,37 @@ int main(int argc, char **argv)
 	  if(iPdf==0)cvLuxRel[iPdf]->SetLineStyle(1);
 	  cvLuxRel[iPdf]->GetXaxis()->SetTitle("       x  ");
 	  cvLuxRel[iPdf]->GetXaxis()->SetTitleSize(0.05);
-	  cvLuxRel[iPdf]->GetXaxis()->SetTitleOffset(0.5);
+	  cvLuxRel[iPdf]->GetXaxis()->SetTitleOffset(1.1);
 	  cvLuxRel[iPdf]->GetXaxis()->SetLabelSize(0.045);
 	  cvLuxRel[iPdf]->GetXaxis()->SetLimits(5e-3, 0.65);
 	  cvLuxRel[iPdf]->GetXaxis()->CenterTitle(true);
 	  cvLuxRel[iPdf]->GetYaxis()->SetTitle("Percentage PDF uncertainty");
 	  cvLuxRel[iPdf]->GetYaxis()->CenterTitle(true);
-	  if(l==0)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,10);	
-	  if(l==1)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,10);
-	  if(l==2)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,10);
-	  if(l==3)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,35);
-	  if(l==4)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,35);
-	  cvLuxRel[iPdf]->GetYaxis()->SetTitleSize(0.05);
-	  cvLuxRel[iPdf]->GetYaxis()->SetLabelSize(0.05);
+	  if(ipol==0){
+	    if(l==0)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,10);	
+	    if(l==1)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,10);
+	    if(l==2)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,10);
+	    if(l==3)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,35);
+	    if(l==4)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,35);
+	  }
+	  if(ipol==1){
+	    // For percentage PDF uncertainty
+	    /*
+	    if(l==0)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,100);	
+	    if(l==1)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,30);
+	    if(l==2)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,100);
+	    if(l==3)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,350);
+	    if(l==4)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,20);
+	    */
+	    // for absolute PDF uncertainty
+	    if(l==0)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,0.15);	
+	    if(l==1)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,0.035);
+	    if(l==2)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,0.1);
+	    if(l==3)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,0.035);
+	    if(l==4)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,0.1);
+	  }
+	  cvLuxRel[iPdf]->GetYaxis()->SetTitleSize(0.04);
+	  cvLuxRel[iPdf]->GetYaxis()->SetLabelSize(0.03);
 	}
 
 	cout<<"Saving plot "<<endl;
@@ -626,10 +660,17 @@ int main(int argc, char **argv)
 	cvLuxRel[iPdf]->Draw("C,same");
 	
 	if(i_scen==0)leg[0]->AddEntry(cvLuxRel[0], "no LQCD moms","L");
-	if(i_scen==0)leg[0]->AddEntry(cvLuxRel[1], "with LQCD moms, #delta_{L} = 1%","L");
-	if(i_scen==1)leg[0]->AddEntry(cvLuxRel[1], "with LQCD moms, #delta_{L} = 3%","L");
-	if(i_scen==2)leg[0]->AddEntry(cvLuxRel[1], "with LQCD moms, #delta_{L} = 5%","L");
-	
+	if(ipol==0){
+	  if(i_scen==0)leg[0]->AddEntry(cvLuxRel[1], "with LQCD moms, #delta_{L} = 1%","L");
+	  if(i_scen==1)leg[0]->AddEntry(cvLuxRel[1], "with LQCD moms, #delta_{L} = 3%","L");
+	  if(i_scen==2)leg[0]->AddEntry(cvLuxRel[1], "with LQCD moms, #delta_{L} = 5%","L");
+	}
+	if(ipol==1){
+	  if(i_scen==0)leg[0]->AddEntry(cvLuxRel[1], "with LQCD moms, #delta_{L} = 10%","L");
+	  if(i_scen==1)leg[0]->AddEntry(cvLuxRel[1], "with LQCD moms, #delta_{L} = 20%","L");
+	  if(i_scen==2)leg[0]->AddEntry(cvLuxRel[1], "with LQCD moms, #delta_{L} = 30%","L");
+	}
+	  
       }//  End loop over scenearios
 
       leg[0]->Draw();

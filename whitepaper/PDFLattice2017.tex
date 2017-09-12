@@ -2,14 +2,15 @@
 %       65 rotate /Times-Roman findfont 216 scalefont setfont
 %       0 0 moveto 0.85 setgray (DRAFT) show grestore}def end}%%%
 
-\documentclass[11pt,a4paper]{article}
-%\usepackage[utf8]{inputenc}
+%stylefile for "Progress in Particle and Nuclear Physics" from 20. March 2003
+\documentclass[twoside,12pt]{article}
+\usepackage{epsfig}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{booktabs}
 \usepackage{threeparttable}
 \usepackage{afterpage}
-\usepackage{epsfig,cite}
+\usepackage{cite}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{dsfont}
@@ -23,19 +24,47 @@
 \usepackage[]{xcolor}
 \usepackage{siunitx} % For correctly displayed SI units.
 \sisetup{range-phrase = \text{--}} % For correctly displayed number ranges
-
-%\textwidth=15.0cm \textheight=23.5cm
-\textwidth=16.0cm \textheight=23.0cm 
-\topmargin 0cm \oddsidemargin 0cm 
-\setlength{\unitlength}{1mm}
-
 \usepackage{url}
 \usepackage{hyperref}
 
-\bibliographystyle{JHEP}
-%\bibliographystyle{plain}
+\def\Journal#1#2#3#4{{#1} {#2} (#4) #3 }
+\def\NCA{{\em Nuovo Cimento} A}
+\def\PHYS{{\em Physica}}
+\def\NPA{{\em Nucl. Phys.} A}
+\def\MATH{{\em J. Math. Phys.}}
+\def\PRO{{\em Prog. Theor. Phys.}}
+\def\NPB{{\em Nucl. Phys.} B}
+\def\PLA{{\em Phys. Lett.} A}
+\def\PLB{{\em Phys. Lett.} B}
+\def\PLD{{\em Phys. Lett.} D}
+\def\PL{{\em Phys. Lett.}}
+\def\PRL{\em Phys. Rev. Lett.}
+\def\PREV{\em Phys. Rev.}
+\def\PREP{\em Phys. Rep.}
+\def\PRA{{\em Phys. Rev.} A}
+\def\PRD{{\em Phys. Rev.} D}
+\def\PRC{{\em Phys. Rev.} C}
+\def\PRB{{\em Phys. Rev.} B}
+\def\ZPC{{\em Z. Phys.} C}
+\def\ZPA{{\em Z. Phys.} A}
+\def\ANNP{\em Ann. Phys. (N.Y.)}
+\def\RMP{{\em Rev. Mod. Phys.}}
+\def\CHEM{{\em J. Chem. Phys.}}
+\def\INT{{\em Int. J. Mod. Phys.} E}
+\def\r{\vec r}
+\def\R{\vec R}
+\def\p{\vec p}
+\def\P{\vec P}
+\def\q{\vec q}
+\def\ss{\mbox{\boldmath $\sigma$}}
+\newcommand{\nn}{\nonumber}
+\topmargin-2.8cm
+\oddsidemargin-1cm
+\evensidemargin-1cm
+\textwidth18.5cm
+\textheight25.0cm
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{JHEP}
 
 \def\smallfrac#1#2{\hbox{$\frac{#1}{#2}$}}
 \newcommand{\be}{\begin{equation}}
