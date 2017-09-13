@@ -42,7 +42,7 @@ int main(int argc, char **argv)
   int const NrepPol=100;
   int nrep=0;
 
-  for(int ipol=1;ipol<2;ipol++){
+  for(int ipol=0;ipol<2;ipol++){
 
     // Set number of replicas
     if(ipol==0) nrep=NrepUnpol;
@@ -57,7 +57,6 @@ int main(int argc, char **argv)
     for(int irep=1;irep<=nrep;irep++){
       int idum=0;
       in1>>idum>> unp_mom_rep_xdp[irep];
-      cout<<irep<<" "<<unp_mom_rep_xdp[irep]<<endl;
       if(idum!=irep){
 	cout<<"Error when reading replica file"<<endl;
 	exit(-10);
@@ -73,7 +72,6 @@ int main(int argc, char **argv)
     for(int irep=1;irep<=nrep;irep++){
       int idum=0;
       in1>>idum>> unp_mom_rep_xup[irep];
-      cout<<irep<<" "<<unp_mom_rep_xup[irep]<<endl;
       if(idum!=irep){
 	cout<<"Error when reading replica file"<<endl;
 	exit(-10);
@@ -205,14 +203,12 @@ int main(int argc, char **argv)
   pdfname.push_back("xup");
   pdfname.push_back("xdp");
   pdfname.push_back("xsp");
-  pdfname.push_back("xupmdp");
 
   std::vector<std::string> titleY;
   titleY.push_back("g ( x, Q^{2} = 4 GeV^{2} ) ");
   titleY.push_back("u^{+} ( x, Q^{2} = 4 GeV^{2} ) ");
   titleY.push_back("d^{+} ( x, Q^{2} = 4 GeV^{2} ) ");
   titleY.push_back("s^{+} ( x, Q^{2} = 4 GeV^{2} ) ");
-  titleY.push_back("( u^{+}-d^{+} ) ( x, Q^{2} = 4 GeV^{2} ) ");
  
   double const xmin=1e-3;
   double const xmax=0.90;
@@ -221,9 +217,17 @@ int main(int argc, char **argv)
 
   std::vector<std::string> outfilename;
   std::vector<std::string> outfilename2;
-  for(unsigned i=0;i< pdfname.size();i++){
-    outfilename.push_back(pdfname.at(i)+"-lattice");
-    outfilename2.push_back(pdfname.at(i)+"-lattice-relerr");
+  if(ipol==0){
+    for(unsigned i=0;i< pdfname.size();i++){
+      outfilename.push_back(pdfname.at(i)+"-unpol-lattice");
+      outfilename2.push_back(pdfname.at(i)+"-unpol-lattice-relerr");
+    }
+  }
+  if(ipol==1){
+    for(unsigned i=0;i< pdfname.size();i++){
+      outfilename.push_back(pdfname.at(i)+"-pol-lattice");
+      outfilename2.push_back(pdfname.at(i)+"-pol-lattice-relerr");
+    }
   }
   
   // Define the PDF prior
@@ -569,12 +573,12 @@ int main(int argc, char **argv)
 	      // Specially relevant for the polarized case
 	      // Maybe show instead the absolute PDF uncertainty
 	      if(iPdf==0){
-		//cvLuxRel[iPdf]->SetPoint(ix, x[ix], 100*err[ix]/fabs( cv[ix]) );
-		cvLuxRel[iPdf]->SetPoint(ix, x[ix], err[ix] );
+		if(ipol==0)cvLuxRel[iPdf]->SetPoint(ix, x[ix], 100*err[ix]/fabs( cv[ix]) );
+		if(ipol==1)cvLuxRel[iPdf]->SetPoint(ix, x[ix], err[ix] );
 	      }
 	      if(iPdf==1){
-		//cvLuxRel[iPdf]->SetPoint(ix, x[ix], 100*err_rw[ix]/fabs( cv_rw[ix]) );
-		cvLuxRel[iPdf]->SetPoint(ix, x[ix], err_rw[ix] );
+		if(ipol==0)cvLuxRel[iPdf]->SetPoint(ix, x[ix], 100*err_rw[ix]/fabs( cv_rw[ix]) );
+		if(ipol==1)cvLuxRel[iPdf]->SetPoint(ix, x[ix], err_rw[ix] );
 	      }
 	    }
 	    
@@ -619,7 +623,8 @@ int main(int argc, char **argv)
 	  cvLuxRel[iPdf]->GetXaxis()->SetLabelSize(0.045);
 	  cvLuxRel[iPdf]->GetXaxis()->SetLimits(5e-3, 0.65);
 	  cvLuxRel[iPdf]->GetXaxis()->CenterTitle(true);
-	  cvLuxRel[iPdf]->GetYaxis()->SetTitle("Percentage PDF uncertainty");
+	  if(ipol==0)cvLuxRel[iPdf]->GetYaxis()->SetTitle("Percentage PDF uncertainty");
+	  if(ipol==1)cvLuxRel[iPdf]->GetYaxis()->SetTitle("Absolute PDF uncertainty");
 	  cvLuxRel[iPdf]->GetYaxis()->CenterTitle(true);
 	  if(ipol==0){
 	    if(l==0)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,10);	
@@ -631,11 +636,11 @@ int main(int argc, char **argv)
 	  if(ipol==1){
 	    // For percentage PDF uncertainty
 	    /*
-	    if(l==0)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,100);	
-	    if(l==1)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,30);
-	    if(l==2)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,100);
-	    if(l==3)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,350);
-	    if(l==4)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,20);
+	      if(l==0)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,100);	
+	      if(l==1)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,30);
+	      if(l==2)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,100);
+	      if(l==3)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,350);
+	      if(l==4)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,20);
 	    */
 	    // for absolute PDF uncertainty
 	    if(l==0)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,0.15);	
@@ -644,8 +649,8 @@ int main(int argc, char **argv)
 	    if(l==3)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,0.035);
 	    if(l==4)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,0.1);
 	  }
-	  cvLuxRel[iPdf]->GetYaxis()->SetTitleSize(0.04);
-	  cvLuxRel[iPdf]->GetYaxis()->SetLabelSize(0.03);
+	  cvLuxRel[iPdf]->GetYaxis()->SetTitleSize(0.043);
+	  cvLuxRel[iPdf]->GetYaxis()->SetLabelSize(0.034);
 	}
 
 	cout<<"Saving plot "<<endl;
