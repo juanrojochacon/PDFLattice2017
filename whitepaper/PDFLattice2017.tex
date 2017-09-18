@@ -172,14 +172,13 @@
 \def\bcirc{\raisebox{-1pt}{\scalebox{1.5}{\color{blue}$\circ$}}}
 \def\rsquare{{\raisebox{-1pt}{\color{red}$\blacksquare$}}}
 
-\def\Red{\color{red}}
-\def\Blue{\color{blue}}
+\newcommand{\Red}[1]{{\color{red}#1}}
+\newcommand{\Blue}[1]{{\color{blue}#1}}
 
 \newcommand{\tmop}[1]{\ensuremath{\operatorname{#1}}}
 \newcommand{\tmtextit}[1]{{\itshape{#1}}}
 \newcommand{\tmtextrm}[1]{{\rmfamily{#1}}}
 \newcommand{\tmtexttt}[1]{{\ttfamily{#1}}}
-
 
 \numberwithin{equation}{section}
 \numberwithin{figure}{section}
