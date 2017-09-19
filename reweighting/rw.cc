@@ -211,8 +211,9 @@ int main(int argc, char **argv)
   titleY.push_back("d^{+} ( x, Q^{2} = 4 GeV^{2} ) ");
   titleY.push_back("s^{+} ( x, Q^{2} = 4 GeV^{2} ) ");
  
-  double const xmin=1e-3;
-  double const xmax=0.90;
+  //double const xmin=1e-3;
+  double const xmin=1e-1;
+  double const xmax=0.95;
 
   int const nx=200;
 
@@ -257,10 +258,10 @@ int main(int argc, char **argv)
       c.push_back(new TCanvas());
       c[0]->SetTickx();
       c[0]->SetTicky();
-      c[0]->SetLogx();
+      //c[0]->SetLogx();
       
       std::vector<TLegend*> leg;
-      leg.push_back(new TLegend(0.11,0.65,0.49,0.89));
+      leg.push_back(new TLegend(0.50,0.11,0.89,0.42));
       leg[0]->SetLineStyle(1);
       leg[0]->SetBorderSize(1);
       leg[0]->SetFillColor(kWhite);
@@ -326,7 +327,9 @@ int main(int argc, char **argv)
 	total_latQCD_sysunc[2][4] = 0.01; // Delta u+ - Delta d+
 
       }
-            
+
+      double ref[nx]={0.0};
+      
       // Loop over the number of scenarios
       for(int i_scen=0;i_scen <n_scenarios;i_scen++ ){
 	
@@ -629,11 +632,15 @@ int main(int argc, char **argv)
 	      // Specially relevant for the polarized case
 	      // Maybe show instead the absolute PDF uncertainty
 	      if(iPdf==0){
-		if(ipol==0)cvLuxRel[iPdf]->SetPoint(ix, x[ix], 100*err[ix]/fabs( cv[ix]) );
+		if(ipol==0)cvLuxRel[iPdf]->SetPoint(ix, x[ix], (100*err[ix]/fabs( cv[ix]) )/ ( 100*err[ix]/fabs( cv[ix]) ) );
 		if(ipol==1)cvLuxRel[iPdf]->SetPoint(ix, x[ix], err[ix] );
+
 	      }
 	      if(iPdf==1){
-		if(ipol==0)cvLuxRel[iPdf]->SetPoint(ix, x[ix], 100*err_rw[ix]/fabs( cv_rw[ix]) );
+		if(ipol==0){
+		  cout<<ix<<" "<< ( 100*err_rw[ix]/fabs( cv_rw[ix])  )/( 100*err[ix]/fabs( cv[ix]) )  <<endl; 
+		  cvLuxRel[iPdf]->SetPoint(ix, x[ix], ( 100*err_rw[ix]/fabs( cv_rw[ix]) )/ ( 100*err[ix]/fabs( cv[ix]) )  );
+		}
 		if(ipol==1)cvLuxRel[iPdf]->SetPoint(ix, x[ix], err_rw[ix] );
 	      }
 	    }
@@ -677,17 +684,23 @@ int main(int argc, char **argv)
 	  cvLuxRel[iPdf]->GetXaxis()->SetTitleSize(0.05);
 	  cvLuxRel[iPdf]->GetXaxis()->SetTitleOffset(0.9);
 	  cvLuxRel[iPdf]->GetXaxis()->SetLabelSize(0.045);
-	  cvLuxRel[iPdf]->GetXaxis()->SetLimits(5e-3, 0.65);
+	  cvLuxRel[iPdf]->GetXaxis()->SetLimits(0.1, 0.80);
 	  cvLuxRel[iPdf]->GetXaxis()->CenterTitle(true);
-	  if(ipol==0)cvLuxRel[iPdf]->GetYaxis()->SetTitle("Percentage PDF uncertainty");
+	  if(ipol==0)cvLuxRel[iPdf]->GetYaxis()->SetTitle("PDF uncertainty (ratio to NNPDF3.1)");
 	  if(ipol==1)cvLuxRel[iPdf]->GetYaxis()->SetTitle("Absolute PDF uncertainty");
 	  cvLuxRel[iPdf]->GetYaxis()->CenterTitle(true);
 	  if(ipol==0){
-	    if(l==0)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,10);	
-	    if(l==1)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,5);
-	    if(l==2)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,8);
-	    if(l==3)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,35);
-	    if(l==4)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,35);
+	    // if(l==0)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,10);	
+	    //if(l==1)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,5);
+	    //if(l==2)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,8);
+	    //if(l==3)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,35);
+	    // if(l==4)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,35);
+
+	    if(l==0)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.6,1.06);	
+	    if(l==1)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.6,1.06);
+	    if(l==2)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.6,1.06);
+	    if(l==3)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.6,1.06);
+	    if(l==4)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.6,1.06);
 	  }
 	  if(ipol==1){
 	    // For percentage PDF uncertainty
@@ -737,7 +750,7 @@ int main(int argc, char **argv)
       // Save the files
       string filename= outfilename2[l]+".eps";
       c[0]->SaveAs(filename.c_str());
-      filename= outfilename2[l]+".pdf";
+      filename= outfilename2[l]+"-largex.pdf";
       c[0]->SaveAs(filename.c_str());
       
       
