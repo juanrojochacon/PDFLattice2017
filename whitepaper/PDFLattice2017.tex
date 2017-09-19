@@ -16,17 +16,18 @@
 \usepackage{amsmath}
 \usepackage{dsfont}
 \usepackage{multirow}
-\usepackage{url,hyperref}
+\usepackage{url}
 \usepackage{color}
 \usepackage{verbatim}
 \usepackage{rotating}
-\usepackage{subfig}
+\usepackage{subfig,cite}
 \usepackage{colortbl}
 \usepackage[]{xcolor}
 \usepackage{siunitx} % For correctly displayed SI units.
 \sisetup{range-phrase = \text{--}} % For correctly displayed number ranges
 \usepackage{url}
-\usepackage{hyperref}
+\usepackage[colorlinks, citecolor=blue,anchorcolor=blue,menucolor=blue, 
+linkcolor=blue,filecolor=blue,runcolor=blue,urlcolor=blue,frenchlinks=blue]{hyperref}
 
 
 \def\Journal#1#2#3#4{{#1} {#2} (#4) #3 }
@@ -175,7 +176,7 @@
 \def\rsquare{{\raisebox{-1pt}{\color{red}$\blacksquare$}}}
 
 \newcommand{\Red}[1]{{\color{red}#1}}
-\newcommand{\Blue}[1]{{\color{blue}#1}}
+\newcommand{\Blue}[1]{{\color{violet}#1}}
 
 \newcommand{\tmop}[1]{\ensuremath{\operatorname{#1}}}
 \newcommand{\tmtextit}[1]{{\itshape{#1}}}

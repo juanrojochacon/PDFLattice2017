@@ -1,10 +1,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Improving PDF Fits with lattice calculations}
+\section{Improving PDF Fits with lattice QCD calculations}
 \label{sec:projections}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In this section we aim to quantify the impact of
-future lattice-QCD calculations
+In this section we aim to provide an initial estimate of the potential  impact of
+present and future lattice-QCD calculations
 in global unpolarised and polarised PDF fits.
 %
 This study will be carried out by means of the publicly available
@@ -12,45 +12,71 @@ Bayesian reweighting
 method~\cite{Ball:2011gg,Ball:2010gb} applied to the
 NNPDF3.1 NNLO an NNPDFpol1.1 sets.
 %
-We emphasize that the qualitative results that are found here
+We emphasize however that the qualitative results that are found here
 should apply as well to other PDF sets, for example
 if the Hessian profiling method~\cite{Camarda:2015zba} was used to assess the
 impact of the same lattice calculations into a Hessian sets.
+%
+Both approximate methods allow to quantify the impact of new measurements
+(or of future measurements, if pseudo-data is used) on a PDF set without
+having to redo the global analysis again.
 
-For simplicity, we will restrict here ourselves to study the
-impact of a subset of all possible moments - in particular,
+For simplicity, we will restrict  ourselves here to study the
+impact of a subset of the moments that can be
+evaluated using lattice QCD.
+%
+In particular,
 we will focus on those that can be currently calculated
 with the smallest uncertainties, as discussed in
 Sect.~\ref{sec:benchmarking}.
 %
-We do not consider other of the moments discussed there
-since these are typically affected by lattice QCD uncertainties.
+We do not consider other of the moments discussed in
+Sect.~\ref{Sec:IntroLQCD} and Appendix~\ref{sec:LQCDtables}
+since these are typically affected by larger systematic uncertainties.
 %
-Likewise, we don't consider pseudo-data based on $x$-space
+Likewise, we won't consider  in this exercise pseudo-data based on $x$-space
 lattice QCD calculations, such as those from the quasi-PDF approach,
 since as shown in Sect.~\ref{sec:xdependence}, despite the rapid
 recent progress, existing calculations are still far to the
 phenomenological PDFs.
 %
-Therefore, we will consider in this analysis the following
-unpolarized moments: $\la x\ra_{u^+}$,
-$\la x\ra_{d^+}$,
-$\la x\ra_{s^+}$,
-$\la x\ra_{g}$, and
-$\la x\ra_{u^+-d^+}$.
-%
-An from the polarized side, we will include the
-following five moments:
-$\la 1\ra_{\Delta u^+}$,
-$\la 1\ra_{\Delta d^+}$,
-$\la 1\ra_{\Delta s^+}$,
-$\la x\ra_{\Delta u^--\Delta d^-}$, and finally
-$\la 1\ra_{\Delta u^+ - \Delta d^+}$.
-%
-See Appendix~\ref{app:notation} for their
-explicit definitions.
+We leave for future work quantifying the impact of  $x$-space
+lattice QCD calculations of PDFs in the global analysis.
 
-To be specific, we will consider in these exercise three
+Taking into account
+these considerations, we will consider in this analysis the following
+moments.
+%
+For the unpolarized case, we will use
+\be
+  \la x\ra_{u^+}\, , \quad
+\la x\ra_{d^+}\, , \quad
+\la x\ra_{s^+}\, , \quad
+\la x\ra_{g}\, , \quad {\rm and} \quad
+\la x\ra_{u^+-d^+} \, ,
+\ee
+while for the polarized side, we will include instead
+the following five moments:
+\be
+\la 1\ra_{\Delta u^+}\, , \quad
+\la 1\ra_{\Delta d^+}\, , \quad
+\la 1\ra_{\Delta s^+}\, , \quad
+\la x\ra_{\Delta u^--\Delta d^-}\, , \quad {\rm and} \quad
+\la 1\ra_{\Delta u^+ - \Delta d^+} \, .
+\ee
+Recall that Appendix~\ref{app:notation} contains the
+explicit definitions and conventions used for these moments.
+%
+Therefore, we see that for the unpolarized case we include
+the second moments (momentum fractions) of $q^+$ (with $q=u,d,s$),
+of the gluon, and of the isoscalar combination $u^+-d^+$.
+%
+In the polarized case instead, we include the first moments (which
+contribute to the proton spin content) of $\Delta q^+$ (with $q=u,d,s$)
+and of the isoscalar combination $\Delta u^+-\Delta d^+$, as well as
+the second moment of $\Delta u^- - \Delta d^-$.
+
+Moreover, we will consider in these exercise three
 different scenarios, which we denote
 as Scenario A, B, and C, respectively, for the total
 uncertainty than could be associated to future lattice
