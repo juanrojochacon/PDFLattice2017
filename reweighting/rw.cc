@@ -42,6 +42,7 @@ int main(int argc, char **argv)
   int const NrepPol=100;
   int nrep=0;
 
+  // Start loop between polarized and unpolarized
   for(int ipol=0;ipol<2;ipol++){
 
     // Set number of replicas
@@ -239,6 +240,12 @@ int main(int argc, char **argv)
   // Set low verbosity as usual
   LHAPDF::setVerbosity(0);
 
+  // Open file to save information on the effective number of replicas
+  ofstream neffout;
+  if(ipol==0) neffout.open("neff_unpol.res");
+  if(ipol==1) neffout.open("neff_pol.res");
+
+ 
   // Loop over PDf flavors
   for (size_t l = 0; l < pdfname.size(); l++)
     {
@@ -265,62 +272,61 @@ int main(int argc, char **argv)
       // Conservative: 5% total systematics
       // Optimistic: 1% total systematics
       int const n_scenarios=3;
-      int const n_mon=5;
+      int const n_mom=5;
       double total_latQCD_sysunc[n_scenarios][n_mom]={{0.0}};
 
       // Unpolarized moments
       if(ipol==0){
 
-	// Scenario A (more conservative)
-	total_latQCD_sysunc[0][0] = 0.20; // u+
-	total_latQCD_sysunc[0][1] = 0.30; // d+
-	total_latQCD_sysunc[0][2] = 0.50; // s+
-	total_latQCD_sysunc[0][3] = 0.15; // g+
-	total_latQCD_sysunc[0][4] = 0.60; // u+-d+
+	// a tiny bit optimistoc
+	total_latQCD_sysunc[0][0] = 0.03; // u+
+	total_latQCD_sysunc[0][1] = 0.028; // d+
+	total_latQCD_sysunc[0][2] = 0.048; // s+
+	total_latQCD_sysunc[0][3] = 0.028; // g+
+	total_latQCD_sysunc[0][4] = 0.05; // u+-d+
 
-	// Scenario B (moderately optimistic)
-	total_latQCD_sysunc[1][0] = 0.10; // u+
-	total_latQCD_sysunc[1][1] = 0.15; // d+
-	total_latQCD_sysunc[1][2] = 0.25; // s+
-	total_latQCD_sysunc[1][3] = 0.07; // g+
-	total_latQCD_sysunc[1][4] = 0.30; // u+-d+
+	// A bit less optimistic
+	total_latQCD_sysunc[1][0] = 0.02; // u+
+	total_latQCD_sysunc[1][1] = 0.02; // d+
+	total_latQCD_sysunc[1][2] = 0.04; // s+
+	total_latQCD_sysunc[1][3] = 0.02; // g+
+	total_latQCD_sysunc[1][4] = 0.04; // u+-d+
 
-	// Scenario C (very optimistic)
-	total_latQCD_sysunc[2][0] = 0.05; // u+
-	total_latQCD_sysunc[2][1] = 0.07; // d+
-	total_latQCD_sysunc[2][2] = 0.12; // s+
-	total_latQCD_sysunc[2][3] = 0.03; // g+
-	total_latQCD_sysunc[2][4] = 0.15; // u+-d+
-
+	// Very optimic
+	total_latQCD_sysunc[2][0] = 0.01; // u+
+	total_latQCD_sysunc[2][1] = 0.01; // d+
+	total_latQCD_sysunc[2][2] = 0.025; // s+
+	total_latQCD_sysunc[2][3] = 0.01; // g+
+	total_latQCD_sysunc[2][4] = 0.025; // u+-d+
+	
       }
 
       // Polarized moments
       if(ipol==1){
 
 	// Scenario A (more conservative)
-	total_latQCD_sysunc[0][0] = 0.20; // Delta u+
-	total_latQCD_sysunc[0][1] = 0.30; // Delta d+
-	total_latQCD_sysunc[0][2] = 0.50; // Delta s+
-	total_latQCD_sysunc[0][3] = 0.15; // Delta u- - Delta d-
-	total_latQCD_sysunc[0][4] = 0.60; // Delta u+ - Delta d+
+	total_latQCD_sysunc[0][0] = 0.05; // Delta u+
+	total_latQCD_sysunc[0][1] = 0.10; // Delta d+
+	total_latQCD_sysunc[0][2] = 0.40; // Delta s+
+	total_latQCD_sysunc[0][3] = 0.70; // Delta u- - Delta d-
+	total_latQCD_sysunc[0][4] = 0.05; // Delta u+ - Delta d+
 
 	// Scenario B (moderately optimistic)
-	total_latQCD_sysunc[1][0] = 0.10; // Delta u+
-	total_latQCD_sysunc[1][1] = 0.15; // Delta d+
-	total_latQCD_sysunc[1][2] = 0.25; // Delta s+
-	total_latQCD_sysunc[1][3] = 0.07; // Delta u- - Delta d-
-	total_latQCD_sysunc[1][4] = 0.30; // Delta u+ - Delta d+
+	total_latQCD_sysunc[1][0] = 0.025; // Delta u+
+	total_latQCD_sysunc[1][1] = 0.05; // Delta d+
+	total_latQCD_sysunc[1][2] = 0.50; // Delta s+
+	total_latQCD_sysunc[1][3] = 0.30; // Delta u- - Delta d-
+	total_latQCD_sysunc[1][4] = 0.025; // Delta u+ - Delta d+
 
 	// Scenario C (very optimistic)
-	total_latQCD_sysunc[2][0] = 0.05; // Delta u+
-	total_latQCD_sysunc[2][1] = 0.07; // Delta d+
-	total_latQCD_sysunc[2][2] = 0.12; // Delta s+
-	total_latQCD_sysunc[2][3] = 0.03; // Delta u- - Delta d-
-	total_latQCD_sysunc[2][4] = 0.15; // Delta u+ - Delta d+
+	total_latQCD_sysunc[2][0] = 0.01; // Delta u+
+	total_latQCD_sysunc[2][1] = 0.02; // Delta d+
+	total_latQCD_sysunc[2][2] = 0.20; // Delta s+
+	total_latQCD_sysunc[2][3] = 0.15; // Delta u- - Delta d-
+	total_latQCD_sysunc[2][4] = 0.01; // Delta u+ - Delta d+
 
       }
-      
-      
+            
       // Loop over the number of scenarios
       for(int i_scen=0;i_scen <n_scenarios;i_scen++ ){
 	
@@ -354,6 +360,7 @@ int main(int argc, char **argv)
 	  chi2[irep]/=ndatfit;
 	  //cout<<irep<<" "<<chi2[irep]<<endl;
 	}
+	//exit(-10);
 	
 	// Compute the weights
 	double weights[NrepUnpol+1]={0.0};
@@ -393,10 +400,40 @@ int main(int argc, char **argv)
 	}
 	double const neff=exp(shannon);
 	std::cout<<"Effective number of replicas = "<<neff<<"\n "<<std::endl;
+
+	if(l==0){
+	  neffout << i_scen << " \t "<< neff<<endl;
+	}
 	
 	// ******************************************************
 	// Now compute the reweighted moments
 	// ******************************************************
+
+	// -- xup -------------------------------------------------------
+	
+	if(ipol==0){
+	  cout<<"\nOriginal Moment: \\int_0^1 x * ( u(x,Q) + ubar(x,Q) )"<<endl;
+	}
+	if(ipol==1){
+	  cout<<"\nOriginal Moment: \\int_0^1 * ( Delta_u(x,Q) + Delta_ubar(x,Q) )"<<endl;
+	}
+	cout<<"Mean +- Std = "<<unp_mom_xup_mean<<"  "<<unp_mom_xup_std<<
+	  "  ( "<<100*unp_mom_xup_std/unp_mom_xup_mean<<" % )"<<endl;
+	
+	cout<<"Reweighted Moment: "<<endl;
+	
+	// Compute mean and variance
+	double unp_mom_xup_mean_rw=0;
+	double unp_mom_xup_std_rw=0;
+	
+	for(int irep=1;irep<=nrep;irep++){
+	  unp_mom_xup_mean_rw+=weights[irep]*unp_mom_rep_xup[irep]/nrep;
+	  unp_mom_xup_std_rw+=weights[irep]*pow(unp_mom_rep_xup[irep],2.0)/nrep;
+	}
+	unp_mom_xup_std_rw=pow(unp_mom_xup_std_rw - pow(unp_mom_xup_mean_rw,2.0),0.5);
+	
+	cout<<"Mean +- Std = "<<unp_mom_xup_mean_rw<<"  "<<unp_mom_xup_std_rw<<
+	  "  ( "<<100*unp_mom_xup_std_rw/unp_mom_xup_mean_rw<<" % )"<<endl;
 	
 	// -- xdp -------------------------------------------------------
 	
@@ -424,31 +461,7 @@ int main(int argc, char **argv)
 	cout<<"Mean +- Std = "<<unp_mom_xdp_mean_rw<<"  "<<unp_mom_xdp_std_rw<<
 	  "  ( "<<100*unp_mom_xdp_std_rw/unp_mom_xdp_mean_rw<<" % )"<<endl;
 
-	// -- xup -------------------------------------------------------
-	
-	if(ipol==0){
-	  cout<<"\nOriginal Moment: \\int_0^1 x * ( u(x,Q) + ubar(x,Q) )"<<endl;
-	}
-	if(ipol==1){
-	  cout<<"\nOriginal Moment: \\int_0^1 * ( Delta_u(x,Q) + Delta_ubar(x,Q) )"<<endl;
-	}
-	cout<<"Mean +- Std = "<<unp_mom_xup_mean<<"  "<<unp_mom_xup_std<<
-	  "  ( "<<100*unp_mom_xup_std/unp_mom_xup_mean<<" % )"<<endl;
-	
-	cout<<"\n Reweighted Moment: "<<endl;
-	
-	// Compute mean and variance
-	double unp_mom_xup_mean_rw=0;
-	double unp_mom_xup_std_rw=0;
-	
-	for(int irep=1;irep<=nrep;irep++){
-	  unp_mom_xup_mean_rw+=weights[irep]*unp_mom_rep_xup[irep]/nrep;
-	  unp_mom_xup_std_rw+=weights[irep]*pow(unp_mom_rep_xup[irep],2.0)/nrep;
-	}
-	unp_mom_xup_std_rw=pow(unp_mom_xup_std_rw - pow(unp_mom_xup_mean_rw,2.0),0.5);
-	
-	cout<<"Mean +- Std = "<<unp_mom_xup_mean_rw<<"  "<<unp_mom_xup_std_rw<<
-	  "  ( "<<100*unp_mom_xup_std_rw/unp_mom_xup_mean_rw<<" % )"<<endl;
+
 	
 	// -- xsp -------------------------------------------------------
 	
@@ -629,18 +642,18 @@ int main(int argc, char **argv)
 	
 	for(int iPdf=0;iPdf<2;iPdf++){
 	  if(ipol==0){
-	    if(l==0)cvLuxRel[iPdf]->SetTitle("#delta( g ) for Q^{2}=4 GeV^{2}, NNPDF3.1 NNLO");
-	    if(l==1)cvLuxRel[iPdf]->SetTitle("#delta( u^{+} ) ) for Q^{2}=4 GeV^{2}, NNPDF3.1 NNLO");
-	    if(l==2)cvLuxRel[iPdf]->SetTitle("#delta( d^{+} ) for Q^{2}=4 GeV^{2}, NNPDF3.1 NNLO");
-	    if(l==3)cvLuxRel[iPdf]->SetTitle("#delta( s^{+} ) for Q^{2}=4 GeV^{2}, NNPDF3.1 NNLO");
-	    if(l==4)cvLuxRel[iPdf]->SetTitle("#delta( u^{+}-d^{+} ) for Q^{2}=4 GeV^{2}, NNPDF3.1 NNLO");
+	    if(l==0)cvLuxRel[iPdf]->SetTitle("#delta( g ) @ Q^{2}=4 GeV^{2}, NNPDF3.1 NNLO");
+	    if(l==1)cvLuxRel[iPdf]->SetTitle("#delta( u^{+} ) @ Q^{2}=4 GeV^{2}, NNPDF3.1 NNLO");
+	    if(l==2)cvLuxRel[iPdf]->SetTitle("#delta( d^{+} ) @ Q^{2}=4 GeV^{2}, NNPDF3.1 NNLO");
+	    if(l==3)cvLuxRel[iPdf]->SetTitle("#delta( s^{+} ) @ Q^{2}=4 GeV^{2}, NNPDF3.1 NNLO");
+	    if(l==4)cvLuxRel[iPdf]->SetTitle("#delta( u^{+}-d^{+} ) @ Q^{2}=4 GeV^{2}, NNPDF3.1 NNLO");
 	  }
 	  if(ipol==1){
-	    if(l==0)cvLuxRel[iPdf]->SetTitle("#delta( #Delta g ) for Q^{2}=4 GeV^{2}, NNPDFpol1.1");
-	    if(l==1)cvLuxRel[iPdf]->SetTitle("#delta( #Delta u^{+} ) ) for Q^{2}=4 GeV^{2}, NNPDFpol1.1");
-	    if(l==2)cvLuxRel[iPdf]->SetTitle("#delta( #Delta d^{+} ) for Q^{2}=4 GeV^{2}, NNPDFpol1.1");
-	    if(l==3)cvLuxRel[iPdf]->SetTitle("#delta( #Delta s^{+} ) for Q^{2}=4 GeV^{2}, NNPDFpol1.1");
-	    if(l==4)cvLuxRel[iPdf]->SetTitle("#delta( #Delta u^{+} - #Delta d^{+} ) for Q^{2}=4 GeV^{2}, NNPDFpol1.1");
+	    if(l==0)cvLuxRel[iPdf]->SetTitle("#delta( #Delta g ) @ Q^{2}=4 GeV^{2}, NNPDFpol1.1");
+	    if(l==1)cvLuxRel[iPdf]->SetTitle("#delta( #Delta u^{+} ) ) @ Q^{2}=4 GeV^{2}, NNPDFpol1.1");
+	    if(l==2)cvLuxRel[iPdf]->SetTitle("#delta( #Delta d^{+} ) @ Q^{2}=4 GeV^{2}, NNPDFpol1.1");
+	    if(l==3)cvLuxRel[iPdf]->SetTitle("#delta( #Delta s^{+} ) @ Q^{2}=4 GeV^{2}, NNPDFpol1.1");
+	    if(l==4)cvLuxRel[iPdf]->SetTitle("#delta( #Delta u^{+} - #Delta d^{+} ) @ Q^{2}=4 GeV^{2}, NNPDFpol1.1");
 	  }
 	  cvLuxRel[iPdf]->SetLineWidth(4);
 
@@ -662,7 +675,7 @@ int main(int argc, char **argv)
 	  if(iPdf==0)cvLuxRel[iPdf]->SetLineStyle(1);
 	  cvLuxRel[iPdf]->GetXaxis()->SetTitle("       x  ");
 	  cvLuxRel[iPdf]->GetXaxis()->SetTitleSize(0.05);
-	  cvLuxRel[iPdf]->GetXaxis()->SetTitleOffset(1.1);
+	  cvLuxRel[iPdf]->GetXaxis()->SetTitleOffset(0.9);
 	  cvLuxRel[iPdf]->GetXaxis()->SetLabelSize(0.045);
 	  cvLuxRel[iPdf]->GetXaxis()->SetLimits(5e-3, 0.65);
 	  cvLuxRel[iPdf]->GetXaxis()->CenterTitle(true);
@@ -671,8 +684,8 @@ int main(int argc, char **argv)
 	  cvLuxRel[iPdf]->GetYaxis()->CenterTitle(true);
 	  if(ipol==0){
 	    if(l==0)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,10);	
-	    if(l==1)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,10);
-	    if(l==2)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,10);
+	    if(l==1)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,5);
+	    if(l==2)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,8);
 	    if(l==3)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,35);
 	    if(l==4)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,35);
 	  }
@@ -686,18 +699,16 @@ int main(int argc, char **argv)
 	      if(l==4)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,20);
 	    */
 	    // for absolute PDF uncertainty
-	    if(l==0)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,0.15);	
-	    if(l==1)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,0.035);
-	    if(l==2)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,0.1);
+	    if(l==0)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,0.20);	
+	    if(l==1)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,0.025);
+	    if(l==2)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,0.03);
 	    if(l==3)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,0.035);
 	    if(l==4)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,0.1);
 	  }
-	  cvLuxRel[iPdf]->GetYaxis()->SetTitleSize(0.043);
+	  cvLuxRel[iPdf]->GetYaxis()->SetTitleSize(0.044);
+	  cvLuxRel[iPdf]->GetYaxis()->SetTitleOffset(0.9);
 	  cvLuxRel[iPdf]->GetYaxis()->SetLabelSize(0.034);
 	}
-
-	cout<<"Saving plot "<<endl;
-	cout<<"i_scen, l = "<<i_scen<<" "<<l<<endl;
 	
 	int iPdf=0;
 	c[0]->cd();
@@ -709,14 +720,14 @@ int main(int argc, char **argv)
 	
 	if(i_scen==0)leg[0]->AddEntry(cvLuxRel[0], "no LQCD moms","L");
 	if(ipol==0){
-	  if(i_scen==0)leg[0]->AddEntry(cvLuxRel[1], "with LQCD moms, #delta_{L} = 1%","L");
-	  if(i_scen==1)leg[0]->AddEntry(cvLuxRel[1], "with LQCD moms, #delta_{L} = 3%","L");
-	  if(i_scen==2)leg[0]->AddEntry(cvLuxRel[1], "with LQCD moms, #delta_{L} = 5%","L");
+	  if(i_scen==0)leg[0]->AddEntry(cvLuxRel[1], "w LattQCD moms, Scen A","L");
+	  if(i_scen==1)leg[0]->AddEntry(cvLuxRel[1], "w LattQCD moms, Scen B","L");
+	  if(i_scen==2)leg[0]->AddEntry(cvLuxRel[1], "w LattQCD moms, Scen C","L");
 	}
 	if(ipol==1){
-	  if(i_scen==0)leg[0]->AddEntry(cvLuxRel[1], "with LQCD moms, #delta_{L} = 10%","L");
-	  if(i_scen==1)leg[0]->AddEntry(cvLuxRel[1], "with LQCD moms, #delta_{L} = 20%","L");
-	  if(i_scen==2)leg[0]->AddEntry(cvLuxRel[1], "with LQCD moms, #delta_{L} = 30%","L");
+	  if(i_scen==0)leg[0]->AddEntry(cvLuxRel[1], "w LattQCD moms, Scen A","L");
+	  if(i_scen==1)leg[0]->AddEntry(cvLuxRel[1], "w LattQCD moms, Scen B","L");
+	  if(i_scen==2)leg[0]->AddEntry(cvLuxRel[1], "w LattQCD moms, Scen C","L");
 	}
 	  
       }//  End loop over scenearios
@@ -731,6 +742,8 @@ int main(int argc, char **argv)
       
       
     } //End loop over PDF flavours
+
+  neffout.close();
 
   } // End loop over unpolarized vs polarized
 

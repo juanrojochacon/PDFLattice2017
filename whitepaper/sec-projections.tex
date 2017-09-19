@@ -125,9 +125,9 @@ $\la x\ra_{g}$  &   $\la x\ra_{u^+-d^+}$  \\
     \hline
     Current  & $\sim 16\%$  &  $\sim 30\%$
     & $\sim 45\%$  & $\sim 13\%$  &  $\sim 60\%$ \\
-    A   & 20\%  & 30\% &  50\% &  15\% &  60\% \\
- B   & 10\%  & 15\% &  25\% &  7\% &  30\%  \\
-  C   & 5\%  & 7\% &  12\% &  3\% &  15\%  \\
+    A   & 3\%  & 3\% &  5\% &  3\% &  5\% \\
+ B   & 2\%  & 2\% &  4\% &  2\% &  4\%  \\
+  C   & 1\%  & 1\% &  3\% &  1\% &  3\%  \\
     \hline
   \end{tabular}\vspace{0.7cm}
    \begin{tabular}{c||ccccc}
@@ -265,17 +265,52 @@ $\la x\ra_{\Delta u^--\Delta d^-}$, and
   This procedure emulates the
   impact that adding these lattice-QCD pseudo-data in a complete PDF fit would have.
   %
-  One important caveat is that, as discussed below, the procedure
-  is only reliable provided the 
-  effective number of replicas $N_{\rm eff}$ that survive the reweighting
-  procedure is not too small.
-  \end{itemize}
+  For instance, after the reweighting the mean value of
+  the PDF moments should be computed as
+   \be
+  \label{eq:pseudodatadef1}
+  \mathcal{F}_i^{\rm (rw)} \equiv \frac{1}{N_{\rm rep}}\sum_{k=1}^{N_{\rm rep}}\omega_k
+  \mathcal{F}_i^{\rm (k)} \, , \quad i=1,\ldots,N_{\rm mom} \, ,
+  \ee
+  and same for the associated uncertainties.
+\end{itemize}
 
+One limitation of the reweighting procedure just
+outlined is that it can be considered as fully 
+ reliable provided only the 
+  effective number of replicas $N_{\rm eff}$ that survive the reweighting
+  procedure (which is a measure of the amount
+  of information left) is not too small.
+  %
+  This effective number of replicas
+    is quantified in terms of the Shannon entropy from information
+    theory, namely
+    \be
+    \label{eq:effnrep}
+    N_{\rm eff}\equiv \exp\lc \frac{1}{N_{\rm rep}}\omega_k
+    \log \lp N_{\rm rep}/\omega_k\rp\rc \, .
+    \ee
+    Finding that $N_{\rm eff}\ll N_{\rm rep}$ means that the pseudo-data
+    has a large impact on the fit, potentially leading to a large
+    reduction of the PDF uncertainties.
+    %
+    But if the effective number of replicas becomes too
+    small, say $N_{\rm eff}\lsim 25$, then the results
+    become unreliable since they are affected by large
+    statistical fluctuations.
+
+    Therefore, before considering the effects
+    of the lattice-QCD pseudo-data at the PDF
+    level, we need to ensure that the
+    three scenarios defined
+    in Table~\ref{tab:scenarios} still lead
+    to values of $N_{\rm eff}$ large enough for
+    the reweighting procedure to be reliable.
+  %
 In Table~\ref{tab:neff} we indicate the effective number of replicas
-    $N_{\rm eff}$ remaining when the pseudo-data
+    $N_{\rm eff}$, Eq.~(\ref{eq:effnrep}), remaining when the pseudo-data
     on the PDF moments is included in the global
-    fit according to the three scenarios outlined
-    in Table~\ref{tab:scenarios}.
+    fit according to the 
     %
     For completeness, we also indicate here the original number
     of replicas $N_{\rm rep}$ for the original
@@ -290,14 +325,6 @@ In Table~\ref{tab:neff} we indicate the effective number of replicas
     Scenario A, the effective number of replicas is around five (three)
     smaller than the starting number of replicas.
 
-    The effective number of replicas
-    is defined in terms of the Shannon entropy from information
-    theory, namely
-    \be
-    N_{\rm eff}\equiv \exp\lc \frac{1}{N_{\rm rep}}\omega_k
-    \log \lp N_{\rm rep}/\omega_k\rp\rc \, .
-    \ee
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[t]
   \centering
@@ -306,15 +333,15 @@ In Table~\ref{tab:neff} we indicate the effective number of replicas
     &  NNPDF3.1 NNLO  &  NNPDFpol1.1 \\
     \hline
     \hline
-    $N_{\rm rep}$   &   1000 &  100   \\
+    $N_{\rm rep}$ original   &   1000 &  100   \\
     \hline
-    Scenario A: $N_{\rm eff}$    &   211  &  35   \\
-    Scenario B: $N_{\rm eff}$    &   670   &   54  \\
-    Scenario C: $N_{\rm eff}$    &   680  &   58  \\
+     $N_{\rm eff}$ Scenario A    &   740  &  72   \\
+     $N_{\rm eff}$ Scenario B    &   750   &   59  \\
+     $N_{\rm eff}$ Scenario C   &   510  &   20  \\
     \hline
   \end{tabular}
   \caption{\small The effective number of replicas
-    $N_{\rm eff}$ remaining when the pseudo-data
+    $N_{\rm eff}$, Eq.~(\ref{eq:effnrep}), remaining when the pseudo-data
     on the PDF moments is included in the global
     fit according to the scenarios outlined
     in Table~\ref{tab:scenarios}.
