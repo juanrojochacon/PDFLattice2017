@@ -76,42 +76,50 @@ contribute to the proton spin content) of $\Delta q^+$ (with $q=u,d,s$)
 and of the isoscalar combination $\Delta u^+-\Delta d^+$, as well as
 the second moment of $\Delta u^- - \Delta d^-$.
 
-Moreover, we will consider in the present exercise three
+In the present exercise we will consider three
 different scenarios, which we denote
-as Scenario A, B, and C, respectively, for the total systematic
+as Scenario A, B, and C respectively, for the total systematic
 uncertainty than we associate to lattice
 QCD calculations of PDF moments.
 %
 In Table~\ref{tab:scenarios} we summarize the
-values assumed of total uncertainty
-    in the lattice QCD calculation, $\delta_L$, for each
+values assumed for this total uncertainty
+    of the lattice QCD calculation, denoted by $\delta_L$, for each
     of the various unpolarized and polarized PDF moments that enter
     this analysis.
     %
-    First of all, scenario A assumes that the uncertainties $\delta_L$
-    are on the ball-park of the current ones, taking as
-    representative values  those from the
+    We emphasize that here, while trying to be reasonably
+    realistic, we do not aim to associate a given scenario
+    within a specific time-scale for the calculation.
+    %
+    Our results  merely provide an illustrative guidance about the potential
+    constraining power of existing and future lattice QCD calculations
+    of PDF  moments in the context
+    of a global analysis.
+    
+    Specifically, as indicated
+    in Table~\ref{tab:scenarios}, scenario A assumes that the uncertainties $\delta_L$
+    for the lattice QCD calculations
+    are on same the ball-park of the current ones, taking as
+    representative values for the latter  those from the
     state-of-the-art lattice QCD calculations
     selected for the benchmarking exercise of Sect.~\ref{sec:benchmarking},
     and summarized in Tables~\ref{tab:BMunp} and~\ref{tab:BMpol}.
     %
     Then scenarios B and C represent two possible optimistic scenarios for the
-    future improvement of these systematic uncertainties.
+    future improvement of these systematic uncertainties, where these are decreased
+    by roughly a factor 2 and a factor 4 with respect current values.
     %
-    We emphasize that, while we try to be reasonably
-    realistic, we do not aim here to classify a given scenario
-    as more or less feasible within a given time scale:
-    the results here are merely illustrative of the possible
-    constraining power of PDF calculations in the context
-    of a global PDF analysis.
-
+    Moreover, we emphasize that the generalization of these projections to other conceivable scenarios
+    is straightforward and can be obtained from the authors upon request.
+ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[t]
   \centering
   \renewcommand{\arraystretch}{1.3} 
   \begin{tabular}{c||ccccc}
     \hline
-    Scenario &  \multicolumn{5}{c}{$\delta_L$ for unpolarized moments}   \\
+    Scenario &  \multicolumn{5}{c}{$\delta_L^{(i)}$ for unpolarized moments}   \\
 &    $\la x\ra_{u^+}$  &   $\la x\ra_{d^+}$   &  $\la x\ra_{s^+}$  &
 $\la x\ra_{g}$  &   $\la x\ra_{u^+-d^+}$  \\
     \hline
@@ -125,7 +133,7 @@ $\la x\ra_{g}$  &   $\la x\ra_{u^+-d^+}$  \\
    \begin{tabular}{c||ccccc}
     \hline
     Scenario   &
-    \multicolumn{5}{c}{$\delta_L$ for polarized moments} \\ 
+    \multicolumn{5}{c}{$\delta_L^{(i)}$ for polarized moments} \\ 
 & $\la 1\ra_{\Delta u^+}$  & $\la 1\ra_{\Delta d^+}$  & $\la 1\ra_{\Delta s^+}$
 &  $\la x\ra_{\Delta u^--\Delta d^-}$  &  $\la 1\ra_{\Delta u^+ - \Delta d^+}$\\
     \hline
@@ -160,13 +168,17 @@ $\la x\ra_{g}$  &   $\la x\ra_{u^+-d^+}$  \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The procedure followed to quantify the impact of future
-lattice QCD calculations of these
-PDF moments is the same in the case of the unpolarized
+lattice QCD calculations
+in PDF fits  (for the three scenarios of Table~\ref{tab:scenarios})
+is common for unpolarized
 and polarized global analyses.
-We briefly describe it here:
+%
+We briefly describe this procedure here,
+and refer to~\cite{Ball:2011gg,Ball:2010gb} for
+additional details.
 \begin{itemize}
 \item First of all, we generate pseudo-data for the lattice QCD calculation
-  of the PDF moments:$\la x\ra_{u^+}$,
+  of the PDF moments used in this exercise, namely $\la x\ra_{u^+}$,
 $\la x\ra_{d^+}$,
 $\la x\ra_{s^+}$,
 $\la x\ra_{g}$, and
@@ -176,19 +188,62 @@ $\la 1\ra_{\Delta d^+}$,
 $\la 1\ra_{\Delta s^+}$,
 $\la x\ra_{\Delta u^--\Delta d^-}$, and
   $\la 1\ra_{\Delta u^+ - \Delta d^+}$ for the polarized case.
-\item This pseudo-data is constructed by taking the central values from
-  the corresponding NNPDF fits (NNPDF3.1NNLO for the unpolarized case, and NNPDFpol1.1NLO
-  for the polarized one). That is, we assume for simplicity that the central value
-  of such future lattice calculations would coincide with those of the global fit.
-\item The percentage uncertainty in the pseudo data is taken to be that indicated in
-  Table~\ref{tab:scenarios} for each of the three scenarios.
-\item Using these central values and total uncertainties of the pseudo-data, we compute
+  %
+  We denote generically these moments by $\mathcal{F}_i$.
+\item This pseudo-data, denoted by $\mathcal{F}_i^{\rm (exp)}$,
+  is constructed by taking the central values from
+  the corresponding NNPDF fits, NNPDF3.1 NNLO for the unpolarized case and NNPDFpol1.1 NLO
+  for the polarized one.
+  %
+  That is, we {\it assume} for simplicity that the central value
+  of such future lattice calculations would coincide with the current ones
+  from the global fit.\footnote{Repeating the exercise with the actual lattice QCD
+    central values would be straightforward, but
+    lies beyond the scope of the present studies.}
+  %
+  As discussed in Sect.~\ref{sec:unpPDFs}, this corresponds to computing
+  the mean over the Monte Carlo replica sample,
+  \be
+  \label{eq:pseudodatadef}
+  \mathcal{F}_i^{\rm (exp)} \equiv \frac{1}{N_{\rm rep}}\sum_{k=1}^{N_{\rm rep}}
+  \mathcal{F}_i^{\rm (k)} \, , \quad i=1,\ldots,N_{\rm mom} \, ,
+  \ee
+  where $N_{\rm mom}$ are the number of PDF moments that will be included
+  in the reweighting, in this case $N_{\rm mom}=5$ both for the unpolarized
+  and polarized cases.
+  %
+  To be consistent with the calculations in Sect.~\ref{sec:benchmarking},
+  here the central values of the pseudo-data Eq.~(\ref{eq:pseudodatadef})
+  are also evaluated at $Q^2=4$ GeV$^2$ (see Tables~\ref{tab:unpPDFmoms} and~\ref{tab:polPDFmoms}).
+\item The uncertainty in the pseudo data, denoted by $\delta\mathcal{F}_i^{\rm (exp)} $,
+  is taken for each moment to be the value indicated in
+  Table~\ref{tab:scenarios} for each of the three scenarios.%
+  That is, we have that the absolute uncertainty on the $i$-th moment
+  will be given by $\delta\mathcal{F}_i^{\rm (exp)}=\delta_L^{(i)}\mathcal{F}_i^{\rm (exp)} $.
+\item Using these pseudo-data (central values and total uncertainties)
+  as defined above, we compute
   weights for each of the $N_{\rm rep}=1000$~(100) replicas of the input PDF set
   in the unpolarized (polarized) case.
   %
   These weights $w_k$ are a measure of the agreement of the individual replicas with the new pseudo-data.
   For instance replicas which lead to moments far from the pseudo-data (within uncertainties) will
   heave associated a very large weight.
+  %
+  Specifically, first of all we compute the $\chi^2$ between each of the Monte Carlo
+  replicas and the lattice pseudo-data as follows,
+  \be
+  \chi^{2(k)}= \frac{1}{N_{\rm mom}}\sum_{i=1}^{\rm N_{\rm mom}} \frac{\lp
+    \mathcal{F}_i^{\rm (k)} -\mathcal{F}_i^{\rm (exp)} \rp^2}{
+    \lp \delta\mathcal{F}_i^{\rm (exp)}\rp^2} \, , \quad k=1,\ldots,N_{\rm rep} \, ,
+  \ee
+  assuming that there are no correlations between the different $N_{\rm mom}$ moments.
+  %
+  This assumption in general might not be a good approximation, since most lattice
+  QCD systematic errors are correlated among the different moments, and should be
+  avoided provided the full breakdown of systematic error of each quantity is available.
+  %
+  Once the values of the $\chi^2$ have been evaluated,
+  we can compute the corresponding weights for each replica.
 \item These weights can be use to now recompute the PDFs and their moments, and emulate the
   impact that adding these pseudo-data points in a complete PDF fit would have (provided
   the effective number of replicas is not too small, see below).
