@@ -4,6 +4,7 @@
 
 %stylefile for "Progress in Particle and Nuclear Physics" from 20. March 2003
 \documentclass[twoside,12pt]{article}
+\usepackage{lineno}
 \usepackage{epsfig}
 \usepackage{graphicx}
 \usepackage{float}
@@ -26,6 +27,7 @@
 \sisetup{range-phrase = \text{--}} % For correctly displayed number ranges
 \usepackage{url}
 \usepackage{hyperref}
+
 
 \def\Journal#1#2#3#4{{#1} {#2} (#4) #3 }
 \def\NCA{{\em Nuovo Cimento} A}
@@ -186,6 +188,8 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
+\linenumbers
+
 \vspace{.3cm}
 
 \begin{center}
@@ -214,26 +218,26 @@ Jeremy~Green$^{22}$,
 Rajan~Gupta$^{23}$, 
 Lucian~Harland-Lang$^{24}$, 
 Tomomi~Ishikawa$^{25}$, 
-Aleksander~Kusina$^{26}$, 
-Keh-Fei~Liu$^{27}$, 	
-Simonetta~Liuti$^{28}$, 		
-Christopher~Monahan$^{29}$, 		
+Aleksander~Kusina$^{26,27}$, 
+Keh-Fei~Liu$^{28}$, 	
+Simonetta~Liuti$^{29,30}$, 		
+Christopher~Monahan$^{31}$, 		
 Pavel~Nadolsky$^{3}$,
 Jian-Wei Qiu$^{5}$,
 Ingo~Schienbein$^{26}$, 	
-Gerrit~Schierholz$^{31}$,
+Gerrit~Schierholz$^{32}$,
 Robert Thorne$^{24}$,
-Werner~Vogelsang$^{32}$,
-Hartmut Wittig~$^{33}$, 
+Werner~Vogelsang$^{33}$,
+Hartmut Wittig~$^{34}$, 
 C.-P. Yuan~$^{1}$, and
-James Zanotti$^{34}$
+James Zanotti$^{35}$
 }
 
 \vspace{.2cm}
 {\it \footnotesize
 ~$^{1}$Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48824, USA\\
 ~$^{2}$Department of Computational Mathematics, Science and Engineering, \\Michigan State University, East Lansing, MI 48824, USA\\
-~$^{3}$Southern Methodist University, Dallas, TX 75275, USA\\
+~$^{3}$Department of Physics, Southern Methodist University, Dallas, TX 75275, USA\\
 ~$^{4}$Physics Department, College of William and Mary, Williamsburg, VA 23187, USA\\
 ~$^{5}$Thomas Jefferson National Accelerator Facility, Newport News, VA 23606, USA\\
 ~$^6$Rudolf Peierls Centre for Theoretical Physics, 1 Keble Road,\\ University of Oxford, OX1 3NP Oxford, United Kingdom.\\
@@ -242,6 +246,9 @@ De Boelelaan 1081, NL-1081, HV Amsterdam, The Netherlands.\\
 ~$^{8}$ Nikhef, Science Park 105, NL-1098 XG Amsterdam, The Netherlands.\\
 ~$^{9}$ Hampton University, Hampton, VA 23668, USA,\\
 and Jefferson Lab, Newport News, VA 23606, USA. \\
+%
+\textcolor{red}{\bf Should we make 5 JLab and 9 Hampton only???}\\
+%
 ~$^{10}$ Department of Physics, University of Cyprus, P.O. Box 20537, 1678 Nicosia, Cyprus. \\
 ~$^{11}$ Computation-based Science and Technology Research Research,\\
 The Cyprus Institute, 20
@@ -263,20 +270,20 @@ Physics and Astronomy,\\ University of Edinburgh, EH9 3FD, UK. \\
 ~$^{23}$ Los Alamos National Laboratory, Theoretical Division, T-2, Los Alamos, NM 87545, USA. \\
 ~$^{24}$ Department of Physics and Astronomy, University College London, WC1E 6BT, UK \\
 ~$^{25}$ T.~D.~Lee Institute, Shanghai Jiao Tong University, Shanghai, 200240, P.~R.~China. \\
-~$^{26}$ 1Laboratoire de Physique Subatomique et de Cosmologie, Universit´e Grenoble-Alpes, CNRS/IN2P3, 53 avenue des Martyrs,
-38026 Grenoble, France. \\
-~$^{27}$ Department of Physics and Astronomy, University of Kentucky, \\
+~$^{26}$ Laboratoire de Physique Subatomique et de Cosmologie, Universit´e Grenoble-Alpes,\\ 
+  CNRS/IN2P3, 53 avenue des Martyrs,  38026 Grenoble, France. \\
+~$^{27}$ Institute of Nuclear Physics Polish Academy of Sciences, PL-31342 Krakow, Poland \\
+~$^{28}$ Department of Physics and Astronomy, University of Kentucky, 
 Lexington, KY 40506, USA. \\
-~$^{28}$ Physics Department, University of Virginia, 382 MCormick Rd.,
+~$^{29}$ Physics Department, University of Virginia, 382 MCormick Rd.,
 Charlottesville, VA 22904, USA \\
-Laboratori Nazionali di Frascati, INFN, Frascati, Italy \\
-~$^{29}$ Institute for Nuclear Theory, University of Washington, Seattle, WA 98195, USA. \\
-~$^{31}$ Deutsches Elektronen-Synchrotron DESY, 22603 Hamburg, Germany. \\
-~$^{32}$ Institute for Theoretical Physics, T\"ubingen University, D-72076 T¨ubingen, Germany. \\
-~$^{33}$ PRISMA Cluster of Excellence and Institute for Nuclear Physics \\
-Johannes Gutenberg University of Mainz, Johann-Joachim-Becher-Weg 45,
-55128 Mainz.\\
-$^{34}$ CSSM, Department of Physics, The University of Adelaide, Adelaide, SA, Australia 5005.\\
+~$^{30}$ Laboratori Nazionali di Frascati, INFN, Frascati, Italy \\
+~$^{31}$ Institute for Nuclear Theory, University of Washington, Seattle, WA 98195, USA. \\
+~$^{32}$ Deutsches Elektronen-Synchrotron DESY, 22603 Hamburg, Germany. \\
+~$^{33}$ Institute for Theoretical Physics, T\"ubingen University, D-72076 T¨ubingen, Germany. \\
+~$^{34}$ PRISMA Cluster of Excellence and Institute for Nuclear Physics 
+Johannes Gutenberg University of Mainz, \\ Johann-Joachim-Becher-Weg 45, 55128 Mainz, Germany. \\
+$^{35}$ CSSM, Department of Physics, The University of Adelaide, Adelaide, SA, Australia 5005.\\
 }
 
 \clearpage
