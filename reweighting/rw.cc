@@ -265,16 +265,59 @@ int main(int argc, char **argv)
       // Conservative: 5% total systematics
       // Optimistic: 1% total systematics
       int const n_scenarios=3;
-      double total_latQCD_sysunc[n_scenarios]={0.0};
+      int const n_mon=5;
+      double total_latQCD_sysunc[n_scenarios][n_mom]={{0.0}};
+
+      // Unpolarized moments
       if(ipol==0){
-	total_latQCD_sysunc[0] = 0.01;
-	total_latQCD_sysunc[1] = 0.03;
-	total_latQCD_sysunc[2] = 0.05;
+
+	// Scenario A (more conservative)
+	total_latQCD_sysunc[0][0] = 0.20; // u+
+	total_latQCD_sysunc[0][1] = 0.30; // d+
+	total_latQCD_sysunc[0][2] = 0.50; // s+
+	total_latQCD_sysunc[0][3] = 0.15; // g+
+	total_latQCD_sysunc[0][4] = 0.60; // u+-d+
+
+	// Scenario B (moderately optimistic)
+	total_latQCD_sysunc[1][0] = 0.10; // u+
+	total_latQCD_sysunc[1][1] = 0.15; // d+
+	total_latQCD_sysunc[1][2] = 0.25; // s+
+	total_latQCD_sysunc[1][3] = 0.07; // g+
+	total_latQCD_sysunc[1][4] = 0.30; // u+-d+
+
+	// Scenario C (very optimistic)
+	total_latQCD_sysunc[2][0] = 0.05; // u+
+	total_latQCD_sysunc[2][1] = 0.07; // d+
+	total_latQCD_sysunc[2][2] = 0.12; // s+
+	total_latQCD_sysunc[2][3] = 0.03; // g+
+	total_latQCD_sysunc[2][4] = 0.15; // u+-d+
+
       }
+
+      // Polarized moments
       if(ipol==1){
-	total_latQCD_sysunc[0] = 0.10;
-	total_latQCD_sysunc[1] = 0.20;
-	total_latQCD_sysunc[2] = 0.30;
+
+	// Scenario A (more conservative)
+	total_latQCD_sysunc[0][0] = 0.20; // Delta u+
+	total_latQCD_sysunc[0][1] = 0.30; // Delta d+
+	total_latQCD_sysunc[0][2] = 0.50; // Delta s+
+	total_latQCD_sysunc[0][3] = 0.15; // Delta u- - Delta d-
+	total_latQCD_sysunc[0][4] = 0.60; // Delta u+ - Delta d+
+
+	// Scenario B (moderately optimistic)
+	total_latQCD_sysunc[1][0] = 0.10; // Delta u+
+	total_latQCD_sysunc[1][1] = 0.15; // Delta d+
+	total_latQCD_sysunc[1][2] = 0.25; // Delta s+
+	total_latQCD_sysunc[1][3] = 0.07; // Delta u- - Delta d-
+	total_latQCD_sysunc[1][4] = 0.30; // Delta u+ - Delta d+
+
+	// Scenario C (very optimistic)
+	total_latQCD_sysunc[2][0] = 0.05; // Delta u+
+	total_latQCD_sysunc[2][1] = 0.07; // Delta d+
+	total_latQCD_sysunc[2][2] = 0.12; // Delta s+
+	total_latQCD_sysunc[2][3] = 0.03; // Delta u- - Delta d-
+	total_latQCD_sysunc[2][4] = 0.15; // Delta u+ - Delta d+
+
       }
       
       
@@ -288,25 +331,25 @@ int main(int argc, char **argv)
 	int const ndatfit=5;
 	for(int irep=1;irep<=nrep;irep++){
 	  
-	  // xdp
-	  chi2[irep] += pow( unp_mom_xdp_mean - unp_mom_rep_xdp[irep] ,2.0)/
-	    pow(total_latQCD_sysunc[i_scen]*unp_mom_xdp_mean ,2.0);
-	  
-	  // xup
+	  // xup ( POL => Delta u+ )
 	  chi2[irep] += pow( unp_mom_xup_mean - unp_mom_rep_xup[irep] ,2.0)/
-	    pow(total_latQCD_sysunc[i_scen]*unp_mom_xup_mean ,2.0);
+	    pow(total_latQCD_sysunc[i_scen][0]*unp_mom_xup_mean ,2.0);
 	  
-	  // xsp
+	  // xdp ( POL => Delta d+ )
+	  chi2[irep] += pow( unp_mom_xdp_mean - unp_mom_rep_xdp[irep] ,2.0)/
+	    pow(total_latQCD_sysunc[i_scen][1]*unp_mom_xdp_mean ,2.0);
+	  
+	  // xsp ( POL => Delta s+ )
 	  chi2[irep] += pow( unp_mom_xsp_mean - unp_mom_rep_xsp[irep] ,2.0)/
-	    pow(total_latQCD_sysunc[i_scen]*unp_mom_xsp_mean ,2.0);
+	    pow(total_latQCD_sysunc[i_scen][2]*unp_mom_xsp_mean ,2.0);
 	  
-	  // xg
+	  // xg ( POL => Delta u- - Delta d- )
 	  chi2[irep] += pow( unp_mom_xg_mean - unp_mom_rep_xg[irep] ,2.0)/
-	    pow(total_latQCD_sysunc[i_scen]*unp_mom_xg_mean ,2.0);
+	    pow(total_latQCD_sysunc[i_scen][3]*unp_mom_xg_mean ,2.0);
 	  
-	  // xupmdp
+	  // xupmdp ( POL => Delta u+ - Delta d+ )
 	  chi2[irep] += pow( unp_mom_xupmdp_mean - unp_mom_rep_xupmdp[irep] ,2.0)/
-	    pow(total_latQCD_sysunc[i_scen]*unp_mom_xupmdp_mean ,2.0);
+	    pow(total_latQCD_sysunc[i_scen][4]*unp_mom_xupmdp_mean ,2.0);
 	  
 	  chi2[irep]/=ndatfit;
 	  //cout<<irep<<" "<<chi2[irep]<<endl;

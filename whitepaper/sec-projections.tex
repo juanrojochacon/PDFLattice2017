@@ -76,19 +76,29 @@ contribute to the proton spin content) of $\Delta q^+$ (with $q=u,d,s$)
 and of the isoscalar combination $\Delta u^+-\Delta d^+$, as well as
 the second moment of $\Delta u^- - \Delta d^-$.
 
-Moreover, we will consider in these exercise three
+Moreover, we will consider in the present exercise three
 different scenarios, which we denote
-as Scenario A, B, and C, respectively, for the total
-uncertainty than could be associated to future lattice
-QCD calculations.
+as Scenario A, B, and C, respectively, for the total systematic
+uncertainty than we associate to lattice
+QCD calculations of PDF moments.
 %
 In Table~\ref{tab:scenarios} we summarize the
-values of total uncertainty
+values assumed of total uncertainty
     in the lattice QCD calculation, $\delta_L$, for each
     of the various unpolarized and polarized PDF moments that enter
     this analysis.
     %
-    We note that, while we try to be reasonably
+    First of all, scenario A assumes that the uncertainties $\delta_L$
+    are on the ball-park of the current ones, taking as
+    representative values  those from the
+    state-of-the-art lattice QCD calculations
+    selected for the benchmarking exercise of Sect.~\ref{sec:benchmarking},
+    and summarized in Tables~\ref{tab:BMunp} and~\ref{tab:BMpol}.
+    %
+    Then scenarios B and C represent two possible optimistic scenarios for the
+    future improvement of these systematic uncertainties.
+    %
+    We emphasize that, while we try to be reasonably
     realistic, we do not aim here to classify a given scenario
     as more or less feasible within a given time scale:
     the results here are merely illustrative of the possible
@@ -96,30 +106,54 @@ values of total uncertainty
     of a global PDF analysis.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[h]
+\begin{table}[t]
   \centering
-  \small
-  \begin{tabular}{c||ccccc||ccccc}
+  \renewcommand{\arraystretch}{1.3} 
+  \begin{tabular}{c||ccccc}
     \hline
-    Scenario &  \multicolumn{5}{c||}{$\delta_L$ unpolarized moments}    &
-    \multicolumn{5}{c}{$\delta_L$ polarized moments} \\
+    Scenario &  \multicolumn{5}{c}{$\delta_L$ for unpolarized moments}   \\
 &    $\la x\ra_{u^+}$  &   $\la x\ra_{d^+}$   &  $\la x\ra_{s^+}$  &
-$\la x\ra_{g}$  &   $\la x\ra_{u^+-d^+}$  &
-$\la 1\ra_{\Delta u^+}$  & $\la 1\ra_{\Delta d^+}$  & $\la 1\ra_{\Delta s^+}$
+$\la x\ra_{g}$  &   $\la x\ra_{u^+-d^+}$  \\
+    \hline
+    Current  & $\sim 16\%$  &  $\sim 30\%$
+    & $\sim 45\%$  & $\sim 13\%$  &  $\sim 60\%$ \\
+    A   & 20\%  & 30\% &  50\% &  15\% &  60\% \\
+ B   & 10\%  & 15\% &  25\% &  7\% &  30\%  \\
+  C   & 5\%  & 7\% &  12\% &  3\% &  15\%  \\
+    \hline
+  \end{tabular}\vspace{0.7cm}
+   \begin{tabular}{c||ccccc}
+    \hline
+    Scenario   &
+    \multicolumn{5}{c}{$\delta_L$ for polarized moments} \\ 
+& $\la 1\ra_{\Delta u^+}$  & $\la 1\ra_{\Delta d^+}$  & $\la 1\ra_{\Delta s^+}$
 &  $\la x\ra_{\Delta u^--\Delta d^-}$  &  $\la 1\ra_{\Delta u^+ - \Delta d^+}$\\
     \hline
-    A   & 1\%  & 1\% &  1\% &  1\% &  1\% &
-    10\% &    10\%  &   10\% &    10\%  &    10\% \\
- B   & 3\%  & 3\% &  3\% &  3\% &  3\% &
- 20\% &    20\%  &   20\% &    20\%  &    20\% \\
-  C   & 5\%  & 5\% &  5\% &  5\% &  5\% &
-    30\% &    30\%  &   30\% &    30\%  &    30\% \\
+    Current  &
+    $\sim 3\%$  & $\sim 5\%$ & $\sim 70\%$ & $\sim 65\%$ & $\sim 3\%$ \\
+    \hline
+    A   & 
+    5\% &    10\%  &   100\% &    70\%  &    5\% \\
+ B   &
+ 3\% &    5\%  &   50\% &    30\%  &    3\% \\
+  C   & 1\% &    2\%  &   20\% &    15\%  &    1\% \\
     \hline
   \end{tabular}
-  \caption{\small The three scenarios for the total uncertainty
-    in the lattice QCD calculation $\delta_L$ for each
-    of the unpolarized and polarized moments that enter
-    this analysis
+   \caption{\small The three scenarios assumed here
+     for the total percentage
+     systematic uncertainty
+    in future lattice QCD calculation $\delta_L$ for each
+    of the unpolarized (upper) and polarized (lower table) PDF
+    moments that are included
+    in the present reweighting analysis.
+    %
+    In addition, the first line indicates the current systematic
+    uncertainties of the state-of-the-art lattice QCD calculations
+    selected for the benchmarking exercise of Sect.~\ref{sec:benchmarking},
+    and summarized in Tables~\ref{tab:BMunp} and~\ref{tab:BMpol}
+    for the unpolarized and polarized cases, respectively.
+    %
+    See text for more details.
 \label{tab:scenarios}
   }
 \end{table}
