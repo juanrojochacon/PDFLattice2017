@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Improving PDF Fits with lattice QCD calculations}
+\section{Improving PDF fits with lattice QCD calculations}
 \label{sec:projections}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -220,19 +220,18 @@ $\la x\ra_{\Delta u^--\Delta d^-}$, and
   Table~\ref{tab:scenarios} for each of the three scenarios.%
   That is, we have that the absolute uncertainty on the $i$-th moment
   will be given by $\delta\mathcal{F}_i^{\rm (exp)}=\delta_L^{(i)}\mathcal{F}_i^{\rm (exp)} $.
-\item Using these pseudo-data (central values and total uncertainties)
-  as defined above, we compute
-  weights for each of the $N_{\rm rep}=1000$~(100) replicas of the input PDF set
-  in the unpolarized (polarized) case.
+\item Using the pseudo-data (central values and total uncertainties)
+  as defined above, we next need to compute
+  the weights  $\omega_k$.
   %
-  These weights $w_k$ are a measure of the agreement of the individual replicas with the new pseudo-data.
-  For instance replicas which lead to moments far from the pseudo-data (within uncertainties) will
-  heave associated a very large weight.
+  These weights
+  quantify the agreement between each of $N_{\rm rep}$ replicas
+  of the input PDF set and the corresponding lattice pseudo-data.
   %
   Specifically, first of all we compute the $\chi^2$ between each of the Monte Carlo
   replicas and the lattice pseudo-data as follows,
   \be
-  \chi^{2(k)}= \frac{1}{N_{\rm mom}}\sum_{i=1}^{\rm N_{\rm mom}} \frac{\lp
+  \chi^{2(k)}= \sum_{i=1}^{\rm N_{\rm mom}} \frac{\lp
     \mathcal{F}_i^{\rm (k)} -\mathcal{F}_i^{\rm (exp)} \rp^2}{
     \lp \delta\mathcal{F}_i^{\rm (exp)}\rp^2} \, , \quad k=1,\ldots,N_{\rm rep} \, ,
   \ee
@@ -241,12 +240,35 @@ $\la x\ra_{\Delta u^--\Delta d^-}$, and
   This assumption in general might not be a good approximation, since most lattice
   QCD systematic errors are correlated among the different moments, and should be
   avoided provided the full breakdown of systematic error of each quantity is available.
-  %
+
+  
   Once the values of the $\chi^2$ have been evaluated,
   we can compute the corresponding weights for each replica.
-\item These weights can be use to now recompute the PDFs and their moments, and emulate the
-  impact that adding these pseudo-data points in a complete PDF fit would have (provided
-  the effective number of replicas is not too small, see below).
+  %
+  The relation between the weights $w_k$  and the values of
+  the $\chi^{2(k)}$ of each replica is the following
+  \be
+  \omega_k =\frac{\lp \chi^{2(k)} \rp^{(N_{\rm mom}-1)/2}\exp(-\chi^{2(k)}/2)}{
+  \sum_{k=1}^{N_{\rm rep}} \lc \lp \chi^{2(k)} \rp^{(N_{\rm mom}-1)/2}\exp(-\chi^{2(k)}/2)\rc} \, ,
+  \ee
+  where the denominator ensures that the weight admit
+  a probabilistic interpretation, that is, $\sum_k w_k=1$.
+  %
+  These weights represent a measure of the agreement of the individual replicas with the new pseudo-data.
+  %
+  For instance, replicas which have associated values
+  of the moments far from the pseudo-data (within uncertainties) will
+  have associated a very large weight, being thus effectively discarded.
+\item These weights can be use to now recompute the PDFs, their moments,
+  as well as any generic cross-section.
+  %
+  This procedure emulates the
+  impact that adding these lattice-QCD pseudo-data in a complete PDF fit would have.
+  %
+  One important caveat is that, as discussed below, the procedure
+  is only reliable provided the 
+  effective number of replicas $N_{\rm eff}$ that survive the reweighting
+  procedure is not too small.
   \end{itemize}
 
 In Table~\ref{tab:neff} we indicate the effective number of replicas
@@ -266,7 +288,15 @@ In Table~\ref{tab:neff} we indicate the effective number of replicas
     %
     For instance, in the most optimistic scenario,
     Scenario A, the effective number of replicas is around five (three)
- smaller than the starting number of replicas.
+    smaller than the starting number of replicas.
+
+    The effective number of replicas
+    is defined in terms of the Shannon entropy from information
+    theory, namely
+    \be
+    N_{\rm eff}\equiv \exp\lc \frac{1}{N_{\rm rep}}\omega_k
+    \log \lp N_{\rm rep}/\omega_k\rp\rc \, .
+    \ee
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[t]
