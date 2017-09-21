@@ -1,31 +1,45 @@
 \section{PDF fit results for higher moments }
 \label{app:Hmoms}
 
-In this appendix, we summarise the current values of the higher moments of unpolarised 
-and polarised PDFs, not previously listed in Sect.~\ref{subsubsec:GPDFfits}.
+In this appendix, we summarise the current values of the higher moments of 
+unpolarised and polarised PDFs, not previously listed in 
+Sect.~\ref{subsubsec:GPDFfits}.
 %
-Even though these moments were not selected for the benchmark exercise performed in
-Sect.~\ref{subsec:BN}, we find it useful to collect them here for future reference.
+Even though these moments were not selected for the benchmark exercise 
+performed in Sect.~\ref{subsec:BN}, we find it useful to collect them 
+here for future reference.
 
 \begin{itemize}
 
-\item In Table~\ref{tab:unpHmoms} we display the values of the second moments of the 
-unpolarised quark valence distributions $\langle x^2\rangle_{u^-}$, 
-$\langle x^2\rangle_{d^-}$, $\langle x^2\rangle_{s^-}$ and $\langle x^2\rangle_{u^--d^-}$.
+\item In Table~\ref{tab:unpHmoms} we display the values of the second moments 
+of the unpolarised quark valence distributions $\langle x^2\rangle_{u^-}$, 
+$\langle x^2\rangle_{d^-}$, $\langle x^2\rangle_{s^-}$ and 
+$\langle x^2\rangle_{u^--d^-}$.
 
-\item In Table~\ref{tab:polHmoms} we display the values of the first moments of the 
-polarised quark valence distributions $\langle x^2\rangle_{u^-}$, 
+\item In Table~\ref{tab:polHmoms} we display the values of the first moments 
+of the polarised quark valence distributions $\langle x^2\rangle_{u^-}$, 
 $\langle x^2\rangle_{d^-}$ and $\langle x^2\rangle_{s^-}$.
+
+\item In Table~\ref{tab:polgmom} we display the value of the zeroth moment
+of the polarised gluon PDF truncated in the region $[x_{\rm min}, x_{\rm max}]$,
+$\langle 0\rangle_{\Delta g}^{[x_{\rm min}, x_{\rm max}]}=\int_{x_{\rm min}}^{x_{\rm max}}dx\,\Delta g(x,Q^2)$.
+%
+The truncated moment is shown instead of the full moment
+because the latter is potentially affected by a large extrapolation 
+uncertainty difficult to quantify (see Sect.~\ref{sec:polPDFs}). 
+%
+Three different truncated ranges are considered: $[10^{-5},1]$,  $[10^{-3},1]$
+and  $[10^{-2},1]$.
 
 \end{itemize}
 %
-All values in Tables~\ref{tab:unpHmoms}-\ref{tab:polHmoms} are computed at 
+All values in Tables~\ref{tab:unpHmoms}-\ref{tab:polgmom} are computed at 
 $\mu^2=Q^2=4$ GeV$^2$.
 %
 For the description of the correspnding PDF sets and their uncertainties, see
 Sects.~\ref{sec:unpPDFs}-\ref{sec:polPDFs}-\ref{subsubsec:GPDFfits}.
 
-%------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 \begin{table}[!t]
 \centering
 \small
@@ -34,22 +48,26 @@ Sects.~\ref{sec:unpPDFs}-\ref{sec:polPDFs}-\ref{subsubsec:GPDFfits}.
 Mom. & NNPDF3.1 & CT14 & MMHT14 & ABMP16 & CJ15 & HERAPDF2.0 & PDF4LHC15 \\
 \midrule
 $\langle x^2\rangle_{u^-}$ 
-& 0.0851(27) & 0.0841(13) & 0.0831(14)    & 0.0845(8) & 0.0853(3) & 0.0886(29) & 0.0833(15) \\
+& 0.0851(27) & 0.0841(13) & 0.0831(14)    
+& 0.0845(8) & 0.0853(3) & 0.0886(29) & 0.0833(15) \\
 $\langle x^2\rangle_{d^-}$
-& 0.0284(27) & 0.0295(10) & 0.0305(11)    & 0.0267(7) & 0.0305(3) & 0.0334(18) & 0.0305(17) \\ 
+& 0.0284(27) & 0.0295(10) & 0.0305(11)    
+& 0.0267(7) & 0.0305(3) & 0.0334(18) & 0.0305(17) \\ 
 $\langle x^2\rangle_{s^-}$
-& 0.0010(31) & ---        & 0.0006(8)\ \, & ---       & ---       & ---        & 0.0011(11) \\
+& 0.0010(31) & ---        & 0.0006(8)\ \, 
+& ---       & ---       & ---        & 0.0011(11) \\
 $\langle x^2\rangle_{u^--d^-}$
-& 0.0571(27) & 0.0546(19) & 0.0526(19)    & 0.0578(9) & 0.0548(3) & 0.0553(17) & 0.0530(24) \\
+& 0.0571(27) & 0.0546(19) & 0.0526(19)    
+& 0.0578(9) & 0.0548(3) & 0.0553(17) & 0.0530(24) \\
 \bottomrule
 \end{tabular}
-\caption{\small Second moments of unpolarised valence PDFs from phenomenological PDF fits
-at $\mu=Q=2$ GeV.}
+\caption{\small Second moments of unpolarised valence PDFs from 
+phenomenological PDF fits at $\mu=Q=2$ GeV.}
 \label{tab:unpHmoms}
 \end{table}
-%------------------------------------------------------------------------------------------
+%-------------------------------------------------------------------------------
 
-%------------------------------------------------------------------------------------------$\langle x^2\rangle_{u^-}$
+%-------------------------------------------------------------------------------
 \begin{table}[!t]
 \centering
 \footnotesize
@@ -63,7 +81,30 @@ $\langle x\rangle_{\Delta d^-}$
 &  -0.0468(79) &  -0.0410(55) \\
 \bottomrule
 \end{tabular}
-\caption{\small Second moments of polarised valence PDFs from phenomenological PDF fits
-at $\mu=Q=2$ GeV.}
+\caption{\small Second moments of polarised valence PDFs from phenomenological 
+PDF fits at $\mu=Q=2$ GeV.}
 \label{tab:polHmoms}
 \end{table}
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
+\begin{table}[!t]
+\centering
+\footnotesize
+\begin{tabular}{lccc}
+\toprule
+Mom. & NNPDFpol1.1 & DSSV14 & JAM17\\
+\midrule
+$\langle 0\rangle_{\Delta g}^{[10^{-5},1]}$  
+& -0.1(17) & & 1.08(87) \\
+$\langle 0\rangle_{\Delta g}^{[10^{-3},1]}$  
+& 0.14(78) & & 0.74(40) \\
+$\langle 0\rangle_{\Delta g}^{[10^{-2},1]}$  
+& 0.23(24) & & 0.52(19) \\
+\bottomrule
+\end{tabular}
+\caption{\small Truncated zeroth moments of the polarised gluon PDF from 
+phenomenological fits at $\mu=Q=2$ GeV.}
+\label{tab:polgmom}
+\end{table}
+%-------------------------------------------------------------------------------
