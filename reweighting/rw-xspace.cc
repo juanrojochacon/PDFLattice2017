@@ -38,9 +38,9 @@ int main(int argc, char **argv)
   int nrep=0;
 
   // Values of x where we assume that lattice-QCD will provide info
-  int const nx=4;
-  double const xl[nx]={0.75,0.80,0.85,0.90};
-  double const Q=2;
+  int const nx=5;
+  double const xl[nx]={0.65,0.70,0.75,0.80,0.85};
+  double const Q=2; // that is 4 GeV2
   
   double xumxd_data[nx]={0.0};
   double xubmxdb_data[nx]={0.0};
@@ -105,26 +105,22 @@ int main(int argc, char **argv)
     color2.push_back(kBlue+2);
     
     std::vector<std::string> pdfname;
-    pdfname.push_back("xg");
     pdfname.push_back("xu");
     pdfname.push_back("xd");
-    pdfname.push_back("xsp");
     pdfname.push_back("xubar");
     pdfname.push_back("xdbar");
     
     std::vector<std::string> titleY;
-    titleY.push_back("g ( x, Q^{2} = 4 GeV^{2} ) ");
     titleY.push_back("u ( x, Q^{2} = 4 GeV^{2} ) ");
     titleY.push_back("d ( x, Q^{2} = 4 GeV^{2} ) ");
-    titleY.push_back("s^{+} ( x, Q^{2} = 4 GeV^{2} ) ");
     titleY.push_back("ubar ( x, Q^{2} = 4 GeV^{2} ) ");
     titleY.push_back("dbar ( x, Q^{2} = 4 GeV^{2} ) ");
     
       //double const xmin=1e-3;
-      double const xmin=1e-1;
-      double const xmax=0.95;
+      double const xmin=0.1;
+      double const xmax=0.9;
       
-      int const nx_p=200;
+      int const nx_p=50;
       
       std::vector<std::string> outfilename;
       std::vector<std::string> outfilename2;
@@ -161,7 +157,7 @@ int main(int argc, char **argv)
 	  //c[0]->SetLogx();
 	  
 	  std::vector<TLegend*> leg;
-	  leg.push_back(new TLegend(0.50,0.11,0.89,0.42));
+	  leg.push_back(new TLegend(0.11,0.11,0.45,0.42));
 	  leg[0]->SetLineStyle(1);
 	  leg[0]->SetBorderSize(1);
 	  leg[0]->SetFillColor(kWhite);
@@ -175,16 +171,16 @@ int main(int argc, char **argv)
 	  
 	  // Unpolarized moments
 	  if(ipol==0){
-	    total_latQCD_sysunc[0]=15;
-	    total_latQCD_sysunc[1]=8;
-	    total_latQCD_sysunc[2]=4;
+	    total_latQCD_sysunc[0]=12;
+	    total_latQCD_sysunc[1]=6;
+	    total_latQCD_sysunc[2]=3;
 	  }
 
-	  // Unpolarized moments
+	  // Polarized moments (typically affected by larger uncertainties)
 	  if(ipol==1){
-	    total_latQCD_sysunc[0]=15;
-	    total_latQCD_sysunc[1]=8;
-	    total_latQCD_sysunc[2]=4;
+	    total_latQCD_sysunc[0]=12;
+	    total_latQCD_sysunc[1]=6;
+	    total_latQCD_sysunc[2]=3;
 	  }
 
 	  // Loop over the number of scenarios
@@ -308,28 +304,20 @@ int main(int argc, char **argv)
 		    LHAPDF::initPDF(irep);
 		    double xpdflh;
 		    
-		    // Gluon
-		    if(l==0){
-		      xpdflh=LHAPDF::xfx(x[ix],Q,0);
-		    }
 		    // up quark
-		    if(l==1){
+		    if(l==0){
 		      xpdflh=LHAPDF::xfx(x[ix],Q,2); 
 		    }
 		    // down quark
-		    if(l==2){
+		    if(l==1){
 		      xpdflh=LHAPDF::xfx(x[ix],Q,1) ;
 		    }
-		    // Total strange quark
-		    if(l==3){
-		      xpdflh=LHAPDF::xfx(x[ix],Q,3) + LHAPDF::xfx(x[ix],Q,-3);
-		    }
 		    // up antiquark
-		    if(l==4){
+		    if(l==2){
 		      xpdflh=LHAPDF::xfx(x[ix],Q,-2);
 		    }
 		    // down antiquark
-		    if(l==5){
+		    if(l==3){
 		      xpdflh=LHAPDF::xfx(x[ix],Q,-1);
 		    }
 		    
@@ -356,22 +344,22 @@ int main(int argc, char **argv)
 		  // Maybe show instead the absolute PDF uncertainty
 		  if(iPdf==0){
 		    if(ipol==0){
-		      cvLuxRel[iPdf]->SetPoint(ix, x[ix], (100*err[ix]/fabs( cv[ix]) )/ ( 100*err[ix]/fabs( cv[ix]) ) );
+		      cvLuxRel[iPdf]->SetPoint(ix, x[ix], 1.0 );
 		    }
 		    if(ipol==1){
 		      // cvLuxRel[iPdf]->SetPoint(ix, x[ix], err[ix] );
-		      cvLuxRel[iPdf]->SetPoint(ix, x[ix], (100*err[ix]/fabs( cv[ix]) )/ ( 100*err[ix]/fabs( cv[ix]) ) );
+		      cvLuxRel[iPdf]->SetPoint(ix, x[ix], 1.0 );
 		    }
 		    
 		  }
 		  if(iPdf==1){
 		    if(ipol==0){
 		      //		      cout<<ix<<" "<< ( 100*err_rw[ix]/fabs( cv_rw[ix])  )/( 100*err[ix]/fabs( cv[ix]) )  <<endl; 
-		      cvLuxRel[iPdf]->SetPoint(ix, x[ix], ( 100*err_rw[ix]/fabs( cv_rw[ix]) )/ ( 100*err[ix]/fabs( cv[ix]) )  );
+		      cvLuxRel[iPdf]->SetPoint(ix, x[ix], ( err_rw[ix] / err[ix] )  );
 		    }
 		    if(ipol==1){
 		      // cvLuxRel[iPdf]->SetPoint(ix, x[ix], err_rw[ix] );
-		      cvLuxRel[iPdf]->SetPoint(ix, x[ix], ( 100*err_rw[ix]/fabs( cv_rw[ix]) )/ ( 100*err[ix]/fabs( cv[ix]) )  );
+		      cvLuxRel[iPdf]->SetPoint(ix, x[ix], ( err_rw[ix] / err[ix] )  );
 		    }
 		  }
 		}
@@ -380,18 +368,16 @@ int main(int argc, char **argv)
 	    
 	    for(int iPdf=0;iPdf<2;iPdf++){
 	      if(ipol==0){
-		if(l==0)cvLuxRel[iPdf]->SetTitle("#delta( g ) @ Q^{2}=4 GeV^{2}, NNPDF3.1 NNLO");
-		if(l==1)cvLuxRel[iPdf]->SetTitle("#delta( u^{+} ) @ Q^{2}=4 GeV^{2}, NNPDF3.1 NNLO");
-		if(l==2)cvLuxRel[iPdf]->SetTitle("#delta( d^{+} ) @ Q^{2}=4 GeV^{2}, NNPDF3.1 NNLO");
-		if(l==3)cvLuxRel[iPdf]->SetTitle("#delta( s^{+} ) @ Q^{2}=4 GeV^{2}, NNPDF3.1 NNLO");
-		if(l==4)cvLuxRel[iPdf]->SetTitle("#delta( u^{+}-d^{+} ) @ Q^{2}=4 GeV^{2}, NNPDF3.1 NNLO");
+		if(l==0)cvLuxRel[iPdf]->SetTitle("#delta( u ) @ Q^{2}=4 GeV^{2}, NNPDF3.1");
+		if(l==1)cvLuxRel[iPdf]->SetTitle("#delta( d ) @ Q^{2}=4 GeV^{2}, NNPDF3.1");
+		if(l==2)cvLuxRel[iPdf]->SetTitle("#delta( #bar{u} ) @ Q^{2}=4 GeV^{2}, NNPDF3.1");
+		if(l==3)cvLuxRel[iPdf]->SetTitle("#delta( #bar{d} ) @ Q^{2}=4 GeV^{2}, NNPDF3.1");
 	      }
 	      if(ipol==1){
-		if(l==0)cvLuxRel[iPdf]->SetTitle("#delta( #Delta g ) @ Q^{2}=4 GeV^{2}, NNPDFpol1.1");
-		if(l==1)cvLuxRel[iPdf]->SetTitle("#delta( #Delta u^{+} ) ) @ Q^{2}=4 GeV^{2}, NNPDFpol1.1");
-		if(l==2)cvLuxRel[iPdf]->SetTitle("#delta( #Delta d^{+} ) @ Q^{2}=4 GeV^{2}, NNPDFpol1.1");
-		if(l==3)cvLuxRel[iPdf]->SetTitle("#delta( #Delta s^{+} ) @ Q^{2}=4 GeV^{2}, NNPDFpol1.1");
-		if(l==4)cvLuxRel[iPdf]->SetTitle("#delta( #Delta u^{+} - #Delta d^{+} ) @ Q^{2}=4 GeV^{2}, NNPDFpol1.1");
+		if(l==0)cvLuxRel[iPdf]->SetTitle("#delta( #Delta u ) @ Q^{2}=4 GeV^{2}, NNPDFpol1.1");
+		if(l==1)cvLuxRel[iPdf]->SetTitle("#delta( #Delta d ) @ Q^{2}=4 GeV^{2}, NNPDFpol1.1");
+		if(l==2)cvLuxRel[iPdf]->SetTitle("#delta( #Delta #bar{u} ) @ Q^{2}=4 GeV^{2}, NNPDFpol1.1");
+		if(l==3)cvLuxRel[iPdf]->SetTitle("#delta( #Delta #bar{d} ) @ Q^{2}=4 GeV^{2}, NNPDFpol1.1");
 	      }
 	      cvLuxRel[iPdf]->SetLineWidth(4);
 	      
@@ -415,10 +401,10 @@ int main(int argc, char **argv)
 	      cvLuxRel[iPdf]->GetXaxis()->SetTitleSize(0.05);
 	      cvLuxRel[iPdf]->GetXaxis()->SetTitleOffset(0.9);
 	      cvLuxRel[iPdf]->GetXaxis()->SetLabelSize(0.045);
-	      cvLuxRel[iPdf]->GetXaxis()->SetLimits(0.2, 0.95);
+	      cvLuxRel[iPdf]->GetXaxis()->SetLimits(0.3, 0.9);
 	      cvLuxRel[iPdf]->GetXaxis()->CenterTitle(true);
 	      if(ipol==0)cvLuxRel[iPdf]->GetYaxis()->SetTitle("PDF uncertainty (ratio to NNPDF3.1)");
-	      if(ipol==1)cvLuxRel[iPdf]->GetYaxis()->SetTitle("Absolute PDF uncertainty");
+	      if(ipol==1)cvLuxRel[iPdf]->GetYaxis()->SetTitle("PDF uncertainty (ratio to NNPDFpol1.1)");
 	      cvLuxRel[iPdf]->GetYaxis()->CenterTitle(true);
 	      if(ipol==0){
 		// if(l==0)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,10);	
@@ -427,22 +413,22 @@ int main(int argc, char **argv)
 		//if(l==3)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,35);
 		// if(l==4)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0,35);
 		
-		if(l==0)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.2,1.06);	
-		if(l==1)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.2,1.06);
-		if(l==2)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.2,1.06);
-		if(l==3)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.2,1.06);
-		if(l==4)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.2,1.06);
-		if(l==5)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.2,1.06);
+		if(l==0)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.4,1.12);	
+		if(l==1)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.4,1.12);
+		if(l==2)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.4,1.12);
+		if(l==3)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.4,1.12);
+		if(l==4)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.4,1.12);
+		if(l==5)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.4,1.12);
 	      }
 	      if(ipol==1){
 
 			
-		if(l==0)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.2,1.06);	
-		if(l==1)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.2,1.06);
-		if(l==2)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.2,1.06);
-		if(l==3)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.2,1.06);
-		if(l==4)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.2,1.06);
-		if(l==5)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.2,1.06);
+		if(l==0)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.4,1.12);	
+		if(l==1)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.4,1.12);
+		if(l==2)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.4,1.12);
+		if(l==3)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.4,1.12);
+		if(l==4)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.4,1.12);
+		if(l==5)cvLuxRel[iPdf]->GetYaxis()->SetRangeUser(0.4,1.12);
 
 		
 		// For percentage PDF uncertainty
@@ -469,7 +455,7 @@ int main(int argc, char **argv)
 	    
 	    int iPdf=0;
 	    c[0]->cd();
-	    if(i_scen==0)cvLuxRel[iPdf]->Draw("aC");
+	    if(i_scen==0)cvLuxRel[iPdf]->Draw("aL");
 	    
 	    iPdf=1;
 	    c[0]->cd();
@@ -477,14 +463,14 @@ int main(int argc, char **argv)
 	    
 	    if(i_scen==0)leg[0]->AddEntry(cvLuxRel[0], "no LQCD moms","L");
 	    if(ipol==0){
-	      if(i_scen==0)leg[0]->AddEntry(cvLuxRel[1], "w LattQCD moms, Scen A","L");
-	      if(i_scen==1)leg[0]->AddEntry(cvLuxRel[1], "w LattQCD moms, Scen B","L");
-	      if(i_scen==2)leg[0]->AddEntry(cvLuxRel[1], "w LattQCD moms, Scen C","L");
+	      if(i_scen==0)leg[0]->AddEntry(cvLuxRel[1], "w LattQCD x-sp, Scen D","L");
+	      if(i_scen==1)leg[0]->AddEntry(cvLuxRel[1], "w LattQCD x-sp, Scen E","L");
+	      if(i_scen==2)leg[0]->AddEntry(cvLuxRel[1], "w LattQCD x-sp, Scen F","L");
 	    }
 	    if(ipol==1){
-	      if(i_scen==0)leg[0]->AddEntry(cvLuxRel[1], "w LattQCD moms, Scen A","L");
-	      if(i_scen==1)leg[0]->AddEntry(cvLuxRel[1], "w LattQCD moms, Scen B","L");
-	      if(i_scen==2)leg[0]->AddEntry(cvLuxRel[1], "w LattQCD moms, Scen C","L");
+	      if(i_scen==0)leg[0]->AddEntry(cvLuxRel[1], "w LattQCD x-sp, Scen D","L");
+	      if(i_scen==1)leg[0]->AddEntry(cvLuxRel[1], "w LattQCD x-sp, Scen E","L");
+	      if(i_scen==2)leg[0]->AddEntry(cvLuxRel[1], "w LattQCD x-sp, Scen F","L");
 	    }
 	    
 	  }//  End loop over scenearios
@@ -492,9 +478,9 @@ int main(int argc, char **argv)
 	  leg[0]->Draw();
 	  
 	  // Save the files
-	  string filename= outfilename2[l]+".eps";
+	  string filename= outfilename2[l]+"-xspace.eps";
 	  c[0]->SaveAs(filename.c_str());
-	  filename= outfilename2[l]+"-largex.pdf";
+	  filename= outfilename2[l]+"-xspace.pdf";
 	  c[0]->SaveAs(filename.c_str());
 	  
 	  

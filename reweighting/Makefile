@@ -8,7 +8,7 @@
 
 # Files
 ##################
-EXECUTABLE= rw-xspace rw
+EXECUTABLE= rw-xspace # rw
 
 # Compiler options
 ##################

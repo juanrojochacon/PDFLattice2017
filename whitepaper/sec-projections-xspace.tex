@@ -1,0 +1,107 @@
+
+\subsection{Impact of $x$-space lattice QCD calculations of PDFs}
+\label{sec:projectionsxspace}
+
+In this section we perform an initial exploration of the
+potential impact that future lattice QCD calculations
+of $x$-space PDFs can have on the global analysis.
+%
+Specifically, we will focus on the isotriplet
+combination $xu-xd$ ($x\Delta u - x\Delta d$), which is the
+one for which more progress has been performed recently.
+%
+Following the same Bayesian reweighting procedure that
+has been employed to quantify the impact of the PDF moments,
+we have generated pseudo-data for the isotriplet
+combinations
+\be
+\label{eq:isotriplet_unpol}
+u(x_i,Q^2)-d(x_i,Q^2) \, \quad{\rm and} \, \quad
+\bar{u}(x_i,Q^2)-\bar{d}(x_i,Q^2) \, , \quad i=1,\ldots,N_x \, ,
+\ee
+for the unpolarized case, and for
+\be
+\label{eq:isotriplet_pol}
+\Delta u(x_i,Q^2)-\Delta d(x_i,Q^2) \, \quad{\rm and} \, \quad
+\Delta\bar{u}(x_i,Q^2)-\Delta\bar{d}(x_i,Q^2) \, , \quad i=1,\ldots,N_x \, ,
+\ee
+for the polarized case, with $N_x$ being the number of points
+in $x$-space that are being sampled and we
+take $Q^2=4$ GeV$^2$, consistently with the choice used
+in the case of the PDF moments.
+
+We consider here three scenarios, denoted by scenario D, E, and F,
+for the total uncertainty that will be assigned to
+the lattice-QCD calculations of the specific quark
+combinations listed in Eqns.~(\ref{eq:isotriplet_unpol})
+and~(\ref{eq:isotriplet_pol}).
+
+The results of this exercise are summarized
+in Fig.~\ref{fig:impactxspace}, where we show the
+ratio of PDF uncertainties to the original
+  NNPDF3.1 (NNPDFpol1.1) in the fits where lattice-QCD pseudo-data
+  on $x$-space PDFs has been added to the global unpolarized
+  (polarized) analysis.
+  %
+  Specifically, we show the impact on the PDF uncertainties
+  in $\bar{u}$ and $\bar{d}$ at large-$x$ in the upper
+  plots, with the corresponding comparison for $\Delta\bar{u}$
+  and $\Delta\bar{d}$ in the lower plots.
+  %
+  From this comparison, we find that
+  indeed these lattice-QCD calculations can reduce significantly
+  the errors of the large-$x$ unpolarized and polarized
+  antiquarks.
+  %
+  Taking into account that the PDF uncertainties on the large-$x$
+  antiquarks to begin with are rather large, and that they
+  enter a number of important BSM search channels
+  (such as for instance for new heavy gauge bosons $W'$ and $Z'$)
+  is clear that such calculations would have direct
+  phenomenological implications.
+
+%-------------------------------------------------------------------
+\begin{figure}[!t]
+\centering
+\includegraphics[scale=0.45]{plots/xubar-unpol-lattice-relerr-xdata-xspace.pdf}
+\includegraphics[scale=0.45]{plots/xdbar-unpol-lattice-relerr-xdata-xspace.pdf}
+\includegraphics[scale=0.45]{plots/xubar-pol-lattice-relerr-xdata-xspace.pdf}
+\includegraphics[scale=0.45]{plots/xdbar-pol-lattice-relerr-xdata-xspace.pdf}
+\caption{\small The ratio of PDF uncertainties to the original
+  NNPDF3.1 (NNPDFpol1.1) in the fits where lattice-QCD pseudo-data
+  on $x$-space PDFs has been added to the global unpolarized
+  (polarized) analysis.
+  %
+  Specifically, we show the impact on the PDF uncertainties
+  in $\bar{u}$ and $\bar{d}$ at large-$x$ in the upper
+  plots, with the corresponding comparison for $\Delta\bar{u}$
+  and $\Delta\bar{d}$ in the lower plots.
+}    
+\label{fig:impactxspace}
+\end{figure}
+%---------------------------------------------------------------------
+
+Specifically, from Fig.~\ref{fig:impactxspace} we find that
+in unpolarized case the large-$x$ PDF uncertainties can be reduced
+down to $60\%$ of its original value.
+%
+We also find that there are no big differences between the three
+scenarios, suggesting that a direct lattice-QCD calculation
+of $xu-xd$ does not need to reach uncertainties
+at the few-percent level in order to impact positively
+the PDFs.
+%
+In the polarized case, we find a similar result but the reduction
+of PDF uncertainties can be more marked.
+%
+For instance in the case of $\Delta \bar{d}$, at $x\simeq 0.8$
+the resulting PDF uncertainty from scenario C is less than 50\%
+of the original one.
+%
+Note that the in a Monte Carlo approach such as NNPDF, the
+PDF uncertainties fluctuate themselves, specially at low-scales,
+explaining the wiggles in these plots.
+
+
+Of course the results of this exercise have to be interpreted
+with great care. 
