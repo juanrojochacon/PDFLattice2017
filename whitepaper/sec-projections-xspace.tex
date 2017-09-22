@@ -1,4 +1,3 @@
-
 \subsection{Impact of $x$-space lattice QCD calculations of PDFs}
 \label{sec:projectionsxspace}
 
@@ -7,7 +6,7 @@ potential impact that future lattice QCD calculations
 of $x$-space PDFs can have on the global analysis.
 %
 Specifically, we will focus on the isotriplet
-combination $xu-xd$ ($x\Delta u - x\Delta d$), which is the
+combination $x u-x d$ ($x\Delta u - x\Delta d$), which is the
 one for which more progress has been performed recently.
 %
 Following the same Bayesian reweighting procedure that
@@ -34,6 +33,27 @@ We consider here three scenarios, denoted by scenario D, E, and F,
 for the total uncertainty that will be assigned to
 the lattice-QCD calculations of the specific quark
 combinations listed in Eqns.~(\ref{eq:isotriplet_unpol})
+and~(\ref{eq:isotriplet_pol}).
+%
+First of all we indicate the values of $\left\{ x_i \right\}$
+that have been chosen for this exercise.
+%
+With the motivation that the lattice-QCD computation is expected to have the
+smallest systematic uncertainties at large $x$,
+we have chosen the $N_x=5$ points to be
+\be
+x_i = 0.70\, ,0.75,\, 0.80,\, 0.85, \, 0.90 \, .
+\ee
+For each scenario we assume that that the total error of the lattice calculation
+is the same for each value of $\left\{ x_i \right\}$, and
+moreover we neglect the possible correlations between neighboring $x$-points.
+%
+We have assumed then that we have $\delta_{L}=12\%, 6\%$ and 3\% for scenarios
+D, E, and F, respectively.
+%
+Note that here we assume the same values of $\delta_{L}$ for the polarized
+and unpolarized cases, as well as for both the quark
+and the antiquark isotriplet combinations Eqns.~(\ref{eq:isotriplet_unpol})
 and~(\ref{eq:isotriplet_pol}).
 
 The results of this exercise are summarized
@@ -87,7 +107,7 @@ down to $60\%$ of its original value.
 %
 We also find that there are no big differences between the three
 scenarios, suggesting that a direct lattice-QCD calculation
-of $xu-xd$ does not need to reach uncertainties
+of $x u-x d$ does not need to reach uncertainties
 at the few-percent level in order to impact positively
 the PDFs.
 %
@@ -102,6 +122,23 @@ Note that the in a Monte Carlo approach such as NNPDF, the
 PDF uncertainties fluctuate themselves, specially at low-scales,
 explaining the wiggles in these plots.
 
-
 Of course the results of this exercise have to be interpreted
-with great care. 
+with some care.
+%
+First of all, the results depend sensitively on the specific values of
+$\left\{ x_i \right\}$
+that we have assumed for the lattice-QCD calculation,
+as well as of the associated uncertainties.
+%
+Also, the quantitative results would vary if a different input PDF set
+was used, for example the HERAPDF2.0 set that was used for
+the Hessian profiling exercise of Sect.~\ref{sec:hessianprofiling}.
+%
+But even accounting for these caveats, is clear that a direct
+computation of the isotriplet combination $x u-x d$ on the lattice
+has the potential to constrain the large-$x$ PDFs in
+a more significant way that the corresponding PDF moments calculation,
+specially in the unpolarized case.
+%
+And given the importance of large-$x$ antiquarks for LHC phenomenology,
+pursuing this approach is thus most promising.
