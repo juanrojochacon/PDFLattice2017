@@ -81,7 +81,67 @@ data in scenarios A, B and C.
 A few sentences about profiling -- that should probably go to the beginning of Sec.4\\
 ==============================================\\
 ==============================================\\
-to be done...
+In case of Hessian PDF sets the Hessian profiling method~\cite{Paukkunen:2014zia}
+can be used in order to both check the compatibility of new data on a given PDF set,
+as well as to estimate the impact these data will have on the PDFs. In the following
+we describe essential components of the profiling method. We will assume here that the
+considered Hessian PDF set is using tolerance of $\Delta\chi^2=1$ which corresponds to
+68\%CL uncertainties.
+
+In the profiling method we consider a $\chi^2$ function in which the $\chi^2$ of the new
+data has been added to the initial $\chi^2$:
+\begin{equation}
+\label{eq:newchi2}
+\chi^2_{\text{new}} = \chi_0^2 + \sum_{k}^{N_{\text{eig}}} z_k^2
+                    + \sum_{i=1}^{N_{\text{data}}}
+                      \frac{\lp \mathcal{F}_i - \mathcal{F}_i^{\rm(exp)}\rp^2}
+                           {\lp\delta\mathcal{F}_i^{\rm(exp)}\rp^2}
+\end{equation}
+where $\chi^2_0$ is the value of the $\chi^2$ function in the minimum of the initial PDF set,
+$z_k$ are parameters diagonalizing the Hessian matrix of the initial PDF set,
+$N_{\text{eig}}$ is the dimension of the space in which initial Hessian errors are defined
+(half of the number of error PDFs), $\mathcal{F}_i^{\rm(exp)}$ is the new data,
+and $\mathcal{F}_i$ the corresponding theory prediction.
+
+In the spirit of the Hessian method the new theory predictions $\mathcal{F}_i$ can be expanded
+using a linear approximation:
+\begin{equation}
+\mathcal{F}_i \simeq \mathcal{F}_i[S_0] + \sum_k \frac{\partial\mathcal{F}_i[S]}{\partial z_k}\bigg|_{S=S_0} z_k
+              \simeq \mathcal{F}_i[S_0] + \sum_k D_{ik} w_k,
+\end{equation}
+where $S_0$ represents central PDF and $D_{ik}=\frac{1}{2}(\mathcal{F}_i[S_k^+]-\mathcal{F}_i[S_k^-])$.
+Additionally in the second equality derivative has been approximated by a finite difference between
+Hessian PDF error sets $S_k^{\pm}$.
+%
+The new $\chi^2$ of Eq.~\eqref{eq:newchi2} can now be minimized with respect to the parameters $w_k$,
+which results in:
+\begin{equation}
+\boldsymbol{\vec{w}_{\text{{\bf min}}}} = \boldsymbol{-B^{-1}} \boldsymbol{\vec{a}},
+\end{equation}
+with
+\begin{equation}
+\begin{split}
+B_{kn} &= \sum_i \frac{D_{ik}D_{in}}{\lp\delta\mathcal{F}_i^{\rm(exp)}\rp^2} + \delta_{kn},\\
+a_k &= \sum_i \frac{D_{ik}(\mathcal{F}_i[S_0] - \mathcal{F}_i^{\rm(exp)})}{\lp\delta\mathcal{F}_i^{\rm(exp)}\rp^2}
+\end{split}
+\end{equation}
+
+The components of the solution $\boldsymbol{\vec{w}_{\text{{\bf min}}}}$ define a new set
+of PDFs representing a global minimum after including the new data:
+\begin{equation}
+f_{\text{new}} = f_{S_0} + \sum_{k=1}^{N_{\text{eig}}} \frac{f_{S_k^+}-f_{S_k^-}}{2} w_k^{\text{min}}.
+\end{equation}
+At the same time $\boldsymbol{\vec{w}_{\text{{\bf min}}}}$ defines also a penalty term
+\begin{equation}
+P = \sum_{k=1}^{N_{\text{eig}}} \lp w_k^{\text{min}} \rp^2
+\end{equation}
+which can be used to estimate whether the new data is consistent with the initial set of PDFs;
+$P\ll1$ means that the new data is consistent.
+
+Finally, a set of new error PDFs can be also defined. In this case matrix $B$ plays a role of
+the Hessian matrix allowing to follow a standard Hessian method to obtained PDF errors.
+%
+%
 \\
 ==============================================\\
 
