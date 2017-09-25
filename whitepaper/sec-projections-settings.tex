@@ -1,9 +1,10 @@
-\subsubsection{Settings}
+\subsubsection{Analysis settings}
+\label{sec:projections:settings}
 
-
-Taking into account
-these considerations, we will consider in this analysis the following
-moments.
+The following projection studies aiming to quantify
+the impact of present and future lattice-QCD calculations
+of PDF moments will be based on the following specific choice
+of moments.
 %
 For the unpolarized case, we will use
 \be
@@ -25,14 +26,14 @@ the following five moments:
 Recall that Appendix~\ref{app:notation} contains the
 explicit definitions and conventions used for these moments.
 %
-Therefore, we see that for the unpolarized case we include
+That is,  for the unpolarized case we include
 the second moments (momentum fractions) of $q^+$ (with $q=u,d,s$),
 of the gluon, and of the isoscalar combination $u^+-d^+$.
 %
 In the polarized case instead, we include the first moments (which
-contribute to the proton spin content) of $\Delta q^+$ (with $q=u,d,s$)
-and of the isoscalar combination $\Delta u^+-\Delta d^+$, as well as
-the second moment of $\Delta u^- - \Delta d^-$.
+contribute to the proton spin sum rule) of $\Delta q^+$ (with $q=u,d,s$)
+and of the isoscalar combination $g_A=\Delta u^+-\Delta d^+$, as well as
+the second moment of the $\Delta u^- - \Delta d^-$ combination.
 
 In the present exercise we will consider three
 different scenarios, which we denote
@@ -76,19 +77,22 @@ values assumed for this total uncertainty
     of $\delta_L^{(i)}$ already rather smaller than the typical
     uncertainties that affect state-of-the-art calculations, see Table~\ref{tab:BMunp}.
     %
-    The reason is that we have verified that including the pseudo-data $\mathcal{F}_i^{(\rm)}$
-    assuming lattice-QCD uncertainties of similar size as those of Table~\ref{tab:BMunp}
+    The reason is that we have verified that including the lattice-QCD pseudo-data
+    assuming uncertainties of similar size as those of Table~\ref{tab:BMunp}
     leaves the PDFs essentially unchanged, and only once the uncertainties
     $\delta_L^{(i)}$ are significantly reduced that we start to obtain a reduction
     of the uncertainties from the global fit.
     %
     The only connection with the uncertainties of the calculations in Table~\ref{tab:BMunp}
     is that we assume that $\delta_L^{(i)}$ is typically larger for $\la x\ra_{s^+}$
-    and $\la x\ra_{u^+-d^+}$ as compared to the other moments.
-    %
-    A total systematic error of $\delta_L^{(i)}$ is probably the best that one can achieve
-    within a lattice-QCD calculation even in principle, since at that level many other
-    effects such as QED corrections become relevant and these are much more difficult
+        and $\la x\ra_{u^+-d^+}$ as compared to the other moments.
+
+    We also note that
+    a total systematic error of $\delta_L^{(i)}\sim 1\%$
+    is probably the best that one can achieve
+    within a lattice-QCD calculation even in principle, since at that level several other
+    effects, such as QED corrections,
+    become relevant and these are much more difficult
     to deal with.
     %
     For both
@@ -107,7 +111,9 @@ values assumed for this total uncertainty
 &    $\la x\ra_{u^+}$  &   $\la x\ra_{d^+}$   &  $\la x\ra_{s^+}$  &
 $\la x\ra_{g}$  &   $\la x\ra_{u^+-d^+}$  \\
     \hline
-    Current  & $\sim 16\%$  &  $\sim 30\%$
+    \hline
+    Current  & $\sim 16\%$  &  $\sim 30\%$ \\
+    \hline
     & $\sim 45\%$  & $\sim 13\%$  &  $\sim 60\%$ \\
     A   & 3\%  & 3\% &  5\% &  3\% &  5\% \\
  B   & 2\%  & 2\% &  4\% &  2\% &  4\%  \\
@@ -120,6 +126,7 @@ $\la x\ra_{g}$  &   $\la x\ra_{u^+-d^+}$  \\
     \multicolumn{5}{c}{$\delta_L^{(i)}$ for polarized moments} \\ 
 & $\la 1\ra_{\Delta u^+}$  & $\la 1\ra_{\Delta d^+}$  & $\la 1\ra_{\Delta s^+}$
 &  $\la x\ra_{\Delta u^--\Delta d^-}$  &  $\la 1\ra_{\Delta u^+ - \Delta d^+}$\\
+    \hline
     \hline
     Current  &
     $\sim 3\%$  & $\sim 5\%$ & $\sim 70\%$ & $\sim 65\%$ & $\sim 3\%$ \\
@@ -137,7 +144,7 @@ $\la x\ra_{g}$  &   $\la x\ra_{u^+-d^+}$  \\
     in future lattice QCD calculation $\delta_L$ for each
     of the unpolarized (upper) and polarized (lower table) PDF
     moments that are included
-    in the present reweighting analysis.
+    in this projection analysis.
     %
     In addition, the first line indicates the current systematic
     uncertainties of the state-of-the-art lattice QCD calculations

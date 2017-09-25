@@ -1,24 +1,20 @@
 \subsubsection{Hessian profiling analysis}
 \label{sec:hessianprofiling}
 
-% Results of the Hessian profiling using HERAPDF2.0 as input.
-
-
-We can also use a profiling method with Hessian PDF uncertainty sets  
-to estimate the effect of including Lattice data into the fit. 
-This is similar to the  reweighting method used with the Monte Carlo PDFs (NNPDF3.0) 
-in Sec.\ref{subsec:upolfits},
-and the details of our approach can be found in~\cite{Paukkunen:2014zia,Camarda:2015zba}.
+In order to complement the results obtained
+with the Bayesian reweighting approach,
+we can also use a profiling method, suitable
+for Hessian PDF sets, to estimate the effect of including
+lattice-QCD pseudo-data into the fit. 
 %
-We choose the HERAPDFs as a representative set of Hessian PDFs, and 
+Specifically, we
+choose the HERAPDF2.0 as a representative set of Hessian PDFs, and 
 we have used the same Lattice data on moments to estimate the impact
 on the HERAPDF2.0 unpolarized Hessian PDFs~\cite{Abramowicz:2015mha}. 
 %
-An additional advantage of the HERAPDFs is that they use
+An additional advantage of the HERAPDF2.0 is that they use
 $\Delta\chi^2=1$ for defining the Hessian error PDFs which ensures a
 one to one correspondence of the profiling and reweighting methods.
-
-%============
 
 In case of Hessian PDF sets, the Hessian profiling method
 can be used to both check the compatibility of new data on a given PDF set,
@@ -27,9 +23,6 @@ In the following we describe essential components of the profiling method,
 and will assume  that the considered Hessian PDF set is using tolerance of $\Delta\chi^2=1$ 
 which corresponds to 68\%~CL uncertainties.
 
-
-
-%INTRO
 The central values of the considered moments are obtained using the central PDFs and the corresponding
 errors are calculated according to:
 \begin{equation}
@@ -94,12 +87,6 @@ a penalty of $P\ll1$ means that the new data is consistent.
 Finally, a set of new error PDFs can be also defined; in this case matrix $B_{kn}$ plays the role of
 the Hessian matrix from which the PDF errors can be obtained. 
 
-
-
-
-%======================================================================
-%CONCLUSION
-%
 We have performed this study assuming the same 3 scenarios for the errors of the Lattice data,
 {\it cf.,}~Table~\ref{tab:scenarios}. 
 The study was performed using the xFitter program~\cite{Alekhin:2014irh}.
@@ -144,47 +131,13 @@ The HERAPDF2.0 PDFs were used, and the PDF uncertainties quoted correspond in al
 \begin{figure}[!t]
 \centering
 \includegraphics[width=0.45\textwidth]{plots/ratio_uPubar_Q2.pdf}
-\includegraphics[width=0.45\textwidth]{plots/ratio_dPdbar_Q2.pdf}
-\\
+\includegraphics[width=0.45\textwidth]{plots/ratio_dPdbar_Q2.pdf}\\
 \includegraphics[width=0.45\textwidth]{plots/ratio_g_Q2.pdf}
-%\\
-%\includegraphics[width=0.3\textwidth]{plots/ratio_uPubarMdMdbar_Q2.pdf}
 \includegraphics[width=0.45\textwidth]{plots/ratio_sPsbar_Q2.pdf}
 \caption{\small Combinations of PDFs: $u^+$, $d^+$, $g$, $s^+$ at scale $Q^2=4$ GeV$^2$
 for initial HERAPDF2.0 compared with the PDFs resulting from including Lattice moments
-data in scenarios A, B and C.
-%  \\
-% \Red{NOTE: this is  an alternate figure. 
-% I've dropped the $u^+-d^+$ so we can enlarge the figs and match the previous plot. 
-% We need to pick ONE of the TWO figs. }
-}
+data in scenarios A, B and C.}
 \label{fig:pdfsProf}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-% 
-% THIS IS THE OLD FIGURE WITH THE 5TH PLOT
-% FRED' SUGGESTS JUST KEEPING 4 PLOTS
-%
-%   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%   %------------------------------------------------------
-%   \begin{figure}[!t]
-%   \centering
-%   \includegraphics[width=0.3\textwidth]{plots/ratio_uPubar_Q2.pdf}
-%   \includegraphics[width=0.3\textwidth]{plots/ratio_dPdbar_Q2.pdf}
-%   \includegraphics[width=0.3\textwidth]{plots/ratio_g_Q2.pdf}
-%   \\
-%   \includegraphics[width=0.3\textwidth]{plots/ratio_uPubarMdMdbar_Q2.pdf}
-%   \includegraphics[width=0.3\textwidth]{plots/ratio_sPsbar_Q2.pdf}
-%   \caption{\small Combinations of PDFs: $u^+$, $d^+$, $g$, $u^+-d^+$, $s^+$ at scale $Q^2=4$ GeV$^2$
-%   for initial HERAPDF2.0 compared with the PDFs resulting from including Lattice moments
-%   data in scenarios A, B and C.
-%   }
-%   \label{fig:pdfsProfOLD}
-%   \end{figure}
-%   %----------------------------------------------------------
-%   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 
