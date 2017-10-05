@@ -1,33 +1,33 @@
 \subsubsection{Bayesian reweighting analysis}
 \label{sec:projections:rw}
 
-The procedure followed to quantify the impact of future
+To quantify the impact of future
 lattice QCD calculations on the NNPDF3.1 and NNPDFpol1.1
-Monte Carlo sets (for the three scenarios of Table~\ref{tab:scenarios})
-is the based on the Bayesian reweighting analysis.
+Monte Carlo sets (for the three scenarios of Tab.~\ref{tab:scenarios})
+we use a procedure based on Bayesian reweighting analysis.
 %
 We briefly describe this procedure here,
 and refer to~\cite{Ball:2011gg,Ball:2010gb} for
 additional details.
 \begin{itemize}
-\item First of all, we generate pseudo-data for the lattice QCD calculation
-  of the PDF moments used in this exercise, namely $\la x\ra_{u^+}$,
+\item We first generate pseudo-data for the lattice-QCD calculations
+ of $\la x\ra_{u^+}$,
 $\la x\ra_{d^+}$,
 $\la x\ra_{s^+}$,
 $\la x\ra_{g}$, and
-  $\la x\ra_{u^+-d^+}$ for the unpolarized case, and
+  $\la x\ra_{u^+-d^+}$ for the unpolarised case, and
   $\la 1\ra_{\Delta u^+}$,
 $\la 1\ra_{\Delta d^+}$,
 $\la 1\ra_{\Delta s^+}$,
 $\la x\ra_{\Delta u^--\Delta d^-}$, and
-  $\la 1\ra_{\Delta u^+ - \Delta d^+}$ for the polarized case.
+  $\la 1\ra_{\Delta u^+ - \Delta d^+}$ for the polarised case.
   %
   We denote generically these moments by $\mathcal{F}_i$.
   
-\item The associated pseudo-data, denoted by $\mathcal{F}_i^{\rm (exp)}$,
-  is constructed by taking the central values from
-  the corresponding NNPDF fits, NNPDF3.1 NNLO for the unpolarized case and NNPDFpol1.1 NLO
-  for the polarized one.
+\item We construct the associated pseudo-data, denoted by $\mathcal{F}_i^{\rm (exp)}$,
+  by taking the central values from
+  the corresponding NNPDF fits, NNPDF3.1 NNLO for the unpolarised case and NNPDFpol1.1 NLO
+  for the polarised one.
   %
   That is, we {\it assume} for simplicity that the central value
   of such future lattice calculations would coincide with the current ones
@@ -43,28 +43,28 @@ $\la x\ra_{\Delta u^--\Delta d^-}$, and
   \mathcal{F}_i^{\rm (k)} \, , \quad i=1,\ldots,N_{\rm mom} \, ,
   \ee
   where $N_{\rm mom}$ are the number of PDF moments that will be included
-  in the reweighting, in this case $N_{\rm mom}=5$ both for the unpolarized
-  and polarized cases.
+  in the reweighting, in this case $N_{\rm mom}=5$ both for the unpolarised
+  and polarised cases.
   %
   To be consistent with the calculations in Sect.~\ref{sec:benchmarking},
   here the central values of the pseudo-data Eq.~(\ref{eq:pseudodatadef})
-  are also evaluated at $Q^2=4$ GeV$^2$ (see Tables~\ref{tab:unpPDFmoms} and~\ref{tab:polPDFmoms}).
-\item The uncertainty in the pseudo data, denoted by $\delta\mathcal{F}_i^{\rm (exp)} $,
-  is taken for each moment to be the value indicated in
-  Table~\ref{tab:scenarios} for each of the three scenarios.
+  are also evaluated at $Q^2=4$ GeV$^2$ (see Tabs.~\ref{tab:unpPDFmoms} and~\ref{tab:polPDFmoms}).
+\item The uncertainty in the pseudo-data, denoted by $\delta\mathcal{F}_i^{\rm (exp)} $,
+  is taken to be the value indicated in
+  Tab.~\ref{tab:scenarios} for each of the three scenarios.
   %
-  That is, we have that the absolute uncertainty on the $i$-th moment
-  will be given by $\delta\mathcal{F}_i^{\rm (exp)}=\delta_L^{(i)}\mathcal{F}_i^{\rm (exp)} $.
+  Thus, the absolute uncertainty on the $i$-th moment
+  is given by $\delta\mathcal{F}_i^{\rm (exp)}=\delta_L^{(i)}\mathcal{F}_i^{\rm (exp)} $.
 \item Using the pseudo-data (central values and total uncertainties)
-  as defined above, we next need to compute
+  as defined above, we compute
   the Bayesian weights  $\omega_k$.
   %
   These weights
   quantify the agreement between each of $N_{\rm rep}$ replicas
   of the input PDF set and the corresponding lattice pseudo-data.
   %
-  Specifically, first of all we compute the $\chi^2$ between each of the Monte Carlo
-  replicas and the lattice pseudo-data as follows,
+  First of all, we compute the $\chi^2$ between each of the Monte Carlo
+  replicas and the lattice pseudo-data as
   \be
   \chi^{2(k)}= \sum_{i=1}^{\rm N_{\rm mom}} \frac{\lp
     \mathcal{F}_i^{\rm (k)} -\mathcal{F}_i^{\rm (exp)} \rp^2}{
@@ -73,15 +73,15 @@ $\la x\ra_{\Delta u^--\Delta d^-}$, and
   assuming that there are no correlations between the different $N_{\rm mom}$ moments.
   %
   This assumption in general might not be a good approximation, since most lattice
-  QCD systematic errors are correlated among the different moments, and should be
-  avoided provided the full breakdown of systematic error of each quantity is available.
+  QCD systematic errors are correlated among the different moments, and can be
+  avoided, provided the full breakdown of systematic errors for each quantity is available.
 
   
   Once the values of the $\chi^2$ have been evaluated,
-  we can compute the corresponding weights for each replica.
+  we compute the corresponding weights for each replica.
   %
   The relation between the weights $w_k$  and the values of
-  the $\chi^{2(k)}$ of each replica is the following
+  the $\chi^{2(k)}$ of each replica is
   \be
   \omega_k =\frac{\lp \chi^{2(k)} \rp^{(N_{\rm mom}-1)/2}\exp(-\chi^{2(k)}/2)}{
   \sum_{k=1}^{N_{\rm rep}} \lc \lp \chi^{2(k)} \rp^{(N_{\rm mom}-1)/2}\exp(-\chi^{2(k)}/2)\rc} \, ,
@@ -94,32 +94,30 @@ $\la x\ra_{\Delta u^--\Delta d^-}$, and
   For instance, replicas which have associated values
   of the moments far from the pseudo-data (within uncertainties) will
   have associated a very large weight, being thus effectively discarded.
-\item These weights can be use to now recompute the PDFs, their moments,
-  as well as any generic cross-section.
+\item These weights are used to recompute the PDFs, their moments,
+  and generic cross-sections.
   %
   This procedure emulates the
-  impact that adding these lattice-QCD pseudo-data in a complete PDF fit would have.
+  impact of adding lattice-QCD pseudo-data to a complete PDF fit.
   %
-  For instance, after the reweighting the mean value of
-  the PDF moments should be computed as
+  For instance, after reweighting, the mean value of
+  the PDF moments is
    \be
   \label{eq:pseudodatadef1}
   \mathcal{F}_i^{\rm (rw)} = \sum_{k=1}^{N_{\rm rep}}\omega_k
   \mathcal{F}_i^{\rm (k)} \, , \quad i=1,\ldots,N_{\rm mom} \, ,
   \ee
-  and same for the associated uncertainties.
+  with a similar relation for the associated uncertainties.
 \end{itemize}
 
-One limitation of the reweighting procedure just
-outlined is that it can be considered as fully 
- reliable provided only the 
+One limitation of this reweighting procedure is that it is only fully 
+ reliable if the 
   effective number of replicas $N_{\rm eff}$ that survive the reweighting
   procedure (which is a measure of the amount
   of information left) is not too small.
   %
   This effective number of replicas
-    is quantified in terms of the Shannon entropy from information
-    theory, namely
+    is quantified in terms of the Shannon entropy
     \be
     \label{eq:effnrep}
     N_{\rm eff}\equiv \exp\lc \frac{1}{N_{\rm rep}}\sum_{k=1}^{N_{\rm rep}}\omega_k
@@ -138,14 +136,14 @@ outlined is that it can be considered as fully
     of the lattice-QCD pseudo-data at the PDF
     level, we need to ensure that the
     three scenarios defined
-    in Table~\ref{tab:scenarios} still lead
+    in Tab.~\ref{tab:scenarios} still lead
     to values of $N_{\rm eff}$ large enough for
     the reweighting procedure to be reliable.
   %
-In Table~\ref{tab:neff} we indicate the effective number of replicas
+In Tab.~\ref{tab:neff} we indicate the effective number of replicas
     $N_{\rm eff}$, Eq.~(\ref{eq:effnrep}), remaining when the pseudo-data
-    on the PDF moments is included in the global
-    fit according to the scenarios of Table~\ref{tab:scenarios}.
+    are included in the global
+    fit according to the scenarios of Tab.~\ref{tab:scenarios}.
     %
     For completeness, we also indicate here the original number
     of replicas $N_{\rm rep}$ for the original
@@ -158,8 +156,8 @@ In Table~\ref{tab:neff} we indicate the effective number of replicas
     %
     For instance, in the most optimistic scenario,
     scenario C, the effective number of replicas is around two (five) times
-    smaller than the starting number of replicas in the unpolarized
-    (polarized) case.
+    smaller than the starting number of replicas in the unpolarised
+    (polarised) case.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[h!]
@@ -181,7 +179,7 @@ In Table~\ref{tab:neff} we indicate the effective number of replicas
     $N_{\rm eff}$, Eq.~(\ref{eq:effnrep}), remaining when the pseudo-data
     on the PDF moments is included in the global
     fit according to the scenarios outlined
-    in Table~\ref{tab:scenarios}.
+    in Tab.~\ref{tab:scenarios}.
     %
     For completeness, we also indicate the original number
     of replicas $N_{\rm rep}$ for the original
@@ -191,27 +189,27 @@ In Table~\ref{tab:neff} we indicate the effective number of replicas
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\paragraph{Impact on unpolarized global fits}
+\paragraph{Impact on unpolarised global fits}
 \label{subsec:upolfits}
 %
-Next we move to discuss the results of applying the reweighting procedure
-outlined above to a representative unpolarized
-global fit, in this case the NNPDF3.1   analysis.
+We now discuss the results of applying the reweighting procedure
+to a representative unpolarised
+global fit, in this case the NNPDF3.1 analysis.
 %
-To begin with, in Table~\ref{tab:unpolmomentsrw} we summarize
-the values of the unpolarized PDF moments
+To begin with, in Tab.~\ref{tab:unpolmomentsrw} we summarise
+the values of the unpolarised PDF moments
 used as pseudo-data $\mathcal{F}_i^{(\rm exp)}$,
 as well as the corresponding results
   after the reweighting has been performed, for the
-three scenarios summarized 
-in Table~\ref{tab:scenarios}.
+three scenarios summarised 
+in Tab.~\ref{tab:scenarios}.
 %
-The PDF uncertainties quoted there correspond to 68\% confidence level intervals.
+The PDF uncertainties quoted there correspond to 68\%-CL intervals.
 %
-We recall that, as explained above, the three scenarios considered here exhibit
-uncertainties $\delta_L^{(i)}$ on the lattice-QCD pseudo-data rather smaller
+We recall that, as explained above, the three scenarios exhibit
+uncertainties $\delta_L^{(i)}$ for the lattice-QCD pseudo-data rather smaller
 than those of current state-of-the-art
-calculations (see Table~\ref{tab:BMunp}).
+calculations (see Tab.~\ref{tab:BMunp}).
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}[t]
@@ -233,11 +231,11 @@ calculations (see Table~\ref{tab:BMunp}).
    $0.1521 \pm 0.0035$ &    $0.1521 \pm 0.0029$ \\
   \hline
 \end{tabular}
-\caption{\small Values of the unpolarized PDF moments
+\caption{\small Values of the unpolarised PDF moments
   used as pseudo-data, as well as the corresponding results
   after the reweighting has been performed, for the
-three scenarios summarized in 
-in Table~\ref{tab:scenarios}.
+three scenarios summarised in 
+in Tab.~\ref{tab:scenarios}.
 %
 The PDF uncertainties quoted correspond in all cases to 68\%
 CL intervals.
@@ -246,29 +244,28 @@ CL intervals.
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-From Table~\ref{tab:unpolmomentsrw} we see that a significant
-reduction of the uncertainties in the unpolarized PDF moments is challenging to achieve
-unless we assume to the most aggressive scenarios.
+From Tab.~\ref{tab:unpolmomentsrw} we see that a significant
+reduction in the uncertainties in the unpolarised PDF moments is challenging to achieve
+unless we assume the most aggressive scenarios.
 %
 For instance, in scenario C, which is about the best precision that
-can achieved from lattice-QCD, the PDF uncertainties on the second moments
+can achieved from lattice-QCD in the near future, the PDF uncertainties of the second moments
 (that is, the momentum fractions) for $u^+,d^+,s^+$ and $g$ decrease by around
-between 30\% and 60\%.
+30\% to 60\%.
 %
 The most marked decrease is for the strange momentum fraction, since this is the
 one affected by the largest PDF errors to begin with.
 %
-On the other hand, the non-singlet combination $\la x\ra_{u^+-d^+}$ is essentially
+In contrast, the non-singlet combination $\la x\ra_{u^+-d^+}$ is essentially
 unchanged in all three scenarios.
 %
-Note that the reason why in Table~\ref{tab:unpolmomentsrw} the central values
-of the PDF moments are very stable is that by construction we assume that the
-lattice-QCD central value corresponds to the PDF one.
+Note​ ​that,​ ​in​ ​Tab.~\ref{tab:unpolmomentsrw},​ ​the​ ​central​ ​values​ ​of​ ​the​ ​PDF​ ​moments​ ​are​ ​stable,​ ​because​ ​we​ ​assume
+that​ ​the​ ​central​ ​values​ ​of​ ​the​ ​pseudo-data​ ​correspond​ ​to​ ​those​ ​of​ ​the​ ​input​ ​PDFs.​ 
 %
-Of course in a realistic situation, such as that summarized in the
-comparisons of Fig.~\ref{fig:Bmoms}, this will not be necessarily the case
-and there also the central value of the PDF moments expected to vary
-upon reweighting.
+​In​ ​a​ ​realistic
+situation,​ ​such​ ​as​ ​that​ ​summarised​ ​in​ ​Fig.~\ref{fig:Bmoms},​ ​this​ ​is​ ​not​ ​necessarily​ ​the​ ​case​ ​and​ ​one​ ​expects
+that​ ​the​ ​central​ ​values​ ​of​ ​the​ ​PDFs​ ​will​ ​also​ ​vary​ ​upon​ ​reweighting.
+
 
 
 %------------------------------------------------------
@@ -283,7 +280,7 @@ upon reweighting.
   $Q^2=4$ GeV$^2$,
   compared to the results of including the five lattice
   QCD moments as pseudo-data points in the fit using the three
-  different scenarios in  Table~\ref{tab:scenarios}.
+  different scenarios in  Tab.~\ref{tab:scenarios}.
   %
 See text for more details.
 }    
@@ -291,19 +288,13 @@ See text for more details.
 \end{figure}
 %----------------------------------------------------------
 
-The result that, at least with the specific moments that we have used
-in this exercise, it will be challenging to reduce the
-PDF uncertainties is also illustrated by the comparisons of 
- Fig.~\ref{fig:impactUnpol}, where we show
-the percentage PDF uncertainties in NNPDF3.1  
-for the gluon and the $u^+$, $d^+$ and $s^+$ quark PDFs in NNPDF3.1  
-at $Q^2=4$ GeV$^2$,
-compared to the corresponding results once
-the lattice-QCD pseudo-data points of Table~\ref{tab:scenarios} have
-been added by reweighting.
-  %
+​Further​ ​evidence​ ​that​ ​reducing​ ​uncertainties​ ​in​ ​unpolarised​ ​PDFs​ ​will​ ​be​ ​challenging​ ​is​ ​shown​ ​in
+Fig.~\ref{fig:impactUnpol},​ ​which​ ​plots​ ​the​ ​percentage​ ​PDF​ ​uncertainties​ ​in​ ​NNPDF3.1​ ​for​ ​the​ ​gluon​ ​and​ ​the
+$u^+$,​ ​$d^+$​ ​and​ ​$s^+$​ ​quark​ ​PDFS​ ​at​ ​$Q^2​ ​=​ ​4$​ ​GeV$^2$,​ ​compared​ ​to​ ​the​ ​corresponding
+results​ ​including​ ​lattice-QCD​ ​pseudo-data.
+%
 In the case of the $u^+,d^+$ and $s^+$, we observe a slight reduction
-of the PDF uncertainties, which is more marked as the move
+of the PDF uncertainties, which is more marked as we move
 from scenario A to C.
 %
 For instance, in the latter case the percentage PDF
@@ -315,23 +306,20 @@ are essentially unchanged even in the most optimistic scenario.
 
 Focusing on the large-$x$ region, where the
 impact of the PDF moments considered here
-is expected to be more marked,
+is expected to be more marked, in
 Fig.~\ref{fig:impactUnpollargex} we show a similar comparison
-as in Fig.~\ref{fig:impactUnpol} but now showing the ratio of the
-  PDF uncertainties in the fits based on the three scenarios
-  as a ratio of the original
-  PDF uncertainty of the NNPDF3.1   set, for the $d^+$
+to that in Fig.~\ref{fig:impactUnpol}, but for the ratio 
+​of​ ​the​ ​uncertainties​ ​in​ ​each​ ​scenario​ ​as​ ​a​ ​ratio​ ​of​ ​the​ ​original​ ​PDF​ ​uncertainty
+of the NNPDF3.1 set, for the $d^+$
   and $s^+$ total quark PDFs.
   %
-  This comparison illustrates better that the relative reduction
+  This comparison clearly illustrates that the relative reduction
   of the PDF uncertainties upon the addition of the lattice-QCD
   pseudo-data is not completely flat, and that it exhibits some
   non-trivial structure.
   %
-  Specifically we find that the constrains from the
-  lattice-QCD computation of these PDF moments is more marked
-  for $x\simeq 0.2$, and then decreasing for
-  larger values of $x$.
+​We​ ​find​ ​that​ ​that​ ​the​ ​constraints​ ​from​ ​lattice-QCD​ ​calculations​ ​of​ ​these​ ​PDF​ ​moments​ ​is​ ​most
+pronounced​ ​for​ ​$x​ ​\simeq​ ​0.2$,​ ​and​ ​decreases​ ​for​ ​larger​ ​values​ ​of​ ​$x$.
 
 %------------------------------------------------------
 \begin{figure}[!t]
@@ -349,32 +337,32 @@ as in Fig.~\ref{fig:impactUnpol} but now showing the ratio of the
 \end{figure}
 %----------------------------------------------------------
 
-\paragraph{Impact on polarized global fits}
+\paragraph{Impact on polarised global fits}
 %
-Now we turn to discuss the results of applying the
-reweighting procedure to a representative polarized
-global fit, specifically the NNPDFpol1.1 NLO set.
+Now we turn to apply the
+reweighting procedure to a representative polarised
+global fit, the NNPDFpol1.1 NLO set.
 %
-First of all, in Table~\ref{tab:polmomentsrw}
-we list the values of the polarized PDF moments
+In Tab.~\ref{tab:polmomentsrw}
+we list the values of the polarised PDF moments
   used as pseudo-data, as well as the corresponding results
   after the reweighting has been performed for the
-three scenarios summarized in 
-in Table~\ref{tab:scenarios}.
+three scenarios summarised in 
+in Tab.~\ref{tab:scenarios}.
 %
-As in the unpolarized case, the PDF uncertainties quoted correspond in all cases to 68\%
-CL intervals.
+As in the unpolarised case, the PDF uncertainties quoted correspond in all cases to 
+68\%-CL intervals.
 %
-As we can see from this comparison, already in the first scenario
+As we can see from this comparison, in scenario A
 (which assumes lattice-QCD pseudo-data with similar uncertainties
-as existing calculations) there is a marked impact on the
-polarized PDF moments.
+to existing calculations) there is a marked impact on the
+polarised PDF moments.
 %
-Specifically, for both $\la 1\ra_{\Delta u^+}$ and $\la 1\ra_{\Delta d^+}$
-the PDF uncertainties are roughly halved, with the same
-trend but less marked for $\la 1\ra_{\Delta s^+}$.
+For both $\la 1\ra_{\Delta u^+}$ and $\la 1\ra_{\Delta d^+}$
+the PDF uncertainties are roughly halved, with a similar, but less marked,
+trend for $\la 1\ra_{\Delta s^+}$.
 %
-At this level, there is no impact for the non-singlet
+At this level, there is no impact on the non-singlet
 combinations $\la 1\ra_{\Delta u^+ - \Delta d^+}$
 and $\la x\ra_{\Delta u^--\Delta d^-}$.
 
@@ -397,8 +385,8 @@ and $\la x\ra_{\Delta u^--\Delta d^-}$.
   & $+0.196 \pm 0.016$     &  $+0.198 \pm 0.012$    \\
   \hline
 \end{tabular}
-\caption{\small Same as Table~\ref{tab:unpolmomentsrw}, now for
-  the polarized PDF moments computed with NNPDFpol1.1.
+\caption{\small Same as Tab.~\ref{tab:unpolmomentsrw}, now for
+  the polarised PDF moments computed with NNPDFpol1.1.
   %
   The corresponding impact at the PDF level is shown in
   Fig.~\ref{fig:impactPol}.
@@ -407,43 +395,43 @@ and $\la x\ra_{\Delta u^--\Delta d^-}$.
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-As we further decrease the assumed uncertainties in the lattice-QCD pseudo-data
-for the PDF moments, we observe a consequent reduction of the uncertainties
+As we further decrease the assumed uncertainties in the lattice-QCD
+ pseudo-data,​ ​we​ ​observe​ ​a​ ​corresponding​ ​reduction of the uncertainties
 in the global fit.
 %
-In the most optimistic scenario C, we find that for both
+In scenario C, the most optimistic, we find that for both
 $\la 1\ra_{\Delta u^+}$ and $\la 1\ra_{\Delta d^+}$ there is an uncertainty
-reduction by about an order of magnitude as compared to the current values,
-and about a factor 5 for $\la 1\ra_{\Delta s^+}$.
+reduction by about an order of magnitude compared to the current values,
+and about a factor of five for $\la 1\ra_{\Delta s^+}$.
 %
 Therefore, we demonstrate that future lattice-QCD calculations of
-polarized PDF moments can potentially lead to a much more
+polarised PDF moments can potentially lead to a much more
 precise understanding of the spin structure of the proton.
 %
 The other quark combinations exhibit less sensitivity to the inclusion
-of the PDF moments in the global fit, given that to begin with
+of the PDF moments in the global fit, because
 they are already quite well constrained by available experimental
 data.
 %
-Specifically, the PDF uncertainties for  $\la 1\ra_{\Delta u^+ - \Delta d^+}$
-are reduced by a factor 2 in this quite optimistic scenario, while
+The PDF uncertainties for  $\la 1\ra_{\Delta u^+ - \Delta d^+}$
+are reduced by a factor of two in this quite optimistic scenario, while
 those of $\la x\ra_{\Delta u^--\Delta d^-}$ are essentially unaffected even
-in this case.
+in the most optimistic scenario.
 
-Next we move to illustrate the impact of the lattice-QCD pseudo-data
-on the polarized PDFs themselves, rather than on their
-moments.
+%Next we move to illustrate the impact of the lattice-QCD pseudo-data
+%on the polarised PDFs themselves, rather than on their
+%moments.
 %
-With this motivation,
-in Fig.~\ref{fig:impactPol} we present a 
-similar comparison as that of Fig.~\ref{fig:impactUnpol}, now
+%With this motivation,
+In Fig.~\ref{fig:impactPol} we present a 
+similar comparison to that of Fig.~\ref{fig:impactUnpol}, now
   showing the absolute PDF uncertainties of the NNPDFpol1.1 fit,
   compared to the corresponding results once the lattice pseudo-data
-  on polarized moments in included in the analysis by means of the
+  on polarised moments is included in the analysis by means of the
   reweighting.
   %
-  The reason to show absolute rather than relative uncertainties
-  is that, unlike unpolarized PDFs, polarized PDFs often exhibit nodes
+  We show absolute rather than relative uncertainties
+  because, unlike unpolarised PDFs, polarised PDFs often exhibit nodes
   (in particular for strangeness and the gluon) and in the nearby regions
   the concept of relative uncertainty becomes ill-defined.
   
@@ -458,33 +446,32 @@ similar comparison as that of Fig.~\ref{fig:impactUnpol}, now
   showing the absolute PDF uncertainties of the NNPDFpol1.1 fit
    $Q^2=4$ GeV$^2$,
   compared to the corresponding results once the lattice pseudo-data
-  on polarized moments in included in the analysis via
+  on polarised moments in included in the analysis via
   reweighting.
 }    
 \label{fig:impactPol}
 \end{figure}
 %---------------------------------------------------------------------
 
-From Fig.~\ref{fig:impactPol} we find that for scenarios
-A and B there only a very moderate reduction (or even a slight increase)
+From Fig.~\ref{fig:impactPol} we see that for scenarios
+A and B there is only a very moderate reduction (or even a slight increase)
 of the PDF uncertainties, seemingly at odds with the results
-for their moments in Table~\ref{tab:polmomentsrw}.
+for their moments in Tab.~\ref{tab:polmomentsrw}.
 %
 The reason is that the first PDF moments alone provide only limited
-information on the shape of the PDFs itself, and therefore in some
-cases one will find a large error reduction on the moments (since these
-are the fitted quantified) than on the PDFs themselves (which are
-only directly constrained).
+information on the shape of the PDFs themselves, and therefore in some
+cases one finds a large error reduction on the moments (since these
+are the fitted quantities) than on the PDFs themselves (which are
+only indirectly constrained).
 %
-On the other hand, once the lattice-QCD pseudo-data uncertainties
-decrease beyond a certain level, the start to impact the PDF shape
-as well, as we can see from the results of scenario C.
+Once, however, the lattice-QCD pseudo-data uncertainties
+decrease beyond a certain level, these uncertainties start to influence the PDF shape, 
+as we can see from the results of scenario C.
 %
-In that case we find that the PDF uncertainties can decreases by up to a factor
-2 (3) for $\Delta d^+(x,Q)$ ($\Delta s^+(x,Q)$).
+In that case we find that the PDF uncertainties can decrease by up to a factor
+of two (three) for $\Delta d^+(x,Q)$ ($\Delta s^+(x,Q)$).
 %
-Interestingly, we see that the relative reduction of PDF uncertainties is more
+We see that the relative reduction of PDF uncertainties is more
 or less constant along the whole range of $x$, consistent with the fact that
-the lattice-QCD pseudo-data is only sensitive to the total integral
+the lattice-QCD pseudo-data are only sensitive to the total integral
 of the $x$ distribution.
-
