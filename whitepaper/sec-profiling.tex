@@ -1,36 +1,36 @@
 \subsubsection{Hessian profiling analysis}
 \label{sec:hessianprofiling}
 
-In order to complement the results obtained
+To complement the results obtained
 with the Bayesian reweighting approach,
-we can also use a profiling method, suitable
+we use a profiling method, suitable
 for Hessian PDF sets, to estimate the effect of including
 lattice-QCD pseudo-data into the fit. 
 %
-Specifically, we
+We
 choose the HERAPDF2.0~\cite{Abramowicz:2015mha}
 as a representative set of Hessian PDFs.
 %
-We have consistently used the same lattice-QCD
-pseudo data on PDF moments to estimate the impact
-on HERAPDF2.0 than in the case of the Bayesian reweighting
+We consistently use the same lattice-QCD
+pseudo-data on PDF moments to estimate the impact
+on HERAPDF2.0 set, as in the case of the Bayesian reweighting
 exercise presented in the previous section.
 %
-An additional advantage of the HERAPDF2.0 is
-their use
+An additional advantage of the HERAPDF2.0 set is
+the use
 of a standard tolerance
-$\Delta\chi^2=1$ for defining the 68\% CL PDF
+$\Delta\chi^2=1$ for defining the 68\%-CL PDF
 uncertainties, which ensures a
-one to one correspondence between
+one-to-one correspondence between
 the profiling and reweighting methods.
 
-In case of Hessian PDF sets, the Hessian profiling method
+For Hessian PDF sets, the Hessian profiling method
 can be used to both check the compatibility of new data on a given PDF set,
 and also  estimate the impact these data will have on the PDFs. 
-In the following we describe essential components of the profiling method, 
-and will assume  that the considered Hessian PDF set is using tolerance of $\Delta\chi^2=1$ 
+In the following we describe the essential components of the profiling method, 
+and assume  that the  Hessian PDF set uses a tolerance of $\Delta\chi^2=1$, 
 which corresponds to 68\%~CL uncertainties,
-as is the case with HERAPDF2.0.\footnote{In this exercise
+as is the case with HERAPDF2.0 set.\footnote{In this exercise
 we consider only the {\it experimental} HERAPDF2.0
 uncertainties, but not the {\it model} and {\it parametrization}
 variations, which are not suited for profiling.}
@@ -51,7 +51,7 @@ data has been added to the initial $\chi^2_0$, namely
 \chi^2_{\text{new}} = \chi_0^2 + \sum_{k}^{N_{\text{eig}}} z_k^2
                     + \sum_{i=1}^{N_{\text{data}}}
                       \frac{\lp \mathcal{F}_i - \mathcal{F}_i^{\rm(exp)}\rp^2}
-                           {\lp\delta\mathcal{F}_i^{\rm(exp)}\rp^2}
+                           {\lp\delta\mathcal{F}_i^{\rm(exp)}\rp^2}\,,
 \end{equation}
 where $\chi^2_0$ is the value of the $\chi^2$ function in the minimum of the initial PDF set,
 $z_k$ are the parameters diagonalizing the Hessian matrix of the initial PDF set,
@@ -66,14 +66,14 @@ using a linear approximation:
 \mathcal{F}_i \simeq \mathcal{F}_i[S_0] + \sum_k \frac{\partial\mathcal{F}_i[S]}{\partial z_k}\bigg|_{S=S_0} z_k \quad
               \simeq \mathcal{F}_i[S_0] + \sum_k D_{ik} w_k \ ,
 \end{equation}
-where $S_0$ represents central PDF and we have defined
+where $S_0$ represents the central PDF and we have defined
 \be
 D_{ik}=\frac{1}{2}(\mathcal{F}_i[S_k^+]-\mathcal{F}_i[S_k^-]) \, ;
 \ee
 here the  derivative has been approximated by a finite difference of the 
 Hessian PDF error sets $S_k^{\pm}$.
 %
-The new $\chi^2$ of Eq.~\eqref{eq:newchi2} can now be minimized with respect to the parameters $w_k$,
+The new $\chi^2$ of Eq.~\eqref{eq:newchi2} can now be minimised with respect to the parameters $w_k$,
 which results in:
 \begin{equation}
 \boldsymbol{\vec{w}_{\text{{\bf min}}}} = \boldsymbol{-B^{-1}} \boldsymbol{\vec{a}},
@@ -109,21 +109,11 @@ Finally, a set of new error PDFs can be also defined; in this case matrix $B_{kn
 the Hessian matrix from which the PDF uncertainties
 can be obtained. 
 
-As mentioned above, we have performed this profiling
-study assuming the same three scenarios for the assumed
-total errors of the lattice-QCD pseudo-data
-{\it cf.,}~Table~\ref{tab:scenarios}.
-%
-The study was performed using the {\tt xFitter}
-program~\cite{Alekhin:2014irh}.
-%
-The results of the profiling are shown in Table~\ref{tab:unpolmomentsProf} where the uncertainties
-of the considered moments are displayed for the case of the initial HERAPDF2.0 PDF and after including the considered lattice-QCD
-moments pseudo-data in the three scenarios.
-%
-Note that the
-corresponding results of applying the reweighting method
-to NNPDF3.1 were listed in Table~\ref{tab:unpolmomentsrw}.
+We​ ​performed​ ​this​ ​study​ ​using​ ​the​ ​Xfitter​ ​program​ ​\cite{Alekhin:2014irh}​ ​and​ ​assuming​ ​the​ ​same​ ​three
+scenarios​ ​for​ ​the​ ​lattice-QCD​ ​pseudo-data​ ​as​ ​in​ ​Tab.~\ref{tab:scenarios}.​ ​The​ ​results​ ​are​ ​shown​ ​in​ ​Tab.~\ref{tab:unpolmomentsProf},
+where​ ​we​ ​tabulate​ ​the​ ​uncertainties​ ​of​ ​the​ ​input​ ​HERAPDF2.0​ ​PDF​ ​in​ ​column​ ​two​ ​and​ ​the
+corresponding​ ​uncertainties​ ​for​ ​each​ ​scenario​ ​in​ ​columns​ ​three​ ​to​ ​five.​ ​Note​ ​that​ ​we​ ​list​ ​the
+analogous​ ​results​ ​from​ ​the​ ​reweighting​ ​method,​ ​applied​ ​to​ ​the​ ​NNPDF​ ​3.1​ ​data​ ​set,​ ​in​ ​Tab.~\ref{tab:unpolmomentsrw}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -141,45 +131,41 @@ to NNPDF3.1 were listed in Table~\ref{tab:unpolmomentsrw}.
   $\la x\ra_{u^+-d^+}$ &  $0.1875\pm 0.0074$  &  $0.1875\pm 0.0045$  &  $0.1875\pm 0.0039$  &  $0.1875\pm 0.0027$ \\
   \hline
 \end{tabular}
-\caption{\small Values of the unpolarized PDF moments
+\caption{\small Values of the unpolarised PDF moments
   used as lattice-QCD pseudo-data, as well as the corresponding results
   after the profiling  for the
-three scenarios summarized in Table~\ref{tab:scenarios}.
+three scenarios summarised in Tab.~\ref{tab:scenarios}.
 %
 The HERAPDF2.0 PDFs were used, and the PDF uncertainties quoted correspond in all cases to 68\%~CL intervals.
 %
 The corresponding results of applying the reweighting method
-to NNPDF3.1 were listed in Table~\ref{tab:unpolmomentsrw}.
+to NNPDF3.1 were listed in Tab.~\ref{tab:unpolmomentsrw}.
 \label{tab:unpolmomentsProf}
 }
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-From the comparison of Table~\ref{tab:unpolmomentsProf},
-we can observe a consistent trend as compared
-to the reweighting of NNPDF3.1.
+From a comparison of Tab.~\ref{tab:unpolmomentsProf} to Tab.~\ref{tab:unpolmomentsrw},
+we observe a consistent trend compared with the reweighting of NNPDF3.1.
 %
 The relative reduction of the PDF uncertainties is larger
-in this case though, for example for $\la x\ra_{d^+}$ ( $\la x\ra_{s^+}$
-and  $\la x\ra_g$) we find a reduction by a factor roughly
-4 (4 and 3, respectively) as compared to the original
+in this case though, for example, for $\la x\ra_{d^+}$ ( $\la x\ra_{s^+}$
+and  $\la x\ra_g$) we find a reduction by a factor of roughly
+four (four and three, respectively) compared to the original
 HERAPDF2.0 uncertainties.
 %
-The fact that the constraining power of the lattice-QCD pseudo-data
+The constraining power of the lattice-QCD pseudo-data
 on the PDF moments appears to be more significant in the
-HERAPDF2.0 case than in the NNPDF3.1 one can be explained by the
-fact that the former is a DIS-only fit, while the latter
+HERAPDF2.0 case than in the NNPDF3.1, because includes only DIS data, while the latter
 is a global fit containing a wider variety of
-input datasets (and thus characterized by smaller
+input datasets (and thus characterised by smaller
 PDF uncertainties to begin with).
 
-Next in Fig.~\ref{fig:pdfsProf} we present a
+In Fig.~\ref{fig:pdfsProf} we present a
 comparison of the
 $u^+$, $d^+$, $g$, and $s^+$ PDFs at the scale of $Q^2=4$ GeV$^2$
 between the original  HERAPDF2.0 set and the results of the profiling
-exercise accounting for the constraints of
-the lattice-QCD moments
-pseudo-data in scenarios A, B and C.
+exercise for scenarios A, B and C.
 %
 As mentioned above, only the {\it experimental} PDF uncertainties are shown
 in this comparison,
@@ -210,22 +196,19 @@ but not the {\it model} and {\it parametrization} variations.
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-From Fig.~\ref{fig:pdfsProf} we find that as expected the
-impact of the lattice pseudo-data is focused
-on the medium and large-$x$ region.
+From Fig.~\ref{fig:pdfsProf} we see that, as expected, the
+impact of the lattice pseudo-data is greeatest in the medium and large-$x$ regions.
 %
-Interestingly, the precise impact on the PDFs is rather
+The precise impact on the PDFs is rather
 similar for the three scenarios, with the most optimistic
-scenario C leading to the bigger reduction of
-the uncertainties.
+scenario C leading to the largest reduction in uncertainties.
 %
-The quark flavor combinations that are more affected by the
+The quark flavor combinations that are most affected by the
 lattice-QCD pseudo-data are the $d^{+}$ and $s^{+}$ PDFs,
-with some impact also for the gluon.
+and, to a lesser extent, the gluon PDF.
 %
-The fact that the PDF uncertainties in $d^{+}$ and $s^{+}$
-improve such much is explained because the DIS data
+The improvement in the PDF uncertainties for $d^{+}$ and $s^{+}$
+occurs because the DIS data
 used in HERAPDF2.0 includes only limited constraints
-on quark flavour separation, and thus the lattice-QCD
-pseudo-data is adding important new information
-in this respect.
+on quark flavour separation, ​and,​ ​for​ ​these​ ​PDFs,​ ​the​ ​lattice-QCD​ ​pseudo-data​ ​adds​ ​important​ ​new
+information.
