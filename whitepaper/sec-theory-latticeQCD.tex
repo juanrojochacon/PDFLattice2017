@@ -473,16 +473,33 @@ of the renormalisation factor with Wilson-line length, which amplifies the finit
 
 %\Red{
 \paragraph*{Pseudo-PDFs} 
-In​ ​the​ ​pseudo-PDF​ ​approach,​ ​the​ ​matrix​ ​element​ ​$h(z,p_z)$​ ​of​ ​Eq.~\eqref{eq:qPDF}​ ​is​ ​re-expressed
-as​ ​a​ ​function​ ​of​ ​the​ ​Lorentz​ ​invariants​ ​$\nu​ ​=​ ​zp_z$​ ​and​ ​$z^2$.​ ​The​ ​pseudo-PDF​ ​is​ ​then​ ​defined
-by​ ​the​ ​Fourier​ ​transform
+The general dependence of the  matrix element $h(z,p_z)$ of Eq.~\eqref{eq:qPDF} on the hadron momentum $p$ and the displacement of the quark and anti-quark fields $z$ can be expressed as a function of the Lorentz invariants $\nu = z\cdot p$  (Ioffe time~\cite{Ioffe:1969kf,Braun:1994jq}) and $z^2$ where $z$  and $p$ is a general 4-vectors.  We can thus introduce
 \begin{equation}
-{\cal​ ​P}(x,\Lambda,z^2)​ ​=​ ​\int​ ​\frac{d\nu}{2\pi}​ ​e^{-ix\nu}​ ​\overline{h}(\nu,z^2),
+\overline{h}(\nu,z^2) \equiv h(z,p_z)\,.
 \end{equation}
-which​ ​has​ ​support​ ​only​ ​in​ ​the​ ​physical​ ​range​ ​$x​ ​=​ ​[-1,1]$​ ​\cite{Radyushkin:2016hsy,Radyushkin:2017cyf}.​ ​A​ ​matching​ ​formula
-analogous​ ​to​ ​Eq.~\eqref{eq:qPDF}​ ​should​ ​exist​ ​with​ ​power​ ​corrections​ ​in​ ​$z^2$,​ ​instead​ ​of
-$1/p_z^2$​ ​\cite{Ji:2017rah}.​ ​The​ ​first​ ​lattice​ ​study​ ​of​ ​the​ ​relevant​ ​matrix​ ​elements​ ​showed​ ​that​ ​there
-was​ ​little​ ​$z^2$​ ​dependence​ ​in​ ​the​ ​ratio​ ​$\overline{h}(\nu,z^2)/\overline{h}(0,z^2)$,​ ​which
-suggests​ ​the​ ​approximate​ ​factorisation​ ​of​ ​the​ ​$\nu$​ ​and​ ​$z^2$​ ​dependence.​ ​The​ ​physics​ ​of
-pseudo-​ ​and​ ​quasi-PDFs​ ​is​ ​otherwise​ ​equivalent​ ​\cite{Ji:2017rah},​ ​although​ ​further​ ​numerical​ ​study​ ​is​ ​required​ ​to
-understand​ ​more​ ​fully​ ​how​ ​these​ ​two​ ​approaches​ ​complement​ ​each​ ​other.
+
+The pseudo-PDF is then defined
+by the Fourier transform
+\begin{equation}
+{\mathcal P}(x,z^2)=\int \frac{d\nu}{2\pi} e^{-ix\nu} \overline{h}(\nu,z^2),
+\end{equation}
+which has support only in the physical range $x = [-1,1]$ \cite{Radyushkin:2016hsy,Radyushkin:2017cyf}. 
+As discussed in  \cite{Radyushkin:2016hsy,Radyushkin:2017cyf}, the pseudo-PDF is directly related to both the PDFs as well as the primordial TMD that describes the transverse structure of the hadron.
+In  \cite{Radyushkin:2017cyf}, using the temporal gamma matrix in the matrix element, a possible factorization of the TMD and PDF was conjectured which implies that the ratio
+\begin{equation}
+{\mathcal M}(\nu,z^2) =\frac{\overline h(\nu,z^2)}{\overline h(0,z^2)}
+\label{eq:RatioPseudo}
+\end{equation}
+is directly related to PDFs as 
+\begin{equation}
+{\mathcal M}(\nu,z^2) =Q(\nu,z^2) + {\cal O}(z^2),
+\label{eq:IoffePDF}
+\end{equation}
+with $Q(\nu,z^2)$ being the Ioffe time PDF~\cite{Ioffe:1969kf,Braun:1994jq} which is just the Fourier transform of the PDFs.
+\begin{equation}
+{q}(x,1/z^2)=\int \frac{d\nu}{2\pi} e^{-ix\nu} Q(\nu,z^2),
+\end{equation}
+Note, that the ratio in Eq.~\ref{eq:RatioPseudo} has a well defined continuum limit and requires no renormalization. 
+The polynomial corrections in Eq.~\ref{eq:IoffePDF} are due to violations of the factorization conjecture, while the 
+PDF ${q}(x,1/z^2)$ is the PDF in a particular scheme defined at scale $1/z^2$. Matching to $\overline{MS}$ can be performed in perturbation theory following standard methodology.
+A preliminary study of this formalism was presented in~\cite{Orginos:2017kos}, where it was shown that indeed the conjectured factorization is observed and the residual corrections are small. Furthermore  evidence of the expected perturbative evolution of the Ioffe time PDFs was observed. More detailed studies of this methodology are required to achieve its full potential.  
