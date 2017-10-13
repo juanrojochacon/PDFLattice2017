@@ -208,7 +208,8 @@ or has appeared as a preprint~(PreP).
 In the following five columns, we assess each source of systematic uncertainty
 according to the criteria listed above. 
 %
-In the last column, we report the computed value at $\mu^2=Q^2=4\mbox{ GeV}^2$.
+In the last column, we report the computed value at $\mu^2=Q^2=4\mbox{ GeV}^2$
+ in the $\overline{{\rm MS}}$ scheme.
 %
 We refer the reader to the corresponding references for details on the 
 meaning of the errors reported in parentheses.
@@ -226,11 +227,19 @@ of Appendix~\ref{sec:LQCDtables}.
 \begin{threeparttable}
 \begin{tabular}{llcllccccccl}
 Mom. & Collab. & Ref. & $N_f$ & Status & 
-\begin{rotate}{70}{discretisation}\end{rotate} &
-\begin{rotate}{70}{quark mass}\end{rotate} &
-\begin{rotate}{70}{finite volume}\end{rotate} &
-\begin{rotate}{70}{renormalisation}\end{rotate} &
-\begin{rotate}{70}{excited states}\end{rotate}&
+%
+%   \begin{rotate}{70}{discretisation}\end{rotate} &
+%   \begin{rotate}{70}{quark mass}\end{rotate} &
+%   \begin{rotate}{70}{finite volume}\end{rotate} &
+%   \begin{rotate}{70}{renormalisation}\end{rotate} &
+%   \begin{rotate}{70}{excited states}\end{rotate}&
+%
+Disc &
+QM &
+FV &
+Ren &
+ES &
+%
 & Value\\
 \toprule
 $\langle x\rangle_{u^+-d^+}$ 
@@ -336,13 +345,28 @@ characterise the various sources of systematics, are described in the text.
 Values are shown at $\mu^2=Q^2=4\mbox{ GeV}^2$.
 %
 We refer the reader to the corresponding references for details on the 
-errors reported in parentheses.}
+errors reported in parentheses.
+%
+We introduce the abbreviations
+Disc (discretisation),
+QM (quark mass),
+FV (finite volume),
+Ren (renormalisation),
+and
+ES (excited states).
+%
+}
 \label{tab:unpolLQCDstatus1}
 \end{table}
 %-------------------------------------------------------------------------------
 
-As is apparent from Tab.~\ref{tab:unpolLQCDstatus1}, there are no lattice 
-calculations of the considered first moments for which all systematics 
+%As is apparent from Tab.~\ref{tab:unpolLQCDstatus1}, there are no lattice 
+%calculations of the considered first moments for which all systematics 
+%have been fully explored and controlled. 
+%
+As presented in Tab.~\ref{tab:unpolLQCDstatus1}, 
+there are only three 
+calculations of $g_A$  for which all systematics considered 
 have been fully explored and controlled. 
 %
 In the case of $\langle x\rangle_{u^+-d^+}$ three different results are available 
@@ -369,7 +393,7 @@ of uncertainty.
 
 Finally, we summarise the current status of lattice-QCD calculations of the 
 second moment of the unpolarised valence-quark PDFs, specifically 
-$\langle x^2 \rangle_{u^-}$ and $\langle x^2\rangle_{u^--d^-}$
+$\langle x^2 \rangle_{u^-}$, $\langle x^2 \rangle_{d^-}$ and $\langle x^2\rangle_{u^--d^-}$
 in Tab.~\ref{tab:unpolLQCDstatus2B} of Appendix~\ref{sec:LQCDtables}.
 % 
 The study of these moments is not sufficiently mature to provide benchmark 
@@ -401,11 +425,19 @@ Tab.~\ref{tab:unpolLQCDstatus1}.
 \begin{threeparttable}
 \begin{tabular}{llcllccccccl}
 Mom. & Collab. & Ref. & $N_f$ & Status &  
-\begin{rotate}{70}{discretisation}\end{rotate} &
-\begin{rotate}{70}{quark mass}\end{rotate} &
-\begin{rotate}{70}{finite volume}\end{rotate} &
-\begin{rotate}{70}{renormalisation}\end{rotate} &
-\begin{rotate}{70}{excited states}\end{rotate}&
+%
+%   \begin{rotate}{70}{discretisation}\end{rotate} &
+%   \begin{rotate}{70}{quark mass}\end{rotate} &
+%   \begin{rotate}{70}{finite volume}\end{rotate} &
+%   \begin{rotate}{70}{renormalisation}\end{rotate} &
+%   \begin{rotate}{70}{excited states}\end{rotate}&
+%
+Disc &
+QM &
+FV &
+Ren &
+ES &
+%
 & Value \\
 \toprule
 $g_A$
@@ -499,7 +531,17 @@ coupling, $g_A\equiv \langle 1\rangle_{\Delta u^+-\Delta d^+}$.
 %
 Studies with three or more red squares are omitted from this table.
 %
-Values are shown at $\mu^2=Q^2=4\mbox{ GeV}^2$.}
+%Values are shown at $\mu^2=Q^2=4\mbox{ GeV}^2$.
+%
+We use the abbreviations
+Disc (discretisation),
+QM (quark mass),
+FV (finite volume),
+Ren (renormalisation),
+and
+ES (excited states).
+%
+}
 \label{tab:gAstatus}
 \end{table}
 %-------------------------------------------------------------------------------
@@ -630,11 +672,19 @@ Tabs.~\ref{tab:polLQCDstatus0} and \ref{tab:polLQCDstatus1}, respectively.
     \vspace{2cm}
 \begin{tabular}{llcllccccccl}
 Mom. & Collab. & Ref. & $N_f$ & Status &
-\begin{rotate}{70}{discretisation}\end{rotate} &
-\begin{rotate}{70}{quark mass}\end{rotate} &
-\begin{rotate}{70}{finite volume}\end{rotate} &
-\begin{rotate}{70}{renormalisation}\end{rotate} &
-\begin{rotate}{70}{excited states}\end{rotate}&
+%
+%   \begin{rotate}{70}{discretisation}\end{rotate} &
+%   \begin{rotate}{70}{quark mass}\end{rotate} &
+%   \begin{rotate}{70}{finite volume}\end{rotate} &
+%   \begin{rotate}{70}{renormalisation}\end{rotate} &
+%   \begin{rotate}{70}{excited states}\end{rotate}&
+%
+Disc &
+QM &
+FV &
+Ren &
+ES &
+%
 & Value \\
 \midrule
 $\langle 1\rangle_{\Delta u^+}$
@@ -711,7 +761,17 @@ see references for details.
 \caption{\small Same as Tab.~\ref{tab:unpolLQCDstatus1}, but for the 
 zeroth moments of the polarised total quark distributions.
 %
-Values are shown at $\mu^2=Q^2=4\mbox{ GeV}^2$.}
+Values are shown at $\mu^2=Q^2=4\mbox{ GeV}^2$.
+%
+We use the abbreviations
+Disc (discretisation),
+QM (quark mass),
+FV (finite volume),
+Ren (renormalisation),
+and
+ES (excited states).
+%
+}
 \label{tab:polLQCDstatus0}
 \end{table}
 %-------------------------------------------------------------------------------
@@ -724,11 +784,19 @@ Values are shown at $\mu^2=Q^2=4\mbox{ GeV}^2$.}
 \begin{threeparttable}
 \begin{tabular}{llcllccccccl}
 Mom. & Collab. & Ref. & $N_f$ & Status &
-\begin{rotate}{70}{discretisation}\end{rotate}  &
-\begin{rotate}{70}{quark mass}\end{rotate}      &
-\begin{rotate}{70}{finite volume}\end{rotate}   &
-\begin{rotate}{70}{renormalisation}\end{rotate} &
-\begin{rotate}{70}{excited states}\end{rotate}  &
+%
+%   \begin{rotate}{70}{discretisation}\end{rotate} &
+%   \begin{rotate}{70}{quark mass}\end{rotate} &
+%   \begin{rotate}{70}{finite volume}\end{rotate} &
+%   \begin{rotate}{70}{renormalisation}\end{rotate} &
+%   \begin{rotate}{70}{excited states}\end{rotate}&
+%
+Disc &
+QM &
+FV &
+Ren &
+ES &
+%
 & Value \\
 \toprule
 $\langle x\rangle_{\Delta u^--\Delta d^-}$
@@ -786,7 +854,17 @@ $\langle x\rangle_{\Delta u^--\Delta d^-}$
 \caption{\small Same as Tab.~\ref{tab:unpolLQCDstatus1}, but for the 
 first moment of the polarised valence-quark distribution.
 %
-Values are shown at $\mu^2=Q^2=4\mbox{ GeV}^2$.}
+Values are shown at $\mu^2=Q^2=4\mbox{ GeV}^2$.
+%
+We use the abbreviations
+Disc (discretisation),
+QM (quark mass),
+FV (finite volume),
+Ren (renormalisation),
+and
+ES (excited states).
+%
+}
 \label{tab:polLQCDstatus1}
 \end{table}
 %-------------------------------------------------------------------------------
@@ -804,7 +882,9 @@ one associated with the propagation of the
 experimental errors from the fitted cross sections,
 one associated with incompatibility of the 
 fitted experiments, and procedural uncertainties such as those related to the choice of the
-functional form of the PDFs and the handling of systematic errors, among others.
+functional form of the PDFs, 
+the treatment of large $x$ data, 
+ and the handling of systematic errors, among others.
 %
 As outlined in Sect.~\ref{sec:unpPDFs}, in principle all of these uncertainties 
 can be accounted for with suitable methods, both in the Hessian and the 
@@ -882,7 +962,10 @@ $\langle x \rangle_{u^+}$
 $\langle x \rangle_{d^+}$    
 & 0.196(3) & 0.190(5) & 0.197(5) & 0.186(3) & 0.196(1) & 0.185(7)\ \,\\
 $\langle x \rangle_{s^+}$    
-& 0.039(3) & 0.035(9) & 0.035(9) & 0.041(2) & 0.031(1) & 0.035(11)\\
+%
+% Remove  CJ15 strange quark resultt 0.031(1) as this is not fitted
+%
+& 0.039(3) & 0.035(9) & 0.035(9) & 0.041(2) & ---   & 0.035(11)\\
 $\langle x \rangle_{g}$     
 & 0.410(4) & 0.416(9) & 0.411(9) & 0.412(4) & 0.416(1) & 0.401(10)\\
 \bottomrule
@@ -892,6 +975,11 @@ benchmark moments of unpolarised PDFs listed in Sect.~\ref{subsubsec:BQ}.
 All values are shown at $\mu^2=Q^2=4\mbox{ GeV}^2$.
 %
 See text for details about the calculation of PDF uncertainties in each case.
+%
+For the CJ15 PDFs, $\langle x \rangle_{s^+}$  is not shown as this is an input rather than an output.
+%
+\protect\\
+\textcolor{red}{Can we rescale CT14 and CJ15 by 1/1.56 to make 68\%CL????}
 }
 \label{tab:unpPDFmoms}
 \end{table}
@@ -1142,7 +1230,7 @@ A slight shift in its central value, towards the current lattice-QCD results,
 might be observed in the future, as soon as new data sensitive to the strange 
 quark becomes available.
 %
-Finally, in order to reconcile the lattice-QCD and the global-fit results
+Finally, in an attempt to reconcile the lattice-QCD and the global-fit results
 of the first moment of the gluon PDF, one could assume a completely
 different behaviour of the gluon PDF below the HERA kinematic
 coverage, $x\sim 10^{-5}$ (see Fig.~\ref{fig:kinplot-report}).
@@ -1275,6 +1363,8 @@ In Sect.~\ref{sec:projections}, we study whether replacing the experimental
 value of the octet PDF combination with its lattice prediction
 results in a deterioration in the description of the data, and how it 
 affects the resulting polarised PDF moments.
+\\
+\textcolor{red}{ the octet PDF combination is NOT YET discussed in Sec.4 ***********}
  
 In the case of the first moment of the valence distribution 
 $\Delta u^--\Delta d^-$, the lattice-QCD and the global-fit results are 
