@@ -16,13 +16,6 @@ processes~\cite{Campbell:2006wx}.
 At low energies, or larger distances, non-perturbative effects give rise to 
 quark confinement and spontaneous chiral symmetry breaking~\cite{Gasser:1983yg}.
 %
-%The study of low-energy phenomena requires specific tools that go beyond 
-%perturbation theory, that is, tools that can handle both strongly coupled 
-%fields at long distances and the ultraviolet divergences of the theory at 
-%short distances.
-%
-%The most representative of these tools is lattice QCD.
-%
 The connection between low- and high-energy dynamics is provided by QCD 
 factorisation theorems~\cite{Collins:1989gx}: 
 short-distance physics above the factorisation scale $\mu$ is captured by 
@@ -30,7 +23,7 @@ partonic hard-scattering cross sections calculated perturbatively as a
 power series expansion in the QCD coupling, while the 
 long-distance physics below the factorisation scale $\mu$ is described by 
 non-perturbative quantities.
-
+%
 In a collinear, leading-twist factorisation framework, these quantities are
 universal PDFs.
 %
@@ -40,7 +33,7 @@ and helicity-dependent (polarised, henceforth) PDFs.
 
 Unpolarised PDFs are denoted as 
 \begin{equation}
-f_{i}(x,\mu^2)\mbox{,} \ \ i=\{g,u,\bar{u},d,\bar{d},s,\bar{s},...\}
+f(x,\mu^2)\mbox{,} \ \ f=\{g,u,\bar{u},d,\bar{d},s,\bar{s},...\}
 \,\mbox{,}
 \label{eq:unpPDFs}
 \end{equation}
@@ -83,8 +76,8 @@ direction of a fast moving nucleon in a helicity eigenstate.
 %
 They are denoted as 
 \begin{equation}
-\Delta f_i(x,\mu^2) \equiv f_i^{\uparrow}(x,\mu^2) - f_i^{\downarrow}(x,\mu^2)
-\mbox{,} \ \ i=\{g,u,\bar{u},d,\bar{d},s,\bar{s},...\}
+\Delta f(x,\mu^2) \equiv f^{\uparrow}(x,\mu^2) - f^{\downarrow}(x,\mu^2)
+\mbox{,} \ \ f=\{g,u,\bar{u},d,\bar{d},s,\bar{s},...\}
 \,\mbox{,}
 \label{eq:polPDFs}
 \end{equation}
@@ -95,14 +88,14 @@ and the parton's spin alignement along ($\uparrow$) or opposite
 is made explicit.
 
 Much of the interest in polarised PDFs is related to the fact that 
-their first moments can be interpreted as the fractions of the proton's 
+their zeroth moments can be interpreted as the fractions of the proton's 
 spin carried by the corresponding partons.
 %
 They are therefore the key to one of the most fundamental, 
 but not yet satisfactorily answered questions in hadronic physics,
 {\it i.e.}, how the spin of the proton is distributed among its constituents.
 %
-Specifically, the first moments of the singlet and the gluon polarised PDFs,
+Specifically, the zeroth moments of the singlet and the gluon polarised PDFs,
 \begin{align}
 \Delta\Sigma(\mu^2)
 & =
@@ -122,43 +115,47 @@ Specifically, the first moments of the singlet and the gluon polarised PDFs,
 directly contribute to the proton spin sum rule~\cite{Leader:2013jra}.
 
 Note that for both unpolarised and polarised PDFs the value of the 
-renormalisation scale $\mu$ is usually chosen to be equal to the characteristic 
+factorisation scale $\mu$ is usually chosen to be equal to the characteristic 
 scale $Q$ of the hard scattering process involving the PDFs.
 %
 Beyond leading order, PDFs are renormalisation scheme-dependent 
 quantities, typically worked out in the $\overline{\rm MS}$ scheme.
 %
-When PDFs are convoluted with the appropriate partonic hard-scattering 
+When PDFs are convolved with the appropriate partonic hard-scattering 
 cross sections, computed in the same scheme, the corresponding physical 
-observables are scheme-independent, up to subleading terms in the perturbative 
-expansion. 
+observables are scheme-independent, up to subleading spurious 
+terms\footnote{Such spurious terms appear if one convolves, for example, 
+ NLO PDFs with NLO Wilson coefficients directly in x-space which includes 
+ incomplete (spurious) terms which would contribute at NNLO. 
+ These terms are scheme-dependent and could be avoided.} in the 
+perturbative expansion. 
 
 Both unpolarised and polarised PDFs are accessible, theoretically and 
-experimentally, through the Compton scattering amplitude
+experimentally, through the forward Compton scattering amplitude
 \begin{equation}
 \label{eq:Compton}
 T_{\mu\nu}(p,q) 
 = 
-\int {\rm d}^4\!x\, {\rm e}^{iqx}  \langle p,s |T J_\mu(x) J_\nu(0)|p,s\rangle\, ,
+\int {\rm d}^4\!z\, {\rm e}^{iqz}  \langle p,s |T J_\mu(z) J_\nu(0)|p,s\rangle\, ,
 \end{equation}
 at large virtual photon momenta $q^2=-Q^2$. 
 %
-Here $T$ is the time-ordering operator, $J_\mu(x)$ and $J_\nu(0)$ are local 
-vector bilinears at space-time points $x$ and $0$ respectively, and the 
+Here $T$ is the time-ordering operator, $J_\mu(z)$ and $J_\nu(0)$ are vector
+currents at space-time points $z$ and $0$ respectively, and the 
 external states are hadronic states with momentum $p$ and spin $s$.
 
-For instance, in the case of Deep-Inelastic Scattering (DIS) of a 
-polarised lepton beam off a polarised nucleon target, the 
-most general form of the Compton amplitude $T_{\mu\nu}(p,q)$ reads
+The most general form of the Compton amplitude $T_{\mu\nu}(p,q)$ reads
 \begin{align}
 T_{\mu\nu}(p,q) 
 = {} & 
   \left(\delta_{\mu\nu}-\frac{q_\mu q_\nu}{q^2}\right)\mathcal{F}_1(\omega,Q^2) 
-+ \left(p_\mu-\frac{p\cdot q}{q^2}q_\mu\right) \left(p_\nu-\frac{p\cdot q}{q^2}q_\nu\right) \frac{1}{p\cdot q} \mathcal{F}_2(\omega,Q^2)\,,\\ 
++ \left(p_\mu-\frac{p\cdot q}{q^2}q_\mu\right) \left(p_\nu-\frac{p\cdot q}{q^2}q_\nu\right) \frac{1}{p\cdot q} \mathcal{F}_2(\omega,Q^2)\,,
+\nonumber\\ 
 & {} \quad  
 + \epsilon_{\mu\nu\lambda\sigma}q_\lambda s_\sigma \frac{1}{p\cdot q}\mathcal{G}_1(\omega,Q^2)
-+ \epsilon_{\mu\nu\lambda\sigma}q_\lambda \left(p\cdot q s_\sigma - s\cdot q p_\sigma\right) \frac{1}{(p\cdot q)^2}\mathcal{G}_2(\omega,Q^2)\,.
++ \epsilon_{\mu\nu\lambda\sigma}q_\lambda \left(p\cdot q s_\sigma - s\cdot q p_\sigma\right) \frac{1}{(p\cdot q)^2}\mathcal{G}_2(\omega,Q^2)\,,
 \end{align}
+where $\omega=2p\cdot q/q^2$.
 %
 The imaginary parts of the Compton amplitude structure functions, 
 $\mathcal{F}_1$, $\mathcal{F}_2$, $\mathcal{G}_1$ and $\mathcal{G}_2$, 
@@ -170,7 +167,7 @@ The unpolarised and polarised PDFs can be derived from $\mathcal{F}_1$ and
 $\mathcal{G}_1$ by first rewriting them in terms of the spin-independent 
 and spin-dependent structure functions, $F_1(x,Q^2)$ and $g_1(x,Q^2)$.
 %
-Neglecting target mass corrections, one has, defining $\omega=2p\cdot q/q^2$,
+Neglecting target mass corrections, one has
 \begin{align}
 \mathcal{F}_1(\omega,Q^2) 
 = {} & 4 \omega^2 \int_0^1 dx\,  \frac{xF_1(x,Q^2)}{1-(\omega x)^2} 
@@ -179,28 +176,27 @@ Neglecting target mass corrections, one has, defining $\omega=2p\cdot q/q^2$,
 = {} & 4 \omega \int_0^1 dx\, \frac{g_1(x,Q^2)}{1-(\omega x)^2} 
 = \sum_{n=1,3,\cdots}^\infty 4\omega^n \int_0^1 dx\, x^{n-1} g_1(x,Q^2)\,.
 \end{align}
-%
-%Odd moments may be obtained from the mixture of currents $J_\mu J_\nu^5$.
 
-At a sufficiently high momentum transfer, power corrections can be neglected and
+At a sufficiently high momentum transfer $Q^2$, power corrections can be 
+neglected and
 QCD factorisation allows us to write the structure functions 
 $F_1(x,Q^2)$ and $g_1(x,Q^2)$ as a convolution between perturbatively-computable
 hard-scattering cross-sections and non-perturbative parton distributions:
 \begin{align}
 F_1(x,Q^2) 
 = {} 
-& x\sum_i^{n_f} \int_x^1 \frac{{\rm d}z}{z}\,C_{1,i}\left(\frac{x}{z},\alpha_s(Q^2)\right)f_i(z,Q^2) \,, \label{eq:Fi}\\
+& x\sum_f \int_x^1 \frac{{\rm d}z}{z}\,C_{1,f}\left(\frac{x}{z},\alpha_s(Q^2)\right)f(z,Q^2) \,, \label{eq:Fi}\\
 g_1(x,Q^2) 
 = {} 
-& \sum_i^{n_f} \int_x^1\frac{dy}{y}\, \Delta C_{1,i}\left(\frac{x}{z},\alpha_s(Q^2)\right) \Delta f_i(z,Q^2) \,.
+& \sum_f \int_x^1\frac{dy}{y}\, \Delta C_{1,f}\left(\frac{x}{z},\alpha_s(Q^2)\right) \Delta f(z,Q^2) \,.
 \label{pdf}
 \end{align}
 %
 Here $x=Q^2/2p\cdot q$ is the Bjorken variable identified with the parton
-fractional momentum, $n_f$ denotes the number of active
-flavours at the scale $Q^2$ (including the gluon), $C_{1,i}$ and 
-$\Delta C_{1,i}$ are the perturbative partonic hard-scattering cross sections,
-$\alpha_s$ is the QCD strong coupling, and $f_i(x,Q^2)$ and $\Delta f_i(x,Q^2)$ 
+fractional momentum, the sums run over the number of active
+flavours at the scale $Q^2$ (including the gluon), $C_{1,f}$ and 
+$\Delta C_{1,f}$ are the perturbative partonic hard-scattering cross sections,
+$\alpha_s$ is the QCD strong coupling, and $f(x,Q^2)$ and $\Delta f(x,Q^2)$ 
 are the unpolarised and polarised PDFs.
 
 While PDFs cannot be calculated perturbatively, their dependence on the scale 
@@ -212,25 +208,34 @@ evolution equations~\cite{Dokshitzer:1977sg,Gribov:1972ri,Altarelli:1977zs},
 a set of integro-differential coupled equations of the form
 \begin{equation}
   \label{eq:dglap}
-\frac{\partial (\Delta)f_i(x,\mu^2)}{\partial \ln \mu^2}
+\frac{\partial f^\prime(x,\mu^2)}{\partial \ln \mu^2}
 =
-\sum_{j=g,q,\bar{q}}\int_x^1 
-\frac{{\rm d}z}{z}(\Delta)P_{ij}(x/z)(\Delta)f_j(z,\mu^2)\, .
+\sum_{f=g,q,\bar{q}}\int_x^1 
+\frac{{\rm d}z}{z}P_{f^\prime f}(x/z)f(z,\mu^2)\, .
+\end{equation}
+%
+\begin{equation}
+  \label{eq:dglap}
+\frac{\partial \Delta f^\prime(x,\mu^2)}{\partial \ln \mu^2}
+=
+\sum_{f=g,q,\bar{q}}\int_x^1 
+\frac{{\rm d}z}{z}\Delta P_{f^\prime f}(x/z)\Delta f(z,\mu^2)\, .
 \end{equation}
 %
 In short, the logarithmic derivative of the PDF is determined by a convolution
-of the PDFs with the DGLAP kernels $(\Delta)P_{ij}$, which can be 
+of the PDFs with the unpolarised (polarised) DGLAP kernels $P_{f^\prime f}$
+($\Delta P_{f^\prime f}$) which can be 
 computed perturbatively in powers of $\alpha_{s}$.
 %
-The unpolarised splitting functions $P_{ij}$ are currently completely known up  
+The unpolarised splitting functions $P_{f^\prime f}$ are currently completely known up  
 to NNLO~\cite{mvvns,Vogt:2004mw} in the $\overline{\rm MS}$ 
 renormalisation scheme.
 %
 Results for the unpolarised non-singlet splitting functions have appeared 
 recently at N$^3$LO~\cite{Davies:2016jie,Moch:2017uml}.
 %
-The polarised splitting functions $\Delta P_{ij}$ are currently known up to  
-NNLO~\cite{Moch:2014sna} in the $\overline{\rm MS}$ renormalisation scheme.
+The polarised splitting functions $\Delta P_{f^\prime f}$ are currently known 
+up to  NNLO~\cite{Moch:2014sna} in the $\overline{\rm MS}$ scheme.
 %
 The DGLAP evolution equations can be solved numerically using
 either $x$-space or Mellin $N$-space techniques widely available in various

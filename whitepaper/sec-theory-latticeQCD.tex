@@ -1,5 +1,5 @@
 The lattice-QCD method is based on
-representing QCD on a finite Euclidean lattice and is generally
+regularising QCD on a finite Euclidean lattice and is generally
 studied by numerical computation of QCD correlation functions in the
 path-integral formalism, using methods adapted from statistical
 mechanics.
@@ -37,14 +37,14 @@ example, Ref.~\cite{Aoki:2016frl}.
 
 \begin{itemize}
 
-\item {\bfseries discretisation effects and the continuum limit.} There is 
+\item {\bfseries Discretisation effects and the continuum limit.} There is 
 a fair degree of flexibility in discretizing the QCD action. This has
 led to a variety of formulations, which differ mainly in the choice of
 the action for quarks.
 %
 In the continuum limit, which corresponds to taking
 the lattice spacing $a$ to zero with all physical quantities fixed,
-the simplest discretisations differ from continuum QCD at ${\cal
+the simplest discretisations differ from continuum QCD at ${\mathcal
 O}(a)$.
 %
 In practice, one cannot afford to perform numerical
@@ -93,7 +93,9 @@ sufficiently large in physical units.
 %
 Unfortunately, this can be
 prohibitively expensive as one approaches the continuum limit, requiring the
-number of lattice sites to grow as $L/a$ in all four directions. Finite volume $\chi$PT is the preferred
+number of lattice sites to grow as $L/a$ in all four directions. 
+%
+Finite volume $\chi$PT is the preferred
 tool to develop systematic expansions that provide quantitative
 information on finite-volume effects.
 %
@@ -107,19 +109,28 @@ $m_\pi$ is the pion mass, are generally sufficiently large that finite
 volume effects are negligible, within the current precision of lattice-QCD
 calculations.
 
-\item {\bfseries Excited state contamination.} At small Euclidean times, a lattice-QCD correlation function
+\item {\bfseries Excited state contamination.} 
+At small Euclidean times, a lattice-QCD correlation function
 is a sum over a tower of states that behave as $e^{-m_it}$, where $m_i$ is the 
-mass of the state and $t$ is the Euclidean time. Thus, at large Euclidean times,
-ground-state quantities can be extracted by fitting to the dominant exponential behavior.
-Unfortunately, the signal-to-noise ratio
-is exponentially suppressed by the difference in the nucleon and pion masses in this limit. Thus, lattice-QCD results
-are extracted from an intermediate region in which excited state contributions are 
-either small or well-controlled and the signal-to-noise ratio is sufficiently large that
-the signal can be reliably extracted. This is a particular challenge for baryons and,
-until recently, was one of the largest sources of systematic uncertainties for
-nucleon matrix elements.
+energy of the state and $t$ is the Euclidean time. 
+%
+Thus, at large Euclidean times,
+ground-state quantities can be extracted by fitting to the dominant 
+exponential behaviour.
+%
+Unfortunately, the signal-to-noise ratio is exponentially suppressed 
+as $e^{-(E_N-3m_\pi/2)t}$, where $E_N$ is the nucleon energy and $m_\pi$ is the 
+pion mass.
+%
+Thus, lattice-QCD results
+are extracted from an intermediate region in which excited state contributions 
+are either small or well-controlled and the signal-to-noise ratio is 
+sufficiently large that the signal can be reliably extracted. 
+%
+This is a particular challenge for baryons and is one of the largest 
+sources of systematic uncertainties for nucleon matrix elements.
 
-\item {\bfseries renormalisation.} The matrix elements extracted from a 
+\item {\bfseries Renormalisation.} The matrix elements extracted from a 
 lattice-QCD calculation at a given lattice spacing are bare matrix elements,
 rendered finite by the presence of the lattice spacing, which serves
 as a gauge-invariant UV regulator. To take the continuum limit,
@@ -155,7 +166,7 @@ operators~\cite{Gockeler:2004wp}.
 Conversely, operators that lie in
 different irreducible representations of $O(4)$, but the same irreducible
 representations of $H(4)$, will mix at finite lattice spacing but not
-in the continuum. When these operators have differing mass dimension,
+in the continuum. When these operators have lower mass dimensions,
 the mixing coefficients scale with the inverse lattice spacing to some
 power, and diverge in the continuum limit.
 %
@@ -165,9 +176,9 @@ lattice calculations of the Mellin moments of PDFs (see
 Sect.~\ref{Sec:MomentsLQCD}).
 
 Finally, it is worth noting that factorization, the key assumption of
-the operator product expansion (OPE), demands that the
-nonperturbatively renormalised hadron matrix elements are matched to the
-perturbatively renormalised Wilson coefficients at a scale where the perturbative 
+the operator product expansion (OPE), demands that the nonperturbatively 
+renormalised hadron matrix elements are matched to the perturbatively 
+renormalised Wilson coefficients at a scale where the perturbative 
 expressions show convergence. This appears to be
 the case for scales $\mu^2 \gtrsim 10\mbox{ GeV}^2$ at
 least~\cite{Gockeler:2010yr}. This, however, is a fundamental aspect
@@ -386,7 +397,7 @@ leads to the relation between the quasi-PDF and the light-front
 PDF expressed in Eq.~\eqref{eq:qPDFmatching}.
 \end{comment}
 
-%\Blue{Although there are some theoretical subtleties~\cite{Rossi:2017muf,Ji:2017rah},} preliminary 
+
 Preliminary results from lattice calculations of quasi-PDFs have been encouraging~\cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp,Alexandrou:2016jqi}, as we illustrate in Figs.~\ref{fig:final_pdf}--\ref{fig:matched}. There are a number of remaining challenges, however, that must be overcome for an {\it ab initio} determination of the $x$-dependence of PDFs directly from lattice QCD that incorporates complete control over systematic uncertainties. Lattice calculations of quasi-PDFs are subject to the same sources of systematic uncertainty that plague all lattice calculations and are highlighted in Sect.~\ref{Sec:IntroLQCD}, but here we focus on systematic uncertainties that are more specific to quasi-PDFs. These are: uncertainties associated with the finite nucleon momentum of the lattice calculations and with the renormalisation of quasi-PDFs.
 
 \begin{itemize}
@@ -409,12 +420,32 @@ where $\delta m$ is the mass renormalisation of a test particle moving along the
 
 Once the linear divergence has been removed nonperturbatively, lattice perturbation theory can be used to renormalize the remaining logarithmic divergences in the quasi-PDF~\cite{Ishikawa:2016znu,Chen:2016fxx,Carlson:2017gpk,Xiong:2017jtn}. A delicate point regarding the renormalisation is the mixing among certain subsets of these nonlocal operators. Such mixing has been identified at one-loop in perturbation theory in Ref.~\cite{Constantiou:2017soon} for a variety of fermion/gluon actions or nonperturbatively based on symmetries~\cite{Chen:2017mzz}. The mixing coefficients are necessary to disentangle the individual matrix elements for each quasi-PDF from lattice calculation data. Of particular interest is the case of the unpolarised quasi-PDF, which mixes with the scalar quasi-PDF if the Lorentz index of Eq.~\eqref{eq:qPDF} is in the same direction as the Wilson line. In contrast, the helicity and transversity PDFs with a Lorentz index in the Wilson line direction do not exhibit any mixing (to one-loop in perturbation theory). 
 
-In addition, nonperturbative schemes, such as the regularization-independent RI/MOM scheme~\cite{Martinelli:1994ty}, can be used to renormalize matrix elements determined on the lattice. Nonperturbative schemes avoid the use of lattice perturbation theory at low energy scales (usually chosen to be $\mu = \pi/a$), although perturbative matching between renormalisation schemes is still necessary for PDFs expressed in the $\overline{\rm MS}$ scheme. Combining a nonperturbative renormalisation scheme with a step-scaling procedure~\cite{Luscher:1991wu} significantly reduces perturbative truncation uncertainties by providing a nonperturbative method for reaching high energy scales. 
-Nonperturbative renormalisation methods for quasi-PDFs have recently been constructed and applied in Refs.~\cite{Alexandrou:2017huk,Chen:2017mzz}.
+In addition, nonperturbative schemes, such as the 
+regularisation-independent/momentum RI/MOM scheme~\cite{Martinelli:1994ty}, 
+can be used to renormalize matrix elements determined on the lattice. 
+%
+Nonperturbative schemes avoid the use of lattice perturbation theory at 
+low energy scales (usually chosen to be $\mu = \pi/a$), although perturbative 
+matching between renormalisation schemes is still necessary for PDFs expressed 
+in the $\overline{\rm MS}$ scheme. 
+%
+Combining a nonperturbative renormalisation scheme with a step-scaling 
+procedure~\cite{Luscher:1991wu} significantly reduces perturbative truncation 
+uncertainties by providing a nonperturbative method for reaching high energy 
+scales.
+% 
+Nonperturbative renormalisation methods for quasi-PDFs have recently been 
+constructed and applied in Refs.~\cite{Alexandrou:2017huk,Chen:2017mzz}.
 
-These nonperturbative procedures also enable the elimination of the mixing between the unpolarised quasi-PDF and the 
-twist-3 scalar operator, which occurs for lattice regularization that break chiral symmetry, through the construction of a $2\times2$ mixing matrix. The mixing coefficients 
-do not contain any divergences and vanish in the continuum limit. Further details can be found in
+These nonperturbative procedures also enable the elimination of the mixing 
+between the unpolarised quasi-PDF and the twist-3 scalar operator, which occurs 
+for lattice regularization that break chiral symmetry, through the construction 
+of a $2\times2$ mixing matrix. 
+%
+The mixing coefficients do not contain any divergences and vanish in the 
+continuum limit. 
+%
+Further details can be found in
 Refs.~\cite{Alexandrou:2017huk,Chen:2017mzz}. 
 \end{itemize}
 
