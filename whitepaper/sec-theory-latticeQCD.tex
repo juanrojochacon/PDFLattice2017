@@ -4,7 +4,6 @@ studied by numerical computation of QCD correlation functions in the
 path-integral formalism, using methods adapted from statistical
 mechanics.
 %
-%
 To make contact with the physical world and experimental
 data, the numerical results are extrapolated to the continuum 
 and infinite-volume limits.
@@ -214,7 +213,6 @@ consideration.
 Therefore, in the following sections, we indicate the
 quality of the lattice calculations, based on criteria inspired by the
 FLAG analysis of flavor physics on the lattice~\cite{Aoki:2016frl}.
-
 
 \subsubsection{Mellin moments of PDFs from lattice QCD}
 \label{Sec:MomentsLQCD}
@@ -435,9 +433,10 @@ Craigie:1980qs,Stefanis:1983ke,Dorn:1986dt}
 \begin{equation}\label{eq:renorm_non-local}
 O_{\Gamma}^{\rm (ren)}(z,\mu)=e^{\delta m(\mu)|z|}Z_{\psi, z}(\mu,z)O^{(0)}_{\Gamma}(z),
 \end{equation}
-where $\delta m$ is the mass renormalisation of a test particle moving along the Wilson line of length $z$ and $Z_{\psi, z}(\mu,z)$ removes the remaining logarithmic divergences associated with the Wilson line endpoints (the quark fields). This result holds to all orders in perturbation theory: the exponentiated counterterm $\delta m(\mu)$ completely removes the linear divergence and the quasi-PDF can be renormalised multiplicatively~\cite{Ji:2017oey,Ishikawa:2017faj}. The exponentiated counterterm can be determined using a static heavy quark potential, which shares the same power-law divergence as the nonlocal quark bilinear~\cite{Musch:2010ka,Ishikawa:2016znu, Chen:2016fxx}. An alternative approach for controlling the power divergence has been proposed in Ref.~\cite{Monahan:2016bvm}.
+where $\delta m$ is the mass renormalisation of a test particle moving along the Wilson line of length $z$ and $Z_{\psi, z}(\mu,z)$ removes the remaining logarithmic divergences associated with the Wilson line endpoints (the quark fields). This result holds to all orders in perturbation theory: the exponentiated counterterm $\delta m(\mu)$ completely removes the linear divergence and the quasi-PDF can be renormalised multiplicatively~\cite{Ji:2017oey,Ishikawa:2017faj}. The exponentiated counterterm can be determined using a static heavy quark potential, which shares the same power-law divergence as the nonlocal quark bilinear~\cite{Musch:2010ka,Ishikawa:2016znu,Chen:2016fxx,Green:2017xeu}. An alternative approach for controlling the power divergence has been proposed in Ref.~\cite{Monahan:2016bvm}.
 
-Once the linear divergence has been removed nonperturbatively, lattice perturbation theory can be used to renormalize the remaining logarithmic divergences in the quasi-PDF~\cite{Ishikawa:2016znu,Chen:2016fxx,Carlson:2017gpk,Xiong:2017jtn}. A delicate point regarding the renormalisation is the mixing among certain subsets of these nonlocal operators. Such mixing has been identified at one-loop in perturbation theory in Ref.~\cite{Constantiou:2017soon} for a variety of fermion/gluon actions or nonperturbatively based on symmetries~\cite{Chen:2017mzz}. The mixing coefficients are necessary to disentangle the individual matrix elements for each quasi-PDF from lattice calculation data. Of particular interest is the case of the unpolarised quasi-PDF, which mixes with the scalar quasi-PDF if the Lorentz index of Eq.~\eqref{eq:qPDF} is in the same direction as the Wilson line. In contrast, the helicity and transversity PDFs with a Lorentz index in the Wilson line direction do not exhibit any mixing (to one-loop in perturbation theory). 
+Once the linear divergence has been removed nonperturbatively, lattice perturbation theory can be used to renormalize the remaining logarithmic divergences in the quasi-PDF~\cite{Ishikawa:2016znu,Chen:2016fxx,Carlson:2017gpk,Xiong:2017jtn}. A delicate point regarding the renormalisation is the mixing among certain subsets of these nonlocal operators. Such mixing has been identified at one-loop in perturbation theory in Ref.~\cite{Constantiou:2017soon} for a variety of fermion/gluon actions or nonperturbatively based on 
+symmetries~\cite{Chen:2017mzz,Chen:2017mie}. The mixing coefficients are necessary to disentangle the individual matrix elements for each quasi-PDF from lattice calculation data. Of particular interest is the case of the unpolarised quasi-PDF, which mixes with the scalar quasi-PDF if the Lorentz index of Eq.~\eqref{eq:qPDF} is in the same direction as the Wilson line. In contrast, the polarised and transversity PDFs with a Lorentz index in the Wilson line direction do not exhibit any mixing (to one-loop in perturbation theory). 
 
 In addition, nonperturbative schemes, such as the 
 regularisation-independent/momentum RI/MOM scheme~\cite{Martinelli:1994ty}, 
@@ -454,7 +453,8 @@ uncertainties by providing a nonperturbative method for reaching high energy
 scales.
 % 
 Nonperturbative renormalisation methods for quasi-PDFs have recently been 
-constructed and applied in Refs.~\cite{Alexandrou:2017huk,Chen:2017mzz}.
+constructed and applied in 
+Refs.~\cite{Alexandrou:2017huk,Chen:2017mzz,Green:2017xeu}.
 
 These nonperturbative procedures also enable the elimination of the mixing 
 between the unpolarised quasi-PDF and the twist-3 scalar operator, which occurs 
@@ -475,33 +475,29 @@ of the unpolarised and polarised PDFs extracted from lattice QCD.
 
 
 % FIXME: will merge these 2 paragraphs when the new figure is done! 
-Figure~\ref{fig:qPDF-demo} shows example results for the renormalised unpolarised PDF from Ref.~\cite{Chen:2017mzz} and helicity PDF from Ref.~\cite{Alexandrou:2017huk}.
+Fig.~\ref{fig:qPDF-demo} shows example results for the renormalised unpolarised PDFs from Ref.~\cite{Chen:2017mzz} and polarised PDF from Ref.~\cite{Alexandrou:2017huk}.
 The negative-$x$ part of PDF is related to the antiquark distribution via
 \be
-\bar{u}(x)-\bar{d}(x) = - u(-x)+ d(-x)\, , \qquad \text{for} \quad x>0 \, .
+\bar{u}(x)-\bar{d}(x) = - u(-x)+ d(-x)\, , \qquad \text{for} \quad x>0 \, ,
 \ee
 for the unpolarised case, and
 \be
-\Delta\bar{u}(x)-\Delta\bar{d}(x) =  \Delta u(-x)- \Delta d(-x)\, , \qquad \text{for} \quad x>0 \, .
+\Delta\bar{u}(x)-\Delta\bar{d}(x) =  \Delta u(-x)- \Delta d(-x)\, , \qquad \text{for} \quad x>0 \, ,
 \ee
-for the helicity distribution. 
-In both cases, a nonperturbative renormalisation procedure is applied to the bare matrix elements that appeared in earlier work~\cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp,Alexandrou:2016eyt}.
+for the polarised distribution. 
+In both cases, a nonperturbative renormalisation procedure is applied to the bare matrix elements that appeared in earlier work~\cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp,Alexandrou:2016jqi,Alexandrou:2016eyt}.
 %
 For the unpolarised PDF, the calculation is carried out at a pion mass of 310~MeV, includes one-loop matching and target mass corrections at the renormalisation scale $\mu=2$~GeV, and the leading higher-twist $O(\Lambda_\text{QCD}^2/p_z^2)$ contributions have been removed~\cite{Chen:2016utp}. Multiple source-sink separations are used to take into account the effects of excited-state contamination, which becomes more important at large momentum. Mixing under renormalisation has been estimated to be a small effect but is not yet computed explicitly. More recent work by the same collaboration at the physical pion mass~\cite{Lin:2017ani} uses a different operator to avoid mixing effects. 
 %
-The helicity PDF is computed in Ref.~\cite{Alexandrou:2017huk} with fully renormalised matrix elements; there is no mixing in the helicity operator. 
-%
-%Both cases shown in Fig.~\ref{fig:qPDF-demo} are not done at physical pion mass, and a careful investigation of a number of systematic effects is still needed in future studies.
-%However, examining these data with the phenomenological PDFs provides a qualitative comparison. 
+The polarised PDF has the advantage that is free of mixing, and is computed in
+Ref.~\cite{Alexandrou:2017huk}  with fully renormalised matrix element, 
+at a pion mass of 375 MeV. The matching to $\overline{\rm MS}$ at 2 GeV 
+does not include any linearly divergent terms, as the matrix element in 
+coordinate space is renormalised.
 % 
 Note that in both cases, the antiquark asymmetry is compatible with zero within current uncertainties, contrary to earlier unrenormalised results~\cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp,Alexandrou:2016eyt}.
 This is mainly due to the rapid increase
 of the renormalisation factor with Wilson-line length, which amplifies the finite-volume effect from truncating long-range correlations. Ref.~\cite{Lin:2017ani} showed that this truncation causes unphysical oscillations in the sea-flavor asymmetry and proposed that the oscillations can be removed by either imposing a filter to reduce the weighting of long-range correlations or by taking the derivative of the matrix element in coordinate space. The effectiveness of both of these two methods is demonstrated in~\cite{Lin:2017ani}. 
-
-%
-%\Blue{\st{The peak in the positive-$x$ region is slightly shifted toward $x{=}0$. This is expected because renormalisation enhances long-range correlations, thereby enhancing the contribution in the small $x$ region when Fourier transformed to momentum space. After renormalisation the unphysical dip near $x=0$ apparent in earlier results also vanishes.}}
-%
-
 
 \begin{figure}[t]
 \centering
@@ -509,8 +505,8 @@ of the renormalisation factor with Wilson-line length, which amplifies the finit
 \includegraphics[scale=0.4,angle=-90]{plots/qmatched_bare_vs_fit69v2}\,\,\,
 \caption{\small [FIXME: editors will remake these figures; caveats mentioned] 
 (Left)LP3's renormalised unpolarised isovector quark distribution at pion mass of 310 MeV after one-loop matching and mass correction at the renormalisation scale $\mu=2$~GeV~\cite{Chen:2017mzz}. %The red band shows the extrapolation to infinite momentum. \\
-(Right) ETMC's renormalised helicity PDF at pion mass of 375 MeV~\cite{Alexandrou:2017huk} . 
-%Comparison of matched helicity PDF obtained from quasi-PDF computed with either fully renormalised matrix elements (blue) 
+(Right) ETMC's renormalised polarised PDF at pion mass of 375 MeV~\cite{Alexandrou:2017huk} . 
+%Comparison of matched polarised PDF obtained from quasi-PDF computed with either fully renormalised matrix elements (blue) 
 %or with bare matrix elements multiplied by the local ($z{=}0$) axial current $Z$-factor, $Z_A$ (magenta). For purely illustration purposes, 
 %phenomenological PDFs (DSSV08~\cite{deFlorian:2009vb} and JAM15~\cite{Sato:2016tuz}) are also shown.
 } \label{fig:qPDF-demo}
