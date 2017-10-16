@@ -57,15 +57,19 @@ To accelerate the convergence to the continuum
 limit, improved quark and gluon actions are widely used, which include
 higher-dimension operators to reduce the discretisation errors to
 ${\cal O}(a^2)$ or better.
+%
+Chiral fermions with automatic $\mathcal{O}(a)$ improvement and small 
+$\mathcal{O}(a^2)$ discretisation errors are also adopted to admit 
+calculations on coarser lattice spacings. 
 
-\item {\bfseries Unphysical pion masses.} 
+\item {\bfseries Pion mass dependence.} 
 The computational cost of the fermion contribution to the path
 integral increases with a large inverse power of the bare quark mass
 (or, equivalently, the pion mass).
 %
 Lattice-QCD calculations are therefore
 often performed at unphysically heavy pion masses, although results calculated
-directly with physical pion masses have become increasingly common, albeit with large
+directly with physical pion masses have become increasingly common, albeit with larger
 errors.
 %
 To obtain results at the physical pion mass, lattice data are
@@ -80,6 +84,12 @@ In particular, the pion-mass dependence can be parametrized
 using chiral perturbation theory ($\chi$PT), which accounts for the
 Nambu-Goldstone nature of the lowest excitations that occur in the
 presence of light quarks. 
+%
+With multiple lattices at different sea quark masses including some
+at physical pion mass, several lattice spacings and volumes, one can  
+perform global fits with judicious functional forms to determine
+the final result at the physical pion mass and extrapolated continuum and 
+infinite volumes.
 
 \item {\bfseries Finite volume effects.} Numerical lattice-QCD 
 calculations are necessarily restricted to a finite space-time
@@ -105,8 +115,12 @@ which can travel around the (periodic) lattice many times.
 Numerical
 evidence suggests that lattice sizes of $m_\pi L \geq 4$, where
 $m_\pi$ is the pion mass, are generally sufficiently large that finite
-volume effects are negligible, within the current precision of lattice-QCD
-calculations.
+volume effects are negligible for mesons, within the current precision 
+of lattice-QCD calculations.
+%
+From the studies of the pseudoscalar and electromagnetic form factors of the 
+nucleon, it is evident that larger physical volumes are needed for the 
+baryons than those for the mesons.
 
 \item {\bfseries Excited state contamination.} 
 At small Euclidean times, a lattice-QCD correlation function
@@ -147,7 +161,8 @@ schemes.
 %
 This requires a renormalisation condition that can be
 implemented on the lattice as well as in continuum perturbation
-theory. A common choice is the RI-MOM scheme~\cite{Martinelli:1994ty}.
+theory. A common choice is the regularisation-independent/momentum (RI/MOM) 
+scheme~\cite{Martinelli:1994ty}.
 
 In addition, on a hyper-cubic lattice, the orthogonal group $O(4)$ of
 continuum Euclidean space-time is reduced to the hyper-cubic group
@@ -186,7 +201,8 @@ for example, work best for $q^2_{\rm min} \approx
 15\mbox{ GeV}^2$~\cite{Abramowicz:2015mha}, which should be kept in
 mind when comparing lattice results with phenomenology.
 
-\item {\bfseries Lattice-spacing determination.} Numerical lattice-QCD calculations 
+\item {\bfseries Lattice-spacing determination.} 
+Numerical lattice-QCD calculations 
 naturally determine all dimensionful quantities in units of the
 lattice spacing. Thus, extracting physical values requires the
 determination of the lattice scale. This is achieved by matching a
@@ -194,7 +210,7 @@ quantity with mass-dimension to its experimental value or through a
 well-defined theoretical procedure, that is referred to as
 ``scale-setting''. Popular reference scales include light decay
 constants, hadron masses, scales defined in terms of the heavy quark
-potential or, most recently, the Wilson flow time
+potential or, most recently, the Wilson gradient
 $\sqrt{t_0}$~\cite{Luscher:2010iy}. The Wilson flow scale has become
 increasingly popular, because it can be computed rather cheaply and
 with high precision, unlike hadron masses, for example.
@@ -276,7 +292,7 @@ Appendix~\ref{app:notation} for the notation used).
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\paragraph*{Higher-twist contributions}
+\paragraph*{Higher-twist contributions.}
 %
 The discussion so far has focused on the limit in which higher-twist contributions, suppressed by powers of the momentum-transfer, have been ignored. In fact, higher twist contributions to the lowest moment of the structure function $F_1(x,Q^2)$ are found to be of ${\cal O}(1\mbox{ GeV}^2/Q^2)$~\cite{Blumlein:2008kz}.
 %
@@ -291,7 +307,7 @@ This ambiguity is canceled by that in the twist-four matrix element $\bar{v}_q^2
 %
 Power corrections can be assessed most efficiently, and the twist expansion tested, by a direct lattice-QCD evaluation of the Compton amplitude, which we discuss in Sect.~\ref{Sec:InversionMethod}.
 
-\paragraph*{Beyond the first three moments}
+\paragraph*{Beyond the first three moments.}
 %
 Moving beyond the lowest three moments requires overcoming the challenge of power-divergent mixing for lattice-QCD twist-two operators.
 %
@@ -317,13 +333,50 @@ While the lowest three moments of PDFs provide important benchmarks for lattice-
 %
 In the following section we summarize recent approaches to determining the $x$-dependence of PDFs directly from lattice QCD.
 
-\paragraph*{Hadronic tensor} 
-PDFs can, in principle, be extracted from hadronic tensors provided the higher-twist contributions, which have different $Q^2$ dependence than the leading twist, can be subtracted. This approach has the advantage that only the renormalisation of local currents  is needed and the calculation can be performed in the nucleon rest frame. However, the inverse Laplace transform which is needed to convert the hadronic tensor from Euclidean space to Minkowski space can be a challenge~\cite{Liu:1993cv,Liu:1999ak}. Three numerical approaches, 
-the Backus-Gilbert method~\cite{Hansen:2017mnd}, 
-improved maximum entropy, and fitting with model spectral functions, are suggested to tackle this inverse Laplace-transform problem~\cite{Liu:2016djw}. Ref.~\cite{Liu:1993cv} separates sea partons into ``connected sea'' and ``disconnected sea'' contributions, based on the distinct topologies of the diagrams in a lattice computation. This​ ​distinction​ ​can​ ​help​ ​identify​ ​the​ ​impact​ ​on​ ​PDF​ ​uncertainties​ ​of​ ​improving the​ ​uncertainties​ ​associated​ ​with​ ​disconnected​ ​diagrams​ ​determined​ ​using​ ​lattice-QCD.
+\paragraph*{Hadronic tensor.} 
+PDFs can, in principle, be extracted from hadronic tensors provided the 
+higher-twist contributions, which have different $Q^2$ dependence than the 
+leading twist, can be subtracted. 
+%
+Calculating the hadronic tensor in the Euclidean path-integral approach
+has the advantage that no renormalisation is required if conserved vector      
+currents are used in the current-current correlation and only finite 
+renormalisations are needed for the local currents.
+%
+Furthermore, since the structure functions are frame-independent, they 
+can be calculated in any momentum frame of the nucleon. 
+%
+One can choose the nucleon momenta and momentum transfers judiciously 
+to have a desirable coverage of $x$ for a given $Q^2$. 
+%
+However, the inverse Laplace transform which is needed to convert the hadronic tensor from Euclidean space to Minkowski space can be a 
+challenge~\cite{Liu:1993cv,Liu:1999ak}. 
+%
+Three numerical approaches, the Backus-Gilbert method~\cite{Hansen:2017mnd}, 
+improved maximum entropy, and fitting with model spectral functions, 
+are suggested to tackle this inverse Laplace-transform 
+problem~\cite{Liu:2016djw}. 
+%
+Ref.~\cite{Liu:1993cv} separates sea partons into ``connected sea'' and 
+``disconnected sea'' contributions, based on the distinct topologies of the 
+diagrams in a lattice computation. 
+%
+This​ ​distinction​ ​can​ ​help​ ​identify​ ​the​ ​impact​ ​on​ ​PDF​ ​uncertainties​ ​of​ ​
+improving the​ ​uncertainties​ ​associated​ ​with​ ​disconnected​ ​diagrams​ ​determined​ ​
+using​ ​lattice-QCD.
+%
+The extended evolution equations to accommodate both the connected sea 
+(CS) and disconnected sea (DS) partons are derived~\cite{Liu:2017lpe}.
+%
+It is essential to have separately evolved CS and DS partons so that 
+comparison with lattice calculations of unpolarised and polarised moments of
+PDFs can be made. 
+%
+Only with the extended evolution equations will the CS and DS partons 
+remain separated at different $Q^2$ to facilitate global fitting 
+of PDFs with separated CS and DS partons.
 
-
-\paragraph*{The inversion method} 
+\paragraph*{The inversion method.} 
 \label{Sec:InversionMethod}
 
 The Compton amplitude $T_{\mu\nu}(p.q)$, Eq.~(\ref{eq:Compton}) can be
@@ -357,7 +410,7 @@ In~\cite{Ji:2001wha,Chambers:2017dov} it was shown that the unpolarised structur
 amplitude, devoid of any renormalisation and mixing issues. Furthermore, by extending the calculation to values $\omega > 1$ it becomes possible
 to compute the structure functions down to fractional momenta $x = {\cal O}(0.001)$. With the same method, PDFs can be computed directly without the need to go through the structure functions, provided $Q^2$ is sufficiently large that power corrections can be neglected. 
 
-\paragraph*{Quasi-PDFs}
+\paragraph*{Quasi-PDFs.}
 Quasi-PDFs provide an alternative approach to determining the $x$-dependence of PDFs directly from lattice QCD~\cite{Ji:2013dva,Ji:2014gla}. In the following discussion, we focus on the flavor-nonsinglet quasi-PDF, for which we can ignore mixing with the gluon quasi-PDF. The unpolarised quark quasi-PDF is defined as the momentum-dependent
 nonlocal forwardmatrix element
 \begin{align}\label{eq:qPDF}
@@ -435,11 +488,12 @@ O_{\Gamma}^{\rm (ren)}(z,\mu)=e^{\delta m(\mu)|z|}Z_{\psi, z}(\mu,z)O^{(0)}_{\Ga
 \end{equation}
 where $\delta m$ is the mass renormalisation of a test particle moving along the Wilson line of length $z$ and $Z_{\psi, z}(\mu,z)$ removes the remaining logarithmic divergences associated with the Wilson line endpoints (the quark fields). This result holds to all orders in perturbation theory: the exponentiated counterterm $\delta m(\mu)$ completely removes the linear divergence and the quasi-PDF can be renormalised multiplicatively~\cite{Ji:2017oey,Ishikawa:2017faj}. The exponentiated counterterm can be determined using a static heavy quark potential, which shares the same power-law divergence as the nonlocal quark bilinear~\cite{Musch:2010ka,Ishikawa:2016znu,Chen:2016fxx,Green:2017xeu}. An alternative approach for controlling the power divergence has been proposed in Ref.~\cite{Monahan:2016bvm}.
 
-Once the linear divergence has been removed nonperturbatively, lattice perturbation theory can be used to renormalize the remaining logarithmic divergences in the quasi-PDF~\cite{Ishikawa:2016znu,Chen:2016fxx,Carlson:2017gpk,Xiong:2017jtn}. A delicate point regarding the renormalisation is the mixing among certain subsets of these nonlocal operators. Such mixing has been identified at one-loop in perturbation theory in Ref.~\cite{Constantiou:2017soon} for a variety of fermion/gluon actions or nonperturbatively based on 
+Once the linear divergence has been removed nonperturbatively, lattice perturbation theory can be used to renormalize the remaining logarithmic divergences in the quasi-PDF~\cite{Ishikawa:2016znu,Chen:2016fxx,Carlson:2017gpk,Xiong:2017jtn}. A delicate point regarding the renormalisation is the mixing among certain subsets of these nonlocal operators. Such mixing has been identified at one-loop in perturbation theory in Ref.~\cite{Constantinou:2017sej} 
+for a variety of fermion/gluon actions or nonperturbatively based on 
 symmetries~\cite{Chen:2017mzz,Chen:2017mie}. The mixing coefficients are necessary to disentangle the individual matrix elements for each quasi-PDF from lattice calculation data. Of particular interest is the case of the unpolarised quasi-PDF, which mixes with the scalar quasi-PDF if the Lorentz index of Eq.~\eqref{eq:qPDF} is in the same direction as the Wilson line. In contrast, the polarised and transversity PDFs with a Lorentz index in the Wilson line direction do not exhibit any mixing (to one-loop in perturbation theory). 
 
 In addition, nonperturbative schemes, such as the 
-regularisation-independent/momentum RI/MOM scheme~\cite{Martinelli:1994ty}, 
+RI/MOM scheme~\cite{Martinelli:1994ty}, 
 can be used to renormalize matrix elements determined on the lattice. 
 %
 Nonperturbative schemes avoid the use of lattice perturbation theory at 
