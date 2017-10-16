@@ -33,7 +33,11 @@ $\la x\ra_{\Delta u^--\Delta d^-}$, and
   of such future lattice calculations would coincide with the current ones
   from the global fit.\footnote{Repeating the exercise with the actual lattice QCD
     central values would be straightforward, but
-    lies beyond the scope of the present studies.}
+    lies beyond the scope of the present studies.
+\\
+\textcolor{red}{RST: Robert noted this is actually a bit more complex as the lattice moments differ quite a bit
+from the PDF results. how to comment???}
+}
   %
   As discussed in Sect.~\ref{sec:unpPDFs}, this corresponds to computing
   the mean over the Monte Carlo replica sample,
@@ -75,6 +79,11 @@ $\la x\ra_{\Delta u^--\Delta d^-}$, and
   This assumption in general might not be a good approximation, since most lattice
   QCD systematic errors are correlated among the different moments, and can be
   avoided, provided the full breakdown of systematic errors for each quantity is available.
+\\
+\textcolor{red}{RST: Robert noted these are actually correlated by the sum rule. 
+Do we want to commentt???}
+
+
 
   
   Once the values of the $\chi^2$ have been evaluated,
@@ -93,7 +102,7 @@ $\la x\ra_{\Delta u^--\Delta d^-}$, and
   %
   For instance, replicas which have associated values
   of the moments far from the pseudo-data (within uncertainties) will
-  have associated a very large weight, being thus effectively discarded.
+  have  a large $\chi^2$ and a very small weight, being thus effectively discarded.
 \item These weights are used to recompute the PDFs, their moments,
   and generic cross-sections.
   %
@@ -234,11 +243,14 @@ calculations (see Tab.~\ref{tab:BMunp}).
 \caption{\small Values of the unpolarised PDF moments
   used as pseudo-data, as well as the corresponding results
   after the reweighting has been performed, for the
-three scenarios summarised in 
+three scenarios summarised 
 in Tab.~\ref{tab:scenarios}.
 %
 The PDF uncertainties quoted correspond in all cases to 68\%
 CL intervals.
+\\
+\textcolor{red}{RST: number of decimals varies in the above; should we make uniform???}
+%
 \label{tab:unpolmomentsrw}
 }
 \end{table}
@@ -390,6 +402,10 @@ and $\la x\ra_{\Delta u^--\Delta d^-}$.
   %
   The corresponding impact at the PDF level is shown in
   Fig.~\ref{fig:impactPol}.
+%
+\\
+\textcolor{red}{RST: number of decimals varies in the above; should we make uniform???}
+%
 \label{tab:polmomentsrw}
 }
 \end{table}
@@ -460,7 +476,7 @@ for their moments in Tab.~\ref{tab:polmomentsrw}.
 %
 The reason is that the first PDF moments alone provide only limited
 information on the shape of the PDFs themselves, and therefore in some
-cases one finds a large error reduction on the moments (since these
+cases one finds a larger error reduction on the moments (since these
 are the fitted quantities) than on the PDFs themselves (which are
 only indirectly constrained).
 %
