@@ -233,7 +233,7 @@ The lowest three moments do provide, however, useful information, both as benchm
 
 Using the OPE, the Mellin moments of structure functions, and the corresponding PDFs, can be expressed in terms of matrix elements of local operators:
 \begin{align}
-\!\!\!2 \int_0^1 dx\, x^{n-1} F_1(x,Q^2) &= \sum_a C_{1,a}^n(\mu^2)\, v_a^n(\mu^2)|_{\mu^2=Q^2} = \sum_a c_{1,a}^n(\mu^2)\, \int_0^1 dx\, x^{n-1} f_a(x,Q^2)\,,\\
+\!\!\!2 \int_0^1 dx\, x^{n-1} F_1(x,Q^2) &= \sum_a C_{1,a}^n(\mu^2)\, v_a^n(\mu^2)|_{\mu^2=Q^2} = \sum_a C_{1,a}^n(\mu^2)\, \int_0^1 dx\, x^{n-1} f_a(x,Q^2)\,,\\
 4 \int_0^1 dx\, x^n g_1(x,Q^2) &= \sum_a e_{1,a}^n(\mu^2)\, a_a^n(\mu^2)|_{\mu^2=Q^2} = \sum_a e_{1,a}^n(\mu^2)\, \int_0^1 dx\, x^n\, 2 \Delta f_a(x,Q^2)\,,
 \end{align}
 where $v_i^n(\mu^2)$ and $a_i^n(\mu^2)$ are reduced matrix elements of the appropriate twist-two operators~\cite{Gockeler:1995wg},
@@ -247,7 +247,10 @@ C_{1,i}^n(\mu^2) = \int_0^1 dy\, y^{n-1} c_{1,i}(y,\mu^2)\,, \quad
 e_{1,i}^n(\mu^2) = \int_0^1 dy\, y^n e_{1,i}(y,\mu^2)\,.
 \end{equation}
 The trace terms include operators with at least one factor of the metric tensor $g^{\mu_i \mu_j}$ multiplied by
-operators of dimension $(n+2)$ with $n-2$ Lorentz indices. The operators relevant for the lowest two moments are listed in Table \ref{Tab:twist2}. The operator $\mathcal{O}^q_{\mu_1\mu_2}$ decomposes into two different representations of $H(4)$~\cite{Gockeler:1996mu}, each with different lattice artifacts and renormalisation factors. In the continuum limit, however, both operators should lead to the same result. In contrast, the operator $\mathcal{O}^q_{\mu_1\mu_2\mu_3}$ splits into several representations transforming identically under $H(4)$, causing the corresponding operators to mix under renormalisation on the lattice.
+operators of dimension $(n+2)$ with $n-2$ Lorentz indices. The operators relevant for the lowest two moments are listed in Table \ref{Tab:twist2}. The operator $\mathcal{O}^q_{\mu_1\mu_2}$ decomposes into two different representations of $H(4)$~\cite{Gockeler:1996mu}, each with different lattice artifacts and renormalisation factors. In the continuum limit, however, both operators should lead to the same result. In contrast, the operator $\mathcal{O}^q_{\mu_1\mu_2\mu_3}$ 
+splits into several representations of $O(4)$ transforming identically 
+under $H(4)$, causing the corresponding operators to mix under renormalisation 
+on the lattice.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{table}
@@ -317,7 +320,9 @@ While the lowest three moments of PDFs provide important benchmarks for lattice-
 In the following section we summarize recent approaches to determining the $x$-dependence of PDFs directly from lattice QCD.
 
 \paragraph*{Hadronic tensor} 
-PDFs can, in principle, be extracted from hadronic tensors provided the higher-twist contributions, which have different $Q^2$ dependence than the leading twist, can be subtracted. This approach has the advantage that only the renormalisation of local currents  is needed and the calculation can be performed in the nucleon rest frame. However, the inverse Laplace transform which is needed to convert the hadronic tensor from Euclidean space to Minkowski space can be a challenge~\cite{Liu:1993cv,Liu:1999ak}. Three numerical approaches, the Backus-Gilbert method, improved maximum entropy, and fitting with model spectral functions, are suggested to tackle this inverse Laplace-transform problem~\cite{Liu:2016djw}. Ref.~\cite{Liu:1993cv} separates sea partons into ``connected sea'' and ``disconnected sea'' contributions, based on the distinct topologies of the diagrams in a lattice computation. This​ ​distinction​ ​can​ ​help​ ​identify​ ​the​ ​impact​ ​on​ ​PDF​ ​uncertainties​ ​of​ ​improving the​ ​uncertainties​ ​associated​ ​with​ ​disconnected​ ​diagrams​ ​determined​ ​using​ ​lattice-QCD.
+PDFs can, in principle, be extracted from hadronic tensors provided the higher-twist contributions, which have different $Q^2$ dependence than the leading twist, can be subtracted. This approach has the advantage that only the renormalisation of local currents  is needed and the calculation can be performed in the nucleon rest frame. However, the inverse Laplace transform which is needed to convert the hadronic tensor from Euclidean space to Minkowski space can be a challenge~\cite{Liu:1993cv,Liu:1999ak}. Three numerical approaches, 
+the Backus-Gilbert method~\cite{Hansen:2017mnd}, 
+improved maximum entropy, and fitting with model spectral functions, are suggested to tackle this inverse Laplace-transform problem~\cite{Liu:2016djw}. Ref.~\cite{Liu:1993cv} separates sea partons into ``connected sea'' and ``disconnected sea'' contributions, based on the distinct topologies of the diagrams in a lattice computation. This​ ​distinction​ ​can​ ​help​ ​identify​ ​the​ ​impact​ ​on​ ​PDF​ ​uncertainties​ ​of​ ​improving the​ ​uncertainties​ ​associated​ ​with​ ​disconnected​ ​diagrams​ ​determined​ ​using​ ​lattice-QCD.
 
 
 \paragraph*{The inversion method} 
@@ -350,19 +355,20 @@ T_{33}(p,q) = 4 \omega^2 \int_0^1 dx\,  \frac{xF_1(x,Q^2)}{1-(\omega x)^2} \,.
 \end{equation}
 Note that to extract the polarised structure functions requires insertions of two different currents with $\mu\neq \nu$. The idea is then to solve Eq.~\eqref{ff} for $F_1(x,Q^2)$ numerically.
 %
-In~\cite{Chambers:2017dov} it was shown that the unpolarised structure function $F_1(x,Q^2)$ can be computed from a lattice calculation of the Compton amplitude with unprecedented accuracy, devoid of any renormalisation and mixing issues. Furthermore, by extending the calculation to values $\omega > 1$ it becomes possible
+In~\cite{Ji:2001wha,Chambers:2017dov} it was shown that the unpolarised structure function $F_1(x,Q^2)$ can be computed from a lattice calculation of the Compton 
+amplitude, devoid of any renormalisation and mixing issues. Furthermore, by extending the calculation to values $\omega > 1$ it becomes possible
 to compute the structure functions down to fractional momenta $x = {\cal O}(0.001)$. With the same method, PDFs can be computed directly without the need to go through the structure functions, provided $Q^2$ is sufficiently large that power corrections can be neglected. 
 
 \paragraph*{Quasi-PDFs}
 Quasi-PDFs provide an alternative approach to determining the $x$-dependence of PDFs directly from lattice QCD~\cite{Ji:2013dva,Ji:2014gla}. In the following discussion, we focus on the flavor-nonsinglet quasi-PDF, for which we can ignore mixing with the gluon quasi-PDF. The unpolarised quark quasi-PDF is defined as the momentum-dependent
-nonlocal static matrix element
+nonlocal forwardmatrix element
 \begin{align}\label{eq:qPDF}
 \widetilde{q}(x,\Lambda,p_z)  = {} &  \int \frac{dz}{2\pi} e^{-i x z p_z} p_z h(z,p_z), \nonumber \\
 h(z,p_z) = {} &
 \frac{1}{4 p_{\alpha}}\sum_{s=1}^2\left\langle p,s\right\vert \bar{\psi}(z)\gamma_\alpha e^{ig\int_0^z
 A_z(z^\prime) dz^\prime} \psi(0) \left\vert p,s\right\rangle,
 \end{align}
-where $\Lambda$ is an ultraviolet (UV) cut-off scale, such as the inverse lattice spacing $1/a$. The Lorentz index $\alpha$ of the matrix $\gamma_\alpha$ has generally be chosen to be spatial, $\alpha = z$, but the alternative choice $\alpha = 4$ is also possible and removes part of the leading order twist-4 contamination~\cite{Radyushkin:2016hsy}. 
+where $\Lambda$ is an ultraviolet (UV) cut-off scale, such as the inverse lattice spacing $1/a$. The Lorentz index $\alpha$ of the matrix $\gamma_\alpha$ has generally be chosen to be spatial, $\alpha = z$, but the alternative choice $\alpha = 4$ is also possible and removes part of the leading order twist-4 contamination~\cite{Xiong:2013bka,Radyushkin:2016hsy}. 
 %\Blue{(JWC: Choosing $\alpha = 4$ eliminates a term that is purely higher-twist, but the remaining term still has a higher-twist effect. This can be seen easily from OPE.)} 
 Note that, because $p$ is finite, the momentum fraction $x$ can be larger than unity.
 
@@ -373,11 +379,11 @@ light-front PDF $q(x,Q^2)$ through~\cite{Ji:2013dva,Ji:2014gla}
 \widetilde{q}(x,\Lambda ,p_z) = 
   \int_{-1}^1 \frac{dy}{\left\vert y\right\vert} 
     Z\left( \frac{x}{y}, \frac{\mu}{p_z}, \frac{\Lambda}{p_z}\right)_{\mu^2 = Q^2} q(y,Q^2) +
-  \mathcal{O}\left( \frac{\Lambda_\text{QCD}^2}{p_z^2},\frac{m^2}{p_z^2}\right), 
+  \mathcal{O}\left( \frac{\Lambda_\text{QCD}^2}{p_z^2},\frac{M^2}{p_z^2}\right), 
 \end{equation}
 where $\mu$ is the renormalisation scale;
-$Z$ is a matching kernel; and $m$ is the nucleon mass.
-Here the $\mathcal{O}\left(m^2/p_z^2\right)$ terms are target-mass corrections and the $ \mathcal{O}\left(\Lambda_\text{QCD}^2/p_z^2\right)$ terms are higher twist effects, both of which are suppressed at large nucleon momentum. A complementary approach to LaMET views the quasi-PDF as a ``lattice cross-section'' from which the light-front PDF can be factorized~\cite{Ma:2014jla, Ma:2014jga,Ma:2017pxb} and an alternative, but related, construction is proposed in Refs.~\cite{Radyushkin:2016hsy,Radyushkin:2017cyf} and explored in Ref.~\cite{Orginos:2017kos}.
+$Z$ is a matching kernel; and $M$ is the nucleon mass.
+Here the $\mathcal{O}\left(M^2/p_z^2\right)$ terms are target-mass corrections and the $\mathcal{O}\left(\Lambda_\text{QCD}^2/p_z^2\right)$ terms are higher twist effects, both of which are suppressed at large nucleon momentum. A complementary approach to LaMET views the quasi-PDF as a ``lattice cross-section'' from which the light-front PDF can be factorised~\cite{Ma:2014jla,Ma:2014jga,Ma:2017pxb} and an alternative, but related, construction is proposed in Refs.~\cite{Radyushkin:2016hsy,Radyushkin:2017cyf} and explored in Ref.~\cite{Orginos:2017kos}.
 
 \begin{comment}
 To understand the origin of the power-suppressed corrections, we apply the OPE to the matrix element that defines the PDF, which becomes a linear combination of local twist-2 operators, with matrix elements in the proton state given by Eq.~\eqref{eq:twist2me}. From this it follows that the light-cone correlation function is {\it kinematically} connected with the +-components of the nucleon four-momentum. To eliminate the time dependence, we consider matrix elements of twist-two operators with $\mu_1=\mu_2=...=\mu_n=z$ and nucleon states with large $p_z$, to give
@@ -398,25 +404,38 @@ PDF expressed in Eq.~\eqref{eq:qPDFmatching}.
 \end{comment}
 
 
-Preliminary results from lattice calculations of quasi-PDFs have been encouraging~\cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp,Alexandrou:2016jqi}, as we illustrate in Figs.~\ref{fig:final_pdf}--\ref{fig:matched}. There are a number of remaining challenges, however, that must be overcome for an {\it ab initio} determination of the $x$-dependence of PDFs directly from lattice QCD that incorporates complete control over systematic uncertainties. Lattice calculations of quasi-PDFs are subject to the same sources of systematic uncertainty that plague all lattice calculations and are highlighted in Sect.~\ref{Sec:IntroLQCD}, but here we focus on systematic uncertainties that are more specific to quasi-PDFs. These are: uncertainties associated with the finite nucleon momentum of the lattice calculations and with the renormalisation of quasi-PDFs.
+Preliminary results from lattice calculations of quasi-PDFs have been encouraging~\cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp,Alexandrou:2016jqi}, as we illustrate in Figs.~\ref{fig:final_pdf}--\ref{fig:matched}. There are a number of remaining challenges, however, that must be overcome for an {\it ab initio} determination of the $x$-dependence of PDFs directly from lattice QCD that incorporates complete control over systematic uncertainties. Lattice calculations of quasi-PDFs are subject to the same sources of systematic uncertainty that plague all lattice calculations and are highlighted in Sect.~\ref{Sec:IntroLQCD}, but here we focus on systematic uncertainties that are more specific to quasi-PDFs. These are uncertainties associated with the finite nucleon momentum of the lattice calculations and with the renormalisation of quasi-PDFs.
 
 \begin{itemize}
- \item Preliminary nonperturbative studies of the quasi-PDF used nucleon momenta in the range $p_z = 2\pi/L$ to $6\pi/L$, where $L$ is the physical extent of the lattice, corresponding to $p_z = 0.5$ to $2.5$~GeV~\cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp,Alexandrou:2016jqi}. At such low momenta, higher-twist and target mass corrections are likely to be considerable.
+ \item Preliminary nonperturbative studies of the quasi-PDF used nucleon momenta in the range $p_z = 2\pi/L$ to $10\pi/L$, where $L$ is the physical extent of the lattice, corresponding to $p_z = 0.5$ to $2.5$~GeV~\cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp,Alexandrou:2016jqi}. At such low momenta, higher-twist and target mass corrections are likely to be considerable.
 
 Target mass corrections can be removed to all orders~\cite{Chen:2016utp}, and twist-4 contributions can be removed in principle~\cite{Chen:2016utp,Radyushkin:2016hsy}, leaving higher-twist contamination. To reduce these remaining effects starting at $O(\Lambda_{\rm QCD}^2/p_z^2)$, the authors of Refs.~\cite{Lin:2014zya,Chen:2016utp} extrapolated to infinite nucleon momentum using the fit ansatz $a + b/p_z^2$ for each value of $x$. Although the effects of finite nucleon momentum can be mitigated, a quark-model study asserts that reducing systematic uncertainties to less than 20\% at moderate values of $x$ require significantly larger values of nucleon momentum~\cite{Gamberg:2014zwa}, and larger values of $x\simeq 1$ may require nucleon momentum as large as $p_z > 4$~GeV.
 
 Presently, the size of the nucleon momentum is restricted by the decreasing signal-to-noise ratio at large momenta, which requires very high statistics to extract a signal. New approaches to high-momentum nucleons are being investigated, with the most promising an approach that employs momentum smearing~\cite{Bali:2016lva}. This method has been applied to quasi-PDFs in Ref.~\cite{Alexandrou:2016jqi,Green:2017xeu}, demonstrating a large improvement in the signal-to-noise ratio by reaching momenta of about $2.5$~GeV.
 
-\item The leading-twist quasi-PDFs and light-front PDFs are connected through the matching (or ``factorization'') relation of Eq.~\eqref{eq:qPDFmatching}. Provided the quasi and light-front PDFs share the same infrared (IR) behavior, the matching kernel can be determined in perturbation theory~\cite{Xiong:2013bka}. The factorization of the IR structure of quasi-PDFs into light-front PDFs and an IR-safe matching kernel was claimed to hold to all orders in Refs.~\cite{Ma:2014jla, Ma:2014jga,Ma:2017pxb}. However, Ref.~\cite{Li:2016amo} asserted that there might be subtleties beyond leading order in perturbation theory. A distinct, but similar, issue is the IR structure of extended operators in Euclidean and Minkowski space-time. There are again subtleties in perturbation theory~\cite{Carlson:2017gpk}, but arguments based on general field-theoretic grounds demonstrate that the quasi-PDF extracted from a Euclidean correlation function is exactly the same matrix element as that determined from the LSZ reduction formula in Minkowski space-time~\cite{Briceno:2017cpo}.
+\item The leading-twist quasi-PDFs and light-front PDFs are connected through the matching (or ``factorization'') relation of Eq.~\eqref{eq:qPDFmatching}. Provided the quasi and light-front PDFs share the same infrared (IR) behavior, the matching kernel can be determined in perturbation theory~\cite{Xiong:2013bka}. 
+%
+The one-loop matching kernel including gluon channel has been recently 
+reported~\cite{Wang:2017qyg}.
+%
+The factorisation of the IR structure of quasi-PDFs into light-front PDFs and an IR-safe matching kernel was claimed to hold to all orders in Refs.~\cite{Ma:2014jla,Ma:2014jga,Ma:2017pxb}.
+%
+More specifically, Refs.~\cite{Ma:2014jla,Ma:2014jga} 
+claim that the factorisation holds to all orders provided that UV divergences 
+are properly renormalised.
+%
+However, Ref.~\cite{Li:2016amo} asserted that there might be subtleties beyond leading order in perturbation theory. A distinct, but similar, issue is the IR structure of extended operators in Euclidean and Minkowski space-time. There are again subtleties in perturbation theory~\cite{Carlson:2017gpk}, but arguments based on general field-theoretic grounds demonstrate that the quasi-PDF extracted from a Euclidean correlation function is exactly the same matrix element as that determined from the LSZ reduction formula in Minkowski space-time~\cite{Briceno:2017cpo}.
 
 In contrast to the IR structure, the ultraviolet (UV) structure of the quasi-PDF is quite different from the UV structure of the light-front PDF: the former has both linear and logarithmic divergences, while the latter contains only logarithmic divergences. Although there are no power-divergences in dimensional regularization, quasi-PDFs determined on the lattice are regulated by the inverse lattice spacing. In the continuum limit (for which $a\to 0$, with all physical quantities held fixed) there is a divergence, associated with the length of the Wilson line $z$, that scales as $z/a$. This divergence must be removed nonperturbatively.
 
-For a general nonlocal bilinear operator with Lorentz structure $\Gamma$, the renormalised operator $O_{\Gamma}^{\rm (ren)}(z,\mu)$ is
-related to its bare operator $O^{(0)}_{\Gamma}(z)$ by~\cite{Dotsenko:1979wb, Arefeva:1980zd, Craigie:1980qs,Dorn:1986dt}
+For a general nonlocal bilinear operator with Lorentz structure $\Gamma$, 
+the renormalised operator $O_{\Gamma}^{\rm (ren)}(z,\mu)$ is related to its bare 
+operator $O^{(0)}_{\Gamma}(z)$ by~\cite{Dotsenko:1979wb,Arefeva:1980zd, 
+Craigie:1980qs,Stefanis:1983ke,Dorn:1986dt}
 \begin{equation}\label{eq:renorm_non-local}
 O_{\Gamma}^{\rm (ren)}(z,\mu)=e^{\delta m(\mu)|z|}Z_{\psi, z}(\mu,z)O^{(0)}_{\Gamma}(z),
 \end{equation}
-where $\delta m$ is the mass renormalisation of a test particle moving along the Wilson line of length $z$ and $Z_{\psi, z}(\mu,z)$ removes the remaining logarithmic divergences associated with the Wilson line endpoints (the quark fields). This result holds to all orders in perturbation theory: the exponentiated counterterm $\delta m(\mu)$ completely removes the linear divergence and the quasi-PDF can be renormalised multiplicatively~\cite{Ji:2015jwa,Ji:2017oey}. The exponentiated counterterm can be determined using a static heavy quark potential, which shares the same power-law divergence as the nonlocal quark bilinear~\cite{Musch:2010ka,Ishikawa:2016znu, Chen:2016fxx}. An alternative approach for controlling the power divergence has been proposed in Ref.~\cite{Monahan:2016bvm}.
+where $\delta m$ is the mass renormalisation of a test particle moving along the Wilson line of length $z$ and $Z_{\psi, z}(\mu,z)$ removes the remaining logarithmic divergences associated with the Wilson line endpoints (the quark fields). This result holds to all orders in perturbation theory: the exponentiated counterterm $\delta m(\mu)$ completely removes the linear divergence and the quasi-PDF can be renormalised multiplicatively~\cite{Ji:2017oey,Ishikawa:2017faj}. The exponentiated counterterm can be determined using a static heavy quark potential, which shares the same power-law divergence as the nonlocal quark bilinear~\cite{Musch:2010ka,Ishikawa:2016znu, Chen:2016fxx}. An alternative approach for controlling the power divergence has been proposed in Ref.~\cite{Monahan:2016bvm}.
 
 Once the linear divergence has been removed nonperturbatively, lattice perturbation theory can be used to renormalize the remaining logarithmic divergences in the quasi-PDF~\cite{Ishikawa:2016znu,Chen:2016fxx,Carlson:2017gpk,Xiong:2017jtn}. A delicate point regarding the renormalisation is the mixing among certain subsets of these nonlocal operators. Such mixing has been identified at one-loop in perturbation theory in Ref.~\cite{Constantiou:2017soon} for a variety of fermion/gluon actions or nonperturbatively based on symmetries~\cite{Chen:2017mzz}. The mixing coefficients are necessary to disentangle the individual matrix elements for each quasi-PDF from lattice calculation data. Of particular interest is the case of the unpolarised quasi-PDF, which mixes with the scalar quasi-PDF if the Lorentz index of Eq.~\eqref{eq:qPDF} is in the same direction as the Wilson line. In contrast, the helicity and transversity PDFs with a Lorentz index in the Wilson line direction do not exhibit any mixing (to one-loop in perturbation theory). 
 
