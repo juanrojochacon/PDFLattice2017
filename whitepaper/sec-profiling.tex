@@ -57,7 +57,7 @@ where $\chi^2_0$ is the value of the $\chi^2$ function in the minimum of the ini
 $z_k$ are the parameters diagonalizing the Hessian matrix of the initial PDF set,
 $N_{\text{eig}}$ is the dimension of the eigenvector space in which initial Hessian errors are defined
 (half of the number of error PDFs), $\mathcal{F}_i^{\rm(exp)}$ is the new
-(pseudo-)data,
+\hbox{(pseudo-)data},
 and $\mathcal{F}_i$ the corresponding theory prediction.
 
 In the spirit of the Hessian method, the new theory predictions $\mathcal{F}_i$ can be expanded
@@ -76,7 +76,9 @@ Hessian PDF error sets $S_k^{\pm}$.
 The new $\chi^2$ of Eq.~\eqref{eq:newchi2} can now be minimised with respect to the parameters $w_k$,
 which results in:
 \begin{equation}
-\boldsymbol{\vec{w}_{\text{{\bf min}}}} = \boldsymbol{-B^{-1}} \boldsymbol{\vec{a}},
+%\boldsymbol{\vec{w}_{\text{{\bf min}}}} = \boldsymbol{-B^{-1}} \boldsymbol{\vec{a}},
+%
+w_k^{min}  = \sum_n \ -B_{kn}^{-1} \, a_n \quad ,
 \end{equation}
 where we have introduced
 \begin{equation}
@@ -90,12 +92,18 @@ a_k = \sum_i \frac{D_{ik}(\mathcal{F}_i[S_0] - \mathcal{F}_i^{\rm(exp)})}{\lp\de
 \end{equation}
 
 The key result of the Hessian profiling method
-is that now the components of the solution $\boldsymbol{\vec{w}_{\text{{\bf min}}}}$ define a new set
+is that now the components of the solution 
+%$\boldsymbol{\vec{w}_{\text{{\bf min}}}}$ 
+$w_k^{min}$
+define a new set
 of PDFs representing a global minimum after including the new data:
 \begin{equation}
 f_{\text{new}} = f_{S_0} + \sum_{k=1}^{N_{\text{eig}}} \frac{f_{S_k^+}-f_{S_k^-}}{2} w_k^{\text{min}} \ .
 \end{equation}
-At the same time $\boldsymbol{\vec{w}_{\text{{\bf min}}}}$ also  defines  a penalty term 
+At the same time 
+%$\boldsymbol{\vec{w}_{\text{{\bf min}}}}$ 
+$w_k^{min}$
+also  defines  a penalty term 
 \begin{equation}
 P = \sum_{k=1}^{N_{\text{eig}}} \lp w_k^{\text{min}} \rp^2 \, ,
 \end{equation}
