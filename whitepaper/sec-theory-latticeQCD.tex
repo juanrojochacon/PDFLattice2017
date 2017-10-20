@@ -210,10 +210,9 @@ quantity with mass-dimension to its experimental value or through a
 well-defined theoretical procedure, that is referred to as
 ``scale-setting''. Popular reference scales include light decay
 constants, hadron masses, scales defined in terms of the heavy quark
-potential or, most recently, the Wilson gradient
-$\sqrt{t_0}$~\cite{Luscher:2010iy}. The Wilson flow scale has become
-increasingly popular, because it can be computed rather cheaply and
-with high precision, unlike hadron masses, for example.
+potential or, most recently, the length scale $\sqrt{t_0}$~\cite{Luscher:2010iy} and $w_0$~\cite{Borsanyi:2012zs} defined via the Wilson 
+gradient flow~\cite{Luscher:2010iy} have become very popular scale setting methods. These scales can be computed cheaply and can be used to very accurately
+match scales between different gauge ensembles.  However, a hadron mass or a decay constant which are known accurately by experiment and can be computed precisely in lattice-QCD have to be used for absolute scale setting. A popular hadronic mass for this purpose is the mass of the triply strange $\Omega$ baryon~\cite{Durr:2008zz} or the 2S-1S splitting in the Upsilon spectrum~\cite{Kendall:2008zz}.
 
 \end{itemize}
 
@@ -245,7 +244,7 @@ Three moments are insufficient to fully reconstruct the momentum dependence of t
 %
 The lowest three moments do provide, however, useful information, both as benchmarks of lattice-QCD calculations and as constraints in global extractions of PDFs. Here we briefly review the determination of Mellin moments of PDFs from lattice QCD. 
 
-Using the OPE, the Mellin moments of structure functions, and the corresponding PDFs, can be expressed in terms of matrix elements of local operators:
+Using the OPE, the Mellin moments of structure functions, and the corresponding PDFs, can be expressed, up to higher twist effects, in terms of matrix elements of local operators:
 \begin{align}
 \!\!\!2 \int_0^1 dx\, x^{n-1} F_1(x,Q^2) &= \sum_a C_{1,a}^n(\mu^2)\, v_a^n(\mu^2)|_{\mu^2=Q^2} = \sum_a C_{1,a}^n(\mu^2)\, \int_0^1 dx\, x^{n-1} f_a(x,Q^2)\,,\\
 4 \int_0^1 dx\, x^n g_1(x,Q^2) &= \sum_a e_{1,a}^n(\mu^2)\, a_a^n(\mu^2)|_{\mu^2=Q^2} = \sum_a e_{1,a}^n(\mu^2)\, \int_0^1 dx\, x^n\, 2 \Delta f_a(x,Q^2)\,,
@@ -421,7 +420,7 @@ power corrections can be neglected.
 
 \paragraph*{Quasi-PDFs.}
 Quasi-PDFs provide an alternative approach to determining the $x$-dependence of PDFs directly from lattice QCD~\cite{Ji:2013dva,Ji:2014gla}. In the following discussion, we focus on the flavor-nonsinglet quasi-PDF, for which we can ignore mixing with the gluon quasi-PDF. The unpolarised quark quasi-PDF is defined as the momentum-dependent
-nonlocal forwardmatrix element
+nonlocal forward matrix element
 \begin{align}\label{eq:qPDF}
 \widetilde{q}(x,\Lambda,p_z)  = {} &  \int \frac{dz}{2\pi} e^{-i x z p_z} p_z h(z,p_z), \nonumber \\
 h(z,p_z) = {} &
@@ -432,7 +431,7 @@ where $\Lambda$ is an ultraviolet (UV) cut-off scale, such as the inverse lattic
 %\Blue{(JWC: Choosing $\alpha = 4$ eliminates a term that is purely higher-twist, but the remaining term still has a higher-twist effect. This can be seen easily from OPE.)} 
 Note that, because $p$ is finite, the momentum fraction $x$ can be larger than unity.
 
-The quasi-PDF is defined for nucleon states at finite momentum and must be related to the corresponding light-front PDF, for which the nucleon momentum is taken to infinity.
+The quasi-PDF is defined for nucleon states at finite momentum and must be related to the corresponding light-front PDF\footnote{In this context the term light-front PDF is used to distinguish PDFs from quasi-PDFs}, for which the nucleon momentum is taken to infinity.
 In the  large-momentum  effective field theory (LaMET) approach, the quasi-PDF $\widetilde{q}(x,\Lambda,p_z)$ can be related to the $p_z$-independent
 light-front PDF $q(x,Q^2)$ through~\cite{Ji:2013dva,Ji:2014gla}
 \begin{equation} \label{eq:qPDFmatching}
@@ -464,7 +463,7 @@ PDF expressed in Eq.~\eqref{eq:qPDFmatching}.
 \end{comment}
 
 
-Preliminary results from lattice calculations of quasi-PDFs have been encouraging~\cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp,Alexandrou:2016jqi}, as we illustrate in Figs.~\ref{fig:final_pdf}--\ref{fig:matched}. There are a number of remaining challenges, however, that must be overcome for an {\it ab initio} determination of the $x$-dependence of PDFs directly from lattice QCD that incorporates complete control over systematic uncertainties. Lattice calculations of quasi-PDFs are subject to the same sources of systematic uncertainty that plague all lattice calculations and are highlighted in Sect.~\ref{Sec:IntroLQCD}, but here we focus on systematic uncertainties that are more specific to quasi-PDFs. These are uncertainties associated with the finite nucleon momentum of the lattice calculations and with the renormalisation of quasi-PDFs.
+Preliminary results from lattice calculations of quasi-PDFs have been encouraging~\cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp,Alexandrou:2016jqi}, as we illustrate in Fig.~\ref{fig:qPDF-demo}. There are a number of remaining challenges, however, that must be overcome for an {\it ab initio} determination of the $x$-dependence of PDFs directly from lattice QCD that incorporates complete control over systematic uncertainties. Lattice calculations of quasi-PDFs are subject to the same sources of systematic uncertainty that plague all lattice calculations and are highlighted in Sect.~\ref{Sec:IntroLQCD}, but here we focus on systematic uncertainties that are more specific to quasi-PDFs. These are uncertainties associated with the finite nucleon momentum of the lattice calculations and with the renormalisation of quasi-PDFs.
 
 \begin{itemize}
  \item Preliminary nonperturbative studies of the quasi-PDF used nucleon momenta in the range $p_z = 2\pi/L$ to $10\pi/L$, where $L$ is the physical extent of the lattice, corresponding to $p_z = 0.5$ to $2.5$~GeV~\cite{Lin:2014zya,Alexandrou:2015rja,Chen:2016utp,Alexandrou:2016jqi}. At such low momenta, higher-twist and target mass corrections are likely to be considerable.
