@@ -561,39 +561,52 @@ Note that in both cases, the antiquark asymmetry is compatible with zero within 
 This is mainly due to the rapid increase
 of the renormalisation factor with Wilson-line length, which amplifies the finite-volume effect from truncating long-range correlations. Ref.~\cite{Lin:2017ani} showed that this truncation causes unphysical oscillations in the sea-flavor asymmetry and proposed that the oscillations can be removed by either imposing a filter to reduce the weighting of long-range correlations or by taking the derivative of the matrix element in coordinate space. The effectiveness of both of these two methods is demonstrated in~\cite{Lin:2017ani}. 
 
-\begin{figure}[t]
+\begin{figure}[!t]
 \centering
-\includegraphics[width=.6\textwidth]{plots/pdf_nonorm}
-\includegraphics[scale=0.4,angle=-90]{plots/qmatched_bare_vs_fit69v2}\,\,\,
-\caption{\small [FIXME: editors will remake these figures; caveats mentioned] 
-(Left)LP3's renormalised unpolarised isovector quark distribution at pion mass of 310 MeV after one-loop matching and mass correction at the renormalisation scale $\mu=2$~GeV~\cite{Chen:2017mzz}. %The red band shows the extrapolation to infinite momentum. \\
-(Right) ETMC's renormalised polarised PDF at pion mass of 375 MeV~\cite{Alexandrou:2017huk} . 
-%Comparison of matched polarised PDF obtained from quasi-PDF computed with either fully renormalised matrix elements (blue) 
-%or with bare matrix elements multiplied by the local ($z{=}0$) axial current $Z$-factor, $Z_A$ (magenta). For purely illustration purposes, 
-%phenomenological PDFs (DSSV08~\cite{deFlorian:2009vb} and JAM15~\cite{Sato:2016tuz}) are also shown.
-} \label{fig:qPDF-demo}
+\includegraphics[scale=0.22,angle=270]{plots/unpxq}
+\includegraphics[scale=0.22,angle=270]{plots/unpxqbar}\\
+\includegraphics[scale=0.22,angle=270]{plots/polxq}
+\includegraphics[scale=0.22,angle=270]{plots/polxqbar}\\
+\caption{\small LP3's renormalised unpolarised isovector quark (top left) and 
+  antiquark (top right) PDF combinations at pion mass of 310 MeV after 
+  one-loop matching and mass correction at the renormalisation scale 
+  $\mu=2$~GeV~\cite{Chen:2017mzz}. 
+  %
+  ETMC's renormalised polarised isovector quark (bottom left) and antiquark
+  (bottom right) PDF combinations at pion mass of 
+  375 MeV~\cite{Alexandrou:2017huk}.} 
+\label{fig:qPDF-demo}
 \end{figure}
-%%%%%%%%%%%%%
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\Red{
 \paragraph*{Pseudo-PDFs} 
-The general dependence of the  matrix element $h(z,p_z)$ of Eq.~\eqref{eq:qPDF} on the hadron momentum $p$ and the displacement of the quark and anti-quark fields $z$ can be expressed as a function of the Lorentz invariants $\nu = z\cdot p$  (Ioffe time~\cite{Ioffe:1969kf,Braun:1994jq}) and $z^2$ where $z$  and $p$ is a general 4-vectors.  We can thus introduce
+The general dependence of the  matrix element $h(z,p_z)$ of Eq.~\eqref{eq:qPDF} 
+on the hadron momentum $p$ and the displacement of the quark and anti-quark 
+fields $z$ can be expressed as a function of the Lorentz invariants 
+$\nu=z\cdot p$ (Ioffe time~\cite{Ioffe:1969kf,Braun:1994jq}) 
+and $z^2$ where $z$  and $p$ is a general 4-vectors.  
+%
+We can thus introduce
 \begin{equation}
 \overline{h}(\nu,z^2) \equiv h(z,p_z)\,.
 \end{equation}
 
-The pseudo-PDF is then defined
-by the Fourier transform
+The pseudo-PDF is then defined by the Fourier transform
+%
 \begin{equation}
 {\mathcal P}(x,z^2)=\int \frac{d\nu}{2\pi} e^{-ix\nu} \overline{h}(\nu,z^2),
 \end{equation}
-which has support only in the physical range $x = [-1,1]$ \cite{Radyushkin:2016hsy,Radyushkin:2017cyf}. 
-As discussed in  \cite{Radyushkin:2016hsy,Radyushkin:2017cyf}, the pseudo-PDF is directly related to both the PDFs as well as the primordial TMD that describes the transverse structure of the hadron.
-In  \cite{Radyushkin:2017cyf}, using the temporal gamma matrix in the matrix element, a possible factorization of the TMD and PDF was conjectured which implies that the ratio
+which has support only in the physical range 
+$x=[-1,1]$ \cite{Radyushkin:2016hsy,Radyushkin:2017cyf}. 
+%
+As discussed in~\cite{Radyushkin:2016hsy,Radyushkin:2017cyf}, the pseudo-PDF 
+is directly related to both the PDFs as well as the primordial TMD that 
+describes the transverse structure of the hadron.
+%
+In~\cite{Radyushkin:2017cyf}, using the temporal gamma matrix in the matrix 
+element, a possible factorization of the TMD and PDF was conjectured which 
+implies that the ratio
+%
 \begin{equation}
 {\mathcal M}(\nu,z^2) =\frac{\overline h(\nu,z^2)}{\overline h(0,z^2)}
 \label{eq:RatioPseudo}
@@ -603,11 +616,25 @@ is directly related to PDFs as
 {\mathcal M}(\nu,z^2) =Q(\nu,z^2) + {\cal O}(z^2),
 \label{eq:IoffePDF}
 \end{equation}
-with $Q(\nu,z^2)$ being the Ioffe time PDF~\cite{Ioffe:1969kf,Braun:1994jq} which is just the Fourier transform of the PDFs.
+with $Q(\nu,z^2)$ being the Ioffe time PDF~\cite{Ioffe:1969kf,Braun:1994jq} 
+which is just the Fourier transform of the PDFs.
 \begin{equation}
 {q}(x,1/z^2)=\int \frac{d\nu}{2\pi} e^{-ix\nu} Q(\nu,z^2),
 \end{equation}
-Note, that the ratio in Eq.~\ref{eq:RatioPseudo} has a well defined continuum limit and requires no renormalization. 
-The polynomial corrections in Eq.~\ref{eq:IoffePDF} are due to violations of the factorization conjecture, while the 
-PDF ${q}(x,1/z^2)$ is the PDF in a particular scheme defined at scale $1/z^2$. Matching to $\overline{MS}$ can be performed in perturbation theory following standard methodology. One loop results are published in~\cite{Ji:2017rah}.
-A preliminary study of this formalism was presented in~\cite{Orginos:2017kos}, where it was shown that indeed the conjectured factorization is observed and the residual corrections are small. Furthermore  evidence of the expected perturbative evolution of the Ioffe time PDFs was observed. More detailed studies of this methodology are required to achieve its full potential.  
+Note, that the ratio in Eq.~\ref{eq:RatioPseudo} has a well defined continuum 
+limit and requires no renormalization. 
+%
+The polynomial corrections in Eq.~\ref{eq:IoffePDF} are due to violations of 
+the factorization conjecture, while the PDF ${q}(x,1/z^2)$ is the PDF in a 
+particular scheme defined at scale $1/z^2$. Matching to $\overline{MS}$ 
+can be performed in perturbation theory following standard methodology. 
+%
+One loop results are published in~\cite{Ji:2017rah}.
+%
+A preliminary study of this formalism was presented in~\cite{Orginos:2017kos}, 
+where it was shown that indeed the conjectured factorization is observed and 
+the residual corrections are small. Furthermore  evidence of the expected 
+perturbative evolution of the Ioffe time PDFs was observed. 
+%
+More detailed studies of this methodology are required to achieve its full 
+potential.  
