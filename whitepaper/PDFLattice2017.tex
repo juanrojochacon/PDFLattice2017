@@ -1,9 +1,6 @@
-%\special{!userdict begin /bop-hook{gsave 200 30 translate
-%       65 rotate /Times-Roman findfont 216 scalefont setfont
-%       0 0 moveto 0.85 setgray (DRAFT) show grestore}def end}%%%
-
 %stylefile for "Progress in Particle and Nuclear Physics" from 20. March 2003
 \documentclass[twoside,12pt]{article}
+\usepackage[utf8]{inputenc} 
 \usepackage{morefloats}
 \usepackage{lineno}
 \usepackage{graphicx}
@@ -19,7 +16,7 @@
 \usepackage{color}
 \usepackage{verbatim}
 \usepackage{rotating}
-\usepackage{subfig,cite}
+\usepackage{subfig}
 \usepackage{colortbl}
 \usepackage[]{xcolor}
 \usepackage{siunitx} % For correctly displayed SI units.
@@ -27,7 +24,6 @@
 \usepackage{url}
 \usepackage[colorlinks, citecolor=blue,anchorcolor=blue,menucolor=blue, 
 linkcolor=blue,filecolor=blue,runcolor=blue,urlcolor=blue,frenchlinks=blue]{hyperref}
-
 
 \def\Journal#1#2#3#4{{#1} {#2} (#4) #3 }
 \def\NCA{{\em Nuovo Cimento} A}
@@ -66,7 +62,7 @@ linkcolor=blue,filecolor=blue,runcolor=blue,urlcolor=blue,frenchlinks=blue]{hype
 \textwidth18.5cm
 \textheight25.0cm
 
-\bibliographystyle{JHEP}
+\bibliographystyle{spphys}
 
 \def\smallfrac#1#2{\hbox{$\frac{#1}{#2}$}}
 \newcommand{\be}{\begin{equation}}
@@ -221,7 +217,7 @@ linkcolor=blue,filecolor=blue,runcolor=blue,urlcolor=blue,frenchlinks=blue]{hype
   Rajan~Gupta$^{20}$, 
   Lucian~A.~Harland-Lang$^{3,21}$, 
   Tomomi~Ishikawa$^{22}$, 
-  Aleksander~Kusina$^{23,24}$, 
+  Aleksander~Kusina$^{24}$, 
   Keh-Fei~Liu$^{25}$, 	
   Simonetta~Liuti$^{26,27}$, 		
   Christopher~Monahan$^{28}$, 		
@@ -281,7 +277,7 @@ University College London, WC1E 6BT, United Kingdom\\
 ~$^{22}$T.~D.~Lee Institute, 
 Shanghai Jiao Tong University, Shanghai, 200240, P.~R.~China\\
 ~$^{23}$Laboratoire de Physique Subatomique et de Cosmologie, 
-Universit´e Grenoble-Alpes,\\ 
+Universit\`e Grenoble-Alpes,\\ 
 CNRS/IN2P3, 53 avenue des Martyrs,  38026 Grenoble, France. \\
 ~$^{24}$Institute of Nuclear Physics Polish Academy of Sciences, 
 PL-31342 Krakow, Poland\\
@@ -309,15 +305,8 @@ MSUHEP-17-017,
 Nikhef-2017-047, 
 SMU-HEP-17-08.
 
-
-
-
 \clearpage
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-$\quad$\\
-\vspace{1.5cm}
 {\bf \large Abstract}
 
 \end{center}
@@ -331,10 +320,10 @@ parton distribution functions (PDFs) of the proton, which
 quantify how momentum and spin 
 are divided among its quark and gluon constituents.
 %
-The​ ​first​ ​is​ the ​global​ ​QCD​ ​analysis framework,​ ​which​ ​is​ ​based​ ​on the​ ​
-factorisation​ ​of​ ​hard-scattering​ ​cross-sections​ ​into​ ​short-distance​ ​matrix​ 
-​elements computable​ ​in​ ​perturbation​ ​theory​ ​and​ ​long-distance​ ​dynamics​ ​
-encoded​ ​in​ ​PDFs and ​exploits constraints​ ​from​ ​experimental​ ​data​ ​to​ ​extract​ ​
+The first is the global QCD analysis framework, which is based on the 
+factorisation of hard-scattering cross-sections into short-distance matrix
+elements computable in perturbation theory and long-distance dynamics
+encoded in PDFs and exploits constraints from experimental data to extract 
 PDFs.
 %
 The second is based on the direct non-perturbative evaluation of PDFs
@@ -361,11 +350,7 @@ to establish a common language between the two communities to
 maximise and foster mutual interactions and dialogue, and to improve
 understanding of the internal structure of the proton.
 
-\clearpage
-
-  \tableofcontents
-
-\clearpage
+\tableofcontents
 
 \input{sec-introduction}
 
@@ -377,6 +362,8 @@ understanding of the internal structure of the proton.
 
 \input{sec-outlook}
 
+\input{sec-acknowledgements}
+
 \appendix
 
 \input{sec-appendix1}
@@ -385,11 +372,6 @@ understanding of the internal structure of the proton.
 
 \input{sec-appendix3}
 
-\newpage
-% The bibliography
 \bibliography{PDFLattice2017}
 
-
 \end{document}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
