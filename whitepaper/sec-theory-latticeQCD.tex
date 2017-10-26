@@ -189,17 +189,17 @@ must be removed nonperturbatively, and is a particular challenge for
 lattice calculations of the Mellin moments of PDFs (see
 Sect.~\ref{Sec:MomentsLQCD}).
 
-Finally, it is worth noting that factorization, the key assumption of
-the operator product expansion (OPE), demands that the nonperturbatively 
-renormalised hadron matrix elements are matched to the perturbatively 
-renormalised Wilson coefficients at a scale where the perturbative 
-expressions show convergence. This appears to be
-the case for scales $\mu^2 \gtrsim 10\mbox{ GeV}^2$ at
-least~\cite{Gockeler:2010yr}. This, however, is a fundamental aspect
-of QCD, and is not restricted to lattice QCD. The DGLAP evolution equations,
-for example, work best for $q^2_{\rm min} \approx
-15\mbox{ GeV}^2$~\cite{Abramowicz:2015mha}, which should be kept in
-mind when comparing lattice results with phenomenology.
+%Finally, it is worth noting that factorization, the key assumption of
+%the operator product expansion (OPE), demands that the nonperturbatively 
+%renormalised hadron matrix elements are matched to the perturbatively 
+%renormalised Wilson coefficients at a scale where the perturbative 
+%expressions show convergence. This appears to be
+%the case for scales $\mu^2 \gtrsim 10\mbox{ GeV}^2$ at
+%least~\cite{Gockeler:2010yr}. This, however, is a fundamental aspect
+%of QCD, and is not restricted to lattice QCD. The DGLAP evolution equations,
+%for example, work best for $q^2_{\rm min} \approx
+%15\mbox{ GeV}^2$~\cite{Abramowicz:2015mha}, which should be kept in
+%mind when comparing lattice results with phenomenology.
 
 \item {\bfseries Lattice-spacing determination.} 
 Numerical lattice-QCD calculations 
@@ -246,18 +246,18 @@ The lowest three moments do provide, however, useful information, both as benchm
 
 Using the OPE, the Mellin moments of structure functions, and the corresponding PDFs, can be expressed, up to higher twist effects, in terms of matrix elements of local operators:
 \begin{align}
-\!\!\!2 \int_0^1 dx\, x^{n-1} F_1(x,Q^2) &= \sum_a C_{1,a}^n(\mu^2)\, v_a^n(\mu^2)|_{\mu^2=Q^2} = \sum_a C_{1,a}^n(\mu^2)\, \int_0^1 dx\, x^{n-1} f_a(x,Q^2)\,,\\
-4 \int_0^1 dx\, x^n g_1(x,Q^2) &= \sum_a e_{1,a}^n(\mu^2)\, a_a^n(\mu^2)|_{\mu^2=Q^2} = \sum_a e_{1,a}^n(\mu^2)\, \int_0^1 dx\, x^n\, 2 \Delta f_a(x,Q^2)\,,
+\!\!\!2 \int_0^1 dx\, x^{n-1} F_1(x,Q^2) &= \sum_a C_{1,a}^n(\mu^2)\, v_a^n(\mu^2)|_{\mu^2=Q^2} = \sum_a C_{1,a}^n(Q^2)\, \int_0^1 dx\, x^{n-1} f_a(x,Q^2)\,,\\
+4 \int_0^1 dx\, x^n g_1(x,Q^2) &= \sum_a \Delta C_{1,a}^n(\mu^2)\, a_a^n(\mu^2)|_{\mu^2=Q^2} = \sum_a \Delta C_{1,a}^n(Q^2)\, \int_0^1 dx\, x^n\, 2 \Delta f_a(x,Q^2)\,,
 \end{align}
 where $v_i^n(\mu^2)$ and $a_i^n(\mu^2)$ are reduced matrix elements of the appropriate twist-two operators~\cite{Gockeler:1995wg},
 \begin{align}
 \frac{1}{2} \sum_s \langle p,s|\mathcal{O}^i_{\{\mu_1,\cdots,\mu_n\}}|p,s\rangle = {} & 2 v_i^n\, [p_{\mu_1}\cdots p_{\mu_n} - {\rm traces}] \,, \label{eq:twist2me}\\
 \langle p,s|\mathcal{O}^{5\,i}_{\{\sigma \mu_1,\cdots,\mu_n\}}|p,s\rangle = {} & \frac{1}{n+1} a_i^n\, [s_\sigma p_{\mu_1}\cdots p_{\mu_n} - {\rm traces}]\,,
 \end{align}
-and $C_{1,i}^n(\mu^2)$ and $e_{1,i}^n(\mu^2)$ are the Mellin moments of the corresponding Wilson coefficients
+and $C_{1,i}^n(\mu^2)$ and $\Delta C_{1,i}^n(\mu^2)$ are the Mellin moments of the corresponding Wilson coefficients
 \begin{equation}
-C_{1,i}^n(\mu^2) = \int_0^1 dy\, y^{n-1} c_{1,i}(y,\mu^2)\,, \quad
-e_{1,i}^n(\mu^2) = \int_0^1 dy\, y^n e_{1,i}(y,\mu^2)\,.
+C_{1,i}^n(\mu^2) = \int_0^1 dy\, y^{n-1} C_{1,i}(y,\mu^2)\,, \quad
+\Delta C_{1,i}^n(\mu^2) = \int_0^1 dy\, y^n \Delta C_{1,i}(y,\mu^2)\,.
 \end{equation}
 The trace terms include operators with at least one factor of the metric tensor $g^{\mu_i \mu_j}$ multiplied by
 operators of dimension $(n+2)$ with $n-2$ Lorentz indices. The operators relevant for the lowest two moments are listed in Table \ref{Tab:twist2}. The operator $\mathcal{O}^q_{\mu_1\mu_2}$ decomposes into two different representations of $H(4)$~\cite{Gockeler:1996mu}, each with different lattice artifacts and renormalisation factors. In the continuum limit, however, both operators should lead to the same result. In contrast, the operator $\mathcal{O}^q_{\mu_1\mu_2\mu_3}$ 

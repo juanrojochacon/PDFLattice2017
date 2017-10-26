@@ -1,4 +1,7 @@
-QCD~\cite{Collins:2011zzd} is the non-abelian quantum field 
+\subsection{Parton distribution functions}
+\label{Sec:IntroPDFs}
+
+Quantum chromodynamics is the non-abelian quantum field 
 theory that describes the strong interaction.
 %
 It provides the theoretical foundation for the phenomenological ideas of 
@@ -6,8 +9,9 @@ quark model, colour charge, and partons as hadron constituents.
 %
 The power of QCD to describe physics from the pion mass scale all the way up 
 to the scale of high-energy colliders, such as the LHC, relies on the 
-remarkable properties of asymptotic freedom and 
-factorisation~\cite{Gross:1973ju,Gross:1973id,Gross:1974cs,Politzer:1974fr}.
+remarkable properties of asymptotic freedom~\cite{Gross:1973ju,Gross:1973id,
+Gross:1974cs,Politzer:1974fr} and 
+factorization~\cite{Collins:1987pm,Collins:1989gx}.
 
 At high energies, or short distances, the QCD coupling is small 
 and perturbation theory can accurately characterise the relevant scattering 
@@ -17,27 +21,27 @@ At low energies, or larger distances, non-perturbative effects give rise to
 quark confinement and spontaneous chiral symmetry breaking~\cite{Gasser:1983yg}.
 %
 The connection between low- and high-energy dynamics is provided by QCD 
-factorisation theorems~\cite{Collins:1989gx}: 
-short-distance physics above the factorisation scale $\mu$ is captured by 
+factorization theorems~\cite{Collins:1987pm,Collins:1989gx}: 
+short-distance physics above the factorization scale $\mu$ is captured by 
 partonic hard-scattering cross sections calculated perturbatively as a 
 power series expansion in the QCD coupling, while the 
-long-distance physics below the factorisation scale $\mu$ is described by 
+long-distance physics below the factorization scale $\mu$ is described by 
 non-perturbative quantities.
 %
-In a collinear, leading-twist factorisation framework, these quantities are
-universal PDFs.
+In a collinear, leading-twist factorization framework, these quantities are
+universal ({\it i.e.} process-independent) PDFs.
 %
 Depending on the helicity state of the parent hadron, one usually 
-distinguishes between helicity-averaged (unpolarised, henceforth)
-and helicity-dependent (polarised, henceforth) PDFs.
+distinguishes between helicity-averaged (unpolarized, henceforth)
+and helicity-dependent (polarized, henceforth) PDFs.
 
-Unpolarised PDFs are denoted as 
+Unpolarized PDFs are denoted as 
 \begin{equation}
 f(x,\mu^2)\mbox{,} \ \ f=\{g,u,\bar{u},d,\bar{d},s,\bar{s},...\}
 \,\mbox{,}
 \label{eq:unpPDFs}
 \end{equation}
-where the index $i$ represents the parton flavour and $x$ is the fraction
+where $x$ is the fraction
 of the hadron longitudinal momentum carried by the parton.
 %
 An additional index could be used to denote the hadronic species (proton,
@@ -46,11 +50,11 @@ neutron, pion, \dots).
 However, we omit such a designation, as we only refer to the proton
 in this paper.
 
-At leading order (LO) in the QCD coupling series, unpolarised PDFs 
+At leading order (LO) in the QCD coupling series, unpolarized PDFs 
 describe the probability distribution of a parton with a specified 
 momentum fraction $x$.
 %
-The total momentum carried by each parton flavour is then given by 
+The total momentum carried by each parton flavor is then given by 
 the first moment of the corresponding PDF, for instance
 %
 \begin{align}
@@ -64,13 +68,12 @@ the first moment of the corresponding PDF, for instance
 %
 Here, $\left\langle x\right\rangle _{u}$ is the momentum
 carried by the up-quark, and $\left\langle x\right\rangle _{u^{+}}$ is
-the momentum carried by the sum of up and anti-up quarks.
-%
-We are especially careful with the notation, as we always refer to $q^+$ to 
-indicate the sum of the quark and anti-quark PDFs of the same flavour (see
-Appendix~\ref{app:notation} for our notational conventions).
+the momentum carried by the sum of up and anti-up quarks~\footnote{We always 
+ refer to $q^+$ to indicate the sum of the quark and anti-quark PDFs of the 
+ same flavor.},
+see Appendix~\ref{app:notation} for our notational conventions.
 
-Polarised PDFs describe the extent to which quarks and gluons 
+Polarized PDFs describe the extent to which quarks and gluons 
 with a given momentum fraction $x$ have their spins aligned with the spin 
 direction of a fast moving nucleon in a helicity eigenstate. 
 %
@@ -81,13 +84,13 @@ They are denoted as
 \,\mbox{,}
 \label{eq:polPDFs}
 \end{equation}
-where the index $i$ represents the parton flavour, $x$ is the fractional 
+where $x$ is the fractional 
 momentum carried by the parton, as in Eq.~\eqref{eq:unpPDFs},  
 and the parton's spin alignement along ($\uparrow$) or opposite 
-($\downarrow$) the polarisation direction of its parent nucleon
+($\downarrow$) the polarization direction of its parent nucleon
 is made explicit.
 
-Much of the interest in polarised PDFs is related to the fact that 
+Much of the interest in polarized PDFs is related to the fact that 
 their zeroth moments can be interpreted as the fractions of the proton's 
 spin carried by the corresponding partons.
 %
@@ -95,7 +98,7 @@ They are therefore the key to one of the most fundamental,
 but not yet satisfactorily answered questions in hadronic physics,
 {\it i.e.}, how the spin of the proton is distributed among its constituents.
 %
-Specifically, the zeroth moments of the singlet and the gluon polarised PDFs,
+Specifically, the zeroth moments of the singlet and the gluon polarized PDFs,
 \begin{align}
 \Delta\Sigma(\mu^2)
 & =
@@ -114,11 +117,7 @@ Specifically, the zeroth moments of the singlet and the gluon polarised PDFs,
 \end{align}
 directly contribute to the proton spin sum rule~\cite{Leader:2013jra}.
 
-Note that for both unpolarised and polarised PDFs the value of the 
-factorisation scale $\mu$ is usually chosen to be equal to the characteristic 
-scale $Q$ of the hard scattering process involving the PDFs.
-%
-Beyond leading order, PDFs are renormalisation scheme-dependent 
+Beyond leading order, PDFs are renormalization scheme-dependent 
 quantities, typically worked out in the $\overline{\rm MS}$ scheme.
 %
 When PDFs are convolved with the appropriate partonic hard-scattering 
@@ -130,13 +129,13 @@ terms\footnote{Such spurious terms appear if one convolves, for example,
  These terms are scheme-dependent and could be avoided.} in the 
 perturbative expansion. 
 
-Both unpolarised and polarised PDFs are accessible, theoretically and 
+Both unpolarized and polarized PDFs are accessible, theoretically and 
 experimentally, through the forward Compton scattering amplitude
 \begin{equation}
 \label{eq:Compton}
-T_{\mu\nu}(p,q) 
+T_{\mu\nu}(p,q,s) 
 = 
-\int {\rm d}^4\!z\, {\rm e}^{iqz}  \langle p,s |T J_\mu(z) J_\nu(0)|p,s\rangle\, ,
+\int {\rm d}^4\!z\, {\rm e}^{iqz}  \langle p,s |T J_\mu(z) J_\nu(0)|p,s\rangle
 \end{equation}
 at large virtual photon momenta $q^2=-Q^2$. 
 %
@@ -146,40 +145,77 @@ external states are hadronic states with momentum $p$ and spin $s$.
 
 The most general form of the Compton amplitude $T_{\mu\nu}(p,q)$ reads
 \begin{align}
-T_{\mu\nu}(p,q) 
+T_{\mu\nu}(p,q,s) 
 = {} & 
-  \left(\delta_{\mu\nu}-\frac{q_\mu q_\nu}{q^2}\right)\mathcal{F}_1(\omega,Q^2) 
-+ \left(p_\mu-\frac{p\cdot q}{q^2}q_\mu\right) \left(p_\nu-\frac{p\cdot q}{q^2}q_\nu\right) \frac{1}{p\cdot q} \mathcal{F}_2(\omega,Q^2)\,,
+  \left(-g_{\mu\nu}+\frac{q_\mu q_\nu}{q^2}\right)\mathcal{F}_1(\omega,Q^2) 
++ \left(p_\mu-\frac{p\cdot q}{q^2}q_\mu\right) \left(p_\nu-\frac{p\cdot q}{q^2}q_\nu\right) \frac{1}{p\cdot q} \mathcal{F}_2(\omega,Q^2)
 \nonumber\\ 
 & {} \quad  
-+ \epsilon_{\mu\nu\lambda\sigma}q_\lambda s_\sigma \frac{1}{p\cdot q}\mathcal{G}_1(\omega,Q^2)
-+ \epsilon_{\mu\nu\lambda\sigma}q_\lambda \left(p\cdot q s_\sigma - s\cdot q p_\sigma\right) \frac{1}{(p\cdot q)^2}\mathcal{G}_2(\omega,Q^2)\,,
++ i\,\epsilon_{\mu\nu\lambda\sigma}q^\lambda s^\sigma \frac{1}{p\cdot q}\mathcal{G}_1(\omega,Q^2)
++ i\,\epsilon_{\mu\nu\lambda\sigma}q^\lambda \left(p\cdot q\, s^\sigma - s\cdot q\, p^\sigma\right) \frac{1}{(p\cdot q)^2}\mathcal{G}_2(\omega,Q^2)\,,
+\label{eq:Comptampl}
 \end{align}
-where $\omega=2p\cdot q/q^2$.
+where $\omega=2p\cdot q/q^2$ and $\mathcal{F}_1$, $\mathcal{F}_2$, 
+$\mathcal{G}_1$ and $\mathcal{G}_2$ are the Compton amplitude structure 
+functions.
 %
-The imaginary parts of the Compton amplitude structure functions, 
-$\mathcal{F}_1$, $\mathcal{F}_2$, $\mathcal{G}_1$ and $\mathcal{G}_2$, 
-are related to the usual structure functions of the hadronic tensor, 
-$F_1(x,Q^2)$, $F_2(x,Q^2)$, $g_1(x,Q^2)$ and $g_2(x,Q^2)$, 
-through the optical theorem.
+They can be related to the electromagnetic structure functions
+$F_1$, $F_2$, $g_1$ and $g_2$, used to parametrize the Deep-Inelastic 
+Scattering (DIS) hadronic tensor
+\begin{align}
+W_{\mu\nu}(p,q,s)
+= {} &
+\frac{1}{4\pi}\int d^4z e^{iqz}\langle p,s |[J_\mu(z),J_\nu(0)]|p,s\rangle
+\nonumber
+\\
+= {} &
+\left(-g_{\mu\nu} +  \frac{q_\mu q_\nu}{q^2}\right) F_1(\omega,Q^2)
++\left( p_\mu - \frac{p\cdot q}{q^2}q_\mu \right)
+ \left(p_\nu - \frac{p\cdot q}{q^2}q_\nu \right) \frac{1}{p\cdot q}
+F_2(\omega, Q^2)
+\nonumber
+\\
+& +i\,\epsilon_{\mu\nu\lambda\sigma}q^\lambda s^\sigma
+\frac{1}{p\cdot q} g_1(\omega,Q^2)
++ i\,\epsilon_{\mu\nu\lambda\sigma}q^\lambda(p\cdot q\, s^\sigma - s\cdot q\, p^\sigma)
+\frac{1}{(p\cdot q)^2}g_2(\omega,Q^2),
+\label{eq:hadtensor}
+\end{align}
+where $J_\mu$ and $J_\nu$ denote the electromagnetic currents\footnote{A more
+ general expression of the DIS hadronic tensor inclusing electroweak currents
+ can be easily worked out, see~\cite{Anselmino:1993tc,Anselmino:1992rn} for 
+ details.}, see~\cite{Anselmino:1992rn,Manohar:1992tz} for details.
 %
-The unpolarised and polarised PDFs can be derived from $\mathcal{F}_1$ and 
-$\mathcal{G}_1$ by first rewriting them in terms of the spin-independent 
-and spin-dependent structure functions, $F_1(x,Q^2)$ and $g_1(x,Q^2)$.
+Specifically, given the definitions in \eqref{eq:Comptampl} and 
+\eqref{eq:hadtensor}, the optical theorem implies that twice the imaginary 
+part of $T_{\mu\nu}$ is equal to $W_{\mu\nu}$ times $4\pi$.
+%
+Therefore:
+\begin{align}
+\Im\mathcal{F}_1(\omega, Q^2) = 2\pi F_1(\omega,Q^2)
+\qquad \qquad &
+\Im\mathcal{G}_1(\omega, Q^2) = 2\pi g_1(\omega,Q^2)
+\\
+\Im\mathcal{F}_2(\omega, Q^2) = 2\pi F_2(\omega,Q^2)
+\qquad \qquad &
+\Im\mathcal{G}_2(\omega, Q^2) = 2\pi g_2(\omega,Q^2)\, ,
+\end{align}
+where $\mathcal{F}_1$, $\mathcal{F}_2$, $\mathcal{G}_1$ and $\mathcal{G}_2$
+are discontinuous across the cuts $1\leq |\omega| \leq \infty$.
 %
 Neglecting target mass corrections, one has
 \begin{align}
 \mathcal{F}_1(\omega,Q^2) 
-= {} & 4 \omega^2 \int_0^1 dx\,  \frac{xF_1(x,Q^2)}{1-(\omega x)^2} 
-= \sum_{n=2,4,\cdots}^\infty 4\omega^n \int_0^1 dx\, x^{n-1} F_1(x,Q^2) \,, \\
+= {} & 2 \omega^2 \int_0^1 dx\,  \frac{xF_1(x,Q^2)}{1-(\omega x)^2} 
+= \sum_{n=2,4,\cdots}^\infty 2\omega^n \int_0^1 dx\, x^{n-1} F_1(x,Q^2) \,, \\
 \mathcal{G}_1(\omega,Q^2) 
-= {} & 4 \omega \int_0^1 dx\, \frac{g_1(x,Q^2)}{1-(\omega x)^2} 
-= \sum_{n=1,3,\cdots}^\infty 4\omega^n \int_0^1 dx\, x^{n-1} g_1(x,Q^2)\,.
+= {} & 2 \omega \int_0^1 dx\, \frac{g_1(x,Q^2)}{1-(\omega x)^2} 
+= \sum_{n=1,3,\cdots}^\infty 2\omega^n \int_0^1 dx\, x^{n-1} g_1(x,Q^2)\,.
 \end{align}
 
 At a sufficiently high momentum transfer $Q^2$, power corrections can be 
 neglected and
-QCD factorisation allows us to write the structure functions 
+QCD factorization allows us to write the structure functions 
 $F_1(x,Q^2)$ and $g_1(x,Q^2)$ as a convolution between perturbatively-computable
 hard-scattering cross-sections and non-perturbative parton distributions:
 \begin{align}
@@ -194,13 +230,13 @@ g_1(x,Q^2)
 %
 Here $x=Q^2/2p\cdot q$ is the Bjorken variable identified with the parton
 fractional momentum, the sums run over the number of active
-flavours at the scale $Q^2$ (including the gluon), $C_{1,f}$ and 
+flavors at the scale $Q^2$ (including the gluon), $C_{1,f}$ and 
 $\Delta C_{1,f}$ are the perturbative partonic hard-scattering cross sections,
 $\alpha_s$ is the QCD strong coupling, and $f(x,Q^2)$ and $\Delta f(x,Q^2)$ 
-are the unpolarised and polarised PDFs.
+are the unpolarized and polarized PDFs.
 
 While PDFs cannot be calculated perturbatively, their dependence on the scale 
-$\mu$ resulting from factorisation can be.
+$\mu$ resulting from factorization can be.
 %
 This is done by means of the
 DGLAP (Dokshitzer-Gribov-Lipatov-Altarelli-Parisi) 
@@ -223,18 +259,18 @@ a set of integro-differential coupled equations of the form
 \end{equation}
 %
 In short, the logarithmic derivative of the PDF is determined by a convolution
-of the PDFs with the unpolarised (polarised) DGLAP kernels $P_{f^\prime f}$
+of the PDFs with the unpolarized (polarized) DGLAP kernels $P_{f^\prime f}$
 ($\Delta P_{f^\prime f}$) which can be 
 computed perturbatively in powers of $\alpha_{s}$.
 %
-The unpolarised splitting functions $P_{f^\prime f}$ are currently completely known up  
-to NNLO~\cite{mvvns,Vogt:2004mw} in the $\overline{\rm MS}$ 
-renormalisation scheme.
+The unpolarized splitting functions $P_{f^\prime f}$ are currently completely 
+known up to NNLO~\cite{mvvns,Vogt:2004mw} in the $\overline{\rm MS}$ 
+renormalization scheme.
 %
-Results for the unpolarised non-singlet splitting functions have appeared 
+Results for the unpolarized non-singlet splitting functions have appeared 
 recently at N$^3$LO~\cite{Davies:2016jie,Moch:2017uml}.
 %
-The polarised splitting functions $\Delta P_{f^\prime f}$ are currently known 
+The polarized splitting functions $\Delta P_{f^\prime f}$ are currently known 
 up to  NNLO~\cite{Moch:2014sna} in the $\overline{\rm MS}$ scheme.
 %
 The DGLAP evolution equations can be solved numerically using
@@ -243,45 +279,46 @@ public codes~\cite{Vogt:2004ns,Salam:2008qg,Botje:2010ay,
 Bertone:2013vaa,Bertone:2015cwa}.
 %
 The typical level of agreement for the results of the PDF evolution 
-has been demonstrated to be of $\mathcal{O}(10^{-5})$.
+has been demonstrated to be of 
+$\mathcal{O}(10^{-5})$~\cite{Giele:2002hx,Dittmar:2005ed}.
 
-The power series expansion of both the unpolarised and polarised 
-splitting functions contains terms proportional to $\ln\mu^2$, 
-$\ln(1/x)$ and $\ln(1-x)$.
+%The power series expansion of both the unpolarized and polarized 
+%splitting functions contains terms proportional to $\ln\mu^2$, 
+%$\ln(1/x)$ and $\ln(1-x)$.
 %
-While DGLAP evolution sums power of $\alpha_s\ln\mu^2$ contributions,
-in the small-$x$ kinematic region one may also sum power of $\ln(1/x)$
-contributions, independent of the value of $\mu^2$.
+%While DGLAP evolution sums power of $\alpha_s\ln\mu^2$ contributions,
+%in the small-$x$ kinematic region one may also sum power of $\ln(1/x)$
+%contributions, independent of the value of $\mu^2$.
 %
-This is achieved by the BFKL (Balitsky-Fadin-Kuraev-Lipatov) equations,
-which resum $\ln(1/x)$ terms to all orders.
+%This is achieved by the BFKL (Balitsky-Fadin-Kuraev-Lipatov) equations,
+%which resum $\ln(1/x)$ terms to all orders.
 %
-They were originally formulated in the unpolarised case at leading logarithm 
-(LL) order~\cite{Fadin:1975cb,Kuraev:1976ge,Kuraev:1977fs,Balitsky:1978ic},
-and later extended to next-to-leading logarithmic (NLL) 
-order~\cite{Fadin:1998py,Camici:1997ij,Ciafaloni:1998gs}
+%They were originally formulated in the unpolarized case at leading logarithm 
+%(LL) order~\cite{Fadin:1975cb,Kuraev:1976ge,Kuraev:1977fs,Balitsky:1978ic},
+%and later extended to next-to-leading logarithmic (NLL) 
+%order~\cite{Fadin:1998py,Camici:1997ij,Ciafaloni:1998gs}
 %
-The DGLAP and BFKL frameworks can be matched into a single set of evolution 
-equations by means of the small-$x$ resummation
-formalism~\cite{Ciafaloni:1999yw,Ciafaloni:2000cb,Ciafaloni:2003ek,
-Ciafaloni:2003rd,Altarelli:2005ni,White:2006yh,Altarelli:2008aj,
-Ciafaloni:2007gf,Bonvini:2016wki}.
+%The DGLAP and BFKL frameworks can be matched into a single set of evolution 
+%equations by means of the small-$x$ resummation
+%formalism~\cite{Ciafaloni:1999yw,Ciafaloni:2000cb,Ciafaloni:2003ek,
+%Ciafaloni:2003rd,Altarelli:2005ni,White:2006yh,Altarelli:2008aj,
+%Ciafaloni:2007gf,Bonvini:2016wki}.
 
-In the polarised case, the use of the small-$x$ formalism was pioneered 
-decades ago by Kirschner and Lipatov~\cite{Kirschner:1983di} 
-(see also~\cite{Kirschner:1994rq,Kirschner:1994vc,Griffiths:1999dj}) 
-and later by Bartels, Ermolaev, and Ryskin in the context of the structure 
-function $g_1$~\cite{Bartels:1995iu,Bartels:1996wc}.
+%In the polarized case, the use of the small-$x$ formalism was pioneered 
+%decades ago by Kirschner and Lipatov~\cite{Kirschner:1983di} 
+%(see also~\cite{Kirschner:1994rq,Kirschner:1994vc,Griffiths:1999dj}) 
+%and later by Bartels, Ermolaev, and Ryskin in the context of the structure 
+%function $g_1$~\cite{Bartels:1995iu,Bartels:1996wc}.
 %
-Small-$x$ evolution equations which resum powers of $\alpha_s\ln^2(1/x)$ 
-in the polarisation-dependent evolution along with powers of $\alpha_s\ln(1/x)$
-in the unpolarised evolution have been recently reconsidered using the 
-formalism of Wilson line-like operators~\cite{Kovchegov:2015pbl}.
+%Small-$x$ evolution equations which resum powers of $\alpha_s\ln^2(1/x)$ 
+%in the polarization-dependent evolution along with powers of $\alpha_s\ln(1/x)$
+%in the unpolarized evolution have been recently reconsidered using the 
+%formalism of Wilson line-like operators~\cite{Kovchegov:2015pbl}.
 %
-Both numerical~\cite{Kovchegov:2016weo}
-and analytical~\cite{Kovchegov:2016zex,Kovchegov:2017jxc}
-solutions to these small-$x$ evolution equations have been derived
-for the flavour singlet combination of polarised PDFs.
+%Both numerical~\cite{Kovchegov:2016weo}
+%and analytical~\cite{Kovchegov:2016zex,Kovchegov:2017jxc}
+%solutions to these small-$x$ evolution equations have been derived
+%for the flavor singlet combination of polarized PDFs.
 %
-Results have been extended also to the case of the polarised gluon 
-PDF~\cite{Kovchegov:2017lsr}.
+%Results have been extended also to the case of the polarized gluon 
+%PDF~\cite{Kovchegov:2017lsr}.

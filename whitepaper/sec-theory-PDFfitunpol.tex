@@ -378,7 +378,7 @@ to the best fit value.
 With this construction, the resulting ensemble of PDFs represents the probability density in the space
 of parton distributions.
 %
-This requires generating a large number of artificial replicas $N_{\rm rep}$
+This requires generating a large number of  replicas $N_{\rm rep}$
 of the original data which encode the same information on
 central values, variances and correlations as that provided by the experiments.
 
@@ -387,8 +387,8 @@ cross-section denoted generically by $F_{I}^{\rm (exp)}$ with
 total uncorrelated uncertainty $\sigma_{I}^{\rm (stat)}$, $N_{\rm sys}$ fully
 correlated systematic uncertainties $\sigma^{\rm (corr)}_{I,c}$ and
 $N_a$ ($N_r$) absolute (relative) normalisation uncertainties
-$\sigma^{\rm (norm)}_{I,n}$, the artificial
-MC replicas are constructed using the following expression
+$\sigma^{\rm (norm)}_{I,n}$, the MC replicas are constructed using the following 
+expression
 \be
 \label{eq:replicas}
 F_{I}^{(\art)(k)}=S_{I,N}^{(k)} F_{I}^{\rm (\mrexp)}\lp 1+
@@ -515,11 +515,10 @@ by the NNPDF collaboration. Here, the interpolating function is modelled with a 
 In practice, this allows for a greatly increased number of free parameters, typically an order of magnitude higher than other sets.
 %
 The form of Eq.~\eqref{eq:pdffunc} is still assumed, but
-now $C(x)={\rm ANN}(x)$ is parametrised as an artificial
-neural network.
+now $C(x)={\rm NN}(x)$ is parametrised as a neural network.
 %
-The $x^{a_1}(1-x)^{a_2}$ term that multiplies the ANN represents
-a pre--processing factor that speeds up the minimisation procedure
+The $x^{a_1}(1-x)^{a_2}$ term that multiplies the NN represents
+a preprocessing factor that speeds up the minimisation procedure
 and that is determined via an iterative procedure.
 
 In Fig.~\ref{fig:globalfits}
