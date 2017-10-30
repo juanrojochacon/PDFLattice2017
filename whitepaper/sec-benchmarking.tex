@@ -1052,9 +1052,9 @@ The rationale for this choice is that PDF sets entering the PDF4LHC
 recommendations are not benchmarked in the $x\gtrsim$ region, which can be 
 relevant for the moment analysis.
 %
-The combination of all results in Table~\ref{tab:unpPDFmoms}, although less
-precise than the PDF4LHC combination, maximizes the amount of experimental
-information included in the benchmark numbers.
+The combination of all results in Table~\ref{tab:unpPDFmoms}, although 
+sometimes less precise than the PDF4LHC combination, maximizes the amount of 
+experimental information included in the benchmark numbers.
 %
 Specifically, it includes that provided at large $x$ and small $Q^2$ by the
 CJ15 and ABMP16 PDF sets, which are otherwise excluded from the PDF4LHC set.
@@ -1116,11 +1116,11 @@ All values are shown at $\mu^2=4\mbox{ GeV}^2$.}
 \end{table}
 %-------------------------------------------------------------------------------
 
-As outlined in Sect.~\ref{sec:polPDFs}, polarised PDFs cannot be determined in a 
-global QCD analysis with the same accuracy as their unpolarised counterparts.
+As outlined in Sect.~\ref{sec:polPDFs}, polarised PDFs cannot be determined in 
+a global QCD analysis with the same accuracy as their unpolarised counterparts.
 %
-Also, because polarised PDFs do not enter precision physics studies at the LHC, the
-selection and combination of different PDF sets has received much less
+Also, because polarised PDFs do not enter precision physics studies at the LHC, 
+the selection and combination of different PDF sets has received much less
 attention.
 %
 No recommendations analogous to those from the PDF4LHC working group
@@ -1175,7 +1175,8 @@ sources of uncertainty, are denoted with a superscript~$\dagger$.
 All values shown here are at $\mu^2=4\mbox{ GeV}^2$.
 %
 For ease of comparison, these benchmark results are also graphically
-compared in the left panel of Fig.~\ref{fig:Bmoms}.
+compared in Fig.~\ref{fig:Bmomsunp}, both in terms of absolute values 
+(left panel) and of ratios to the lattice values (right panel).
 
 %-------------------------------------------------------------------------------
 \begin{table}[!t]
@@ -1222,17 +1223,18 @@ calculation; they may underestimate some sources of uncertainty.}
 \begin{figure}[!t]
 \centering
 \includegraphics[scale=0.44,angle=270]{plots/unpmoms}
-\includegraphics[scale=0.44,angle=270]{plots/polmoms}\\
-\caption{\small A comparison of the unpolarised (left) and polarised (right) 
-benchmark PDF first moments between the lattice QCD computations and global fit results.
+\includegraphics[scale=0.44,angle=270]{plots/unpmomsratio}\\
+\caption{\small A comparison of the unpolarized benchmark PDF first moments 
+between the lattice QCD computations and global fit determinations.
 %
-All values are shown at $\mu^2=4\mbox{ GeV}^2$.}
-\label{fig:Bmoms}
+Results are displayed both in terms of absolute values (left) and ratios to
+the lattice values (right) at $\mu^2=Q^2=4\mbox{ GeV}^2$.}
+\label{fig:Bmomsunp}
 \end{figure} 
 %-------------------------------------------------------------------------------
 
-As is apparent from Tab.~\ref{tab:BMunp} and Fig.~\ref{fig:Bmoms}, there is a 
-significant difference in the uncertainties between the lattice QCD and 
+As is apparent from Tab.~\ref{tab:BMunp} and Fig.~\ref{fig:Bmomsunp}, there is 
+a significant difference in the uncertainties between the lattice QCD and 
 global fit results, with the latter always about one order of magnitude 
 smaller than the former.
 %
@@ -1297,13 +1299,16 @@ unweighted average of the NNPDFpol1.1, DSSV08 and JAM15 PDF fits
 (as described in Sect.~\ref{subsubsec:GPDFfits}) and from the 
 JAM17~\cite{Ethier:2017zbq} fit.
 %
-In contrast with the NNPDFpol1.1, DSSV08 and JAM15 fits, in the JAM17 result the experimental value of 
-$g_A^{\mathrm{exp}} = 1.2723(23)$~\cite{Olive:2016xmw} is not an input of the PDF fit.
+In contrast with the NNPDFpol1.1, DSSV08 and JAM15 fits, in the JAM17 result 
+the experimental value of $g_A^{\mathrm{exp}} = 1.2723(23)$~\cite{Olive:2016xmw} 
+is not an input of the PDF fit.
 %
-The value of $g_A$ is scale-independent, and we quote all other results at $\mu^2=4\mbox{ GeV}^2$.
+The value of $g_A$ is scale-independent, and we quote all other results at 
+$\mu^2=4\mbox{ GeV}^2$.
 %
 For ease of comparison, these values are also displayed in 
-the right panel of Fig.~\ref{fig:Bmoms}.
+the right panel of Fig.~\ref{fig:Bmomspol} in the same format as in 
+Fig.~\ref{fig:Bmomsunp}.
 
 %-------------------------------------------------------------------------------
 \begin{table}[!t]
@@ -1338,8 +1343,19 @@ moments.}
 \end{table}
 %-------------------------------------------------------------------------------
 
-As is apparent from Tab.~\ref{tab:BMpol} and Fig.~\ref{fig:Bmoms}, the size of 
-the uncertainties on the moments is in general comparable between the 
+%-------------------------------------------------------------------------------
+\begin{figure}[!t]
+\centering
+\includegraphics[scale=0.44,angle=270]{plots/polmoms}
+\includegraphics[scale=0.44,angle=270]{plots/polmomsratio}\\
+\caption{\small Same as Fig.~\ref{fig:Bmomsunp}, but for the polarized
+benchmark moments.}
+\label{fig:Bmomspol}
+\end{figure} 
+%-------------------------------------------------------------------------------
+
+As is apparent from Tab.~\ref{tab:BMpol} and Fig.~\ref{fig:Bmomspol}, the 
+size of the uncertainties on the moments is in general comparable between the 
 lattice-QCD and the global-fit results, in contrast  with the unpolarised case.
 %
 The corresponding central values are also in reasonable agreement within their
