@@ -229,6 +229,7 @@ of Appendix~\ref{sec:LQCDtables}.
 \centering 
 \begin{threeparttable}
 \begin{tabular}{llcllccccccl}
+\toprule
 Mom. & Collab. & Ref. & $N_f$ & Status & 
 Disc &
 QM &
@@ -237,7 +238,7 @@ Ren &
 ES &
 %
 & Value\\
-\toprule
+\midrule
 $\langle x\rangle_{u^+-d^+}$ 
 & LHPC\,14  
   & \cite{Green:2012ud} 
@@ -419,6 +420,7 @@ All results are quoted at $\mu^2=4\mbox{ GeV}^2$.
 \centering
 \begin{threeparttable}
 \begin{tabular}{llcllccccccl}
+\toprule
 Mom. & Collab. & Ref. & $N_f$ & Status &  
 Disc &
 QM &
@@ -427,7 +429,7 @@ Ren &
 ES &
 %
 & Value \\
-\toprule
+\midrule
 $g_A$
 & CalLat\,17 
   & \cite{Berkowitz:2017gql} 
@@ -676,6 +678,7 @@ Tabs.~\ref{tab:polLQCDstatus0} and \ref{tab:polLQCDstatus1}, respectively.
 \centering
 \begin{threeparttable}
 \begin{tabular}{llcllccccccl}
+\toprule
 Mom. & Collab. & Ref. & $N_f$ & Status &
 Disc &
 QM &
@@ -780,6 +783,7 @@ ES (excited states).
 \centering
 \begin{threeparttable}
 \begin{tabular}{llcllccccccl}
+\toprule
 Mom. & Collab. & Ref. & $N_f$ & Status &
 Disc &
 QM &
@@ -787,7 +791,7 @@ FV &
 Ren &
 ES &
 & Value \\
-\toprule
+\midrule
 $\langle x\rangle_{\Delta u^--\Delta d^-}$
 & RBC/ 
   & \multirow{2}{*}{\cite{Aoki:2010xg}} 
@@ -1002,8 +1006,8 @@ that can be easily used to compute all the needed benchmark values.
 
 While we refer the reader to \cite{Butterworth:2015oua} for details,
 here we only mention that the PDF4LHC15 PDF set was constructed by means of
-a statistical
-combination~\cite{Carrazza:2015hva,Gao:2013bia,Watt:2012tq,Carrazza:2015aoa} (an unweighted average) of the 
+a statistical combination~\cite{Carrazza:2015hva,Gao:2013bia,Watt:2012tq,
+Carrazza:2015aoa} (an unweighted average) of the 
 NNPDF3.0~\cite{Ball:2014uwa}, CT14 and MMHT2014 PDF sets.\footnote{The 
 NNPDF3.1 PDF set was not available when the recommendations were formulated.}
 %
@@ -1032,8 +1036,28 @@ The ABMP2016 set (as well as its previous versions) does not meet the second
 and third criteria; the CJ15 set does not meet the first, second and fourth
 criteria, while the HERAPDF2.0 set does not meet the first criterion.
 %
-Hence, these sets were not included in the PDF4LHC2015 PDF set, although the possibility
-of including them in future versions of the recommendation remains open.
+Hence, these sets were not included in the PDF4LHC2015 PDF set, although the 
+possibility of including them in future versions of the recommendation 
+remains open.
+
+In order to summarize the information contained in the PDF sets excluded from 
+the PDF4LHC recommendations, we also provide alternative benchmark numbers.
+%
+Specifically, we combined all the numbers quoted in Table~\ref{tab:unpPDFmoms}
+so that the mean value is an unweighted average of the mean 
+values and the error is half of the difference between the smallest and the 
+largest result.
+%
+The rationale for this choice is that PDF sets entering the PDF4LHC 
+recommendations are not benchmarked in the $x\gtrsim$ region, which can be 
+relevant for the moment analysis.
+%
+The combination of all results in Table~\ref{tab:unpPDFmoms}, although less
+precise than the PDF4LHC combination, maximizes the amount of experimental
+information included in the benchmark numbers.
+%
+Specifically, it includes that provided at large $x$ and small $Q^2$ by the
+CJ15 and ABMP16 PDF sets, which are otherwise excluded from the PDF4LHC set.
 
 \paragraph{Polarised parton distributions.}
 %
@@ -1157,25 +1181,30 @@ compared in the left panel of Fig.~\ref{fig:Bmoms}.
 \begin{table}[!t]
 \centering
 \renewcommand{\arraystretch}{1.2}
-\begin{tabular}{lcc}
+\begin{tabular}{lccc}
 \toprule
-Moment & Lattice QCD & Global Fit\\
+Moment & Lattice QCD & Global Fit (PDF4LHC) & Global fit (uw avg)\\
 \midrule
 $\langle x \rangle_{u^+ -d^+}$ 
 & \numrange{0.119}{0.226} 
-& 0.155(5)\\
+& 0.155(5)
+& \, 0.161(18)\\
 $\langle x \rangle_{u^+}$     
 & 0.453(75)$^\dagger$ 
-& 0.347(5)\\
+& 0.347(5)
+& \, 0.352(12)\\
 $\langle x \rangle_{d^+}$     
 & 0.259(74)$^\dagger$ 
-& 0.193(6)\\
+& 0.193(6)
+& 0.192(6)\\
 $\langle x \rangle_{s^+}$     
 & 0.092(41)$^\dagger$ 
-& 0.036(6)\\
+& 0.036(6)
+& 0.037(3)\\
 $\langle x\rangle_{g}$       
 & 0.267(35)$^\dagger$ 
-& 0.414(9)\\
+& 0.414(9)
+& 0.411(8)\\
 \bottomrule
 \end{tabular}
 \caption{\small Benchmark values for lattice-QCD calculations and global-fit 
