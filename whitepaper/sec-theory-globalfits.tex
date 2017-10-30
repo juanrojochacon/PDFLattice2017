@@ -26,14 +26,14 @@ determination.
 \paragraph*{Fitting PDFs from hard-scattering data.} 
 Parton distributions appear in the factorization formul{\ae} of a class of 
 sufficiently inclusive processes, among which deep-inelastic scattering (DIS) 
-and proton-proton ($pp$) collisions.
+and proton-(anti)proton collisions.
 %
 The factorization formul{\ae} for the unpolarized and polarized structure 
 functions $F_1$ and $g_1$ were introduced Eqs.~\eqref{eq:Fi}-\eqref{pdf}.
 %
 For the hadroproduction of a generic final-state $X$ in unpolarized 
-(double polarized) $pp$ ($\overrightarrow{p}\overrightarrow{p}$) collisions, the
-corresponding factorized expressions read
+(double polarized) proton-proton ($\overrightarrow{p}\overrightarrow{p}$) 
+collisions, the corresponding factorized expressions read
 \begin{align}
 \sigma_{pp\to X}(s,\mu_F,\mu_R)=&\sum_{a,b}\int {\rm d}x_1 {\rm d}x_2\, 
 f_a(x_1,\mu_F^2)f_b(x_2,\mu_F^2)\,
@@ -401,21 +401,25 @@ is of utmost importance for modern PDF fits, given the wealth of collider
 data used.
 
 \paragraph*{Experimental data.}
-A broad set of input hard-scattering cross sections from DIS and $pp$ 
-collisions, providing information on the PDFs over a wide range of $x$ 
-and for different flavor combinations is used in modern PDF fits.
+A broad set of input hard-scattering cross sections from DIS and
+proton-(anti)proton collisions, providing information on the PDFs over a wide 
+range of $x$ and for different flavor combinations, is used in modern PDF fits.
 %
-While traditional PDF fits were based mostly on DIS structure function and 
-Drell-Yan and inclusive jet cross-sections, in recent years many other 
+Inclusive DIS measurements have been realized with electron, muon and neutrino
+(and the corresponding antiparticles) off protons, deuterons and
+heavy nuclear targets. 
+%
+While traditional PDF fits were based mostly on DIS structure function, 
+Drell-Yan and inclusive jet cross sections, in recent years many other 
 processes have proved important for constraining PDFs, among which
 in particular  top-quark pair production~\cite{Czakon:2016olj}, 
 the $p_T$ of $Z$ bosons~\cite{Boughezal:2017nla} and $D$ meson production in 
 the forward region~\cite{Gauld:2016kpd}.
 
 In Fig.~\ref{fig:kinplot-report} we show the representative kinematic coverage 
-in the $(x,Q^2)$ plane of the DIS and $pp$ hard-scattering measurements that 
-are used as input in a typical global fit of unpolarized PDFs, in this case 
-NNPDF3.1~\cite{Ball:2017nwa}.
+in the $(x,Q^2)$ plane of the DIS and proton-(anti)proton hard-scattering 
+measurements that are used as input in a typical global fit of unpolarized 
+PDFs, in this case NNPDF3.1~\cite{Ball:2017nwa}.
 %
 In order to facilitate visualization, different datasets have been clustered 
 together into families of related processes.
@@ -441,7 +445,7 @@ state $W^2<12.5$ GeV$^2$ adopted there.
 \centering
 \includegraphics[scale=0.60]{plots/kinplot-report.pdf}
 \caption{\small Representative kinematic coverage in the $(x,Q^2)$ plane
- of the DIS and $pp$ hard-scattering measurements that are
+ of the DIS and proton-(anti)proton hard-scattering measurements that are
  used as input in a typical fit of unpolarized PDFs, 
  NNPDF3.1~\cite{Ball:2017nwa}.
  %
@@ -474,8 +478,8 @@ fixed (nuclear and proton) target experiments, the Tevatron $p\overline{p}$
 collider and the LHC. 
 %
 The ABMP16~\cite{Alekhin:2017kpj} set fits to a similar global data set
-(although excluding jet production)
-but differs in its treatment of errors and heavy flavors.
+(although excluding jet production) but differs in its treatment of errors,
+ heavy flavors and the low-$Q^2$ and large-$x$ regions.
 %
 The HERAPDF2.0~\cite{Abramowicz:2015mha} set fits to the final combined HERA 
 Run I + II data set only, with the aim of determining the PDFs from a 
@@ -510,11 +514,15 @@ in terms of a basis of  Bernstein and Chebyshev polynomials, respectively.
 %
 While formally equivalent to the simple polynomial expansion
 Eq.~\eqref{eq:lpower}, these are much more convenient for fitting as the 
-number of free parameters $n_{\rm par}$ is increased.
+number of free parameters $n_{\rm par}$ is usually increased.
 %
 In the latest CT and MMHT sets, there are between 20 and 40 free parameters in 
 total, though some of these are kept fixed when evaluating the
-Hessian PDF uncertainties.
+Hessian PDF uncertainties to control for redundancy between the parameters.
+%
+The use of orthogonal polynomials, like Bernstein or Chebyshev polynomials,
+further allows one to decouple the parameters in $C(x)$ and to uniformly
+sample its possible functional shapes.
 
 An alternative approach to the PDF parametrization is adopted
 by the NNPDF collaboration. Here, the interpolating function is modelled with 
@@ -529,6 +537,16 @@ now $C(x)={\rm NN}(x)$ is parametrised as a neural network.
 The $x^{a_1}(1-x)^{a_2}$ term that multiplies the NN represents
 a preprocessing factor that speeds up the minimization procedure
 and that is determined via an iterative procedure.
+%
+Because of the redundancy of the parametrization, the statistical noise in 
+the data could be learned in the minimization procedure.
+%
+In order to avoid such a behavior, the data are split into validation and 
+training sets, then the best-fit is determined by
+cross-validation~\cite{Forte:2002fg,DelDebbio:2004xtd}.
+%
+A similar technique is used also in the JAM 
+fits~\cite{Sato:2016tuz,Ethier:2017zbq}.
 
 In Fig.~\ref{fig:globalfits}
 we present a snapshot of the current understanding
@@ -663,7 +681,7 @@ First, PDFs must lead to positive cross sections.
 At leading order (LO), this implies that polarized 
 PDFs are bounded by their unpolarized counterparts\footnote{Beyond LO, more 
 complicated relations hold~\cite{Altarelli:1998gn}; however they have little
-effect on PDFs.}, $|\Delta f(x,\mu^2)|\leq f(x,\mu^2)$.
+effect on PDFs.}, $|\Delta f(x,\mu^2)|\leq f(x,\mu^2)$~\cite{Altarelli:1998gn}.
 %
 Second, PDFs must be integrable: this corresponds to the assumption 
 that the nucleon matrix element of the axial current for each flavor is finite.
@@ -679,7 +697,7 @@ measured values are~\cite{Olive:2016xmw}
  a_3
  & =
  \int_0^1 dx \Delta T_3 (x,\mu^2)
- = \langle 1\rangle_{\Delta u^+} - \langle 1\rangle_{\Delta d^+}  = 1.2701 \pm 0.0025
+ = \langle 1\rangle_{\Delta u^+} - \langle 1\rangle_{\Delta d^+}  = 1.2723 \pm 0.0023
  ,,\\
  a_8
  & =
@@ -708,12 +726,15 @@ while SIDIS data with identified pions or kaons in the final state
 constrain individual quark and antiquark flavors. 
 %
 In principle, both DIS and SIDIS are also sensitive to the gluon 
-distribution $\Delta g$, as it directly enters the factorised expressions of
+distribution $\Delta g$, as it directly enters the factorized expressions of
 the corresponding structure functions beyond LO, and indirectly via DGLAP 
 evolution.
 %
 In practice the constraining power of DIS and SIDIS data on $\Delta g$ is 
-rather weak, because of the limited $Q^2$ range covered by the data. 
+rather weak if one restricts to the kinematic region not affected by
+power-suppressed corrections, because the $Q^2$ range covered by 
+the data is limited and abundant and very precise data from JLab are 
+excluded. 
 
 Note that, in the case of SIDIS, a reliable knowledge of fragmentation 
 functions (FFs) is required in the factorised expressions of the 
@@ -726,10 +747,11 @@ even become a bias.
 For this reason, a significant experimental and theoretical effort has been
 invested in improving the independent determination of 
 FFs~\cite{deFlorian:2014xna,deFlorian:2017lwf,
-Hirai:2016loo,Sato:2016tuz,Nocera:2017qgb,Bertone:2017xsf,Ethier:2017zbq}.
+Hirai:2016loo,Sato:2016wqj,Bertone:2017tyb} and most recently in simultaneously 
+fitting both PDFs and FFs~\cite{Ethier:2017zbq}.
 
 Besides DIS and SIDIS fixed-target data, a significant amount of data from
-longitudinally polarized proton-proton ($pp$) collisions at the Relativistic 
+longitudinally polarized proton-proton collisions at the Relativistic 
 Heavy Ion Collider (RHIC) has become available recently (see {\it e.g.} 
 Ref.~\cite{Aschenauer:2015eha} for an overview), although in a limited range 
 of momentum fractions, $0.05\lesssim x \lesssim 0.4$.
@@ -750,8 +772,8 @@ PDFs is displayed in Fig.~\ref{fig:kinEIC}.
 %
 A comparison with Fig.~\ref{fig:kinplot-report} makes it apparent that the
 quantity of data points, their kinematic coverage and the variety of 
-available hard-scattering processes are presently much more limited in the polarized case
-than in the unpolarized case.
+available hard-scattering processes are presently much more limited in the 
+polarized case than in the unpolarized case.
 %
 Therefore polarized PDFs can currently be determined with much less 
 precision than their unpolarized counterparts and only over an $x$-range limited
@@ -761,21 +783,21 @@ The kinematic coverage is expected to be significantly extended in the future,
 with DIS and SIDIS data from JLab-12~\cite{Dudek:2012vr} and a polarized 
 high-energy Electron-Ion Collider (EIC)~\cite{Accardi:2012qut}.
 %
-Such an extended kinematic coverage is also displayed in Fig.\ref{fig:kinEIC},
-where the eRHIC realization of an EIC~\cite{Aschenauer:2014cki} has been plotted.
+Such an extended kinematic coverage is also displayed in Fig.~\ref{fig:kinEIC},
+where it is denoted as eRHIC.
 
 %-------------------------------------------------------------------------------
 \begin{figure}[!t]
 \centering
 \includegraphics[width=0.9\textwidth]{plots/kinEIC}\\
 \caption{\small Representative kinematic coverage, in the $(x,Q^2)$ plane,
-of the (neutral current) DIS, SIDIS and $pp$ hard-scattering measurements 
-that are used as input in a global polarized PDF fit.
+of the (neutral current) DIS, SIDIS and proton-proton hard-scattering 
+measurements that are used as input in a global polarized PDF fit.
 %
 The extended kinematic coverage achieved by 
-JLab-12~\cite{Dudek:2012vr} and by the eRHIC~\cite{Aschenauer:2014cki} 
-realization of an EIC~\cite{Accardi:2012qut}
-(including projected charged-current (CC) DIS data) is also shown.
+JLab-12~\cite{Dudek:2012vr} and by an EIC~\cite{Accardi:2012qut}
+(including projected charged-current (CC) DIS data and denoted as eRHIC) 
+is also shown.
 %
 Figure taken from Ref.~\cite{Aschenauer:2014cki}.}
 \label{fig:kinEIC}
@@ -819,19 +841,19 @@ The various determinations differ among each other in the data sets included
 in the analysis, in some details of the QCD analysis (like the treatment of 
 higher-twist corrections) and in the procedure used to determine PDFs from the 
 data (for details, see {\it e.g.} Chap.~3 in Refs.~\cite{Nocera:2014vla} 
-and~\cite{Nocera:2016xhb}). 
+and~\cite{Nocera:2016xhb,Jimenez-Delgado:2013sma}). 
 %
 The NNDPF procedure and the conventional/standard one adopted by DSSV have 
 already been outlined in Sec.~\ref{sec:unpPDFs}. 
 %
 We note that DSSV has developed a method based on Mellin moments of the PDFs 
 in order to efficiently incorporate NLO computations
-of $pp$ cross sections in the fitting procedure. 
+of proton-proton cross sections in the fitting procedure. 
 %
 The JAM collaboration has implemented for their analysis a new approach called 
 iterative Monte Carlo procedure~\cite{Sato:2016tuz}. 
 
-Motivated by the interest in assessing the impact of RHIC $pp$ 
+Motivated by the interest in assessing the impact of RHIC proton-proton 
 data, two new global analyses of polarized PDFs have been carried out in
 2014, DSSV14~\cite{deFlorian:2014yva} and NNPDFpol1.1~\cite{Nocera:2014gqa}.
 %
@@ -980,8 +1002,13 @@ especially in terms of ratios of light-quark polarized to unpolarized PDFs
 and model predictions, see Ref.~\cite{Nocera:2014uea}).
 %
 Finally, the small lever arm of the data in $Q^2$ is a serious limiting factor 
-in the determination of $\Delta g$ via evolution and the assessment of possible 
-higher-twist contributions. 
+in the determination of $\Delta g$ via evolution, unless the data at low $Q^2$
+and large $x$ are included in the fit and carefully analyzed.
+%
+This requires an appropriate treatment of power-suppressed corrections and 
+possibly a minimization methodology which can iteratively focus on a region 
+in parameter space where constraints are not too strong, as done in the 
+JAM15 analysis~\cite{Sato:2016tuz}. 
 
 The determination of the total polarized strange distribution $\Delta s^+$ is 
 also particularly delicate.
@@ -1013,7 +1040,9 @@ compatible with the negative result found from inclusive DIS within its
 large uncertainties, has been obtained.
 % 
 An octet axial charge about $20\%$ smaller than its quoted experimental value, 
-Eq.~\eqref{eq:decayconst} appears to be preferred by the data.
+Eq.~\eqref{eq:decayconst}, appears to be preferred by the data.
+%
+This change is opposite in sign to that in~\cite{FloresMendieta:1998ii}.
 %
 However, we stress that the determination of $\Delta s^+$ from SIDIS data 
 also relies on good knowledge of the {\it un}polarized strange distribution. 
