@@ -106,6 +106,58 @@ The possibility of parametrizing and fitting the charm PDF
 on the same footing as light quark PDFs has been recently 
 explored~\cite{Ball:2016neh}.
 
+Some form for the interpolating function $C(x)$ in Eq.~\eqref{eq:pdffunc} 
+must be assumed.
+%
+The simplest ansatz, which has been very widely used, is to take a basic 
+polynomial form in $x$ (or $\sqrt{x}$), such as
+\begin{equation}\label{eq:lpower}
+C(x)=1+a_2\sqrt{x}+a_3 x+...\;.
+\end{equation}
+Functional forms of this type are, for example, taken in CJ, HERAPDF and 
+earlier MMHT and CT sets (see below for the references to each set). 
+%
+More recently, the CT and MMHT collaborations expand 
+in terms of a basis of  Bernstein and Chebyshev polynomials, respectively.
+%
+While formally equivalent to the simple polynomial expansion
+Eq.~\eqref{eq:lpower}, these are much more convenient for fitting as the 
+number of free parameters $n_{\rm par}$ is usually increased.
+%
+In the latest CT and MMHT sets, there are between 20 and 40 free parameters in 
+total, though some of these are kept fixed when evaluating the
+Hessian PDF uncertainties to control for redundancy between the parameters.
+%
+Furthermore, the use of orthogonal polynomials, like Bernstein or Chebyshev 
+polynomials, allows one to decouple the parameters in $C(x)$ and to uniformly
+sample its possible functional shapes.
+
+An alternative approach to the PDF parametrization Eq.~\eqref{eq:lpower}
+is adopted by the NNPDF collaboration. 
+%
+Here, the interpolating function $C(x)$ is modelled with 
+a multi-layer feed forward neural network.
+%
+In practice, this allows for a greatly increased number of free parameters, 
+typically an order of magnitude higher than other sets.
+%
+The form of Eq.~\eqref{eq:pdffunc} is still assumed, but
+now $C(x)={\rm NN}(x)$ is parametrized as a neural network.
+%
+The $x^{a_1}(1-x)^{a_2}$ term that multiplies the NN represents
+a preprocessing factor that speeds up the minimization procedure
+and that is determined via an iterative procedure.
+%
+Because of the redundancy of the parametrization, the statistical noise in 
+the data could be learned in the minimization procedure.
+%
+In order to avoid such a drawback, the data are split into validation and 
+training sets, then the best-fit is determined by
+cross-validation~\cite{Forte:2002fg,DelDebbio:2004xtd}.
+%
+A similar technique is used also in the JAM 
+fits~\cite{Sato:2016tuz,Ethier:2017zbq}.
+
 Once the PDF parametrization is chosen, the best-fit PDF parameters
 and their uncertainty should be determined via a fitting methodology
 which minimizes a suitable statistical estimator, typically the $\chi^2$.
@@ -304,11 +356,11 @@ While the general $x$ dependence of the PDFs is determined by
 nonperturbative QCD dynamics, there are still a number
 of theoretical constraints that any PDF set should satisfy. 
 %
-These should be imposed during the global fit procedure.
+These should be imposed during the fit procedure.
 
 First, since the proton has the quantum numbers of two up quarks and one 
-down quark, the following quark number sum rules given in terms of zeroth
-moments must be satisfied: 
+down quark, the following quark number sum rules, given in terms of zeroth
+moments, must be satisfied: 
 \begin{eqnarray}
 \int_{0}^{1}dx\ \left[u(x,\mu)-\bar{u}(x,\mu)\right] 
 & =\left\langle 1\right\rangle _{u^{-}}= & 2 \, ,\nonumber \\
@@ -323,14 +375,15 @@ Similar constraints hold for heavy quarks:
 $\left\langle 1\right\rangle _{c^{-}}=\left\langle 1\right\rangle _{b^{-}}
 =\left\langle 1\right\rangle _{t^{-}}=0$.
 %
-The sum rules Eqs.~\eqref{eq:valencesumrules} should be satisfied at 
+The valence sum rules, Eqs.~\eqref{eq:valencesumrules}, should be satisfied at 
 any scale $\mu$. 
 %
 Indeed it can be shown that if they hold at the input parametrization scale 
-$Q_0$, they are subsequently respected by DGLAP evolution.
+$\mu=Q_0$, they are subsequently respected by DGLAP evolution.
 %
 Therefore, for these distributions we must have $a_1>-1$ in
-Eq.~(\ref{eq:pdffunc}), otherwise the valence sum rules would be ill-defined.
+Eq.~(\ref{eq:pdffunc}), otherwise Eqs.\eqref{eq:valencesumrules} 
+would be ill-defined.
 
 Second, PDFs should satisfy the conservation of energy-momentum derived from
 the QCD Lagrangian.
@@ -360,14 +413,13 @@ to the sum of the momentum carried by all its constituents
 where the ellipsis represents any other partonic components (such
 as a photon). 
 %
-The zeroth moments, $\left\langle x\right\rangle _{f_i}$, are defined in analogy 
+The first moments, $\left\langle x\right\rangle _{f}$, are defined in analogy 
 to Eqs.~\eqref{eq:umoment1}-\eqref{eq:uplusmoment1}. 
 %
-Thus, in order to avoid a divergent contribution to Eq.~\eqref{eq:mom},
-we must have $a_1>-2$ in Eq.~\eqref{eq:pdffunc} for the non-valence 
-distributions.
+In order to avoid a divergent contribution, we must have $a_1>-2$ in 
+Eq.~\eqref{eq:pdffunc} for the non-valence distributions.
 %
-Typically it turns aout that $-2<a_1<-1$ for such distributions, hence 
+Typically it turns out that $-2<a_1<-1$ for such distributions, hence 
 the number of soft partons grows very quickly at small $x$, although the 
 momentum fraction carried by them is well-defined and finite.
 %
@@ -378,8 +430,7 @@ Theoretical calculations of DIS and hadronic cross-sections at the highest
 perturbative order available should be used.
 %
 Currently, this implies using NNLO for the QCD corrections and NLO
-for the electroweak and photon-induced 
-effects~\cite{Manohar:2016nzj,Manohar:2017eqh}.
+for the EW and photon-induced effects~\cite{Manohar:2016nzj,Manohar:2017eqh}.
 %
 Thanks to recent progress in higher-order calculations, these results
 are available for most of the processes entering the global
@@ -394,13 +445,10 @@ from a computational point of view.
 %
 To bypass the limitations of the lengthy (N)NLO
 computations, a number of fast interfaces have
-been developed that allow the efficient calculation
-of NLO (and NNLO) fully differential hadronic cross-sections.
-%
-The exploitation of fast interfaces such as {\tt APPLgrid}~\cite{Carli:2010rw},
-{\tt FastNLO}~\cite{Wobisch:2011ij} and {\tt aMCfast}~\cite{Bertone:2014zva} 
-is of utmost importance for modern PDF fits, given the wealth of collider 
-data used.
+been developed that allow for the efficient calculation
+of NLO (and NNLO) fully differential hadronic cross-sections,
+among which {\tt APPLgrid}~\cite{Carli:2010rw},
+{\tt FastNLO}~\cite{Wobisch:2011ij} and {\tt aMCfast}~\cite{Bertone:2014zva}.
 
 \paragraph*{Experimental data.}
 A broad set of input hard-scattering cross-sections from DIS and
@@ -411,11 +459,11 @@ Inclusive DIS measurements have been realized with electron, muon and neutrino
 (and the corresponding antiparticles) off protons, deuterons and
 heavy nuclear targets. 
 %
-While traditional PDF fits were based mostly on DIS structure function, 
-Drell-Yan and inclusive jet cross-sections, in recent years many other 
+While traditional PDF fits were based mostly on DIS structure functions, 
+and Drell-Yan and inclusive jet cross-sections, in recent years many other 
 processes have proved important for constraining PDFs, among which
-in particular  top-quark pair production~\cite{Czakon:2016olj}, 
-the $p_T$ of $Z$ bosons~\cite{Boughezal:2017nla} and $D$ meson production in 
+top-quark pair production~\cite{Czakon:2016olj}, the $p_T$ distribution of $Z$ 
+bosons~\cite{Boughezal:2017nla} and $D$ meson production in 
 the forward region~\cite{Gauld:2016kpd}.
 
 In Fig.~\ref{fig:kinplot-report} we show the representative kinematic coverage 
@@ -426,16 +474,16 @@ PDFs, in this case NNPDF3.1~\cite{Ball:2017nwa}.
 In order to facilitate visualization, different datasets have been clustered 
 together into families of related processes.
 %
-For hadronic cross-sections, leading order kinematics is assumed to map
-each experimental bin to a pair of points in the $(x,Q^2)$ plane.
+For hadronic cross-sections, LO kinematics is assumed to map
+each experimental bin into a pair of points in the $(x,Q^2)$ plane.
 %
 The fact that similar regions in the $(x,Q^2)$ plane are covered by
 different processes is essential to achieve quark
 flavor separation and to constrain the gluon PDF.
-%
+
 Abundant precise data from SLAC and Jefferson Lab exist also in the 
 bottom right corner of the $(x,Q^2)$ plane, where however power corrections 
-such as target mass corrections and higher-twist terms need to be accounted for 
+need to be accounted for 
 in QCD fits~\cite{Alekhin:2017kpj,Owens:2012bv,Accardi:2016qay}.
 %
 They are not shown in Fig.~\ref{fig:kinplot-report} because they are excluded 
@@ -494,61 +542,19 @@ higher $x$ by lowering $Q^2$ and $W^2$ cuts in DIS.
 This greatly increases the available data, but requires additional modeling of 
 power-like ${\cal O}(1/Q^2)$ corrections.
 
-A detailed discussion of the similarities and differences between
-PDF sets, which is beyond the scope of this document,
-can be found in the PDF4LHC report~\cite{Butterworth:2015oua}.
-%
-It suffices here to say that all PDF sets listed above use the Hessian
-method to determine PDF uncertainties,
-except NNPDF which is based on the Monte Carlo approach.
+The features of each PDF set have ben discussed in detail in 
+Refs.~\ref{Butterworth:2015oua,Accardi:2016ndt}, including the 
+dataset, the fitting methodology, the theoretical details of the 
+corresponding QCD analyses, and, most importantly, the uncertainties
+coming from each of these aspects.
 
-As discussed above, in order to perform a  PDF fit, some form for the 
-interpolating function $C(x)$ in Eq.~\eqref{eq:pdffunc} must be assumed.
-%
-The simplest ansatz, which has been very widely used, is to take a basic 
-polynomial form in $x$ (or $\sqrt{x}$), such as
-\begin{equation}\label{eq:lpower}
-C(x)=1+a_2\sqrt{x}+a_3 x+...\;.
-\end{equation}
-Functional forms of this type are, for example, taken by CJ, HERAPDF and 
-earlier MMHT and CT sets. More recently, the CT and MMHT collaborations expand 
-in terms of a basis of  Bernstein and Chebyshev polynomials, respectively.
-%
-While formally equivalent to the simple polynomial expansion
-Eq.~\eqref{eq:lpower}, these are much more convenient for fitting as the 
-number of free parameters $n_{\rm par}$ is usually increased.
-%
-In the latest CT and MMHT sets, there are between 20 and 40 free parameters in 
-total, though some of these are kept fixed when evaluating the
-Hessian PDF uncertainties to control for redundancy between the parameters.
-%
-The use of orthogonal polynomials, like Bernstein or Chebyshev polynomials,
-further allows one to decouple the parameters in $C(x)$ and to uniformly
-sample its possible functional shapes.
-
-An alternative approach to the PDF parametrization is adopted
-by the NNPDF collaboration. Here, the interpolating function is modelled with 
-a multi-layer feed forward neural network.
-%
-In practice, this allows for a greatly increased number of free parameters, 
-typically an order of magnitude higher than other sets.
-%
-The form of Eq.~\eqref{eq:pdffunc} is still assumed, but
-now $C(x)={\rm NN}(x)$ is parametrized as a neural network.
-%
-The $x^{a_1}(1-x)^{a_2}$ term that multiplies the NN represents
-a preprocessing factor that speeds up the minimization procedure
-and that is determined via an iterative procedure.
-%
-Because of the redundancy of the parametrization, the statistical noise in 
-the data could be learned in the minimization procedure.
-%
-In order to avoid such a behavior, the data are split into validation and 
-training sets, then the best-fit is determined by
-cross-validation~\cite{Forte:2002fg,DelDebbio:2004xtd}.
-%
-A similar technique is used also in the JAM 
-fits~\cite{Sato:2016tuz,Ethier:2017zbq}.
+%A detailed discussion of the similarities and differences between
+%PDF sets, which is beyond the scope of this document,
+%can be found in the PDF4LHC report~\cite{Butterworth:2015oua}.
+%%
+%It suffices here to say that all PDF sets listed above use the Hessian
+%method to determine PDF uncertainties,
+%except NNPDF which is based on the Monte Carlo approach.
 
 In Fig.~\ref{fig:globalfits}
 we present a snapshot of the current understanding
@@ -561,7 +567,7 @@ to the central value of the last.
 From top to bottom and from left to right we show the
 $u$, $\bar{d}$ and $s$ quark PDFs and the gluon PDF.
 %
-The error bands indicate the 68\%-CL PDF uncertainties
+The error bands indicate the 68\%-confidence level (CL) PDF uncertainties
 associated to each set, computed with the corresponding master formula.
 %
 We observe that differences for the up quark PDF
@@ -572,7 +578,7 @@ in the medium and large-$x$ region.
 For the gluon there is reasonable agreement except in the large-$x$ region, 
 where NNPDF3.1 is softer than CT14 and MMHT14.
 %
-We note that any other comparison plots between PDFs can be straightforwardly
+Any other comparison plots between PDFs can be straightforwardly
 obtained using the {\tt APFEL-Web} online plotting 
 interface~\cite{Carrazza:2014gfa}.
 
@@ -618,11 +624,11 @@ In this respect, Specialized Minimal PDF sets~\cite{Carrazza:2016htc}
 (SM-PDFs) have also
 been advocated, which
 are tailored to specific physical processes and are based
-on the minimal number of Hessian eigenvectors.
+on a minimal number of Hessian eigenvectors.
 %
-The PDF4LHC15 sets provide a suitable representative for the expectations
-from the global QCD analysis point of view, and as such will be used
-in the benchmark comparisons of the next section.
+%The PDF4LHC15 sets provide a suitable representative for the expectations
+%from the global QCD analysis point of view, and as such will be used
+%in the benchmark comparisons of the next section.
 
 The PDF4LHC15 NLO set~\cite{Butterworth:2015oua} is displayed in 
 Fig.~\ref{fig:nnlopdfs} at $\mu^2=Q^2=4~{\rm GeV}^2$ and at
@@ -632,7 +638,7 @@ Specifically, we show the $u_v=u-\bar{u}$ and $d_v=d-\bar{d}$ valence
 combinations, the $\bar{u}$, $\bar{d}$, $s$ and $c$ sea quark PDFs, 
 and the gluon (divided by a factor 10).
 %
-The evolution between $Q^2=10$ to $Q^2=10^4~{\rm GeV}^2$ is completely
+The evolution between $Q^2=4$ GeV$^2$ to $Q^2=10^2$ GeV$^2$ is completely
 determined by the solution of the DGLAP evolution equations.
 %
 The shape of the $u_v~(u^{-})$ and $d_v~(d^{-})$ valence quark combinations
@@ -643,8 +649,7 @@ At small $x$, there is a rapid growth of the gluon and the sea quark PDFs,
 implying that the higher the collision center-of-mass energy $\sqrt{s}$, 
 the more important gluon- and sea-quark-initiated processes become.
 %
-The bands in Fig.~\ref{fig:nnlopdfs} represent the 68\% confidence level (CL)
-PDF uncertainties, determined as discussed below.
+The bands in Fig.~\ref{fig:nnlopdfs} represent the 68\% CL PDF uncertainties.
 
 %-------------------------------------------------------------------------------
 \begin{figure}[!t]
@@ -662,13 +667,12 @@ PDF uncertainties, determined as discussed below.
 \end{figure}
 %-------------------------------------------------------------------------------
 
-Finally, and particularly relevant for the discussions in this white paper,
-we strongly encourage the community to use the most recent versions
+We strongly encourage the community to use the most recent versions
 of global PDF fits when comparing with existing or new
 lattice QCD calculations.
 %
 Comparing with deprecated sets, based on obsolete methodology
-and in many cases experimental data that have already been
+and in many cases experimental data that have been
 superseded, should always be avoided.
 
 \subsubsection{Polarized PDFs}
