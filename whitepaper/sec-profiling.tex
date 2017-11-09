@@ -20,8 +20,10 @@ An additional advantage of the HERAPDF2.0 set is
 the use
 of a standard tolerance
 $\Delta\chi^2=1$ for defining the 68\%-CL PDF
-uncertainties, which provides a correspondence between
-the profiling and reweighting methods.
+uncertainties,
+%%%% RST , which provides a correspondence between the profiling and reweighting methods.
+which enables a robust framework for applying the profiling method. 
+
 
 For Hessian PDF sets, the Hessian profiling method
 can be used to both check the compatibility of new data with a given PDF set,
@@ -171,6 +173,11 @@ the initial uncertainties of the HERAPDF2.0  analysis
 are affected by the choice of data sets (DIS data only), and 
 the number and form of the parameterization (14 parameter HERAPDF form);
 the final uncertainties are determined by the profiling procedure. 
+%%%%%RST
+In particular the profiling for the HERAPDF2.0 study assigns an effective 
+uncertainty on the pseudodata corresponding to $\Delta\chi^2=1$, whereas the 
+constraint in the NNPDF study is weaker, as it would be for a PDF set with eigenvectors, but which applied a tolerance criterion. 
+%%%%%RST
 %
 While these initial studies are instructive, 
 further comparisons of these analyses would be valuable. 
@@ -229,3 +236,4 @@ occurs because the DIS data
 used in HERAPDF2.0 includes only limited constraints
 on quark flavour separation, and, for these PDFs, the lattice-QCD 
 pseudo-data adds important new information.
+
