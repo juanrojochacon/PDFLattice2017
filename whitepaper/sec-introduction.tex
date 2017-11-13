@@ -2,52 +2,70 @@
 \section{Introduction and motivation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-The internal structure of nucleons is an active area of research
-with important phenomenological implications for
-high-energy, nuclear, and astroparticle physics.
+The detailed understanding of the inner structure of nucleons is an 
+active research field with relevant phenomenological implications in 
+high-energy, hadron, nuclear and astroparticle physics.
 %
-There exist two main methods to quantify the parton distribution functions (PDFs)
-of nucleons that determine how their momentum and spin 
-are divided among their quarks and gluons constituents.
-%
-The first one
-is the {\it global QCD analysis}, which exploits the fact that hard-scattering
-cross sections can be factorised into the short-distance matrix elements
-computable with perturbation theory and the long-distance
-non-perturbative dynamics encoded in the PDFs.
-%
-By combining a wide variety of experimental data on hard-scattering processes
-from lepton-proton and proton-proton collisions
-with state-of-the-art perturbative calculations,
-the PDFs of the proton can be determined
-both in the unpolarized and polarized cases,
-see~\cite{Perez:2012um,DeRoeck:2011na,Alekhin:2011sk,Ball:2012wy,
-Forte:2013wc,Jimenez-Delgado:2013sma,Rojo:2015acz,Butterworth:2015oua,
-Accardi:2016ndt,Gao:2017yyd}
-for recent reviews.
-%
-Several collaborations provide regular updates of
-their PDF determinations, both
-within unpolarized~\cite{Ball:2017nwa,Harland-Lang:2014zoa,
-  Dulat:2015mca,Alekhin:2017kpj,Accardi:2016qay} and polarized~\cite{Nocera:2014gqa,deFlorian:2009vb,
-  Sato:2016tuz,Hirai:2008aj} global analyses.
+Within Quantum Chromodynamics (QCD), information on this structure --
+specifically on how nucleon's momentum and spin are divided among quarks and 
+gluons -- is encoded in Parton Distribution Functions (PDFs).
 
-Alternatively, one can compute quantities related to PDFs directly 
-from QCD, without resorting to
-experimental data, by using the non-perturbative formulation known as
-{\it lattice-QCD}~\cite{Olive:2016xmw,Gupta:1997nd}.
+There exist two main methods to determine PDFs.
+
+The first method is the {\it global QCD analysis}~\cite{Perez:2012um,
+DeRoeck:2011na,Alekhin:2011sk,Ball:2012wy,Forte:2013wc,Jimenez-Delgado:2013sma,
+Rojo:2015acz,Butterworth:2015oua,Accardi:2016ndt,Gao:2017yyd}.
 %
-This method introduces an ultraviolet cutoff that allows the direct 
-computation of the QCD path integral in a discretised finite-volume 
-Euclidean space-time.
+It is based on QCD factorization of physical observables, {\it i.e.}
+the fact that a class of hard-scattering cross-sections can be expressed as a 
+convolution between short-distance, perturbative, matrix 
+elements and long-distance, non-perturbative, PDFs.
+%
+By combining a variety of available hard-scattering experimental data with 
+state-of-the-art perturbative calculations, complete PDF sets including 
+the gluon and various combinations of quark flavors, are currently determined
+for protons, in both the unpolarized~\cite{Ball:2017nwa,Harland-Lang:2014zoa,
+Dulat:2015mca,Alekhin:2017kpj,Accardi:2016qay} and 
+polarized~\cite{Nocera:2014gqa,deFlorian:2009vb,Sato:2016tuz,Hirai:2008aj} case.
+
+Recent progress in global QCD analyses has been driven, on the one hand, 
+by the increasing availability of a wealth of high-precision measurements from 
+Jefferson Lab, HERA, RHIC, the Tevatron and the LHC and, on the other hand, 
+by the advancement in perturbative calculations of QCD and 
+electroweak (EW) higher-order corrections.
+%
+Parton distributions are now determined with unprecedented precision, 
+in many cases at the few-percent level.
+%
+A paradigmatic illustration of this progress is provided by both the 
+unpolarized and polarized gluon PDFs, which were affected by rather large 
+uncertainties until recently, due to the limited experimental information 
+available.
+%
+In the unpolarized case, the gluon PDF is now constrained quite accurately from 
+small to large $x$ thanks to the inclusion of processes such as 
+inclusive deep-inelatic scattering (DIS)~\cite{Abramowicz:2015mha}, 
+$D$-meson production~\cite{Zenaiev:2015rfa,Gauld:2016kpd},
+the transverse momentum of $Z$ bosons~\cite{Boughezal:2017nla},
+inclusive jet production~\cite{Currie:2016bfm}, and top-quark pair
+distributions~\cite{Czakon:2016olj,Guzzi:2014wia}.
+%
+In the polarized case, the gluon PDF is now constrained from double 
+spin-asymmetries for high-$p_T$ jet and pion production in proton-proton 
+collisions~\cite{deFlorian:2014yva,Nocera:2014gqa}, 
+although only in the medium-to-large $x$ region.
+
+The second method is {\it lattice QCD}~\cite{Olive:2016xmw,Gupta:1997nd}.
+%
+It is based on the direct computation of the QCD path integral in a 
+discretized finite-volume Euclidean space-time, provided a suitable ultraviolet
+cut-off.
 %
 In order to connect with experimental measurements, extrapolations to the 
 continuum and infinite-volume limits are necessary in order to remove the  
-cutoff dependence and finite-volume effects, respectively.
-
-One of the main
-conceptual advantages of lattice-QCD calculations is that
-they require minimal external input: one needs only to 
+cut-off dependence and finite-volume effects, respectively.
+%
+Lattice-QCD calculations require minimal external input: one needs only to 
 set the hadronic scale $\Lambda_\text{QCD}$ and the values of the quark masses.
 %
 For calculations relevant to low-energy hadron structure, this means
@@ -57,40 +75,13 @@ which is usually done using the pion and kaon masses as external inputs.
 The overall hadronic scale can be set using well-determined baryon masses 
 such as that of the $\Omega$ baryon.
 %
-A variety of important
-QCD quantities can then be computing using lattice-QCD, including 
-several ones that are challenging to obtain directly from experiment. 
+A variety of QCD quantities can then be computed using lattice QCD, including
+moments of PDFs or of certain quark flavor PDF combinations.
 
-From the perspective of global PDF analyses, the availability of a wealth of 
-high-precision collider measurements from Jefferson Lab, HERA, RHIC, 
-the Tevatron and the LHC, together with that of the corresponding
-NNLO QCD and NLO electroweak perturbative calculations, are pushing the
-accuracy frontier and leading to improved PDFs with reduced uncertainties,
-in many cases at the few-percent level.
-%
-A paradigmatic illustration of this progress is provided by both the 
-unpolarised and polarised gluon PDFs, which
-until recently were affected by rather 
-large uncertainties due to the limited experimental information
-available.
-%
-In modern PDF fits, however, the unpolarised gluon is constrained quite 
-accurately from small to large-$x$ thanks to the inclusion of processes such as $D$-meson
-production~\cite{Zenaiev:2015rfa,Gauld:2016kpd},
-the transverse momentum of $Z$ bosons~\cite{Boughezal:2017nla},
-inclusive jet production~\cite{Currie:2016bfm}, and top-quark pair
-distributions~\cite{Czakon:2016olj,Guzzi:2014wia}.
-%
-The polarised gluon is also constrained from double spin-asymmetries for 
-high-$p_T$ jet and pion production in proton-proton 
-collisions~\cite{deFlorian:2014yva,Nocera:2014gqa}, 
-although only in the medium-to-large $x$ region.
-
-In the case of lattice-QCD calculations, early attempts to determine
-the nucleon PDFs were 
-limited by the available computational resources and various technical 
-challenges, with most results restricted to
-the first few moments of non-singlet PDFs at relatively large (unphysical) quark masses.
+Early lattice-QCD attempts to determine the proton PDFs were limited by the 
+available computational resources and various technical challenges, with most 
+results restricted to the first few moments of non-singlet PDFs at relatively 
+large (unphysical) quark masses.
 %
 Overcoming these limitations, recent progress has been mostly
 driven by advances in two main areas. 
@@ -103,58 +94,54 @@ Second, by the  development of novel strategies
 for the computation of the first few 
 moments~\cite{Constantinou:2014tga,Syritsyn:2014saa,Lin:2012ev},
 the determination of more challenging quantities 
-such as gluon and flavour-singlet matrix elements, and
+such as gluon and flavor-singlet matrix elements, and
 for the direct calculation of the 
 Bjorken-$x$ dependence of PDFs~\cite{Lin:2014zya,Alexandrou:2015rja,
 Chen:2016utp,Alexandrou:2016jqi}.
 
 These developments have pushed lattice-QCD calculations to the point where, 
 for the first time, it is possible to provide information on the PDF shape
-of specific flavour combinations, both for quarks and for antiquarks, 
+of specific flavor combinations, both for quarks and for antiquarks, 
 and where meaningful comparison with global fits can be made.
 %
-Indeed, one of the main motivations for these lattice-QCD efforts is to reach a point where 
-the calculations can be used to constrain the PDFs obtained from global analyses.
+Indeed, one of the main motivations for these lattice-QCD efforts is to 
+achieve a sufficient accuracy to constrain the PDFs obtained from global 
+analyses.
 
-Despite these exciting developments from both the lattice-QCD
-and the global fitting approaches to
-the nucleon structure, the communication between the
-two communities has been so far rather limited.
+Despite these developments in both the global QCD analysis and lattice-QCD 
+methods, interplay between the two -- and communication between the 
+respective communities of physicists -- have been rather limited so far.
 %
-This situation led some of us
-to organise the first edition of the
-``{\it Parton Distributions and Lattice Calculations in the LHC Era}''
-workshop (PDFLattice2017), which took
-place in the Balliol College of the University of Oxford in March
-2017.\footnote{\url{http://www.physics.ox.ac.uk/confs/PDFlattice2017/index.asp}}
+This situation led some of us to organize the first workshop on
+{\it Parton Distributions and Lattice Calculations in the LHC Era}
+(PDFLattice2017), which took place in the Balliol College, University of 
+Oxford, in March 2017.\footnote{\url{http://www.physics.ox.ac.uk/confs/PDFlattice2017/index.asp}}
 %
-The main goal of this workshop was to create a common ground for discussions
-between the two communities and ensure that we spoke the same language.
+The main goal of this workshop was to establish a common ground 
+and languange for discussions between the two communities.
 %
-In addition, we aimed to carry out a first quantitative exploration
-of how lattice-QCD calculations 
-could be used to improve global PDF fits, and conversely, of how PDF fits 
-can be exploited to benchmark existing and future lattice calculations 
-in a systematic way.
-
+In addition, we aimed to carry out a first quantitative exploration of how PDF 
+fits can be exploited to benchmark existing and future lattice calculations,
+and of how lattice-QCD calculations could be used to improve global PDF fits.
+%
 In this context, some of the questions that were addressed during this workshop
-included:
+included the following.
 \begin{itemize}
 \item What information from PDF fits is relevant to constrain, 
   test, or validate lattice calculations?
 
-\item What PDF-related quantities are most urgent
-  to compute in lattice-QCD in terms of phenomenological relevance?
+\item What PDF-related quantities are most compelling
+  to compute in lattice QCD in terms of phenomenological relevance?
 
 \item What accuracy do we need from lattice quantities 
   in order to have a significant impact on global PDF fits?
 
-\item What information does lattice-QCD provide on the
+\item What information does lattice QCD provide on the
   shape (Bjorken-$x$ dependence) of the PDFs? Which specific
-  PDF moments, and up to which order, can be computed?
+  PDF moments can be computed?
   
-\item How do we systematically and consistently quantify the systematic errors 
-in  lattice-QCD calculations of the proton structure?
+\item How do we consistently quantify the systematic uncertainties 
+  in lattice-QCD calculations?
 
 \item To what extent do available lattice results agree with the results of
   global PDF fits? Is there a tension between global PDF fits, PDF
@@ -166,44 +153,37 @@ in  lattice-QCD calculations of the proton structure?
 
 \end{itemize}
 
-This white paper summarises the joint
-effort between the two communities to address some of these questions, 
-and follows up on the very fruitful discussions and interactions that took place both during 
-the Oxford workshop and in the subsequent months.
+This white paper summarizes the joint effort between the two communities to 
+address some of these questions, and follows up on the very fruitful 
+discussions and interactions that took place both during 
+the workshop and in the subsequent months.
 %
-While this document does not represent the final word on this topic,
-it provides a solid starting point for subsequent collaborative efforts,
-and should facilitate smooth 
-interactions between the two communities in the near future.
+While this document does not represent the final word on this topic, it 
+provides a solid starting point for subsequent collaborative efforts, and 
+should facilitate smooth interactions between the two communities in the future.
 
 The outline of this white paper is the following.
 %
-First of all, in Sect.~\ref{sec:theoryoverview} we review
-the global PDF analysis and lattice-QCD methods for the evaluation
-of polarised and unpolarised parton distributions.
+In Sect.~\ref{sec:theoryoverview} we review the global QCD analysis and 
+lattice-QCD methods for the determination of polarized and unpolarized PDFs.
 %
-Then, in Sect.~\ref{sec:benchmarking}
-we present state-of-the-art benchmarks for the most
-recent lattice-QCD calculations and compare them with the results from global fits
-for selected PDF moments.
+In Sect.~\ref{sec:benchmarking} we present state-of-the-art benchmarks 
+for selected PDF moments between the most recent lattice-QCD calculations and 
+global QCD analyses.
 %
-Sect.~\ref{sec:projections} provides a first quantitative
-exploration of the impact that
-lattice calculations of PDF-related quantities could have on unpolarised
-and polarised global analyses within different scenarios
-for the uncertainties in the lattice-QCD calculations.
+In Sect.~\ref{sec:projections} we quantitatively assess the impact that
+lattice calculations of PDF-related quantities could have on unpolarized
+and polarized global analyses, assuming different scenarios for the 
+uncertainties in the lattice-QCD calculations.
 %
-In Sect.~\ref{sec:outlook} we summarise our studies
-and discuss the outlook for future interactions between
-the global QCD fit and lattice-QCD communities.
+In Sect.~\ref{sec:outlook} we conclude
+and discuss future interactions between
+the global QCD analysis and lattice-QCD communities.
 %
-Finally, appendix~\ref{app:notation} summarises the conventions
-that are adopted in this report for the definition of the PDF
-moments, a
-Appendix~\ref{sec:LQCDtables} presents an exhaustive summary of existing calculations
-of those moments in lattice-QCD,
-and then Appendix~\ref{app:Hmoms} collects some
-additional results for PDF moments from the global analysis.
+In Appendix~\ref{app:notation} we summarize the conventional notation
+adopted in this document for the definition of the PDF moments; 
+in Appendix~\ref{sec:LQCDtables} we compile bibliographical tables for
+existing lattice-QCD calculations of PDF moments;
+and in Appendix~\ref{app:Hmoms} we collect some
+additional results of PDF moments from global QCD analyses.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5

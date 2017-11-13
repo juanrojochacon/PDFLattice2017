@@ -693,7 +693,7 @@ FUNCTION {article}
 { output.bibitem
   format.collaboration output
   format.authors "author" output.check
-  format.title "title" output.check
+  %format.title "title" output.check
   blank.sep
   crossref missing$
   { journal missing$
@@ -851,7 +851,7 @@ FUNCTION {inproceedings}
 { output.bibitem
   format.collaboration output
   format.authors "author" output.check
-  format.title "title" output.check
+  %format.title "title" output.check
   blank.sep
   crossref missing$
     { format.in.ed.booktitle "booktitle" output.check
