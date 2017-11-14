@@ -252,7 +252,7 @@ $\langle x\rangle_{u^+-d^+}$
 & ETMC 17  
   & \cite{Alexandrou:2017oeh} 
   & 2   
-  & PreP 
+  & P
   & \rsquare 
   & \bstar   
   & \rsquare 
@@ -276,7 +276,7 @@ $\langle x\rangle_{u^+}$
 &  ETMC 17  
   & \cite{Alexandrou:2017oeh} 
   & 2 
-  & PreP 
+  & P
   & \rsquare 
   & \bstar   
   & \rsquare 
@@ -289,7 +289,7 @@ $\langle x\rangle_{d^+}$
 & ETMC 17  
   & \cite{Alexandrou:2017oeh} 
   & 2 
-  & PreP 
+  & P
   & \rsquare 
   & \bstar   
   & \rsquare 
@@ -302,7 +302,7 @@ $\langle x\rangle_{s^+}$
 & ETMC 17  
   & \cite{Alexandrou:2017oeh} 
   & 2 
-  & PreP 
+  & P
   & \rsquare  
   & \bstar   
   & \rsquare 
@@ -314,7 +314,7 @@ $\langle x\rangle_{g}$
 & ETMC 17  
   & \cite{Alexandrou:2017oeh} 
   & 2 
-  & PreP 
+  & P 
   & \rsquare 
   & \bstar   
   & \rsquare 
@@ -328,7 +328,8 @@ $\langle x\rangle_{g}$
 \footnotesize
 \item[$\ \,*$] Study employing a single physical pion mass ensemble.
 \item[$**$] Study employing a single ensemble with $m_\pi=150$~MeV.
-\item[$\ \,\triangleright$] The mixing with $\langle x\rangle_{g}$ is computed.
+\item[$\ \,\triangleright$] Nonsinglet renormalization is applied.
+%The mixing with $\langle x\rangle_{g}$ is computed.
 \end{tablenotes}
 \end{threeparttable}
 \caption{\small Status of current lattice-QCD calculations of the benchmark 
@@ -434,7 +435,7 @@ $g_A$
   & \rsquare 
   & \bstar 
   & \bstar 
-  & $^\diamond$ 
+  & %$^\diamond$ 
   & 1.278(21)(26) \\
 & PNDME\,16  
   & \cite{Bhattacharya:2016zcn} 
@@ -470,7 +471,7 @@ $g_A$
 & ETMC\,17    
   & \cite{Alexandrou:2017hac} 
   & 2 
-  & PreP 
+  & P
   & \rsquare  
   & \bstar 
   & \rsquare  
@@ -507,7 +508,7 @@ $g_A$
 \item[$*$] Study employing a single physical pion mass ensemble.
 \item[$^\ddag$] $g_A$ is determined via the ratio $g_A/f_\pi$, employing the 
 physical value for $f_\pi$.
-\item[$\diamond$] Approach inspired by the Feynman-Hellmann method.
+%\item[$\diamond$] Approach inspired by the Feynman-Hellmann method.
 \end{tablenotes}
 \end{threeparttable}
 \caption{\small Same as Tab.~\ref{tab:unpolLQCDstatus1}, but for the axial 
@@ -673,7 +674,7 @@ $\langle 1\rangle_{\Delta u^+}$
 & ETMC\,17 
   & \cite{Alexandrou:2017oeh} 
   & 2 
-  & PreP 
+  & P
   & \rsquare 
   & \bstar 
   & \rsquare 
@@ -686,7 +687,7 @@ $\langle 1\rangle_{\Delta d^+}$
 & ETMC\,17  
   & \cite{Alexandrou:2017oeh} 
   & 2 
-  & PreP 
+  & P
   & \rsquare 
   & \bstar 
   & \rsquare  
@@ -721,7 +722,7 @@ $\langle 1\rangle_{\Delta s^+}$
 & ETMC\,17 
   & \cite{Alexandrou:2017oeh} 
   & 2 
-  & PreP 
+  & P
   & \rsquare  
   & \bstar 
   & \rsquare  
@@ -851,7 +852,7 @@ uncertainties has been carefully assessed in dedicated reviews
 recently~\cite{Forte:2013wc,Jimenez-Delgado:2013sma}, and further 
 summarized in Sect.~\ref{sec:unpPDFs}. 
 %
-It is now recognized that PDF uncertainties receives various contributions: 
+It is now recognized that PDF uncertainties receive various contributions: 
 the measurement uncertainty propagated from the data, uncertainties associated 
 with incompatible data sets, procedural uncertainties such as those related to 
 the choice of the PDF parametrization, 
@@ -867,7 +868,7 @@ of these methods between unpolarized and polarized PDF fits.
 In Sect.~\ref{sec:unpPDFs}, we also emphasized that there are additional 
 theoretical uncertainties on PDFs associated with uncertainty in
 the input values of the physical parameters used in the fit (such as the 
-reference value of the strong coupling) and to missing higher-order
+reference value of the strong coupling) and with missing higher-order
 uncertainties (given that fits are usually performed with fixed-order
 perturbation theory).
 %
@@ -908,11 +909,12 @@ They have been obtained from the default PDF sets at the highest available
 perturbative order, which is NNLO for all of them except CJ15
 for which it is NLO.
 %
-The uncertainties for the CT14 PDF set has been rescaled by a factor $1/1.65$ to 
-convert from  90\%-CL bands to  68\%-CL bands.
+The uncertainties for the CT14 PDF set has been rescaled by a factor $1/1.65$ 
+to convert from  90\%-CL bands to  68\%-CL bands.
 %
-Note that no tolerance is used for the CJ15 PDF set; hence, the 
-smaller uncertainties of this set compared to all the other PDF sets.
+Note that tolerance of $\Delta chi^2=1$ at 68\% CL is used in the CJ15 PDF set; 
+hence, the smaller uncertainties of this set compared to all the other PDF sets.
+%
 Additionally, the CJ15 set does  not fit $\langle x \rangle_{s^+}$, 
 so this entry is removed. 
 %
@@ -1015,15 +1017,16 @@ values and the error is half of the difference between the smallest and the
 largest result.
 %
 The rationale for this choice is that PDF sets entering the PDF4LHC 
-recommendations are not benchmarked in the $x\gtrsim$ region, which can be 
+recommendations are not benchmarked in the $x\gtrsim 0.1$ region, which can be 
 relevant for the moment analysis.
 %
 The combination of all results in Table~\ref{tab:unpPDFmoms}, although 
 sometimes less precise than the PDF4LHC combination, maximizes the amount of 
 experimental information included in the benchmark numbers.
 %
-Specifically, it includes that provided at large $x$ and small $Q^2$ by the
-CJ15 and ABMP16 PDF sets, which is otherwise excluded from the PDF4LHC set.
+Specifically, it includes the information taken into account 
+at large $x$ and small $Q^2$ in the CJ15 and ABMP16 PDF sets, 
+which is otherwise excluded from the PDF4LHC set.
 
 \paragraph{Polarized parton distributions.}
 %
@@ -1035,9 +1038,10 @@ In the first column, we indicate the computed momentum, and in the subsequent
 three columns, its value as obtained from the most recent available PDF 
 determinations: NNPDFpol1.1~\cite{Nocera:2014gqa}, 
 DSSV08~\cite{deFlorian:2009vb}~\footnote{The DSSV08 analysis has been updated
-by the DSSV14 analysis~\cite{deFlorian:2014yva} only in the determination
-of the gluon PDF. The moments in Tab.~\ref{tab:polPDFmoms} are therefore  
-unchanged in the two analyses.} and JAM15~\cite{Sato:2016tuz}.
+by the DSSV14 analysis~\cite{deFlorian:2014yva} essentially 
+only in the determination of the gluon PDF. 
+The moments in Tab.~\ref{tab:polPDFmoms} therefore hardly differ
+in the two analyses.} and JAM15~\cite{Sato:2016tuz}.
 %
 The most relevant features of these PDF sets have been presented in
 Sect.~\ref{sec:polPDFs}.
@@ -1057,21 +1061,21 @@ the valence distribution $\Delta u^- - \Delta d^-$.
 \begin{table}[!t]
 \centering
 \renewcommand{\arraystretch}{1.2}
-\begin{tabular}{lccc}
+\begin{tabular}{lcccc}
 \toprule
 Mom. 
-& NNPDFpol1.1 & DSSV08 & JAM15 \\
+& NNPDFpol1.1 & DSSV08 & JAM15 & JAM17 \\
 \midrule
 $\langle 1 \rangle_{\Delta u^+-\Delta d^+}$ &
-\ 1.250(16) & \ 1.260(18) & 1.314(6)\, \\
+\ 1.250(16) & \ 1.260(18) & 1.314(6)\,  & \ 1.240(41)\\
 $\langle 1 \rangle_{\Delta u^+}$ &
-\ 0.794(46) & \ 0.814(12) & \ 0.831(21)\\
+\ 0.794(46) & \ 0.814(12) & \ 0.831(21) & \ 0.812(22)\\
 $\langle 1 \rangle_{\Delta d^+}$ &  
--0.453(52)  &  -0.456(11) &  -0.476(22)\\
+-0.453(52)  &  -0.456(11) &  -0.476(22) &  -0.428(31)\\
 $\langle 1 \rangle_{\Delta s^+}$ &  
--0.120(81)  &  -0.112(23) &  -0.109(20)\\
+-0.120(81)  &  -0.112(23) &  -0.109(20) &  -0.038(96)\\
 $\langle x \rangle_{\Delta u^- - \Delta d^-}$ &     
-\ 0.195(14) &  0.203(9)\, &  --- \\
+\ 0.195(14) &  0.203(9)\, &  ---        & \ 0.241(26)\\
 \bottomrule
 \end{tabular}
 \caption{\small Status of current global-fit determinations of the 
@@ -1250,7 +1254,6 @@ fit.
 
 \paragraph{Polarized parton distributions.}
 %
-%
 The benchmark values of the first moments of the unpolarized PDFs, obtained
 as described in Sects.~\ref{subsubsec:BClQCD}-\ref{subsubsec:GPDFfits}, 
 are summarized in Tab.~\ref{tab:BMpol}.
@@ -1259,7 +1262,7 @@ Results from a single lattice calculation, which might underestimate some
 sources of uncertainty, are denoted with a superscript~$\dagger$.
 %
 In the case of $g_A$, we report the two values with $N_f=2+1+1$ and
-$N_f$ sea quarks from lattice QCD, and the two values from the 
+$N_f=2$ sea quarks from lattice QCD, and the two values from the 
 unweighted average of the NNPDFpol1.1, DSSV08 and JAM15 PDF fits
 (as described in Sect.~\ref{subsubsec:GPDFfits}) and from the 
 JAM17~\cite{Ethier:2017zbq} fit.
@@ -1272,8 +1275,7 @@ The value of $g_A$ is scale-independent, and we quote all other results at
 $\mu^2=4\mbox{ GeV}^2$.
 %
 For ease of comparison, these values are also displayed in 
-the right panel of Fig.~\ref{fig:Bmomspol} in the same format as in 
-Fig.~\ref{fig:Bmomsunp}.
+Fig.~\ref{fig:Bmomspol} in the same format as in Fig.~\ref{fig:Bmomsunp}.
 
 %-------------------------------------------------------------------------------
 \begin{table}[!t]
@@ -1356,7 +1358,7 @@ of $\langle 1 \rangle_{\Delta u^+}$) or smaller than (in the case
 of $\langle 1 \rangle_{\Delta d^+}$ and $\langle 1 \rangle_{\Delta s^+}$)
 the uncertainty on the global-fit result.
 %
-However, in the case of the first moments of the total down- and strange-quark 
+However, in the case of the zeroth moments of the total down- and strange-quark 
 distributions, the lattice-QCD and the global-fit results are discrepant
 by about two $\sigma$ (in units of the
 lattice QCD uncertainty).
