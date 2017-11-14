@@ -22,6 +22,7 @@ polarized PDFs and present a brief review of their state-of-the-art
 determination.
 
 \subsubsection{General framework}
+\label{sec:genframework}
 
 \paragraph*{Fitting PDFs from hard-scattering data.} 
 Parton distributions appear in the factorization formul{\ae} of a class of 
@@ -700,11 +701,12 @@ $\Delta T_8 = \Delta u^+ +\Delta d^+ -2\Delta s^+$
 related to the baryon octet $\beta$-decay constants, whose 
 measured values are~\cite{Olive:2016xmw}
 \begin{align}
- a_3
+ g_A  = a_3
  & =
  \int_0^1 dx \Delta T_3 (x,\mu^2)
- = \langle 1\rangle_{\Delta u^+} - \langle 1\rangle_{\Delta d^+}  = 1.2723 \pm 0.0023
- ,,\\
+ = \langle 1\rangle_{\Delta u^+} - \langle 1\rangle_{\Delta d^+}  = 1.2723 \pm 0.0023\,,
+ \label{eq:a3}
+ \\
  a_8
  & =
  \int_0^1 dx \Delta T_8 (x,\mu^2)
@@ -736,10 +738,10 @@ distribution $\Delta g$, as it directly enters the factorized expressions of
 the corresponding structure functions beyond LO, and indirectly via DGLAP 
 evolution.
 %
-In practice the constraining power of DIS and SIDIS data on $\Delta g$ is 
-rather weak if one restricts to the kinematic region not affected by
-power-suppressed corrections, because the $Q^2$ range covered by 
-the data is limited and abundant and very precise data from JLab are 
+In practice, the constraining power of DIS and SIDIS data on $\Delta g$ is 
+rather weak because the $Q^2$ range covered by the data is limited,
+especially if one restricts to the kinematic region not affected by
+power-suppressed corrections and very precise data from JLab are therefore
 excluded. 
 
 Note that, in the case of SIDIS, a reliable knowledge of fragmentation 
@@ -747,10 +749,9 @@ functions (FFs) is required in the factorized expressions of the
 corresponding observables. 
 %
 Since FFs are nonperturbative objects on the same footing as PDFs, they are 
-an additional source of uncertainty in PDF determinations, and can  
-even become a bias.
+an additional source of uncertainty in PDF determinations, if not a bias.
 %
-For this reason, a significant experimental and theoretical effort has been
+A significant experimental and theoretical effort has been
 invested in improving the independent determination of 
 FFs~\cite{deFlorian:2014xna,deFlorian:2017lwf,
 Hirai:2016loo,Sato:2016wqj,Bertone:2017tyb} and most recently in simultaneously 
@@ -766,7 +767,7 @@ On the one hand, longitudinal (parity-violating) single-spin and
 (parity-conserving) double-spin asymmetries for $W^\pm$ boson production are 
 sensitive to the flavor decomposition of polarized quark and antiquark 
 distributions, because of the chiral nature of the weak 
-interactions~\cite{Bourrely:1993dd}. 
+interaction~\cite{Bourrely:1993dd}. 
 %
 On the other hand, double-spin asymmetries for jet, di-jet and $\pi^0$ 
 production are directly sensitive to the gluon polarization in 
@@ -781,7 +782,7 @@ quantity of data points, their kinematic coverage and the variety of
 available hard-scattering processes are presently much more limited in the 
 polarized case than in the unpolarized case.
 %
-Therefore polarized PDFs can currently be determined with much less 
+Therefore, polarized PDFs can currently be determined with much less 
 precision than their unpolarized counterparts and only over an $x$-range limited
 to $x\gtrsim 0.005$.
 %
@@ -836,7 +837,7 @@ Several modern determinations of polarized PDFs of the proton (up to
 NLO\footnote{A NNLO QCD analysis of polarized PDFs based on inclusive DIS
 data only was performed in Refs.~\cite{Shahri:2016uzl,Khanpour:2017cha}.
 Inclusive DIS is the only polarized process for which coefficient functions
-are known up to NNLO (all others are known only up to NLO).} 
+are known up to NNLO (all others are known up to NLO).} 
 and mostly in the $\overline{\rm MS}$ factorization scheme) are available in 
 the literature~\cite{Nocera:2014gqa,Nocera:2016xhb,deFlorian:2014yva,deFlorian:2008mr,deFlorian:2009vb,Sato:2016tuz,Leader:2010rb,Blumlein:2010rn,Bourrely:2014uha,Hirai:2008aj}. 
 %
@@ -849,21 +850,22 @@ higher-twist corrections) and in the procedure used to determine PDFs from the
 data (for details, see {\it e.g.} Chap.~3 in Refs.~\cite{Nocera:2014vla} 
 and~\cite{Nocera:2016xhb,Jimenez-Delgado:2013sma}). 
 %
-The NNDPF procedure and the conventional/standard one adopted by DSSV have 
-already been outlined in Sec.~\ref{sec:unpPDFs}. 
+The NNDPF procedure and the standard (adopted by DSSV) have 
+already been outlined in Sec.~\ref{sec:genframework}. 
 %
 We note that DSSV has developed a method based on Mellin moments of the PDFs 
 in order to efficiently incorporate NLO computations
 of proton-proton cross-sections in the fitting procedure. 
 %
-The JAM collaboration has implemented for their analysis a new approach called 
-iterative Monte Carlo procedure~\cite{Sato:2016tuz}. 
+The JAM collaboration has implemented a new approach called 
+iterative Monte Carlo procedure~\cite{Sato:2016tuz,Ethier:2017zbq}
+in their analyses.
 
-Motivated by the interest in assessing the impact of RHIC proton-proton 
-data, two new global analyses of polarized PDFs have been carried out in
-2014, DSSV14~\cite{deFlorian:2014yva} and NNPDFpol1.1~\cite{Nocera:2014gqa}.
+The most recent analyses of polarized PDFs are DSSV14~\cite{deFlorian:2014yva}
+and NNPDFpol1.1~\cite{Nocera:2014gqa}.
 %
-They upgrade the corresponding previous analyses, 
+Motivated by the interest in assessing the impact of RHIC proton-proton 
+data, they upgrade the corresponding previous analyses, 
 DSSV08~\cite{deFlorian:2008mr,deFlorian:2009vb} and 
 NNPDFpol1.0~\cite{Ball:2013lla}, with data respectively on double-spin 
 asymmetries for inclusive jet production~\cite{Adamczyk:2014ozi} 
@@ -921,18 +923,17 @@ $x$ region covered by RHIC data.
 The agreement between the two analyses is optimal in the
 range $0.08\leq x \leq 0.2$, where the dominant experimental information comes
 from jet data; a slightly smaller central value is found in the DSSV14 
-analysis, in comparison to the NNPDFpol1.1, in the range 
+analysis, in comparison to NNPDFpol1.1, in the range 
 $0.05\leq x \leq 0.08$, where the dominant experimental information comes from 
 $\pi^0$ production data. 
 %
-Indeed, these are included in DSSV14 but are not
-in NNPDFpol1.1. 
+Indeed, these are included in DSSV14 but are not in NNPDFpol1.1. 
 %
 Nevertheless, best fits lie well within each other's error
 bands, though NNPDFpol1.1 uncertainties tend to be larger than DSSV14
 uncertainties outside the region covered by RHIC data.
 %
-Very consistent values of the integral of $\Delta g$, 
+Very consistent values of the zeroth moment of $\Delta g$, 
 Eq.~\eqref{eq:moments}, truncated over the interval $0.05\leq x \leq 1$, are 
 found: at $Q^2=10$ GeV$^2$, this is $0.20^{+0.06}_{-0.07}$ for 
 DSSV14~\cite{deFlorian:2014yva}, and $0.23\pm 0.06$ for 
@@ -949,34 +950,36 @@ as shown in Fig.~\ref{fig:RHICpdfs1}.
 % 
 The size of the flavor symmetry breaking for polarized sea quarks is 
 quantified by the asymmetry $\Delta\bar{u}-\Delta\bar{d}$, which,
-in the NNPDFpol1.1 analysis, turned out to be roughly as large as its 
-unpolarized counterpart (in absolute value), 
+in the NNPDFpol1.1 analysis, turn out to be roughly as large as its 
+unpolarized counterpart (in absolute value)~\cite{Ball:2017nwa}, 
 though much more uncertain~\cite{Nocera:2014rea}. 
 %
 Even within this uncertainty, polarized and unpolarized light sea quark 
-asymmetries show opposite signs,
-with the polarized ones being clearly positive.  This trend is also found
-from analysis of the polarized SIDIS data, as revealed by the DSSV analyses. 
+asymmetries show opposite signs, with the polarized one being clearly positive. 
+% 
+This trend is also found from analysis of the polarized SIDIS data, 
+as revealed by the DSSV08 parton set. 
 %
-This result may discriminate among various models of nucleon structure; 
-see Fig.~\ref{fig:RHICpdfs1}: 
-specifically, some meson-cloud (MC) models are disfavored, while a more 
-accurate experimental information is needed to establish whether 
-chiral quark-soliton (CQS), Pauli-blocking (PB) or statistical (ST)
-models are preferred (all these models are described in~\cite{Chang:2014jba}).
+This result may discriminate among various models of nucleon structure, 
+see~\cite{Nocera:2014rea} and references therein. 
+%Fig.~\ref{fig:RHICpdfs1}: 
+%specifically, some meson-cloud (MC) models are disfavored, while a more 
+%accurate experimental information is needed to establish whether 
+%chiral quark-soliton (CQS), Pauli-blocking (PB) or statistical (ST)
+%models are preferred (all these models are described in~\cite{Chang:2014jba}).
 
 \end{itemize}
 
 %------------------------------------------------------------------------------
-\begin{figure}[!h]
-\centering
-\includegraphics[scale=0.35]{plots/asysea_2}\\
-\caption{\small The polarized light sea quark asymmetry 
-$x(\Delta\bar{u}-\Delta\bar{d})$ from the NNPDFpol1.1 and 
-DSSV08 PDF sets at $Q^2=10$ GeV$^2$, compared to expectations from 
-various models of nucleon structure~\cite{Chang:2014jba}.}
-\label{fig:RHICpdfs1}
-\end{figure}
+%\begin{figure}[!h]
+%\centering
+%\includegraphics[scale=0.35]{plots/asysea_2}\\
+%\caption{\small The polarized light sea quark asymmetry 
+%$x(\Delta\bar{u}-\Delta\bar{d})$ from the NNPDFpol1.1 and 
+%DSSV08 PDF sets at $Q^2=10$ GeV$^2$, compared to expectations from 
+%various models of nucleon structure~\cite{Chang:2014jba}.}
+%\label{fig:RHICpdfs1}
+%\end{figure}
 %------------------------------------------------------------------------------
 
 \paragraph{Open issues.}
@@ -988,21 +991,23 @@ unpolarized counterparts.
 The experimental data are confined to a relatively narrow range of 
 $x$ and $Q^2$.
 %
-As a consequence, the sizes of the contribution of quarks, antiquarks and 
+As a consequence, the size of the contributions of quarks, antiquarks and 
 gluons to the nucleon spin, as quantified by their zeroth moments, 
 Eq.~\eqref{eq:moments}, are still affected by large uncertainties. 
 %
 These come predominantly from the extrapolation into the small-$x$ region 
 ($x\lesssim 10^{-3}$). 
 %
-Here potential modifications in the PDF shape induced by small-$x$ evolution 
+Here potential modifications in the PDF shape induced by small-$x$ 
+evolution~\cite{Bartels:1995iu,Bartels:1996wc,Kovchegov:2015pbl,
+Kovchegov:2016weo,Kovchegov:2016zex,Kovchegov:2017jxc,Kovchegov:2017lsr} 
 could arise, which presently cannot be tested.
 %
 Significant uncertainties also affect the PDFs in the large-$x$ 
 {\it valence} region ($x\gtrsim 0.7$). 
 %
-This regime is less relevant for determination of the PDF moments, but is 
-important for comparisons to nonperturbative models of nucleon structure, 
+This regime is less relevant for the determination of the PDF moments, but it 
+is important for comparisons to nonperturbative models of nucleon structure, 
 especially in terms of ratios of light-quark polarized to unpolarized PDFs 
 (for a comparison between large-$x$ PDFs 
 and model predictions, see Ref.~\cite{Nocera:2014uea}).
@@ -1023,7 +1028,7 @@ Inclusive DIS data, together with nonsinglet axial couplings,
 Eq.~\eqref{eq:decayconst}, and kaon SIDIS data provide the sole available 
 constraint on $\Delta s^+$.
 %
-A sizeable negative $\Delta s^+$ is found 
+A sizable negative $\Delta s^+$ is found 
 consistently in all analyses based on inclusive DIS data only, as a result 
 of the constraint from hyperon decays that is usually adopted. 
 %
@@ -1035,7 +1040,7 @@ the corresponding observables~\cite{Leader:2011tm}.
 %
 The recent study in Ref.~\cite{Ethier:2017zbq} sheds some light on this issue
 by performing a simultaneous determination of polarized PDFs and unpolarized 
-fragmentation functions using DIS, SIDIS and single-inclusive annihilation data.
+FFs using DIS, SIDIS and single-inclusive annihilation data.
 %
 In order to avoid biasing the determination of $\Delta s^+$ by 
 assumptions on SU(3) symmetry, the octet axial charge in 
@@ -1054,7 +1059,7 @@ However, we stress that the determination of $\Delta s^+$ from SIDIS data
 also relies on good knowledge of the {\it un}polarized strange distribution. 
 %
 Furthermore, unpolarized SIDIS data themselves set constraints on 
-fragmentation functions and ultimately would need to be included as well
+FFs and ultimately would need to be included as well
 to obtain a reliable picture. 
 %
 In any case, further higher precision kaon SIDIS data will be needed 
