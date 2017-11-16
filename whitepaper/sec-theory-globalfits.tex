@@ -26,14 +26,14 @@ determination.
 
 \paragraph*{Fitting PDFs from hard-scattering data.} 
 Parton distributions appear in the factorization formul{\ae} of a class of 
-sufficiently inclusive processes, among which deep-inelastic scattering (DIS) 
-and proton-(anti)proton collisions.
+sufficiently inclusive processes, among which are deep-inelastic scattering 
+(DIS) and proton-(anti)proton collisions.
 %
 The factorization formul{\ae} for the unpolarized and polarized structure 
 functions $F_1$ and $g_1$ were introduced in Eqs.~\eqref{eq:Fi}-\eqref{pdf}.
 %
 For the hadroproduction of a generic final-state $X$ in unpolarized 
-(double polarized) proton-proton ($\overrightarrow{p}\overrightarrow{p}$) 
+(doubly polarized) proton-proton ($\overrightarrow{p}\overrightarrow{p}$) 
 collisions, the corresponding factorized expressions read
 \begin{align}
 \sigma_{pp\to X}(s,\mu_F,\mu_R)=&\sum_{a,b}\int {\rm d}x_1 {\rm d}x_2\, 
@@ -52,9 +52,10 @@ perturbatively as an expansion in the QCD and electroweak (EW)
 running couplings.
 %
 The specific values of the momentum fractions
-$x_i$ are related to the kinematics of the final state.
+$x_i$ can be related to the kinematics of the final state.
 %
-In particular, at LO it can be shown that
+For example, for the production of a heavy final state, 
+it can be shown that, at LO,
 \be
 x_{1,2}=\frac{M_X}{\sqrt{s}}e^{\pm y_X} \, ,
 \ee
@@ -143,9 +144,9 @@ In practice, this allows for a greatly increased number of free parameters,
 typically an order of magnitude higher than other sets.
 %
 The form of Eq.~\eqref{eq:pdffunc} is still assumed, but
-now $C(x)={\rm NN}(x)$ is parametrized as a neural network.
+now $C(x)={\rm NN}(x)$, where ${\rm NN}(x)$ is a neural network.
 %
-The $x^{a_1}(1-x)^{a_2}$ term that multiplies the NN represents
+The $x^{a_1}(1-x)^{a_2}$ term that multiplies ${\rm NN}(x)$ represents
 a preprocessing factor that speeds up the minimization procedure
 and that is determined via an iterative procedure.
 %
@@ -161,7 +162,7 @@ fits~\cite{Sato:2016tuz,Ethier:2017zbq}.
 
 Once the PDF parametrization is chosen, the best-fit PDF parameters
 and their uncertainty should be determined via a fitting methodology
-which minimizes a suitable statistical estimator, typically the $\chi^2$.
+that minimizes a suitable statistical estimator, typically the $\chi^2$.
 %
 There exist different alternative definitions of the $\chi^2$
 to be used in the global fits~\cite{Ball:2012wy}. 
@@ -220,7 +221,7 @@ the various sources of experimental, methodological and theoretical
 uncertainties.
 %
 In this respect, there are two main methods to determine PDF uncertainties, the 
-{\it Hessian} and the {\it Monte Carlo} methods.\footnote{The Lagrange 
+{\it Hessian} and the {\it Monte Carlo} (MC) methods.\footnote{The Lagrange 
 multiplier method~\cite{Stump:2001gu} is also frequently used for dedicated 
 studies of PDF uncertainties.}
 
@@ -254,7 +255,7 @@ the uncertainty of the cross-section $\mathcal{F}$, namely
 \lc \mathcal{F}(S_i^+)-\mathcal{F}(S_i^-) \rc^2 \rp^{1/2} \, ,
 \ee
 where $S_i^{\pm}$ correspond to the $i$-th eigenvector
-associated to positive and negative variations with respect
+associated with positive and negative variations with respect
 to the best fit value.
 
 The Monte Carlo method~\cite{Forte:2002fg,DelDebbio:2004xtd} is based 
@@ -285,7 +286,7 @@ where $S_{I,N}^{(k)}$ is a normalization prefactor.
 The variables $r_{I,c}^{(k)},r_{I}^{(k)},r_{p,n}^{(k)}$ are
 univariate Gaussian random numbers.
 %
-For each individual replica, the random fluctuations associated to a given 
+For each individual replica, the random fluctuations associated with a given 
 fully-correlated systematic uncertainty will be the same
 for all data points, $r^{(k)}_{I,c}=r^{(k)}_{I',c}$.
 
@@ -318,14 +319,6 @@ Monte Carlo sample,
 Likewise, other properties of the underlying PDF probability distribution, 
 such as skewness and kurtosis, could be readily computed.
 
-%In the following sections, when comparing the results of global PDF fits
-%with the results of lattice QCD calculations we will use 
-%Eqs.~(\ref{eq:hessianmaster2}) and~(\ref{mastersig}) to evaluate the PDF 
-%uncertainties of Hessian and Monte Carlo PDF sets.
-%%
-%Unless otherwise stated, the quoted PDF uncertainties correspond to 
-%the 68\%-CL intervals.
-
 Given a PDF set in the Hessian representation, it is possible to construct
 the corresponding Monte Carlo representation~\cite{Watt:2012tq,Hou:2016sho}
 and vice-versa~\cite{Gao:2013bia,Carrazza:2015aoa}.
@@ -334,7 +327,7 @@ There are additional sources of theoretical uncertainty that are not accounted
 for, either in the Hessian or in the MC methods.
 %
 The first one is the parametric uncertainty due to finite uncertainties 
-associated to the input values of the physical parameters used in the global 
+associated with the input values of the physical parameters used in the global 
 fit, such as $\alpha_s(m_Z)$ and the charm mass $m_c(m_c)$.
 %
 These additional uncertainties can be included by repeating the fits for 
@@ -363,12 +356,12 @@ First, since the proton has the quantum numbers of two up quarks and one
 down quark, the following quark number sum rules, given in terms of zeroth
 moments, must be satisfied: 
 \begin{eqnarray}
-\int_{0}^{1}dx\ \left[u(x,\mu)-\bar{u}(x,\mu)\right] 
+\int_{0}^{1}dx\ \left[u(x,\mu^2)-\bar{u}(x,\mu^2)\right] 
 & =\left\langle 1\right\rangle _{u^{-}}= & 2 \, ,\nonumber \\
-\int_{0}^{1}dx\ \left[d(x,\mu)-\bar{d}(x,\mu)\right] 
+\int_{0}^{1}dx\ \left[d(x,\mu^2)-\bar{d}(x,\mu^2)\right] 
 & =\left\langle 1\right\rangle _{d^{-}}= & 1 \, ,
 \label{eq:valencesumrules}\\
-\int_{0}^{1}dx\ \left[s(x,\mu)-\bar{s}(x,\mu)\right] 
+\int_{0}^{1}dx\ \left[s(x,\mu^2)-\bar{s}(x,\mu^2)\right] 
 & =\left\langle 1\right\rangle _{s^{-}}= & 0 \, .\nonumber
 \end{eqnarray}
 %
@@ -540,22 +533,14 @@ by HERA data, the uncertainties can be quite large.
 The CJ15~\cite{Accardi:2016qay} NLO set focuses on constraining the PDFs at 
 higher $x$ by lowering $Q^2$ and $W^2$ cuts in DIS.
 %
-This greatly increases the available data, but requires additional modeling of 
-power-like ${\cal O}(1/Q^2)$ corrections.
+This greatly increases the amount of available data, but requires additional 
+modeling of power-like ${\cal O}(1/Q^2)$ corrections.
 
-The features of each PDF set have ben discussed in detail in 
-Refs.~\ref{Butterworth:2015oua,Accardi:2016ndt}, including the 
+The features of each PDF set have been discussed in detail in 
+Refs.~\cite{Butterworth:2015oua,Accardi:2016ndt}, including the 
 dataset, the fitting methodology, the theoretical details of the 
 corresponding QCD analyses, and, most importantly, the uncertainties
 coming from each of these aspects.
-
-%A detailed discussion of the similarities and differences between
-%PDF sets, which is beyond the scope of this document,
-%can be found in the PDF4LHC report~\cite{Butterworth:2015oua}.
-%%
-%It suffices here to say that all PDF sets listed above use the Hessian
-%method to determine PDF uncertainties,
-%except NNPDF which is based on the Monte Carlo approach.
 
 In Fig.~\ref{fig:globalfits}
 we present a snapshot of the current understanding
@@ -569,7 +554,7 @@ From top to bottom and from left to right we show the
 $u$, $\bar{d}$ and $s$ quark PDFs and the gluon PDF.
 %
 The error bands indicate the 68\%-confidence level (CL) PDF uncertainties
-associated to each set, computed with the corresponding master formula.
+associated with each set, computed with the corresponding master formula.
 %
 We observe that differences for the up quark PDF
 are small, at the few percent level, but greater differences
@@ -598,7 +583,7 @@ interface~\cite{Carrazza:2014gfa}.
   $u$, $\bar{d}$ and $s$ quark PDFs as well as the gluon.
   %
   The error bands indicate the 1-$\sigma$ PDF uncertainties
-  associated to each set.
+  associated with each set.
   %
   These PDF comparison plots have been produced using the
   {\tt APFEL-Web} online plotting interface~\cite{Carrazza:2014gfa}.
@@ -719,9 +704,9 @@ measured values are~\cite{Olive:2016xmw}
 Fairly significant violations of SU(3) symmetry are advocated
 in the literature (see {\it e.g.} Ref.~\cite{Cabibbo:2003cu} for a review). 
 %
-In this case, an uncertainty on the octet axial charge, larger by up to $30\%$ 
-than its experimental value in Eq.~\eqref{eq:decayconst}, 
-is found~\cite{FloresMendieta:1998ii}. 
+In this case, an uncertainty on the octet axial charge, which could be as 
+large as 30\% of the experimental value of $a_8$ in Eq.~\eqref{eq:decayconst}, 
+see Ref.~\cite{FloresMendieta:1998ii}. 
 
 \paragraph*{Experimental data.}
 The bulk of the experimental information on polarized PDFs comes from 
@@ -755,7 +740,7 @@ A significant experimental and theoretical effort has been
 invested in improving the independent determination of 
 FFs~\cite{deFlorian:2014xna,deFlorian:2017lwf,
 Hirai:2016loo,Sato:2016wqj,Bertone:2017tyb} and most recently in simultaneously 
-fitting both PDFs and FFs~\cite{Ethier:2017zbq}.
+fitting both PDFs and FFs~\cite{Ethier:2017zbq,Borsa:2017vwy}.
 
 Besides DIS and SIDIS fixed-target data, a significant amount of data from
 longitudinally polarized proton-proton collisions at the Relativistic 
@@ -869,12 +854,12 @@ data, they upgrade the corresponding previous analyses,
 DSSV08~\cite{deFlorian:2008mr,deFlorian:2009vb} and 
 NNPDFpol1.0~\cite{Ball:2013lla}, with data respectively on double-spin 
 asymmetries for inclusive jet production~\cite{Adamczyk:2014ozi} 
-and $\pi^0$ production~\cite{Adare:2014hsq}\footnote{Preliminary RHIC results 
-included in Ref.~\cite{deFlorian:2008mr} were replaced in
-Ref.~\cite{deFlorian:2014yva} with final results.}, 
+and $\pi^0$ production~\cite{Adare:2014hsq} (DSSV14\footnote{Preliminary 
+RHIC results included in Ref.~\cite{deFlorian:2008mr} were replaced in
+Ref.~\cite{deFlorian:2014yva} with final results.}), 
 and on double-spin asymmetries for high-$p_T$ inclusive jet 
 production~\cite{Adamczyk:2014ozi,Adamczyk:2012qj,Adare:2010cc} and single-spin
-asymmetries for $W^\pm$ production~\cite{Adamczyk:2014xyw}.
+asymmetries for $W^\pm$ production~\cite{Adamczyk:2014xyw} (NNPDFpol1.1).
 %
 The new data have been included in NNPDFpol1.1 
 by means of Bayesian reweighting~\cite{Ball:2010gb},
@@ -1061,8 +1046,8 @@ However, we stress that the determination of $\Delta s^+$ from SIDIS data
 also relies on good knowledge of the {\it un}polarized strange distribution. 
 %
 Furthermore, unpolarized SIDIS data themselves set constraints on 
-FFs and ultimately would need to be included as well
-to obtain a reliable picture. 
+FFs and ultimately need to be included as well
+to obtain a reliable picture~\cite{Borsa:2017vwy}. 
 %
 In any case, further higher precision kaon SIDIS data will be needed 
 to reduce the uncertainty on $\Delta s^+$ and further test the degree of 

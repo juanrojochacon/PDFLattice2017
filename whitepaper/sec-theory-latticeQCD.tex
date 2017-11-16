@@ -119,8 +119,7 @@ In general, finite volume
 effects of hadrons are dominated by their interactions with pions,
 which can travel around the (periodic) lattice many times.
 %
-Numerical
-evidence suggests that lattice sizes of $m_\pi L \geq 4$, where
+Numerical evidence suggests that lattice sizes of $m_\pi L \geq 4$, where
 $m_\pi$ is the pion mass, are generally sufficiently large that finite
 volume effects are negligible for mesons, within the current precision 
 of lattice-QCD calculations.
@@ -139,8 +138,7 @@ ground-state quantities can be extracted by fitting to the dominant
 exponential behaviour.
 %
 Unfortunately, the signal-to-noise ratio is exponentially suppressed 
-as $e^{-(E_N-3m_\pi/2)t}$, where $E_N$ is the nucleon energy and $m_\pi$ is the 
-pion mass~\cite{Lepage:1989hd}.
+as $e^{-(E_N-3m_\pi/2)t}$, where $E_N$ is the nucleon energy~\cite{Lepage:1989hd}.
 %
 Thus, lattice-QCD results
 are extracted from an intermediate region in which excited state contributions 
@@ -165,13 +163,17 @@ scales the renormalization constants should be computed
 nonperturbatively to avoid uncontrolled uncertainties due to 
 truncated perturbative results.
 %
-In QCD with only light quarks it is technically
-advantageous to employ so-called mass-independent renormalization
-schemes.
+To compare with phenomenology, which uses the $\overline{\rm MS}$ scheme, 
+a conversion factor from the nonperturbative scheme must be computed 
+perturbatively. 
 %
-This requires a renormalization condition that can be
-implemented on the lattice as well as in continuum perturbation
-theory. A common choice is the regularization-independent/momentum (RI/MOM) 
+This requires a renormalization condition that can be implemented on the 
+lattice and in continuum perturbation theory. 
+%
+In QCD with only light quarks it is technically advantageous to employ 
+so-called mass-independent renormalization schemes. 
+%
+A common choice is the regularization-independent/momentum (RI/MOM) 
 scheme~\cite{Martinelli:1994ty}.
 
 In addition, on a hypercubic lattice, the orthogonal group $O(4)$ of
@@ -223,15 +225,15 @@ value or through a well-defined theoretical procedure, that is referred to as
 %
 Popular reference scales include light decay constants, hadron masses, 
 scales defined in terms of the heavy quark potential or, most recently, 
-the length scale $\sqrt{t_0}$~\cite{Luscher:2010iy} and 
+the length scales $\sqrt{t_0}$~\cite{Luscher:2010iy} and 
 $w_0$~\cite{Borsanyi:2012zs} defined via the Wilson  gradient 
 flow~\cite{Luscher:2010iy}. 
 %
 These scales can be computed cheaply and can be used to 
 match scales between different gauge ensembles very accurately.  
 %
-However, a hadron mass or a decay constant - which are known accurately 
-from the experiment and can be computed precisely in lattice-QCD  - 
+However, a hadron mass or a decay constant -- which are known accurately 
+from experiment and can be computed precisely in lattice-QCD -- 
 have to be used for absolute scale setting. 
 %
 A popular hadronic mass for this purpose is the mass of the triply strange 
@@ -412,7 +414,7 @@ at one-loop in lattice perturbation theory is suppressed
 by ${\cal O}(\alpha_s a)$ or ${\cal O}(\alpha_s a^2)$. 
 %
 The suppression depends on the lattice action used, provided that the gauge 
-action adopted to construct the gauge-invariant bilinears are tadpole-improved 
+action adopted to construct the gauge-invariant bilinears is tadpole-improved 
 and smeared over a region whose physical size is held fixed as the continuum 
 limit is taken. 
 %
@@ -420,6 +422,13 @@ In principle, this allows higher moments of PDFs to be obtained from lattice
 QCD, without power divergences. Numerical investigations of this approach,
 which requires gauge configurations with very fine lattice spacings, are 
 underway.
+%
+Other approaches that avoid power-divergent mixing have also been suggested, 
+including coupling fictitious heavy quarks to light-quark 
+currents~\cite{Detmold:2005gg}, and calculating current correlators in 
+position space~\cite{Braun:2007wv}. 
+%
+The practical application of these ideas is yet to be studied nonperturbatively.
 
 \subsubsection{The $x$-dependence of PDFs from lattice QCD}
 \label{sec:xdependence}
@@ -612,7 +621,7 @@ Sect.~\ref{Sec:IntroLQCD}.
 %
 Here we focus on systematic uncertainties that are more specific to quasi-PDFs.
 %
-These are uncertainties associated to the finite nucleon momentum of the 
+These are uncertainties associated with the finite nucleon momentum of the 
 lattice calculations and to the renormalization of quasi-PDFs.
 
 \begin{itemize}
@@ -636,9 +645,9 @@ nucleon momentum using the fit ansatz $a + b/p_z^2$ for each value of $x$.
 %
 Although the effects of finite nucleon momentum can be mitigated, a quark-model 
 study asserts that reducing systematic uncertainties to less than 20\% at 
-moderate values of $x$ require significantly larger values of nucleon 
+moderate values of $x$ requires significantly larger values of nucleon 
 momentum~\cite{Gamberg:2014zwa}, and at larger values of $x$ 
-(roughly $x\simeq 1$) require nucleon momentum as large as $p_z > 4$~GeV.
+(roughly $x\simeq 1$) requires nucleon momentum as large as $p_z > 4$~GeV.
 
 The size of the nucleon momentum is currently limited by the decreasing 
 signal-to-noise ratio at large momenta, which requires very high statistics 
@@ -688,7 +697,7 @@ quasi-PDFs determined on the lattice are regulated by the inverse lattice
 spacing. 
 %
 In the continuum limit (for which $a\to 0$, with all physical quantities held 
-fixed) there is a divergence, associated to the length of the Wilson line $z$, 
+fixed) there is a divergence, associated with the length of the Wilson line $z$, 
 that scales as $z/a$. This divergence must be removed nonperturbatively.
 
 For a general nonlocal bilinear operator with Lorentz structure $\Gamma$, 
@@ -700,7 +709,7 @@ O_{\Gamma}^{\rm (ren)}(z,\mu)=e^{\delta m(\mu)|z|}Z_{\psi, z}(\mu,z)O^{(0)}_{\Ga
 \end{equation}
 where $\delta m$ is the mass renormalization of a test particle moving along 
 the Wilson line of length $z$ and $Z_{\psi, z}(\mu,z)$ removes the remaining 
-logarithmic divergences associated to the Wilson line endpoints 
+logarithmic divergences associated with the Wilson line endpoints 
 (the quark fields). 
 %
 This result holds to all orders in perturbation theory: the exponentiated 
@@ -762,8 +771,7 @@ quasi-PDF and the twist-3 scalar operator, which occurs for lattice
 regularization that break chiral symmetry, through the construction 
 of a $2\times2$ mixing matrix. 
 %
-The mixing coefficients do not contain any divergences and vanish in the 
-continuum limit. 
+The mixing coefficients do not contain any divergences. 
 %
 Further details can be found in Refs.~\cite{Alexandrou:2017huk,Chen:2017mzz}. 
 \end{itemize}
@@ -800,7 +808,7 @@ $O(\Lambda_\text{QCD}^2/p_z^2)$ contributions have been
 removed~\cite{Chen:2016utp}. 
 %
 Multiple source-sink separations are used to take into account the effects of 
-excited-state contamination, which becomes more important at large momentum. 
+excited-state contamination, which become more important at large momentum. 
 %
 Mixing under renormalization has been estimated to be a small effect but is not 
 yet computed explicitly. 
@@ -831,7 +839,7 @@ long-range correlations or by taking the derivative of the matrix element in
 coordinate space. 
 %
 The effectiveness of both these two methods is 
-demonstrated in~\cite{Lin:2017ani}. 
+demonstrated in~\cite{Alexandrou:2017dzj,Lin:2017ani}. 
 
 %-------------------------------------------------------------------------------
 \begin{figure}[!t]
