@@ -1,153 +1,147 @@
 \subsubsection{Analysis settings}
 \label{sec:projections:settings}
 
-The following projection studies, which quantify
-the impact of present and future lattice-QCD calculations
-of PDF moments, are based on the following specific choice
-of moments.
-%
-For the unpolarised case, we use
-\be
-  \la x\ra_{u^+}\, , \quad
-\la x\ra_{d^+}\, , \quad
-\la x\ra_{s^+}\, , \quad
-\la x\ra_{g}\, , \quad {\rm and} \quad
-\la x\ra_{u^+-d^+} \, ,
-\ee
-while for polarised PDFs, we include
-the following five moments:
-\be
-\la 1\ra_{\Delta u^+}\, , \quad
-\la 1\ra_{\Delta d^+}\, , \quad
-\la 1\ra_{\Delta s^+}\, , \quad
-\la x\ra_{\Delta u^--\Delta d^-}\, , \quad {\rm and} \quad
-\la 1\ra_{\Delta u^+ - \Delta d^+} \, .
-\ee
-Appendix~\ref{app:notation} contains the
-explicit definitions and conventions used for these moments.
-%
-That is, for the unpolarised case we include
-the first moments (momentum fractions) of $q^+$ (with $q=u,d,s$),
+In the unpolarized case,  we consider
+the first moments (momentum fractions) of $q^+=q+\bar{q}$ (with $q=u,d,s$),
 of the gluon, and of the isoscalar combination $u^+-d^+$.
 %
-In the polarised case, we include the zeroth moments (spin fractions) 
-of $\Delta q^+$ (with $q=u,d,s$)
-and of the isoscalar combination $g_A=\Delta u^+-\Delta d^+$, as well as
-the first moment of the $\Delta u^- - \Delta d^-$ combination.
-
-We consider three
-different scenarios, which we denote
-as Scenario A, B, and C, for the total systematic
-uncertainty that we associate with lattice-QCD calculations of PDF moments.
+In the polarized case, we consider the zeroth moments (spin fractions) 
+of $\Delta q^+$ (with $q=u,d,s$) and of the isoscalar combination 
+$g_A=\Delta u^+-\Delta d^+$, and the first moment of the 
+$\Delta u^- - \Delta d^-$ combination.
 %
-In Tab.~\ref{tab:scenarios} we summarise our choice of projected
-total uncertainty from lattice-QCD calculations, denoted by $\delta_L$, for each
-PDF moment.
-    %
-    We emphasise that, while trying to be reasonably
-    realistic, we do not associate a given scenario
-    within a specific time-scale for the calculation.
-    %
-    Our results provide a guide to the potential
-    constraining power of existing and future lattice QCD calculations
-    of PDF  moments in the context
-    of a global analysis.
-    
-    The motivation for our choice of the scenarios
-    in Tab.~\ref{tab:scenarios}
-    is rather different for the unpolarised and polarised cases.
-    %
-    For the unpolarised case, scenario A is based on values
-    of $\delta_L^{(i)}$ rather smaller than the typical
-    uncertainties that affect state-of-the-art lattice calculations, see Tab.~\ref{tab:BMunp}.
-    %
-    Scenarios B and C represent two optimistic scenarios for the
-    future improvement of these systematic uncertainties, where these are decreased
-    by roughly a factor of two and a factor of four with respect to scenario A.
-    
-    In contrast, for the polarised fits,
-    scenario A assumes that the uncertainties $\delta_L$
-    are similar to current uncertainties in
-    state-of-the-art lattice QCD calculations
-    selected for the benchmarking exercise of Sect.~\ref{sec:benchmarking},
-    and summarised in Tab.~\ref{tab:BMpol}.
-    %
-    We have verified that, for unpolarised PDFs,
-    including lattice-QCD pseudo-data with uncertainties of similar size as those of Tab.~\ref{tab:BMunp}
-    leaves the PDFs essentially unchanged, and it is only once the uncertainties
-    $\delta_L^{(i)}$ are significantly reduced that uncertainties from the global fit
-    are reduced.
-    %
-    The only connection with the uncertainties of the calculations in Tab.~\ref{tab:BMunp}
-    is that we assume that $\delta_L^{(i)}$ is typically larger for $\la x\ra_{s^+}$
-        and $\la x\ra_{u^+-d^+}$, compared to the other moments.
+Using the notation outlined in Appendix~\ref{app:notation}, we have
+\begin{align}
+\la x\ra_{u^+}\, , \
+\la x\ra_{d^+}\, , \
+\la x\ra_{s^+}\, , \
+\la x\ra_{g}\, ,  \
+\la x\ra_{u^+-d^+} & \qquad\text{for the unpolarized case} \, ,
+\label{eq:UM}\\
+\la 1\ra_{\Delta u^+}\, , \
+\la 1\ra_{\Delta d^+}\, , \
+\la 1\ra_{\Delta s^+}\, , \
+\la x\ra_{\Delta u^--\Delta d^-}\, ,\
+\la 1\ra_{\Delta u^+ - \Delta d^+} & \qquad\text{for the polarized case}\, .
+\label{eq:PM}
+\end{align}
 
-    We also note that
-    a total systematic error of $\delta_L^{(i)}\sim 1\%$
-    is probably the best that one can achieve
-    within a lattice-QCD calculation in the near future, since at that level several other
-    effects, such as QED corrections,
-    become relevant and these are much more difficult
-    to deal with.
-    %
-    For both
-    the polarised and
-    the unpolarised case,
-    we emphasise that the generalization of these projections to other conceivable scenarios
-    is straightforward and can be obtained from the authors upon request.
+We look at three different scenarios, which we denote
+as Scenario A, B, and C, for the projected total systematic
+uncertainty associated with lattice-QCD calculations.
+%
+Our choice for this uncertainty is denoted by $\delta_L^{(i)}$.
+%
+It is summarized in Table~\ref{tab:scenarios} for each PDF moment $i$ in 
+Eqs.~\eqref{eq:UM}-\eqref{eq:PM} and for each scenario.
+%
+Current uncertainties on lattice-QCD results 
+(see Sects.~\ref{subsubsec:BClQCD}-\ref{subsec:BN})
+are also quoted for comparison.
+%
+We emphasize that, while trying to be reasonably
+realistic, we do not associate a given scenario
+with a specific time scale for the calculation.
+%
+Our results provide a guide to the potential
+constraining power of future lattice-QCD calculations
+of PDF moments once included in global analyses. 
  
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{table}[t]
-  \centering
-  \renewcommand{\arraystretch}{1.3} 
-  \begin{tabular}{c||ccccc}
-    \hline
-    Scenario &  \multicolumn{5}{c}{$\delta_L^{(i)}$ for unpolarised moments}   \\
-&    $\la x\ra_{u^+}$  &   $\la x\ra_{d^+}$   &  $\la x\ra_{s^+}$  &
-$\la x\ra_{g}$  &   $\la x\ra_{u^+-d^+}$  \\
-    \hline
-    \hline
-    Current  & $\sim 16\%$  &  $\sim 30\%$ 
-    & $\sim 45\%$  & $\sim 13\%$  &  $\sim 60\%$ \\
-    A   & 3\%  & 3\% &  5\% &  3\% &  5\% \\
- B   & 2\%  & 2\% &  4\% &  2\% &  4\%  \\
-  C   & 1\%  & 1\% &  3\% &  1\% &  3\%  \\
-    \hline
-  \end{tabular}\vspace{0.7cm}
-   \begin{tabular}{c||ccccc}
-    \hline
-    Scenario   &
-    \multicolumn{5}{c}{$\delta_L^{(i)}$ for polarised moments} \\ 
-& $\la 1\ra_{\Delta u^+}$  & $\la 1\ra_{\Delta d^+}$  & $\la 1\ra_{\Delta s^+}$
-&  $\la x\ra_{\Delta u^--\Delta d^-}$  &  $\la 1\ra_{\Delta u^+ - \Delta d^+}$\\
-    \hline
-    \hline
-    Current  &
-    $\sim 3\%$  & $\sim 5\%$ & $\sim 70\%$ & $\sim 65\%$ & $\sim 3\%$ \\
-    \hline
-    A   & 
-    5\% &    10\%  &   100\% &    70\%  &    5\% \\
- B   &
- 3\% &    5\%  &   50\% &    30\%  &    3\% \\
-  C   & 1\% &    2\%  &   20\% &    15\%  &    1\% \\
-    \hline
-  \end{tabular}
-   \caption{\small The three scenarios assumed here
-     for the total percentage
-     systematic uncertainty
-    in future lattice QCD calculation $\delta_L$ for each
-    of the unpolarised (upper) and polarised (lower table) PDF
-    moments that are included
-    in this projection analysis.
-    %
-    In addition, the first line indicates the current systematic
-    uncertainties of the state-of-the-art lattice QCD calculations
-    selected for the benchmarking exercise of Sect.~\ref{sec:benchmarking},
-    and summarised in Tables~\ref{tab:BMunp} and~\ref{tab:BMpol}
-    for the unpolarised and polarised cases, respectively.
-    %
-    See text for more details.
+%-------------------------------------------------------------------------------
+\begin{table}[!t]
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{1.3} 
+\begin{tabular}{cccccc}
+\toprule
+Scenario &  \multicolumn{5}{c}{$\delta_L^{(i)}$ for unpolarized moments} \\
+& $\la x\ra_{u^+}$ 
+& $\la x\ra_{d^+}$ 
+& $\la x\ra_{s^+}$  
+& $\la x\ra_{g}$  
+&   $\la x\ra_{u^+-d^+}$  \\
+\midrule
+Current  
+& $\sim 16\%$  
+& $\sim 30\%$ 
+& $\sim 45\%$  
+& $\sim 13\%$  
+& $\sim 60\%$ \\
+A   & 3\%  & 3\% &  5\% &  3\% &  5\% \\
+B   & 2\%  & 2\% &  4\% &  2\% &  4\%  \\
+C   & 1\%  & 1\% &  3\% &  1\% &  3\%  \\
+\bottomrule
+\\
+\toprule
+Scenario & \multicolumn{5}{c}{$\delta_L^{(i)}$ for polarized moments} \\ 
+& $\la 1\ra_{\Delta u^+}$  
+& $\la 1\ra_{\Delta d^+}$  
+& $\la 1\ra_{\Delta s^+}$
+& $\la x\ra_{\Delta u^--\Delta d^-}$  
+& $\la 1\ra_{\Delta u^+ - \Delta d^+}$\\
+\midrule
+Current  
+& $\sim 3\%$  
+& $\sim 5\%$ 
+& $\sim 70\%$ 
+& $\sim 65\%$ 
+& $\sim 3\%$ \\
+A   & 5\% & 10\%  & 100\% & 70\%  & 5\% \\
+B   & 3\% &  5\%  &  50\% & 30\%  & 3\% \\
+C   & 1\% &  2\%  &  20\% & 15\%  & 1\% \\
+\bottomrule
+\end{tabular}
+\caption{\small The three scenarios assumed for the total percentage
+systematic uncertainty $\delta_L^{(i)}$ in future lattice-QCD calculations.
+%
+The unpolarized (upper table) and polarized (lower table) PDF moments
+included in the analysis are shown.
+%
+Current systematic uncertainties in state-of-the-art lattice-QCD calculations
+are also displayed according to the benchmark exercise performed in
+Sect.~\ref{sec:benchmarking} (see also Tables~\ref{tab:BMunp} 
+and~\ref{tab:BMpol} for the unpolarized and polarized cases, respectively).
 \label{tab:scenarios}
-  }
+}
 \end{table}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-------------------------------------------------------------------------------
+
+   
+Our choice of uncertainties in Tab.~\ref{tab:scenarios}
+is rather different for the unpolarized and polarized cases.
+%
+For the unpolarized case, scenario A is based on values
+of $\delta_L^{(i)}$ rather smaller than the typical uncertainties that affect 
+state-of-the-art lattice-QCD calculations, see Table~\ref{tab:BMunp}.
+%
+As expected from Fig.~\ref{fig:Bmomsunp}, and as we have explicitly verified,
+including lattice-QCD pseudo-data with uncertainties of similar size as those 
+of Table~\ref{tab:BMunp} leaves unpolarized PDFs essentially unchanged.
+%
+Significantly reduced uncertainties $\delta_L^{(i)}$ must be assumed to 
+demonstrate any impact on global fits.
+%
+We assume that $\delta_L^{(i)}$ is typically larger for $\la x\ra_{s^+}$
+and $\la x\ra_{u^+-d^+}$, compared to the other moments, in line with 
+what is observed from Table~\ref{tab:BMunp}.
+%
+Scenarios B and C are rather optimistic, in that they require systematic 
+uncertainties to decrease by roughly a factor of two and a factor of four 
+with respect to scenario A.
+%    
+For the polarized case, scenario A assumes that the uncertainties 
+$\delta_L^{(i)}$ are similar to current uncertainties in
+state-of-the-art lattice-QCD calculations, see Sect.~\ref{sec:benchmarking},
+and Table~\ref{tab:BMpol}.
+
+We note that a total systematic error of $\delta_L^{(i)}\sim 1\%$
+is probably the best that one can achieve within a lattice-QCD calculation 
+in the near future, since at that level several other effects, such as QED 
+corrections, become relevant. These are much more difficult to deal with.
+%
+For both the polarized and the unpolarized case, the generalization of these 
+projections to other conceivable scenarios
+is straightforward and can be obtained from the authors upon request.
+ 
+
+
