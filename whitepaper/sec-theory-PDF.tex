@@ -125,10 +125,7 @@ scheme~\cite{tHooft:1973mfk,Weinberg:1951ss}.
 When PDFs are convolved with the appropriate partonic hard-scattering 
 cross-sections, computed in the same scheme, the corresponding physical 
 observables are scheme-independent, up to subleading spurious 
-terms\footnote{Such spurious terms appear if one convolves, for example, 
- NLO PDFs with NLO Wilson coefficients directly in $x$-space which includes 
- incomplete (spurious) terms which would contribute at NNLO.} in the 
-perturbative expansion. 
+terms in the perturbative expansion. 
 
 Both unpolarized and polarized PDFs are accessible, theoretically and 
 experimentally, through the forward Compton scattering amplitude
@@ -194,13 +191,13 @@ part of $T_{\mu\nu}$ is equal to $W_{\mu\nu}$ times $4\pi$.
 %
 Therefore:
 \begin{align}
-\Im\mathcal{F}_1(\omega, Q^2) = 2\pi F_1(\omega,Q^2)
+{\rm Im}\mathcal{F}_1(\omega, Q^2) = 2\pi F_1(\omega,Q^2)
 \qquad \qquad &
-\Im\mathcal{G}_1(\omega, Q^2) = 2\pi g_1(\omega,Q^2)
+{\rm Im}\mathcal{G}_1(\omega, Q^2) = 2\pi g_1(\omega,Q^2)
 \\
-\Im\mathcal{F}_2(\omega, Q^2) = 2\pi F_2(\omega,Q^2)
+{\rm Im}\mathcal{F}_2(\omega, Q^2) = 2\pi F_2(\omega,Q^2)
 \qquad \qquad &
-\Im\mathcal{G}_2(\omega, Q^2) = 2\pi g_2(\omega,Q^2)\, ,
+{\rm Im}\mathcal{G}_2(\omega, Q^2) = 2\pi g_2(\omega,Q^2)\, ,
 \end{align}
 where $\mathcal{F}_1$, $\mathcal{F}_2$, $\mathcal{G}_1$ and $\mathcal{G}_2$
 are discontinuous across the cuts $1\leq |\omega| \leq \infty$.
@@ -225,12 +222,12 @@ F_1(x,Q^2)
 & x\sum_f \int_x^1 \frac{{\rm d}z}{z}\,C_{1,f}\left(\frac{x}{z},\alpha_s(Q^2)\right)f(z,Q^2) \,, \label{eq:Fi}\\
 g_1(x,Q^2) 
 = {} 
-& \sum_f \int_x^1\frac{dy}{y}\, \Delta C_{1,f}\left(\frac{x}{z},\alpha_s(Q^2)\right) \Delta f(z,Q^2) \,.
+& \sum_f \int_x^1\frac{dz}{z}\, \Delta C_{1,f}\left(\frac{x}{z},\alpha_s(Q^2)\right) \Delta f(z,Q^2) \,.
 \label{pdf}
 \end{align}
 %
 Here $x=Q^2/2p\cdot q$ is the Bjorken variable identified with the parton
-fractional momentum, the sums run over the number of active
+fractional momentum at Born level, the sums run over the number of active
 flavors at the scale $Q^2$ (including the gluon), $C_{1,f}$ and 
 $\Delta C_{1,f}$ are the perturbative partonic hard-scattering cross-sections,
 $\alpha_s$ is the QCD strong coupling, and $f(x,Q^2)$ and $\Delta f(x,Q^2)$ 
@@ -275,8 +272,8 @@ The polarized splitting functions $\Delta P_{f^\prime f}$ are currently known
 up to  NNLO~\cite{Moch:2014sna} in the $\overline{\rm MS}$ scheme.
 %
 The DGLAP evolution equations can be solved numerically using
-either $x$-space or Mellin $N$-space techniques widely available in various
-public codes~\cite{Vogt:2004ns,Salam:2008qg,Botje:2010ay,
+either $x$-space or Mellin $N$-space techniques that are widely available 
+in various public codes~\cite{Vogt:2004ns,Salam:2008qg,Botje:2010ay,
 Bertone:2013vaa,Bertone:2015cwa}.
 %
 The typical level of agreement for the results of the PDF evolution 
