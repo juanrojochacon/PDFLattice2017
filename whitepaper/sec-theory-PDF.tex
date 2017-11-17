@@ -174,36 +174,25 @@ W_{\mu\nu}(p,q,s)
 \nonumber
 \\
 = {} &
-\left(-g_{\mu\nu} +  \frac{q_\mu q_\nu}{q^2}\right) F_1(\omega,Q^2)
+\left(-g_{\mu\nu} +  \frac{q_\mu q_\nu}{q^2}\right) F_1(x,Q^2)
 +\left( p_\mu - \frac{p\cdot q}{q^2}q_\mu \right)
  \left(p_\nu - \frac{p\cdot q}{q^2}q_\nu \right) \frac{1}{p\cdot q}
-F_2(\omega, Q^2)
+F_2(x, Q^2)
 \nonumber
 \\
 & +i\,\epsilon_{\mu\nu\lambda\sigma}q^\lambda s^\sigma
-\frac{1}{p\cdot q} g_1(\omega,Q^2)
+\frac{1}{p\cdot q} g_1(x,Q^2)
 + i\,\epsilon_{\mu\nu\lambda\sigma}q^\lambda(p\cdot q\, s^\sigma - s\cdot q\, p^\sigma)
-\frac{1}{(p\cdot q)^2}g_2(\omega,Q^2)\,,
+\frac{1}{(p\cdot q)^2}g_2(x,Q^2)\,,
 \label{eq:hadtensor}
 \end{align}
+where $x=1/\omega$ is the Bjorken variable identified with the parton
+fractional momentum at Born level; 
 see~\cite{Anselmino:1992rn,Manohar:1992tz} for details.
 %
 Specifically, given the definitions in \eqref{eq:Comptampl} and 
 \eqref{eq:hadtensor}, the optical theorem implies that twice the imaginary 
 part of $T_{\mu\nu}$ is equal to $W_{\mu\nu}$ times $4\pi$.
-%
-Therefore:
-\begin{align}
-{\rm Im}\mathcal{F}_1(\omega, Q^2) = 2\pi F_1(\omega,Q^2)
-\qquad \qquad &
-{\rm Im}\mathcal{G}_1(\omega, Q^2) = 2\pi g_1(\omega,Q^2)
-\\
-{\rm Im}\mathcal{F}_2(\omega, Q^2) = 2\pi F_2(\omega,Q^2)
-\qquad \qquad &
-{\rm Im}\mathcal{G}_2(\omega, Q^2) = 2\pi g_2(\omega,Q^2)\, ,
-\end{align}
-where $\mathcal{F}_1$, $\mathcal{F}_2$, $\mathcal{G}_1$ and $\mathcal{G}_2$
-are discontinuous across the cuts $1\leq |\omega| \leq \infty$.
 %
 Neglecting target mass corrections, one has
 \begin{align}
@@ -229,12 +218,37 @@ g_1(x,Q^2)
 \label{pdf}
 \end{align}
 %
-Here $x=Q^2/2p\cdot q$ is the Bjorken variable identified with the parton
-fractional momentum at Born level, the sums run over the number of active
+Here, the sums run over the number of active
 flavors at the scale $Q^2$ (including the gluon), $C_{1,f}$ and 
 $\Delta C_{1,f}$ are the perturbative partonic hard-scattering cross-sections,
 $\alpha_s$ is the QCD strong coupling, and $f(x,Q^2)$ and $\Delta f(x,Q^2)$ 
 are the unpolarized and polarized PDFs.
+
+Parton distributions allow for a proper field-theoretic definition as matrix 
+elements in a hadron state of bilocal operators that act to count the number 
+of quarks and gluons carrying a fraction $x$ of the hadron's momentum.
+%
+The definitions are usually stated in the light-cone frame, where 
+the hadron carries momentum $p$ with plus/minus components
+$p^\pm=(p^0\pm p^3)/\sqrt{2}$, and transverse components equal to zero.
+%
+For example, in the case of unpolarized and polarized quark PDFs, one has
+\begin{align}
+q(x) & = \frac{1}{4\pi}
+\int dy^-e^{-iy^-xp^+}\langle p|\bar{\psi}(0,y^-,\mathbf{0}_\perp)
+\gamma^+\mathcal{G}\psi(0,0,\mathbf{0})|p\rangle\,,
+\label{eq:LCdefunp}\\
+\Delta q(x) & = \frac{1}{4\pi}
+\int dy^-e^{-iy^-xp^+}\langle p, s|\bar{\psi}(0,y^-,\mathbf{0}_\perp)
+\gamma^+\gamma^5\mathcal{G}\psi(0,0,\mathbf{0})|p, s\rangle\,,
+\label{eq:LCdefpol}
+\end{align}
+where $\psi$ is the quark field and $\mathcal{G}$ is an appropriate gauge link
+required to make Eqs.~\eqref{eq:LCdefunp}-\eqref{eq:LCdefpol} gauge invariant.
+%
+See Refs.~\cite{Collins:1981uw,Curci:1980uw,Baulieu:1979mr,Collins:1989gx} 
+for the definition of $\mathcal{G}$ and for
+explicit light-cone formul{\ae} of unpolarized an polarized gluon PDFs.
 
 While PDFs cannot be calculated perturbatively, their dependence on the scale 
 $\mu$ resulting from factorization can be.
