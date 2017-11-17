@@ -354,24 +354,79 @@ Given a PDF set in the Hessian representation, it is possible to construct
 the corresponding Monte Carlo representation~\cite{Watt:2012tq,Hou:2016sho}
 and vice-versa~\cite{Gao:2013bia,Carrazza:2015aoa}.
 
-There are additional sources of theoretical uncertainty that are not accounted 
-for, either in the Hessian or in the MC methods.
+So far, we discussed PDF uncertainties following from propagation of the
+uncertainty of the experimental data that underlie the PDF determination.
 %
-The first one is the parametric uncertainty due to finite uncertainties 
+Procedural uncertainties, associated with the methodology used to 
+determine PDFs from data, can also be accounted for in the MC or Hessian
+approaches, or reduced to a negligible size, as in the NNPDF approach.
+%
+There are however additional sources of uncertainty, mostly theoretical, 
+that are not accounted for, either in the Hessian or in the MC methods.
+%
+These are extensively discussed 
+in~\cite{Forte:2013wc,Butterworth:2015oua,Accardi:2016ndt,Gao:2017yyd} 
+and briefly summarized as follows.
+
+\begin{itemize}
+
+\item The uncertainty due to finite uncertainties 
 associated with the input values of the physical parameters used in the global 
-fit, such as $\alpha_s(m_Z)$ and the charm mass $m_c(m_c)$.
-%
-These additional uncertainties can be included by repeating the fits for 
-different values of the physical parameters and then suitably combining 
-the results.
-%
-The second source of theoretical uncertainty neglected in PDF fits
-is that due to the truncation of the perturbative expansion, known
-as missing higher-order uncertainty (MHOU).
+fit, such as $\alpha_s(m_Z)$ and the charm mass $m_c(m_c)$ is 
+evaluated by repeating the fits for different values of the physical 
+parameters and then suitably combining the results.
+
+\item The missing higher order uncertainty (MHOU), due to the truncation
+of the perturbative expasion, is usually inferred by comparing NLO to NNLO 
+unpolarized PDFs and LO to NLO polarized PDFs.
 %
 While this is expected to be small for NNLO fits, currently its size is unknown.
 
-%Extend here the discussion along the lines suggested by Alberto?
+\item The uncertainty due to different choices in the treatment of heavy quarks
+was studied in~\cite{Binoth:2010nha,Thorne:2012az}, for unpolarized PDFs, 
+by looking at their impact.
+%
+It was found that differences may not be entirely negligible at NLO in 
+the vicinity of the quark threshold, though they rapidly decrease at 
+NNLO~\cite{Binoth:2010nha}.
+
+\item Uncertainties associated with missing higher-twist (power-suppressed) 
+corrections (if they are not included in the factorized description of 
+fit observables) are kept under control by removing data, below some low cutoff 
+scale, that may be affected by them. 
+%
+Their impact can be studied by varying this cutoff~\cite{Martin:2003sk}, or
+by looking at the stability of the fit with and without inclusion of higher 
+twist terms~\cite{Sato:2016tuz,Accardi:2016qay,Alekhin:2017kpj}.
+
+\item Uncertainties associated with nuclear corrections, whenever they are
+not included, affect some DIS data in which targets are deuterons or heavier 
+nuclei, rather than just protons.
+%
+They have been studied by including such corrections according to various 
+models~\cite{Martin:2009iq,Ball:2009mk,Sato:2016tuz,Accardi:2016qay}, 
+or by attempting to fit the corrections 
+directly~\cite{Martin:2009iq,Martin:2012da}.
+
+\item Extrapolation uncertainties in the region not covered 
+by experimental data are particularly delicate as far as full moments of PDFs
+are concerned.
+%
+They are difficult to quantify, especially in the polarized case at small $x$
+due to the lack of data.
+
+\end{itemize}
+%
+At present, the only way of dealing with such uncertainties is to make sure 
+that they are small enough (in comparison to the data uncertainty)
+in each PDF set.
+%
+Therefore, in the remainder of this paper, 
+we will assume that they can be neglected.
+%
+We will point out to the reader how global-fit results can be affected 
+by underestimation of these uncertainties in 
+Sects.~\ref{subsubsec:GPDFfits}-\ref{subsec:BN}.
 
 \subsubsection{Unpolarized PDFs}
 \label{sec:unpPDFs}
