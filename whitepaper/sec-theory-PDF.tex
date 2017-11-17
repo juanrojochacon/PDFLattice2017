@@ -37,12 +37,15 @@ and helicity-dependent (polarized, henceforth) PDFs.
 
 Unpolarized PDFs are denoted as 
 \begin{equation}
-f(x,\mu^2)\mbox{,} \ \ f=\{g,u,\bar{u},d,\bar{d},s,\bar{s},...\}
+f(x,\mu^2)\equiv f^{\rightarrow}(x,\mu^2) + f^{\leftarrow}(x,\mu^2)\mbox{,}\qquad 
+f=\{g,u,\bar{u},d,\bar{d},s,\bar{s},...\}
 \,\mbox{,}
 \label{eq:unpPDFs}
 \end{equation}
 where $x$ is the fraction
-of the hadron longitudinal momentum carried by the parton.
+of the hadron longitudinal momentum carried by the parton,
+and the sum over parton's helicities aligned along ($\rightarrow$) and 
+opposite ($\leftarrow$) the parent's nucleon helicity is made explicit.
 %
 An additional index could be used to denote the hadronic species (proton,
 neutron, pion, \dots).
@@ -79,15 +82,15 @@ direction of a fast moving nucleon in a helicity eigenstate.
 %
 They are denoted as 
 \begin{equation}
-\Delta f(x,\mu^2) \equiv f^{\uparrow}(x,\mu^2) - f^{\downarrow}(x,\mu^2)
-\mbox{,} \ \ f=\{g,u,\bar{u},d,\bar{d},s,\bar{s},...\}
+\Delta f(x,\mu^2) \equiv f^{\rightarrow}(x,\mu^2) - f^{\leftarrow}(x,\mu^2)
+\mbox{,}\qquad f=\{g,u,\bar{u},d,\bar{d},s,\bar{s},...\}
 \,\mbox{,}
 \label{eq:polPDFs}
 \end{equation}
-where $x$ is the fractional 
-momentum carried by the parton, as in Eq.~\eqref{eq:unpPDFs},  
-and the parton's spin alignement along ($\uparrow$) or opposite 
-($\downarrow$) the polarization direction of its parent nucleon
+where, as in Eq.~\eqref{eq:unpPDFs}, $x$ is the fractional 
+momentum carried by the parton,
+and the parton's spin alignement along ($\rightarrow$) or opposite 
+($\leftarrow$) the polarization direction of its parent nucleon
 is made explicit.
 
 Much of the interest in polarized PDFs is related to the fact that 
@@ -102,10 +105,10 @@ Specifically, the zeroth moments of the singlet and the gluon polarized PDFs,
 \begin{align}
 \Delta\Sigma(\mu^2)
 & =
-\sum_{q}^{n_f}\int_0^1 dx 
+\sum_{q}^{N_f}\int_0^1 dx 
 \left[\Delta q(x, \mu^2) + \Delta\bar{q}(x, \mu^2)\right]
 \equiv
-\sum_q^{n_f}\langle 1 \rangle_{\Delta q^+}(\mu^2)\,,
+\sum_q^{N_f}\langle 1 \rangle_{\Delta q^+}(\mu^2)\,,
 \label{eq:singletmom}
 \\
 \Delta G(\mu^2)
@@ -116,6 +119,7 @@ Specifically, the zeroth moments of the singlet and the gluon polarized PDFs,
 \,,
 \label{eq:moments}
 \end{align}
+where $N_f$ is the number of active flavors,
 directly contribute to the proton spin sum rule~\cite{Leader:2013jra}.
 
 Beyond LO, PDFs are renormalization scheme-dependent 
@@ -160,7 +164,9 @@ functions.
 %
 They can be related to the electromagnetic structure functions
 $F_1$, $F_2$, $g_1$ and $g_2$, used to parametrize the Deep-Inelastic 
-Scattering (DIS) hadronic tensor
+Scattering (DIS) hadronic tensor\footnote{A more
+ general expression of the DIS hadronic tensor including electroweak currents
+ can be worked out, see~\cite{Anselmino:1993tc,Anselmino:1992rn}.}
 \begin{align}
 W_{\mu\nu}(p,q,s)
 = {} &
@@ -177,13 +183,10 @@ F_2(\omega, Q^2)
 & +i\,\epsilon_{\mu\nu\lambda\sigma}q^\lambda s^\sigma
 \frac{1}{p\cdot q} g_1(\omega,Q^2)
 + i\,\epsilon_{\mu\nu\lambda\sigma}q^\lambda(p\cdot q\, s^\sigma - s\cdot q\, p^\sigma)
-\frac{1}{(p\cdot q)^2}g_2(\omega,Q^2),
+\frac{1}{(p\cdot q)^2}g_2(\omega,Q^2)\,,
 \label{eq:hadtensor}
 \end{align}
-where $J_\mu$ and $J_\nu$ denote the electromagnetic currents\footnote{A more
- general expression of the DIS hadronic tensor including electroweak currents
- can be worked out, see~\cite{Anselmino:1993tc,Anselmino:1992rn} for 
- details.}, see~\cite{Anselmino:1992rn,Manohar:1992tz} for details.
+see~\cite{Anselmino:1992rn,Manohar:1992tz} for details.
 %
 Specifically, given the definitions in \eqref{eq:Comptampl} and 
 \eqref{eq:hadtensor}, the optical theorem implies that twice the imaginary 
