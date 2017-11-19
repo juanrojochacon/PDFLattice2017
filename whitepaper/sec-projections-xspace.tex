@@ -17,32 +17,32 @@ diagrams and the absence of mixing with other quark flavors or with gluons.
 
 
 Following the same Bayesian reweighting procedure employed for PDF moments
-in Sect.~\ref{sec:projections:rw},
+in Sec.~\ref{sec:projections:rw},
 we have generated pseudo-data for the isotriplet
 combinations
 \be
 \label{eq:isotriplet_unpol}
-u(x_i,Q^2)-d(x_i,Q^2) \, \quad{\rm and} \, \quad
+u(x_i,Q^2)-d(x_i,Q^2) \, \quad\text{and} \, \quad
 \bar{u}(x_i,Q^2)-\bar{d}(x_i,Q^2) \, , \quad i=1,\ldots,N_x \, ,
 \ee
 for the unpolarized case, and for
 \be
 \label{eq:isotriplet_pol}
-\Delta u(x_i,Q^2)-\Delta d(x_i,Q^2) \, \quad{\rm and} \, \quad
+\Delta u(x_i,Q^2)-\Delta d(x_i,Q^2) \, \quad\text{and} \, \quad
 \Delta\bar{u}(x_i,Q^2)-\Delta\bar{d}(x_i,Q^2) \, , \quad i=1,\ldots,N_x \, ,
 \ee
 for the polarized case, with $N_x$ being the number of points
 in $x$-space that are being sampled.
 %
-We take $Q^2=4$ GeV$^2$, consistent with our choices for the exercise 
-performed in Sects.~\ref{sec:projections:rw}-\ref{sec:hessianprofiling}.
+We take $Q^2=4\text{ GeV}^2$, consistent with our choices for the exercise 
+performed in Secs.~\ref{sec:projections:rw}--\ref{sec:hessianprofiling}.
 
-We consider three scenarios, denoted by scenario D, E, and F,
+We consider three scenarios, denoted by Scenario~D, E, and F,
 for the total uncertainty $\delta_L^{(i)}$
 that will be assigned to
 the lattice-QCD calculations of the specific quark
-combinations listed in Eqs.~(\ref{eq:isotriplet_unpol})
-and~(\ref{eq:isotriplet_pol}).
+combinations listed in Eqs.~\eqref{eq:isotriplet_unpol}
+and \eqref{eq:isotriplet_pol}.
 %
 Lattice-QCD computations are expected to have the smallest systematic 
 uncertainties at large $x$, so we choose the $N_x=5$ points to be
@@ -59,11 +59,11 @@ D, E, and F, respectively.
 %
 Note that we assume the same values of $\delta_{L}^{(i)}$ for the polarized
 and unpolarized cases, as well as for both the quark
-and the antiquark isotriplet combinations Eqs.~(\ref{eq:isotriplet_unpol})
-and~(\ref{eq:isotriplet_pol}).
+and the antiquark isotriplet combinations Eqs.~\eqref{eq:isotriplet_unpol}
+and \eqref{eq:isotriplet_pol}.
 
 We summarize the results of this exercise in Fig.~\ref{fig:impactxspace}, 
-where we plot the ratio of the PDF uncertainties in each scenario A, B and C 
+where we plot the ratio of the PDF uncertainties in each Scenario~A, B and C 
 (D, E and F) to the uncertainty of the original
 NNPDF3.1 (NNPDFpol1.1) set.
 %
@@ -82,7 +82,7 @@ unpolarized and polarized antiquarks in the large-$x$ region.
 %
 Taking into account that the PDF uncertainties on the large-$x$
 antiquarks are rather large, and that they
-enter a number of important Beyond Standard Model (BSM) search channels
+enter a number of important beyond-the-Standard Model (BSM) search channels
 (such as for instance for production of new heavy gauge bosons $W'$ and $Z'$),
 our analysis demonstrates that such calculations would have direct
 phenomenological implications.
@@ -132,22 +132,22 @@ For the polarized PDFs, Fig.~\ref{fig:impactxspace} demonstrates that the
 reduction in PDF uncertainties could be significantly more marked.
 %
 For instance, in the case of $\Delta \bar{d}$, at $x\simeq 0.8$
-the resulting PDF uncertainty from scenario F is less than 50\%
+the resulting PDF uncertainty from Scenario~F is less than 50\%
 of the original uncertainty.
 
 In Table~\ref{tab:neffxspace} we indicate the effective number of replicas
-$N_{\rm eff}$, Eq.~(\ref{eq:effnrep}), remaining when
-the lattice-QCD pseudo-data for Eqns.~(\ref{eq:isotriplet_unpol})
-and~(\ref{eq:isotriplet_pol}) are included in the global
+$N_\text{eff}$, Eq.~\eqref{eq:effnrep}, remaining when
+the lattice-QCD pseudo-data for Eqns.~\eqref{eq:isotriplet_unpol}
+and~\eqref{eq:isotriplet_pol} are included in the global
 unpolarized and polarized fits.
 %
-Here we find a marked decrease in $N_{\rm rep}$
+Here we find a marked decrease in $N_\text{rep}$
 for the three scenarios,
 in particular for the unpolarized case.
 %
-For example, in the most optimistic scenario F, only
+For example, in the most optimistic Scenario~F, only
 64 effective replicas remain out of the
-original sample of $N_{\rm rep}=1000$ replicas.
+original sample of $N_\text{rep}=1000$ replicas.
 %
 See Table~\ref{tab:neff} for the corresponding
 information at the level of PDF moments.
@@ -161,17 +161,17 @@ information at the level of PDF moments.
 \toprule
 &  NNPDF3.1  &  NNPDFpol1.1 \\
 \midrule
-$N_{\rm rep}$ original   & 1000 & 100 \\
-$N_{\rm eff}$ Scenario D &  376 &  41 \\
-$N_{\rm eff}$ Scenario E &  173 &  35 \\
-$N_{\rm eff}$ Scenario F &  64  &  22 \\
+$N_\text{rep}$ original   & 1000 & 100 \\
+$N_\text{eff}$ Scenario D &  376 &  41 \\
+$N_\text{eff}$ Scenario E &  173 &  35 \\
+$N_\text{eff}$ Scenario F &  64  &  22 \\
 \bottomrule
 \end{tabular}
 \caption{\small The effective number of replicas
-  $N_{\rm eff}$, Eq.~(\ref{eq:effnrep}), remaining when the pseudo-data
+  $N_\text{eff}$, Eq.~\eqref{eq:effnrep}, remaining when the pseudo-data
   on the lattice-QCD calculations
-  of Eqns.~(\ref{eq:isotriplet_unpol})
-  and~(\ref{eq:isotriplet_pol}) 
+  of Eqns.~\eqref{eq:isotriplet_unpol}
+  and~\eqref{eq:isotriplet_pol} 
   are included in the global
   unpolarized and polarized fits. 
   \label{tab:neffxspace}
@@ -190,7 +190,7 @@ of the associated uncertainties $\delta_L^{(i)}$.
 %
 The quantitative results depend on the choice of input PDF set and would 
 vary if, for example, the input set were the HERAPDF2.0 set used for the 
-Hessian profiling exercise of Sect.~\ref{sec:hessianprofiling}.
+Hessian profiling exercise of Sec.~\ref{sec:hessianprofiling}.
 %
 Even with these caveats, our analysis makes clear that a direct
 computation of the isotriplet combination $x u-x d$ on the lattice

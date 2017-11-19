@@ -198,7 +198,7 @@ power, and diverge in the continuum limit.
 This power-divergent mixing
 must be removed nonperturbatively, and is a particular challenge for
 lattice calculations of the Mellin moments of PDFs (see
-Sect.~\ref{Sec:MomentsLQCD}).
+Sec.~\ref{Sec:MomentsLQCD}).
 
 %Finally, it is worth noting that factorization, the key assumption of
 %the operator product expansion (OPE), demands that the nonperturbatively 
@@ -232,8 +232,8 @@ flow~\cite{Luscher:2010iy}.
 These scales can be computed cheaply and can be used to 
 match scales between different gauge ensembles very accurately.  
 %
-However, a hadron mass or a decay constant -- which are known accurately 
-from experiment and can be computed precisely in lattice-QCD -- 
+However, a hadron mass or a decay constant --- which are known accurately 
+from experiment and can be computed precisely in lattice-QCD --- 
 have to be used for absolute scale setting. 
 %
 A popular hadronic mass for this purpose is the mass of the triply strange 
@@ -251,7 +251,7 @@ calculations of various quantities, the degree to which each
 systematic has been controlled in a given calculation is an important
 consideration.
 %
-In Sect.~\ref{subsubsec:BClQCD}, we characterize the
+In Sec.~\ref{subsubsec:BClQCD}, we characterize the
 quality of the lattice calculations, based on criteria inspired by the
 FLAG analysis of flavor physics on the lattice~\cite{Aoki:2016frl}.
 
@@ -281,7 +281,7 @@ of PDFs.
 Here we briefly review the determination of Mellin moments of PDFs from lattice 
 QCD. 
 
-Using the Operator Product Expansion (OPE)~\cite{Zimmermann:1972tv}, the Mellin 
+Using the operator product expansion (OPE)~\cite{Zimmermann:1972tv}, the Mellin 
 moments of the structure functions and the corresponding PDFs can be expressed, 
 up to higher-twist effects, in terms of matrix elements of local operators:
 \begin{align}
@@ -355,7 +355,7 @@ ${\cal O}(1\mbox{ GeV}^2/Q^2)$~\cite{Blumlein:2008kz}.
 %
 For lattice QCD, typically $Q^2 \simeq 1/a^2$, and at present lattice spacings 
 this corresponds to $Q^2 = {\cal O}(10\mbox{ GeV}^2)$ or a higher-twist 
-contribution of $5 - 10\, \%$. 
+contribution of 5--$10\%$. 
 %
 With contributions of higher-twist included, the OPE for $F_1$ reads
 \begin{equation}
@@ -378,7 +378,7 @@ to the power corrections themselves.
 %
 Power corrections can be assessed most efficiently, and the twist expansion 
 tested, by a direct lattice-QCD evaluation of the Compton amplitude, which we 
-discuss in Sect.~\ref{Sec:InversionMethod}.
+discuss in Sec.~\ref{Sec:InversionMethod}.
 
 \paragraph*{Beyond the first three moments.}
 %
@@ -399,7 +399,7 @@ at shorter distances.
 A simple way to incorporate an intrinsic {\it smearing} scale for an operator 
 is to sum over bilinears of quark fields that are displaced over many lattice 
 sites in a small (compared to the scale $1/\mu$) region of Euclidean space-time 
-(an alternative approach appears in~\cite{Monahan:2015lha}).
+(an alternative approach appears in Ref.~\cite{Monahan:2015lha}).
 
 To ensure that the correct $SO(4)$ transformation properties of the matrix 
 elements are recovered in the continuum limit, one must project the sum using 
@@ -474,12 +474,12 @@ improving the uncertainties associated with disconnected diagrams determined
 using lattice-QCD.
 %
 The extended evolution equations to accommodate both the connected sea 
-(CS) and disconnected sea (DS) partons are derived in~\cite{Liu:2017lpe}.
+(CS) and disconnected sea (DS) partons are derived in Ref.~\cite{Liu:2017lpe}.
 
 \paragraph*{The inversion method.} 
 \label{Sec:InversionMethod}
 
-The Compton amplitude $T_{\mu\nu}(p.q)$, Eq.~(\ref{eq:Compton}), can be
+The Compton amplitude $T_{\mu\nu}(p,q)$, Eq.~\eqref{eq:Compton}, can be
 directly obtained in lattice QCD, including disconnected contributions,  
 by a simple extension~\cite{Chambers:2017dov} of existing implementations of 
 the Feynman-Hellmann technique to lattice QCD~\cite{Horsley:2012pz,
@@ -502,7 +502,7 @@ perturbation to the QCD Lagrangian is introduced, for example,
 \quad 
 \mathcal{J}_3(x)
 =
-Z_V\cos(\vec{q}\vec{x})\; 
+Z_V\cos(\vec{q} \cdot \vec{x})\; 
 e_q \,\bar{q}(x)\gamma_3 q(x) 
 \label{in}
 \end{equation}
@@ -516,7 +516,7 @@ Taking the second derivative of the nucleon two-point function
 \begin{equation}
 \langle N(\vec{p},t) \bar{N}(\vec{p},0)\rangle_\lambda 
 \simeq 
-C_\lambda\, {\rm e}^{-E_\lambda(p,q)\,t}
+C_\lambda\, e^{-E_\lambda(p,q)\,t}
 \end{equation}
 with respect to $\lambda$ on both sides, gives
 \begin{equation}
@@ -538,7 +538,7 @@ different currents with $\mu\neq \nu$.
 %
 The idea is then to solve Eq.~\eqref{ff} for $F_1(x,Q^2)$ numerically.
 %
-In~\cite{Ji:2001wha,Chambers:2017dov} it was shown that the unpolarized 
+In Refs.~\cite{Ji:2001wha,Chambers:2017dov} it was shown that the unpolarized 
 structure function $F_1(x,Q^2)$ can be computed from a lattice calculation 
 of the Compton amplitude, devoid of any renormalization and mixing issues. 
 %Furthermore, by extending the calculation to values $\omega > 1$ 
@@ -579,7 +579,7 @@ Because $p$ is finite, the momentum fraction $x$ can be larger than unity.
 The quasi-PDF is defined for nucleon states at finite momentum and must be 
 related to the corresponding light-front PDF\footnote{In this context the term 
  light-front PDF is used to distinguish ordinary PDFs, 
- Eqs.~\eqref{eq:unpPDFs}-\eqref{eq:polPDFs} from quasi-PDFs, 
+ Eqs.~\eqref{eq:unpPDFs}--\eqref{eq:polPDFs} from quasi-PDFs, 
  Eq.~\eqref{eq:qPDF}.}, 
 for which the nucleon momentum is taken to infinity.
 %
@@ -617,7 +617,7 @@ lattice QCD that incorporates complete control over systematic uncertainties.
 %
 Lattice calculations of quasi-PDFs are subject to the same sources of 
 systematic uncertainty that affect all lattice calculations, see 
-Sect.~\ref{Sec:IntroLQCD}. 
+Sec.~\ref{Sec:IntroLQCD}. 
 %
 Here we focus on systematic uncertainties that are more specific to quasi-PDFs.
 %
@@ -820,7 +820,7 @@ The polarized PDF has the advantage that is free from mixing, and is computed in
 Ref.~\cite{Alexandrou:2017huk}  with fully renormalized matrix element, 
 at a pion mass of 375 MeV. 
 %
-The matching to $\overline{\rm MS}$ at $\mu^2=4$ GeV$^2$ does not include any 
+The matching to $\overline{\rm MS}$ at $\mu^2=4$~GeV$^2$ does not include any 
 linearly divergent term, as the matrix element in 
 coordinate space is renormalized.
 % 
@@ -839,7 +839,7 @@ long-range correlations or by taking the derivative of the matrix element in
 coordinate space. 
 %
 The effectiveness of both these two methods is 
-demonstrated in~\cite{Alexandrou:2017dzj,Lin:2017ani}. 
+demonstrated in Refs.~\cite{Alexandrou:2017dzj,Lin:2017ani}. 
 
 %-------------------------------------------------------------------------------
 \begin{figure}[!t]
@@ -854,9 +854,9 @@ demonstrated in~\cite{Alexandrou:2017dzj,Lin:2017ani}.
   %
   ETMC's renormalized polarized isovector quark (bottom left) and antiquark
   (bottom right) PDF combinations at pion mass of 
-  375 MeV~\cite{Alexandrou:2017huk}.
+  375~MeV~\cite{Alexandrou:2017huk}.
   %
-  Note that only statistical errors are shown here; the systematics are yet to be addressed. The small-x region (x< 0.2) can suffer larger systematics than the rest of the distribution due to the limited nucleon boost momentum.
+  Note that only statistical errors are shown here; the systematics are yet to be addressed. The small-$x$ region ($x< 0.2$) can suffer larger systematics than the rest of the distribution due to the limited nucleon boost momentum.
   } 
 \label{fig:qPDF-demo}
 \end{figure}
@@ -882,11 +882,11 @@ The pseudo-PDF is then defined by the Fourier transform
 which has support only in the physical range 
 $x=[-1,1]$ \cite{Radyushkin:2016hsy,Radyushkin:2017cyf}. 
 %
-As discussed in~\cite{Radyushkin:2016hsy,Radyushkin:2017cyf}, the pseudo-PDF 
+As discussed in Refs.~\cite{Radyushkin:2016hsy,Radyushkin:2017cyf}, the pseudo-PDF 
 is directly related to both the PDFs and the 
-Transverse-Momentum-Dependent PDFs (TMDs).
+transverse-momentum--dependent PDFs (TMDs).
 %
-In~\cite{Radyushkin:2017cyf}, using the temporal gamma matrix in the matrix 
+In Ref.~\cite{Radyushkin:2017cyf}, using the temporal gamma matrix in the matrix 
 element, a possible factorization of the TMD and PDF was conjectured which 
 implies that the ratio
 %
@@ -914,9 +914,9 @@ the factorization conjecture, while the PDF ${q}(x,1/z^2)$ is the PDF in a
 particular scheme defined at scale $1/z^2$. Matching to $\overline{\rm MS}$ 
 can be performed in perturbation theory following standard methodology. 
 %
-One loop results can be found in~\cite{Ji:2017rah,Radyushkin:2017lvu}.
+One loop results can be found in Refs.~\cite{Ji:2017rah,Radyushkin:2017lvu}.
 %
-A preliminary study was presented in~\cite{Orginos:2017kos,Karpie:2017bzm}, 
+A preliminary study was presented in Refs.~\cite{Orginos:2017kos,Karpie:2017bzm}, 
 where it was shown that indeed the conjectured factorization is observed and 
 the residual corrections are small. 
 %
