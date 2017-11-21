@@ -1,0 +1,369 @@
+%stylefile for "Progress in Particle and Nuclear Physics" from 20. March 2003
+\documentclass[twoside,12pt]{article}
+\usepackage[utf8]{inputenc} 
+\usepackage{morefloats}
+\usepackage{lineno}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{threeparttable}
+\usepackage{afterpage}
+\usepackage{cite}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{dsfont}
+\usepackage{multirow}
+\usepackage{url}
+\usepackage{color}
+\usepackage{verbatim}
+\usepackage{rotating}
+\usepackage{subfig}
+\usepackage{colortbl}
+\usepackage[]{xcolor}
+\usepackage{siunitx} % For correctly displayed SI units.
+\sisetup{range-phrase = \text{--}} % For correctly displayed number ranges
+\usepackage{url}
+\usepackage[colorlinks, citecolor=blue,anchorcolor=blue,menucolor=blue, 
+linkcolor=blue,filecolor=blue,runcolor=blue,urlcolor=blue,frenchlinks=blue]{hyperref}
+
+\def\Journal#1#2#3#4{{#1} {#2} (#4) #3 }
+\def\NCA{{\em Nuovo Cimento} A}
+\def\PHYS{{\em Physica}}
+\def\NPA{{\em Nucl. Phys.} A}
+\def\MATH{{\em J. Math. Phys.}}
+\def\PRO{{\em Prog. Theor. Phys.}}
+\def\NPB{{\em Nucl. Phys.} B}
+\def\PLA{{\em Phys. Lett.} A}
+\def\PLB{{\em Phys. Lett.} B}
+\def\PLD{{\em Phys. Lett.} D}
+\def\PL{{\em Phys. Lett.}}
+\def\PRL{\em Phys. Rev. Lett.}
+\def\PREV{\em Phys. Rev.}
+\def\PREP{\em Phys. Rep.}
+\def\PRA{{\em Phys. Rev.} A}
+\def\PRD{{\em Phys. Rev.} D}
+\def\PRC{{\em Phys. Rev.} C}
+\def\PRB{{\em Phys. Rev.} B}
+\def\ZPC{{\em Z. Phys.} C}
+\def\ZPA{{\em Z. Phys.} A}
+\def\ANNP{\em Ann. Phys. (N.Y.)}
+\def\RMP{{\em Rev. Mod. Phys.}}
+\def\CHEM{{\em J. Chem. Phys.}}
+\def\INT{{\em Int. J. Mod. Phys.} E}
+\def\r{\vec r}
+\def\R{\vec R}
+\def\p{\vec p}
+\def\P{\vec P}
+\def\q{\vec q}
+\def\ss{\mbox{\boldmath $\sigma$}}
+\newcommand{\nn}{\nonumber}
+\topmargin-2.8cm
+\oddsidemargin-1cm
+\evensidemargin-1cm
+\textwidth18.5cm
+\textheight25.0cm
+
+\bibliographystyle{JHEP}
+
+\def\smallfrac#1#2{\hbox{$\frac{#1}{#2}$}}
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+\newcommand{\ben}{\begin{enumerate}}
+\newcommand{\een}{\end{enumerate}}
+\newcommand{\la}{\left\langle}
+\newcommand{\ra}{\right\rangle}
+\newcommand{\lc}{\left[}
+\newcommand{\rc}{\right]}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\as}{\alpha_s}
+\newcommand{\aq}{\alpha_s\left( Q^2 \right)}
+\newcommand{\amz}{\alpha_s\left( M_Z^2 \right)}
+\newcommand{\aqq}{\alpha_s \left( Q^2_0 \right)}
+\newcommand{\aqz}{\alpha_s \left( Q^2_0 \right)}
+\def\toinf#1{\mathrel{\mathop{\sim}\limits_{\scriptscriptstyle
+{#1\rightarrow\infty }}}}
+\def\tozero#1{\mathrel{\mathop{\sim}\limits_{\scriptscriptstyle
+{#1\rightarrow0 }}}}
+\def\toone#1{\mathrel{\mathop{\sim}\limits_{\scriptscriptstyle
+{#1\rightarrow1 }}}}
+\def\frac#1#2{{{#1}\over {#2}}}
+\def\gsim{\mathrel{\rlap{\lower4pt\hbox{\hskip1pt$\sim$}}
+    \raise1pt\hbox{$>$}}}         %greater than or approx. symbol
+\def\lsim{\mathrel{\rlap{\lower4pt\hbox{\hskip1pt$\sim$}}
+    \raise1pt\hbox{$<$}}}         %less than or approx. symbol
+\newcommand{\mrexp}{\mathrm{exp}}
+\newcommand{\dat}{\mathrm{dat}}
+\newcommand{\one}{\mathrm{(1)}}
+\newcommand{\two}{\mathrm{(2)}}
+\newcommand{\art}{\mathrm{art}} 
+\newcommand{\rep}{\mathrm{rep}}
+\newcommand{\net}{\mathrm{net}}
+\newcommand{\stopp}{\mathrm{stop}}
+\newcommand{\sys}{\mathrm{sys}}
+\newcommand{\stat}{\mathrm{stat}}
+\newcommand{\diag}{\mathrm{diag}}
+\newcommand{\pdf}{\mathrm{pdf}}
+\newcommand{\tot}{\mathrm{tot}}
+\newcommand{\minn}{\mathrm{min}}
+\newcommand{\mut}{\mathrm{mut}}
+\newcommand{\partt}{\mathrm{part}}
+\newcommand{\dof}{\mathrm{dof}}
+\newcommand{\NS}{\mathrm{NS}}
+\newcommand{\cov}{\mathrm{cov}}
+\newcommand{\gen}{\mathrm{gen}}
+\newcommand{\cut}{\mathrm{cut}}
+\newcommand{\parr}{\mathrm{par}}
+\newcommand{\val}{\mathrm{val}}
+\newcommand{\tr}{\mathrm{tr}}
+\newcommand{\checkk}{\mathrm{check}}
+\newcommand{\reff}{\mathrm{ref}}
+\newcommand{\Mll}{M_{ll}}
+\newcommand{\extra}{\mathrm{extra}}
+\newcommand{\draft}[1]{}
+\def\beq{\begin{equation}}  
+\def\eeq{\end{equation}}  
+\def\bgamma{\boldsymbol{\gamma}}
+\def\nn{\nonumber}
+\def \so{\sigma_I^{DIS}(x_I,Q^2_I)}
+\def \sh{\frac{d\sigma^{hh}}{dX}}
+\def\sdy{\frac{d\sigma^{\mathrm{DY}}}{dQ_I^2dY_I}}
+\def \npdf{N_{\mathrm{pdf}}}
+\def \gtilda{\tilde\Gamma_J^{\mathrm{OBS}}}
+\def \n0{N_j^{(0)}}
+\def \a{\alpha}
+\def \b{\beta}
+\def \g{\gamma}
+\def \c{\xi}
+\def \z{\zeta}
+% Added by JR
+\def\lapprox{\lower .7ex\hbox{$\;\stackrel{\textstyle <}{\sim}\;$}}
+\def\gapprox{\lower .7ex\hbox{$\;\stackrel{\textstyle >}{\sim}\;$}}
+\def\half{\smallfrac{1}{2}}
+\def\GeV{{\rm GeV}}
+\def\TeV{{\rm TeV}}
+\def\ap{{a'}}
+\def\vp{{v'}}
+\def\e{\epsilon}
+\def\d{{\rm d}}
+\def\calN{{\cal N}}
+\def\shat{\hat{s}}
+\def\barq{\bar{q}}
+\def\qq{q \bar q}
+\def\uu{u \bar u}
+\def\dd{d \bar d}
+\def\pp{p \bar p}
+\def\xa{x_{1}}
+\def\xb{x_{2}}
+\def\xaa{x_{1}^{0}}
+\def\xbb{x_{2}^{0}}
+\def\smx{\stackrel{x\to 0}{\longrightarrow}}
+\def\Li{{\rm Li}}
+% Added by CJM [benchmarking] 
+% Please do not change spacing and sizing without good reason.
+\def\bstar{{\color{blue}$\bigstar$}}
+\def\bcirc{\raisebox{-1pt}{\scalebox{1.5}{\color{blue}$\circ$}}}
+\def\rsquare{{\raisebox{-1pt}{\color{red}$\blacksquare$}}}
+
+\newcommand{\Red}[1]{{\color{black}#1}}
+\newcommand{\Blue}[1]{{\color{black}#1}}
+
+\newcommand{\tmop}[1]{\ensuremath{\operatorname{#1}}}
+\newcommand{\tmtextit}[1]{{\itshape{#1}}}
+\newcommand{\tmtextrm}[1]{{\rmfamily{#1}}}
+\newcommand{\tmtexttt}[1]{{\ttfamily{#1}}}
+
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
+\makeatletter
+\g@addto@macro\bfseries{\boldmath}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%\linenumbers
+\vspace{.3cm}
+
+\begin{center}
+{\Large \bf Parton distributions and lattice QCD calculations:
+\\[0.2cm] a community white paper}
+\vspace{.4cm}
+
+{\small 
+  Huey-Wen~Lin$^{1,2}$,
+  Emanuele~R.~Nocera$^{3,4}$,
+  Fred~Olness$^5$,
+  Kostas~Orginos$^{6,7}$,
+  Juan~Rojo$^{8,9}$ (editors),
+  Alberto~Accardi$^{7,10}$, 
+  Constantia~Alexandrou$^{11,12}$, 
+  Alessandro~Bacchetta$^{13}$, 
+  Giuseppe~Bozzi$^{13}$, 
+  Jiunn-Wei~Chen$^{14}$,
+  Sara~Collins$^{15}$, 	
+  Amanda~Cooper-Sarkar$^{16}$,
+  Martha~Constantinou$^{17}$, 
+  Luigi~Del~Debbio$^{4}$, 
+  Michael~Engelhardt$^{18}$, 
+  Jeremy~Green$^{19}$, 
+  Rajan~Gupta$^{20}$, 
+  Lucian~A.~Harland-Lang$^{3,21}$, 
+  Tomomi~Ishikawa$^{22}$, 
+  Aleksander~Kusina$^{24}$, 
+  Keh-Fei~Liu$^{25}$, 	
+  Simonetta~Liuti$^{26,27}$, 		
+  Christopher~Monahan$^{28}$, 		
+  Pavel~Nadolsky$^{5}$,
+  Jian-Wei Qiu$^{7}$,
+  Ingo~Schienbein$^{23}$, 	
+  Gerrit~Schierholz$^{29}$,
+  Robert~S.~Thorne$^{21}$,
+  Werner~Vogelsang$^{30}$,\\
+  Hartmut Wittig$^{31}$, 
+  C.-P. Yuan$^{1}$, and
+  James Zanotti$^{32}$
+}
+
+\vspace{.2cm}
+{\it \footnotesize
+~$^{1}$Department of Physics and Astronomy, 
+Michigan State University, East Lansing, MI 48824, USA\\
+~$^{2}$Department of Computational Mathematics, Science and Engineering,\\
+Michigan State University, East Lansing, MI 48824, USA\\
+~$^{3}$Rudolf Peierls Centre for Theoretical Physics, 1 Keble Road,\\ 
+University of Oxford, OX1 3NP Oxford, United Kingdom\\
+~$^{4}$Higgs Centre for Theoretical Physics, School of Physics and Astronomy,\\ 
+University of Edinburgh, EH9 3FD, UK\\
+~$^{5}$Department of Physics, 
+Southern Methodist University, Dallas, TX 75275, USA\\
+~$^{6}$Physics Department, 
+College of William and Mary, Williamsburg, VA 23187, USA\\
+~$^{7}$Thomas Jefferson National Accelerator Facility, 
+Newport News, VA 23606, USA\\
+~$^{8}$Department of Physics and Astronomy, VU University Amsterdam,\\
+De Boelelaan 1081, NL-1081, HV Amsterdam, The Netherlands\\
+~$^{9}$Nikhef, Science Park 105, NL-1098 XG Amsterdam, The Netherlands\\
+~$^{10}$Hampton University, Hampton, VA 23668, USA\\
+~$^{11}$Department of Physics, 
+University of Cyprus, P.O. Box 20537, 1678 Nicosia, Cyprus\\
+~$^{12}$Computation-based Science and Technology Research Research,\\
+The Cyprus Institute, 20 Kavafi Str., Nicosia 2121, Cyprus\\
+~$^{13}$Dipartimento di Fisica, Universit\`{a} degli Studi di Pavia, and INFN, 
+Sezione di Pavia, 27100 Pavia, Italy\\
+~$^{14}$Department of Physics, Center for Theoretical Sciences,
+and Leung Center for Cosmology and Particle Astrophysics,
+National Taiwan University, Taipei, Taiwan 106\\
+~$^{15}$Institute for Theoretical Physics, 
+Universit\"at Regensburg, D-93040 Regensburg, Germany\\
+~$^{16}$Department of Physics, University of Oxford,\\
+Denys Wilkinson Building, 1 Keble Road, OX1 3RH Oxford, United Kingdom\\
+~$^{17}$ Department of Physics, 
+Temple University, Philadelphia, PA 19122, USA\\
+~$^{18}$Department of Physics, 
+New Mexico State University, Las Cruces, NM 88003-8001, USA\\
+~$^{19}$NIC, Deutsches Elektronen-Synchrotron, 15738 Zeuthen, Germany\\
+~$^{20}$Los Alamos National Laboratory, Theoretical Division, 
+T-2, Los Alamos, NM 87545, USA\\
+~$^{21}$ Department of Physics and Astronomy, 
+University College London, WC1E 6BT, United Kingdom\\
+~$^{22}$T.~D.~Lee Institute, 
+Shanghai Jiao Tong University, Shanghai, 200240, P.~R.~China\\
+~$^{23}$Laboratoire de Physique Subatomique et de Cosmologie, 
+Universit\`e Grenoble-Alpes,\\ 
+CNRS/IN2P3, 53 avenue des Martyrs,  38026 Grenoble, France. \\
+~$^{24}$Institute of Nuclear Physics Polish Academy of Sciences, 
+PL-31342 Krakow, Poland\\
+~$^{25}$Department of Physics and Astronomy, University of Kentucky, 
+Lexington, KY 40506, USA\\
+~$^{26}$Physics Department, University of Virginia, 382 MCormick Road,
+Charlottesville, VA 22904, USA\\
+~$^{27}$Laboratori Nazionali di Frascati, INFN, Frascati, Italy\\
+~$^{28}$Institute for Nuclear Theory, 
+University of Washington, Seattle, WA 98195, USA\\
+~$^{29}$Deutsches Elektronen-Synchrotron DESY, 22603 Hamburg, Germany\\
+~$^{30}$Institute for Theoretical Physics, 
+T\"ubingen University, D-72076 T\"ubingen, Germany\\
+~$^{31}$PRISMA Cluster of Excellence and Institute for Nuclear Physics 
+Johannes Gutenberg University of Mainz,\\ 
+Johann-Joachim-Becher-Weg 45, 55128 Mainz, Germany\\
+~$^{32}$CSSM, Department of Physics, 
+The University of Adelaide, Adelaide, SA, Australia 5005\\
+}
+\vspace{0.3cm}
+       {\it Preprint numbers:} \\
+DESY 17-185,
+IFJPAN-IV-2017-19,       
+INT-PUB-17-042, 
+MSUHEP-17-017, 
+Nikhef-2017-047,
+OUTP-17-15P,
+SMU-HEP-17-08.
+
+\clearpage
+
+{\bf \large Abstract}
+
+\end{center}
+
+\vspace{-0.4cm}
+In the framework of quantum chromodynamics (QCD), parton distribution 
+functions (PDFs) quantify how the momentum and spin of a hadron are divided 
+among its quark and gluon constituents.
+%
+Two main approaches exist to determine PDFs.
+%
+The first approach, based on QCD factorization theorems, realizes a QCD 
+analysis of a suitable set of hard-scattering measurements, often using a 
+variety of hadronic observables.
+%
+The second approach, based on first-principle operator definitions of PDFs,
+uses lattice QCD to compute directly some PDF-related quantities, such 
+as their moments.
+%
+Motivated by recent progress in both approaches, in this document we present
+an overview of lattice-QCD and global-analysis techniques used to 
+determine unpolarized and polarized proton PDFs and their moments. 
+%
+We provide benchmark numbers to validate present and future lattice-QCD 
+calculations and we illustrate how they could be used to reduce
+the PDF uncertainties in current unpolarized and polarized global analyses.
+%
+This document represents a first step towards establishing a common
+language between the two communities, to foster dialogue and
+to further improve our knowledge of PDFs.
+\vspace{-0.5cm}
+
+\tableofcontents
+
+\input{sec-introduction}
+
+\input{sec-theory}
+
+\input{sec-benchmarking}
+
+\input{sec-projections}
+
+\input{sec-outlook}
+
+\input{sec-acknowledgements}
+
+\appendix
+
+\input{sec-appendix1}
+
+\input{sec-appendix2}
+\clearpage % this \clearpage prints all the Appendix B tables  so the C text is near the C tables. 
+
+\input{sec-appendix3}
+\clearpage % this prints out all tables so they are not mixed in with refs
+
+\newpage % Start bib on new page
+\bibliography{PDFLattice2017}
+
+\end{document}

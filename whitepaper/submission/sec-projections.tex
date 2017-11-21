@@ -1,0 +1,62 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Improving PDF fits with lattice-QCD calculations}
+\label{sec:projections}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In this section, we provide an estimate of the potential
+impact of future lattice-QCD calculations
+in global unpolarized and polarized PDF fits.
+%
+This study is carried out with two publicly available
+tools: the Bayesian reweighting
+method~\cite{Ball:2011gg,Ball:2010gb} applied to the
+NNPDF3.1~\cite{Ball:2017nwa} and NNPDFpol1.1~\cite{Nocera:2014gqa} sets; 
+and the Hessian profiling method~\cite{Camarda:2015zba} applied to
+HERAPDF2.0 set~\cite{Abramowicz:2015mha}.
+%
+Both methods allow us to quantify the impact of new measurements
+(or of future measurements, if pseudo-data are used) on PDFs without
+repeating the global analysis.
+%
+The main limitation of these methods is that they are maximally reliable
+if the amount of information carried in by the new (pseudo-)data is moderate
+in comparison to that already included in the fit.
+
+For simplicity, we limit our study to the impact of a subset of the moments 
+that can be computed using lattice QCD, focusing on those that can be 
+currently calculated with the highest precision.
+%
+Therefore, we restrict ourselves to the benchmark moments discussed in 
+Sec.~\ref{sec:benchmarking}.
+%
+We also consider pseudo-data based on $x$-space
+lattice-QCD calculations from the quasi-PDF approach
+discussed in Sec.~\ref{sec:xdependence}.
+%
+As we show, particularly in the unpolarized case, the
+constraining power of direct $x$-space calculations is
+superior to that of PDF moments.
+
+\subsection{Impact of lattice calculations of PDF moments}
+
+We start by quantifying the constraining power of projected lattice-QCD 
+calculations of PDF moments on both unpolarized and polarized global fits.
+%
+We define the settings for our study and present our results following
+Bayesian reweighting and Hessian profiling, respectively.
+
+% General projections for moments
+\input{sec-projections-settings}
+
+% PDF moment analysis using reweighting
+\input{sec-reweightingmom}
+
+% PDF moment analysis using Hessian profiling 
+\input{sec-profiling}
+
+% x-space analysis using reweighting
+\input{sec-projections-xspace}
+
+% General discussion
+\input{sec-projections-discussion}
+
