@@ -1,0 +1,79 @@
+
+Referee's report 
+"Parton distributions and lattice QCD calculations: a community white paper"
+Huey-Wen Lin et al.
+
+----------------------------------------------
+
+This paper is a very useful offspring of the Workshop on Parton Distributions 
+and Lattice Calculations in the LHC Era (PDFLattice2017), which took part in March 2017.
+A very systematic collection of results from both the global phenomenological fits and the 
+lattice calculations concerning the PDFs of the proton is most useful and the paper 
+should definitely be published.  
+
+Below are my remarks, aiming at improving the text, which should be adressed before 
+the paper is published. 
+
+----------------------------------------------
+
+1. On page 10 and further on the authors refer to the lowest three moments. 
+I understand they count from 0: 0, 1, 2. This should be stated explicitly to avoid
+confusion of unxperienced readers.
+
+2. Figure 2.1, as well as the results for the benchmarks from Sect. 3, show that the present 
+Euclidean lattice results are, although encouraging, preliminary at best. Looking at Fig. 2.1 
+it is not clear if the normalization (0th moment) is correct. Could the autors check and state 
+this explicitly? 
+
+3. At the bottom of page 17 it is stated that factorization is observed, but the simulations 
+used by Orginos et al. are quenched and this should be stated. The authors should also precicely 
+say what factorization they have in mind (call it the transverse-longitudinal factorization, or the 
+transverse-virtuality z^2 factorization). Also, TMDs are mentioned here in passing, whereas they
+are related in a very deep and simple way, as shown by Radyuskkin, to the quasi/pseudo distributions. 
+It is worth to show this relation as one of the cornerstones of the approach. 
+Also, the authors should state that the studies of TMDs on the lattice (cf. the included 
+Ref. to Musch et al.) use a very similar methodology to Orginos et al., in particular, the Ioffe 
+distributions are used, and the ratio (2.33) is fully analogous to the quantity used by Musch et al.
+
+In that context, it should be pointed out that the results of the quasi/pseudo technique at a FIXED
+P_3 are also physically interensing, not only the P_3 -> infinity limit. The issue is discussed in 
+a recent arXiv:1711.03377.
+
+I understand that requesting the authors to present detailed results on the TMDs would be excessive, 
+but the issue should be properly mentioned, with references, and key messages. 
+
+4. There is no clear discussion of the fiducial region for the quasi/pseudo method, which is 
+large x. An obvious estimate was presented, e.g., arXiv:1711.03377, where x>1/n, 
+with 2 pi n = P_3 L. Hence, presenty, x > 0.1 or so - very large. The authors should include 
+a discussion here and state at what values of x the forseeable result could be trusted. 
+
+5. The proposed benchmarks are very simplistic and do not take into account the fiducial x region. 
+It would be better in the future to use benchmarks truncated from below, as discussed for the gluons.
+The paragraph in the Outlook section starting with "First, we have restricted our benchmark..." should
+contain a more detailed discussion and proposal on benchmarks good at large x. 
+
+The present status of the agreement of the first moments on the lattice to phenomenology 
+shows how long is the way to go and it should be admitted. 
+
+Also, the presentation of the benchmarks based on <x> creates an impression that the new techniques 
+based on quasi/pseudo distributions aim at computing x moments, whereas the ultimate and 
+ambitious goal is to compute the PDFs directly in x space. Perghaps a better benchmark would be simply t
+o compare the valus at specific values of x> x-0.5, 0.75, ... ?
+
+6. The authors should show for completeness the results for the second x moments from the lattice.
+
+7. Editorial comment: it would be nice to have the results shown in Tables 3.1-3.3 and the corresponding 
+results for the global fits in Table 3.4 etc. to place, correspondingly do the displayed quantity,
+next to each. That would facilitate the comparison for the reader without the necessity to flip pages.
+
+8. Top left Fig. 4.3 - please, shift legend such that it does not cover the curves.
+
+9. Being a white paper, the work also serves as a review of the field. As such, it might contain some 
+representative references to: pion PDFs, TMDs, and QCD-based nonperturbative models of the PDFs 
+(perhaps as yet another method listed in the introduction). That would broaden the outreach of the 
+paper. The authors might also mention the transverse (hamiltonian) lattice studies of 
+M. Burkardt and S. Dalley, aiming at the same goal of obtaing PDF's directly in x space.
+
+
+
+
